@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.31" />
+  <meta name="author" content="Matteo Lisi">
+  
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://mattelisi.github.io/post/listing-s-law-and-the-mathematics-of-the-eyes/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7cMerriweather%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/override.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-107105934-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+  <link rel="alternate" href="https://mattelisi.github.io/index.xml" type="application/rss+xml" title="juicy bits">
+  <link rel="feed" href="https://mattelisi.github.io/index.xml" type="application/rss+xml" title="juicy bits">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://mattelisi.github.io/post/listing-s-law-and-the-mathematics-of-the-eyes/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="juicy bits">
+  <meta property="og:url" content="https://mattelisi.github.io/post/listing-s-law-and-the-mathematics-of-the-eyes/">
+  <meta property="og:title" content="Listing&#39;s law, and the mathematics of the eyes | juicy bits">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2017-09-27T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2017-09-27T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>Listing&#39;s law, and the mathematics of the eyes | juicy bits</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">juicy bits</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>/blog</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#notes">
+            
+            <span>/misc</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>/about</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>/contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>/publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Listing&#39;s law, and the mathematics of the eyes</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2017-09-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sep 27, 2017
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    9 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="https://mattelisi.github.io/post/listing-s-law-and-the-mathematics-of-the-eyes/#disqus_thread"></a>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/eye-movements">eye movements</a
+    >, 
+    
+    <a href="/categories/tutorial">tutorial</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Listing%27s%20law%2c%20and%20the%20mathematics%20of%20the%20eyes&amp;url=https%3a%2f%2fmattelisi.github.io%2fpost%2flisting-s-law-and-the-mathematics-of-the-eyes%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmattelisi.github.io%2fpost%2flisting-s-law-and-the-mathematics-of-the-eyes%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmattelisi.github.io%2fpost%2flisting-s-law-and-the-mathematics-of-the-eyes%2f&amp;title=Listing%27s%20law%2c%20and%20the%20mathematics%20of%20the%20eyes"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fmattelisi.github.io%2fpost%2flisting-s-law-and-the-mathematics-of-the-eyes%2f&amp;title=Listing%27s%20law%2c%20and%20the%20mathematics%20of%20the%20eyes"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Listing%27s%20law%2c%20and%20the%20mathematics%20of%20the%20eyes&amp;body=https%3a%2f%2fmattelisi.github.io%2fpost%2flisting-s-law-and-the-mathematics-of-the-eyes%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        <p><em>Brief intro to the mathematical formalism used to describe rotations of the eyes in 3D (including the torsional component).</em> <img src="/img/3Deyecoord_Haslwanter1995.png" alt="3D eye coordinate systems in the primary reference position, left panel, and after a leftward rotation, right panel (Haslwanter 1995). " /></p>
+<p>The shape of the human eye is approximately a sphere with a diameter of 23 mm, and mechanically it behaves like a ball in a ball and socket joint. Because there is a functional distinguished axis - the visual axis, that is the line of gaze or more precisely the imaginary straight line passing through both the center of the pupil and the center of the fovea - the movements of the eyes are usually divided in <em>gaze direction</em> and <em>cyclotorsion</em> (or simply <em>torsion</em>): while gaze direction refers to the direction of the visual axis, the torsion indicates the rotation of the eyeball about the visual axis. While modern video-based eyetrackers allow to record movements of the visual axis, they do not provide data about torsion. It turns out that there is a nice mathematical relationship that specifies the torsion of the eye in every direction of the gaze. This relationship is known as Listing’s law, and was named after the german mathematician <a href="https://en.wikipedia.org/wiki/Johann_Benedict_Listing">Johann Benedict Listing (1808-1882)</a>. Listing’s law can be better understood by looking at how the 3D orientation of the eye can be formally described.</p>
+<div id="mathematics-of-3d-eye-movements" class="section level1">
+<h1>Mathematics of 3D eye movements</h1>
+<p>3D eye position can be specified by characterising the 3D rotation that brings the eye to the current eye position from an arbitrary reference or <em>primary</em> position<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>, which typically is defined as the position that the eye assumes when looking straight ahead with the head in normal, upright position. This rotation can be described by the 3-by-3 rotation matrix <span class="math inline">\(\bf{R}\)</span>. More specifically the matrix can be used to describe the rotation of three-dimensional coordinates by a certain angle about a certain axis. To formally define this matrix, consider the coordinate system <span class="math inline">\(\{ \vec{h}_1,\vec{h}_2,\vec{h}_3 \}\)</span> (a coordinate system is defined by a set of linearly independent vectors; e.g. here <span class="math inline">\(\vec{h}_1 = (1,0,0)\)</span>, corresponding to the <span class="math inline">\(x\)</span> axis) as the <em>head-centered</em> coordinate system where the axis <span class="math inline">\(\vec{h}_1\)</span> correspond to the visual axis when the eye is in the reference position, and <span class="math inline">\(\{\vec{e}_1,\vec{e}_2,\vec{e}_3\}\)</span> is an <em>eye-centered</em> coordinate system where <span class="math inline">\(\vec{e}_1\)</span> always correspond to the visual axis, regardless of the orientation of the eye (see the figure on top of this page). Any orientation of the eye can be described by a matrix <span class="math inline">\(\bf{R}\)</span> such that <span class="math display">\[
+{{\vec{e}}_i} = {\bf{R}} {{\vec{h}}_i}
+\]</span> where <span class="math inline">\(i=1,2,3\)</span>. This rotation matrix is straightforward for 1D rotations. For example, a purely horizontal rotation of an angle <span class="math inline">\(\theta\)</span> around the axis <span class="math inline">\(\vec{h}_3\)</span> is formulated as <span class="math display">\[
+\bf{R}_3 \left( \theta  \right) = \left( {\begin{array}{*{20}{c}}
+{\cos \theta }&amp;{ - \sin \theta }&amp;0\\
+{\sin \theta }&amp;{\cos \theta }&amp;0\\
+0&amp;0&amp;1
+\end{array}} \right)
+\]</span> The first two columns of the matrix indicates the new coordinates of the first (i.e., <span class="math inline">\(\vec{h}_1\)</span>) and of the second basis (<span class="math inline">\(\vec{h}_2\)</span>) of the new eye-centerd coordinate system after the rotation, expressed according to the initial head-centered coordinate system. The third basis, <span class="math inline">\(\vec{h}_3\)</span> is the axis of rotation, and does not change. It becomes more complicated for 3D rotations, i.e. rotations of the fixed eye-centered coordinate system to any new orientation. They can be obtained by calculating a sequence of 3 different rotations about the three fixed axis, and multiplying the corresponding matrices: <span class="math inline">\(\bf{R} = \bf{R}_3 \left( \theta \right) \bf{R}_2 \left( \phi \right) \bf{R}_1 \left( \psi \right)\)</span>. Although the first two rotations are sufficient to specity the orientation of the visual axis, the third is necessary to specify the torsion component and fully specify the 3D orientation of the eye. Importantly, the order of the three rotations is relevant - rotations are not commutative, so if you put them in different order you end up with a different result - and needs to be arbitrarily specified (when it is specified in this order is referred to as <em>Flick sequence</em>). This representation of 3D orientations is not very efficient (9 values, while only 3 are necessary), or practical for computations; additionally one needs to define arbitrarily the order of the rotations of the sequence.</p>
+<div id="quaternions-and-rotation-vectors" class="section level2">
+<h2>Quaternions and rotation vectors</h2>
+<p>An alternative way to describe rotations is with <em>quaternions</em>. Quaternions can be looked upon as four-dimensional vectors, although they are more commonly split in a real scalar part and an imaginary vector part; they are in fact an extension of the complex numbers. They have the form <span class="math display">\[
+q_0 + q_1i + q_2j + q_3k = \left( q_0,\vec{q} \cdot \vec{I} \right) = \left( r,\vec{v} \right)
+\]</span> where <span class="math display">\[
+\vec{q} = \left( \begin{array}{*{20}{c}}
+{q_1}\\
+{q_2}\\
+{q_3}
+\end{array} \right)
+\]</span> and <span class="math display">\[
+\vec{I} = \left( \begin{array}{*{20}{c}}
+{i}\\
+{j}\\
+{k}
+\end{array} \right)
+\]</span> <span class="math inline">\(i,j,k\)</span> are the quaternion units. These can be multiplied according to the following formula, discovered by <a href="https://en.wikipedia.org/wiki/William_Rowan_Hamilton">Hamilton</a> in 1843 <span class="math display">\[
+i^2 = j^2 = k^2 = ijk =  - 1
+\]</span> This formula may seems strange but it determines all the possible products of <span class="math inline">\(i,j,k\)</span>, such as <span class="math inline">\(ij=k\)</span> and <span class="math inline">\(ji=-k\)</span>. Note that the product of the basis are not commutative. There is a visual trick to remember the multiplication rules, based on the following diagram:</p>
+<div class="figure">
+<img src="/img/quatrule.png" alt="Multiplying quaternions. Multiplying two elements in the clockwise direction gives the next element along the same direction (e.g. jk=i). The same is for counter-clockwise directions, except that the result is negative (e.g. kj=-i). " />
+<p class="caption">Multiplying quaternions. Multiplying two elements in the clockwise direction gives the next element along the same direction (e.g. <span class="math inline">\(jk=i\)</span>). The same is for counter-clockwise directions, except that the result is negative (e.g. <span class="math inline">\(kj=-i\)</span>). </p>
+</div>
+<p>Quaternions can be used to represent rotations. For example, a rotation of an angle <span class="math inline">\(\theta\)</span> around the axis define by the unit vector <span class="math inline">\(\vec{u} = (u_1, u_2,u_3) = u_1i + u_2j + u_3k\)</span><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> can be described by the following quaternion <span class="math display">\[
+\cos \frac{\theta}{2} + \sin \frac{\theta}{2}\left( u_1i + u_2j + u_3k \right)
+\]</span> The direction of the rotation is given by the <a href="https://en.wikipedia.org/wiki/Right-hand_rule#A_rotating_body">right-hand rule</a>. Successive rotations can combined using the formula for quaternion multiplication. The multiplication of quaternions can be computed by the products of their elements element as if they were two polynomials, but keeping track of the ordering of the basis, as their multiplication is not commutative. This is a desired property if we want to specify rotations, which as seen earlier are also not commutative. Quaternion multiplication can be also expressed in the modern language of vector and cross product <span class="math display">\[
+\left( r_1,\vec{v_1} \right) \left( r_2,\vec{v_2} \right) = 
+\left( r_1 r_2 - \vec{v_1} \cdot \vec{v_2},\;\; r_1\vec{v_2} + r_2\vec{v_1} +\vec{v_1} \times \vec{v_2} \right)
+\]</span> where “<span class="math inline">\(\cdot\)</span>” is the <a href="https://en.wikipedia.org/wiki/Dot_product">dot product</a> and “<span class="math inline">\(\times\)</span>” is the <a href="https://en.wikipedia.org/wiki/Cross_product">cross product</a>.</p>
+<p>In sum, quaternions are pretty useful to compute transformations in 3D. One can use quaternions to combine 3D any sequence of rotations about arbitrary axis (using quaternion multiplications), as well as to rotate any 3D Euclidean vector about any arbitrary axis. A quaternion can also be transformed into a 3D rotation matrix (formula <a href="https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation#Quaternion-derived_rotation_matrix">here</a>), which then may be used in 3D graphics.</p>
+<p><strong>Rotation vectors</strong> are an even more succint representation of rotations. Indeed, the scalar component of the quaterion (<span class="math inline">\(q_0\)</span>) does not add any information that is not alredy in the vector part, so a rotation could be effectively described by just 3 numbers. The rotation vector <span class="math inline">\(\vec{r}\)</span>, which correspond to a rotation of an angle <span class="math inline">\(\theta\)</span> about an axis <span class="math inline">\(\vec{n}\)</span> is defined as <span class="math display">\[
+\vec{r} = \tan \left( \frac{\theta}{2} \right) \vec{n}
+\]</span> which can be defined also with respect to the equivalent quaternion <span class="math inline">\(\textbf{q}\)</span> <span class="math display">\[
+\textbf{q}=\left( q_0, \vec{q} \right) = \left( \cos \left(\frac{\theta}{2}\right), \sin \left(\frac{\theta}{2}\right)\vec{n} \right)
+\]</span> as <span class="math display">\[ \vec{r} = \frac{\vec{q}}{q_0} \]</span>.</p>
+</div>
+</div>
+<div id="donders-law-and-listings-law" class="section level1">
+<h1>Donder’s law and Listing’s law</h1>
+<p>Donder’s law (1848) states that the eye use only two degrees of freedom while fixating, although mechanically it has three. In othere words this means that the torsion component of the eye movement is not arbitrary but it is uniquely determined by the direction of the visual axis and is independent of the previous eye movements. From the material review above it should be clear how any 3D eye orientation can be fully described as a rotation abour a given axis from a primary reference position. This allows also to formulate Donder’s law more specifically,according to what is known as Listing’s law <span class="citation">(Helmholtz 1910,<span class="citation">Haustein (1989)</span>)</span> “<em>There exists a certain eye position from which the eye may reach any other position of fixation by a rotation around an axis perpendicular to the visual axis. This particular position is called primary position</em>”. This means that <em>all possible eye positions</em> can be reached from the primary position by a single rotation about an axis perpendicular to the visual axis. Since they are all perpendicular to the visual axis, all rotation axis that satisfy Listing’s law are on the same plane (<em>Listing’s plane</em>). The law can be tested with eyetracking equipments that allows measuring also the torsional components (such as scleral coils): results have shown that the standard deviation from Listing’s plane of empirically measured rotation vectors is only about 0.5-1 deg <span class="citation">(Haslwanter 1995)</span>. Formally it can be written that for any orientation of the visual axis, defined by the rotation vector <span class="math inline">\(\vec{a}\)</span> and measured from the primary position <span class="math inline">\(\vec{h_1}=(1,0,0)\)</span>, <span class="math display">\[
+\vec{h_1} \cdot \vec{a} = 0
+\]</span> This indicates simply that the rotation about the visual axis is 0, and that as a consequence all the rotation axes lies in a frontal plane.</p>
+<p>Going back to the beginning, knowing the coordinates os Listing’s plane one can compute the rotation vector that correspond to the current eye position from the recording of the 2D gaze location on a screen. In the simplest case, we assume that the primary position corresponds to when the observer fixates the center of the screen, <span class="math inline">\((0,0)\)</span>. What is the rotation vector that describes the 3D eye orientation when the observer fixates the location <span class="math inline">\((s_x, s_y)\)</span> ? Let’s say the position on screen is defined in cm, and we know that the distance of the eye from the screen is <span class="math inline">\(L\)</span> cm. The rotation angle can be computed as <span class="math inline">\(\theta = \rm{atan} \frac{\sqrt{s_x^2+s_y^2}}{L}\)</span>, while the angle that defines the orientation of the rotation axis within Listing’s plane is <span class="math inline">\(\alpha = \rm{atan2}(s_y,s_x)\)</span>. The complete rotation vector is then <span class="math display">\[
+\vec{r} = \tan \left( \frac{\theta}{2}\right) \cdot \left( {\begin{array}{*{20}{c}}
+0\\
+{\cos \alpha }\\
+{ - \sin \alpha }
+\end{array}} \right)
+\]</span> This vector describe aparticular eye position as a rotation from the reference position, and does not have a torsional component (that is a component along <span class="math inline">\(\vec{h_1}\)</span>). Indeed, Listing’s law implies that all possible eye positions can be reached from the primary reference position without a torsional component. However, vectors describing rotations from and to positions different than the primary one do <em>not</em>, in general, lie in Listing’s plane. For Listing law to hold such vectors must lie in a plane whose orientation depends on the current eye position, and more specifically is such that the vector perpendicular to the plane is exactly halfway between the current and the primary eye position <span class="citation">(Tweed and Vilis 1990)</span>.</p>
+<hr />
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references">
+<div id="ref-Haslwanter1995">
+<p>Haslwanter, Thomas. 1995. “Mathematics of three-dimensional eye rotations.” <em>Vision Research</em> 35 (12): 1727–39. doi:<a href="https://doi.org/10.1016/0042-6989(94)00257-M">10.1016/0042-6989(94)00257-M</a>.</p>
+</div>
+<div id="ref-Haustein1989">
+<p>Haustein, Werner. 1989. “Considerations on Listing’s Law and the primary position by means of a matrix description of eye position control.” <em>Biological Cybernetics</em> 60 (6): 411–20. doi:<a href="https://doi.org/10.1007/BF00204696">10.1007/BF00204696</a>.</p>
+</div>
+<div id="ref-Helmholtz1910">
+<p>Helmholtz, Hermann von. 1910. <em>Handbuch der Physiologischen Optik</em>. Hamburg: Voss.</p>
+</div>
+<div id="ref-Tweed1990">
+<p>Tweed, Douglas, and Tutis Vilis. 1990. “Geometric relations of eye position and velocity vectors during saccades.” <em>Vision Research</em> 30 (1): 111–27. doi:<a href="https://doi.org/10.1016/0042-6989(90)90131-4">10.1016/0042-6989(90)90131-4</a>.</p>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="https://en.wikipedia.org/wiki/Euler%27s_rotation_theorem">Euler’s theorem</a> guarantee that a rigid body can always move from one orientation to any different one through a single rotation about a fixed axis.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Saying that <span class="math inline">\(\vec(u)\)</span> is a unit vector indicates that it has length 1, i.e. <span class="math inline">\(\left| \vec{u} \right| = \sqrt{u_1^2 + u_2^2 + u_3^2} = 1\)</span><a href="#fnref2">↩</a></p></li>
+</ol>
+</div>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/eye-movements">eye movements</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+
+
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mattelisi" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Matteo Lisi &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//mattelisi.disqus.com/count.js" async></script>
+    
+
+    
+    <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD12zE83xCTsL_ohYvAPoW43ZdpsvD_rGU"></script>
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+
