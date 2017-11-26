@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>juicy bits on juicy bits</title>
-    <link>https://mattelisi.github.io/</link>
+    <link>/</link>
     <description>Recent content in juicy bits on juicy bits</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,11 +12,11 @@
     
     <item>
       <title>Listing&#39;s law, and the mathematics of the eyes</title>
-      <link>https://mattelisi.github.io/post/listing-s-law-and-the-mathematics-of-the-eyes/</link>
+      <link>/post/listing-s-law-and-the-mathematics-of-the-eyes/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/post/listing-s-law-and-the-mathematics-of-the-eyes/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Brief intro to the mathematical formalism used to describe rotations of the eyes in 3D (including the torsional component).&lt;/em&gt; &lt;img src=&#34;https://mattelisi.github.io/img/3Deyecoord_Haslwanter1995.png&#34; alt=&#34;3D eye coordinate systems in the primary reference position, left panel, and after a leftward rotation, right panel (Haslwanter 1995). &#34; /&gt;&lt;/p&gt;
+      <guid>/post/listing-s-law-and-the-mathematics-of-the-eyes/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Brief intro to the mathematical formalism used to describe rotations of the eyes in 3D (including the torsional component).&lt;/em&gt; &lt;img src=&#34;/img/3Deyecoord_Haslwanter1995.png&#34; alt=&#34;3D eye coordinate systems in the primary reference position, left panel, and after a leftward rotation, right panel (Haslwanter 1995). &#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The shape of the human eye is approximately a sphere with a diameter of 23 mm, and mechanically it behaves like a ball in a ball and socket joint. Because there is a functional distinguished axis - the visual axis, that is the line of gaze or more precisely the imaginary straight line passing through both the center of the pupil and the center of the fovea - the movements of the eyes are usually divided in &lt;em&gt;gaze direction&lt;/em&gt; and &lt;em&gt;cyclotorsion&lt;/em&gt; (or simply &lt;em&gt;torsion&lt;/em&gt;): while gaze direction refers to the direction of the visual axis, the torsion indicates the rotation of the eyeball about the visual axis. While modern video-based eyetrackers allow to record movements of the visual axis, they do not provide data about torsion. It turns out that there is a nice mathematical relationship that specifies the torsion of the eye in every direction of the gaze. This relationship is known as Listing’s law, and was named after the german mathematician &lt;a href=&#34;https://en.wikipedia.org/wiki/Johann_Benedict_Listing&#34;&gt;Johann Benedict Listing (1808-1882)&lt;/a&gt;. Listing’s law can be better understood by looking at how the 3D orientation of the eye can be formally described.&lt;/p&gt;
 &lt;div id=&#34;mathematics-of-3d-eye-movements&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Mathematics of 3D eye movements&lt;/h1&gt;
@@ -49,7 +49,7 @@ q_0 + q_1i + q_2j + q_3k = \left( q_0,\vec{q} \cdot \vec{I} \right) = \left( r,\
 i^2 = j^2 = k^2 = ijk =  - 1
 \]&lt;/span&gt; This formula may seems strange but it determines all the possible products of &lt;span class=&#34;math inline&#34;&gt;\(i,j,k\)&lt;/span&gt;, such as &lt;span class=&#34;math inline&#34;&gt;\(ij=k\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(ji=-k\)&lt;/span&gt;. Note that the product of the basis are not commutative. There is a visual trick to remember the multiplication rules, based on the following diagram:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://mattelisi.github.io/img/quatrule.png&#34; alt=&#34;Multiplying quaternions. Multiplying two elements in the clockwise direction gives the next element along the same direction (e.g. jk=i). The same is for counter-clockwise directions, except that the result is negative (e.g. kj=-i). &#34; /&gt;
+&lt;img src=&#34;/img/quatrule.png&#34; alt=&#34;Multiplying quaternions. Multiplying two elements in the clockwise direction gives the next element along the same direction (e.g. jk=i). The same is for counter-clockwise directions, except that the result is negative (e.g. kj=-i). &#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Multiplying quaternions. Multiplying two elements in the clockwise direction gives the next element along the same direction (e.g. &lt;span class=&#34;math inline&#34;&gt;\(jk=i\)&lt;/span&gt;). The same is for counter-clockwise directions, except that the result is negative (e.g. &lt;span class=&#34;math inline&#34;&gt;\(kj=-i\)&lt;/span&gt;). &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Quaternions can be used to represent rotations. For example, a rotation of an angle &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; around the axis define by the unit vector &lt;span class=&#34;math inline&#34;&gt;\(\vec{u} = (u_1, u_2,u_3) = u_1i + u_2j + u_3k\)&lt;/span&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; can be described by the following quaternion &lt;span class=&#34;math display&#34;&gt;\[
@@ -109,128 +109,128 @@ i^2 = j^2 = k^2 = ijk =  - 1
     
     <item>
       <title>Memory-guided saccades show effect of perceptual illusion whereas visually-guided saccades do not</title>
-      <link>https://mattelisi.github.io/publication/memory-delphine/</link>
+      <link>/publication/memory-delphine/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/publication/memory-delphine/</guid>
+      <guid>/publication/memory-delphine/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Different spatial representations guide eye and hand movements</title>
-      <link>https://mattelisi.github.io/publication/double-drift-pointing/</link>
+      <link>/publication/double-drift-pointing/</link>
       <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/publication/double-drift-pointing/</guid>
+      <guid>/publication/double-drift-pointing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Discrete confidence levels revealed by sequential decisions</title>
-      <link>https://mattelisi.github.io/publication/discrete-confidence/</link>
+      <link>/publication/discrete-confidence/</link>
       <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/publication/discrete-confidence/</guid>
+      <guid>/publication/discrete-confidence/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Target Displacements during Eye Blinks Trigger Automatic Recalibration of Gaze Direction</title>
-      <link>https://mattelisi.github.io/publication/blink-adapt/</link>
+      <link>/publication/blink-adapt/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/publication/blink-adapt/</guid>
+      <guid>/publication/blink-adapt/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Time Costancy in human perception</title>
-      <link>https://mattelisi.github.io/publication/time-constancy/</link>
+      <link>/publication/time-constancy/</link>
       <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/publication/time-constancy/</guid>
+      <guid>/publication/time-constancy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Voluntary eye movements direct attention on the mental number space</title>
-      <link>https://mattelisi.github.io/publication/voluntary-eye/</link>
+      <link>/publication/voluntary-eye/</link>
       <pubDate>Tue, 02 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/publication/voluntary-eye/</guid>
+      <guid>/publication/voluntary-eye/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dissociation between the Perceptual and Saccadic Localization of Moving Objects</title>
-      <link>https://mattelisi.github.io/publication/double-drift-1/</link>
+      <link>/publication/double-drift-1/</link>
       <pubDate>Thu, 24 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/publication/double-drift-1/</guid>
+      <guid>/publication/double-drift-1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Effects of Multimodal Load on Spatial Monitoring as Revealed by ERPs</title>
-      <link>https://mattelisi.github.io/publication/load-erp/</link>
+      <link>/publication/load-erp/</link>
       <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/publication/load-erp/</guid>
+      <guid>/publication/load-erp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pupil dilation reveals top-down attentional load during spatial monitoring</title>
-      <link>https://mattelisi.github.io/publication/load-pupil/</link>
+      <link>/publication/load-pupil/</link>
       <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/publication/load-pupil/</guid>
+      <guid>/publication/load-pupil/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spatial constancy of attention across eye movements is mediated by the presence of visual objects</title>
-      <link>https://mattelisi.github.io/publication/spatial-constancy-attention/</link>
+      <link>/publication/spatial-constancy-attention/</link>
       <pubDate>Fri, 01 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/publication/spatial-constancy-attention/</guid>
+      <guid>/publication/spatial-constancy-attention/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Larger, smaller, odd or even? Task-specific effects of optokinetic stimulation on the mental number space</title>
-      <link>https://mattelisi.github.io/publication/optokinetic/</link>
+      <link>/publication/optokinetic/</link>
       <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/publication/optokinetic/</guid>
+      <guid>/publication/optokinetic/</guid>
       <description>&lt;p&gt;Mariagrazia Ranzini and Matteo Lisi contributed equally to the work&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>The prediction of visual stimuli influences auditory loudness discrimination</title>
-      <link>https://mattelisi.github.io/publication/desantis/</link>
+      <link>/publication/desantis/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/publication/desantis/</guid>
+      <guid>/publication/desantis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Space coding for sensorimotor transformations can emerge through unsupervised learning</title>
-      <link>https://mattelisi.github.io/publication/unsupervised-space-coding/</link>
+      <link>/publication/unsupervised-space-coding/</link>
       <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/publication/unsupervised-space-coding/</guid>
+      <guid>/publication/unsupervised-space-coding/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Paying Attention through Eye Movements: A Computational Investigation of the Premotor Theory of Spatial Attention</title>
-      <link>https://mattelisi.github.io/publication/premotor-model/</link>
+      <link>/publication/premotor-model/</link>
       <pubDate>Tue, 29 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/publication/premotor-model/</guid>
+      <guid>/publication/premotor-model/</guid>
       <description>&lt;p&gt;Marco Casarotti and Matteo Lisi contributed equally to the article and are listed in alphabetical order.&lt;/p&gt;
 </description>
     </item>
