@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.31" />
+  <meta name="author" content="Matteo Lisi">
+  
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://mattelisi.github.io/post/model-averaging/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7cMerriweather%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/override.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-107105934-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+  <link rel="alternate" href="https://mattelisi.github.io/index.xml" type="application/rss+xml" title="juicy bits">
+  <link rel="feed" href="https://mattelisi.github.io/index.xml" type="application/rss+xml" title="juicy bits">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://mattelisi.github.io/post/model-averaging/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="juicy bits">
+  <meta property="og:url" content="https://mattelisi.github.io/post/model-averaging/">
+  <meta property="og:title" content="Multi-model estimation of psychophysical parameters | juicy bits">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2017-12-08T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2017-12-08T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>Multi-model estimation of psychophysical parameters | juicy bits</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">juicy bits</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>/blog</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#notes">
+            
+            <span>/misc</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>/about</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>/contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>/publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Multi-model estimation of psychophysical parameters</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2017-12-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Dec 8, 2017
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    9 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="https://mattelisi.github.io/post/model-averaging/#disqus_thread"></a>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/r">R</a
+    >, 
+    
+    <a href="/categories/data-analysis">data-analysis</a
+    >, 
+    
+    <a href="/categories/tutorial">tutorial</a
+    >, 
+    
+    <a href="/categories/statistics">statistics</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Multi-model%20estimation%20of%20psychophysical%20parameters&amp;url=https%3a%2f%2fmattelisi.github.io%2fpost%2fmodel-averaging%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmattelisi.github.io%2fpost%2fmodel-averaging%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmattelisi.github.io%2fpost%2fmodel-averaging%2f&amp;title=Multi-model%20estimation%20of%20psychophysical%20parameters"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fmattelisi.github.io%2fpost%2fmodel-averaging%2f&amp;title=Multi-model%20estimation%20of%20psychophysical%20parameters"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Multi-model%20estimation%20of%20psychophysical%20parameters&amp;body=https%3a%2f%2fmattelisi.github.io%2fpost%2fmodel-averaging%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        <p>In the study of human perception we often need to measure how sensitive is an observer to a stimulus variation, and how her/his sensitivity changes due to changes in the context or experimental manipulations. In many applications this can be done by estimating the slope of the psychometric function<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>, a parameter that relates to the precision with which the observer can make judgements about the stimulus. A psychometric function is generally characterized by 2-3 parameters: the slope, the threshold (or criterion), and an optional lapse parameter, which indicate the rate at which attention lapses (i.e. <em>stimulus-independent</em> errors) occur.</p>
+<p>As an example, consider the situation where an observer is asked to judge whether a signal (can be anything, from the orientation angle of a line on a screen, or the pitch of a tone, to the speed of a car or the approximate number of people in a crowd, etc.) is above or below a given reference value, call it zero. The experimenter presents the observers with many signals of different intensities, and the observer is asked to respond by making a binary choice (larger/smaller than the reference), under two different contextual conditions (before/after having a pint, with different headphones, etc.). These two conditions are expected to results in different sensitivity, and the experimenter is interested in estimating as precisely as possible the difference in sensitivity<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>. The psychometric function for one observer in the two conditions might look like this (figure below).</p>
+<div class="figure">
+<img src="/img/psyfun.png" alt="Psychometric functions. Each points is a response (0 or 1 ; some vertical jitter is added for clarity), and the lines represent the fitted psychometric model (here a cumulative Gaussian psychometric function). The two facets of the plots represent the two different conditions. It can be seen that the precision seems to be different across conditions: judgements made under condition 2 are more variable, indicating reduced sensitivity. " style="width:50.0%" />
+<p class="caption">Psychometric functions. Each points is a response (0 or 1 ; some vertical jitter is added for clarity), and the lines represent the fitted psychometric model (here a cumulative Gaussian psychometric function). The two facets of the plots represent the two different conditions. It can be seen that the precision seems to be different across conditions: judgements made under condition ‘2’ are more variable, indicating reduced sensitivity. </p>
+</div>
+<p>Our focus is on the psychometric slope, and we are not really interested in measuring the lapse rate; however it is still important to take lapses into account: it has been shown that not accounting for lapses can have a large influence on the estimates of the slope <span class="citation">(Wichmann and Hill 2001)</span>.</p>
+<div id="the-problem-with-lapses" class="section level3">
+<h3>The problem with lapses</h3>
+<p>Different observer may lapse at quite different rates, and for some of them the lapse rate is probably so small that can be considered negligible. Also, we usually don’t have hypothesis about lapses, and about whether they should or should not vary across conditions. We can base our analysis on different assumptions about when the observers may have attention lapses:</p>
+<ol style="list-style-type: decimal">
+<li>they may never lapse (or they do so with a small, negligible frequency);</li>
+<li>they may lapse at a fairly large rate, but the rate is assumed constant across conditions (reasonable, especially if conditions are randomly interleaved);</li>
+<li>they may lapse with variable rate across conditions.</li>
+</ol>
+<p>These assumptions will lead to three different psychometric models. The number can increase if we consider also different functional forms of the relationship between stimulus and choice; here for simplicity I will consider only psychometric models based on the cumulative Gaussian function (equivalent to a <em>probit</em> analysis), <span class="math inline">\(\Phi = \frac{1}{2}\left[ {1 + {\rm{erf}}\left( {\frac{{x - \mu }}{{\sigma \sqrt 2 }}} \right)} \right]\)</span>, where the mean <span class="math inline">\(\mu\)</span> woud correspond to the threshold parameter, <span class="math inline">\(\sigma\)</span> to the slope, and <span class="math inline">\(x\)</span> is the stimulus intensity. In our case the first assumption (<em>zero lapses</em>) would lead to the simplest psychometric model <span class="math display">\[
+\Psi (x, \mu_i, \sigma_i)= \Phi (\frac{x-\mu_i}{\sigma_i})
+\]</span> where the subscript <span class="math inline">\(i\)</span> indicates that the values of both mean <span class="math inline">\(\mu_i\)</span> and slope <span class="math inline">\(\sigma_i\)</span> are specific to the condition <span class="math inline">\(i\)</span>. The second assumption (<em>fixed lapse rate</em>) could correspond to the model <span class="math display">\[
+\Psi (x, \mu_i, \sigma_i, \lambda)= \lambda + (1-2\lambda) \Phi (\frac{x-\mu_i}{\sigma_i})
+\]</span> where the parameter <span class="math inline">\(\lambda\)</span> correspond to the probability of the observer making a random error. Note that this is assumed to be fixed with respect to the condition (no subscript). Finally the last assumption (<em>variable lapse rate</em>) would suggests the model <span class="math display">\[
+\Psi (x, \mu_i, \sigma_i, \lambda_i)= \lambda_i + (1-2\lambda_i) \Phi (\frac{x-\mu_i}{\sigma_i})
+\]</span> where all the parameters are allowed to vary between conditions.</p>
+<p>We have thus three different models, but we haven’t any prior information to decide which model is more likely to be correct in our case. Also, we acknowledge the fact that there are individual differences and each observer in our sample may conform to one of the three assumptions with equal probability. Hence, ideally, we would like to find a way to deal with lapses - and find the best estimates of the slope values <span class="math inline">\(\sigma_i\)</span> without committing to one of the three models.</p>
+</div>
+<div id="multi-model-inference" class="section level1">
+<h1>Multi-model inference</h1>
+<p>One possible solution to this problem is provided by a <em>multi-model</em>, or model averaging, approach <span class="citation">(Burnham and Anderson 2002)</span>. This requires calculating the <a href="https://en.wikipedia.org/wiki/Akaike_information_criterion">AIC (Akaike Information Criterion)</a><a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> for each model and subjects, and then combine the estimates according to the Akaike weights of each model. To compute the Akaike weights one typically proceed by first transforming them into differences with respect to the AIC of the best candidate model (i.e. the one with lower AIC) <span class="math display">\[
+{\Delta _m} = {\rm{AI}}{{\rm{C}}_m} - \min {\rm{AIC}}
+\]</span> From the differences in AIC, we can obtain an estimate of the relative likelihood of the model <span class="math inline">\(m\)</span> given the data <span class="math display">\[
+\mathcal{L} \left( {m|{\rm{data}}} \right) \propto \exp \left( { - \frac{1}{2}{\Delta _m}} \right)
+\]</span> Then, to obtain the Akaike weight <span class="math inline">\(w_m\)</span> of the model <span class="math inline">\(m\)</span>, the relative likelihoods are normalized (divided by their sum) <span class="math display">\[
+{w_m} = \frac{{\exp \left( { - \frac{1}{2}{\Delta _m}} \right)}}{{\mathop \sum \limits_{k = 1}^K \exp \left( { - \frac{1}{2}{\Delta _k}} \right)}}
+\]</span> Finally, one can compute the model-averaged estimate of the parameter<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>, <span class="math inline">\(\hat {\bar \sigma}\)</span>, by combining the estimate of each model according to their Akaike weight <span class="math display">\[
+\hat {\bar \sigma} = \sum\limits_{k = 1}^K {{w_k}\hat \sigma_k } 
+\]</span></p>
+</div>
+<div id="simulation-results" class="section level1">
+<h1>Simulation results</h1>
+<p>Model averaging seems a sensitive approach to deal with the uncertainty about which form of the model works is more correct in our case. To see whether it is worth doing the extra work of fitting 3 models instead of just one, I run a simulation, where I repeatedly fit and compare the estimates of the three models, with the model averaged estimate, for different values of sample sizes. In all the simulations, each observer is generated by randomly drawing parameters from a Gaussian distribution which summarize the distribution of the parameters in the population. Hence, I know the <em>true</em> difference in sensitivity in the population, and by simulating and fitting the models I can test which estimating procedure is more <em>efficient</em>. In statistics a procedure or an estimator is said to be more efficient than another one when it provides a better estimate with the same number or fewer observations. The notion of “better” clearly relies on the choice of a cost function, which for example can be the mean squared error (it is here).</p>
+<p>Additionally, in my simulations each simulated observer could, <em>with equal probability</em> <span class="math inline">\(\frac{1}{3}\)</span>, either never lapse, lapse with a constant rate across conditions, or lapse at a higher rate in the more difficult condition (condition ‘2’ where the judgements are less precise). The lapse rates were draw uniformly from the interval [0.01, 0.1], and could get as high as 0.15 in condition ‘2’. Each simulated observer ran 250 trials per condition (similar to the figure at the top of this page). I simulated dataset from <span class="math inline">\(n=5\)</span> to <span class="math inline">\(n=50\)</span>, using 100 iterations for each sample size (only 85 in the case of <span class="math inline">\(n=50\)</span> because the simulation was taking too long and I needed my laptop for more other stuff). For simplicity I assumed that the different parameters were not correlated across observers<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>. I also had my simulated observer using the same criterion across the two conditions, although this may not necessarily be true. The quantity of interest here is the difference in slope between the two condition, that is <span class="math inline">\(\sigma_2 - \sigma_1\)</span>.</p>
+<p>First, I examined the mean squared error of each of the models’ estimates, and of the model-averaged estimate. This is the average squared difference between the estimate and the true value. <img src="/img/mse.png" alt="" style="width:60.0%" /> The results shows (unless my color blindness fooled me) that the model-averaged estimate attains always the smaller error. Note also that the error tend to decrease exponentially with the sample size. Interestingly, the worst model seems to be the one that allow for the lapses to vary across conditions. This may be because the change in the lapse rate across condition was - when present - relatively small, but also because this model has a larger number of parameters, and thus produces more variable estimates (that is with higher standard errors) than smaller model. Indeed, given that I know the ‘true’ value of the parameres in this simulation settings, I can divide the error into the two subcomponents of variance and bias (see <a href="http://scott.fortmann-roe.com/docs/BiasVariance.html">this page</a> for a nice introduction to the bias-variance tradeoff). The bias is the difference between the expected estimate (averaged over many repetitions/iterations) of the same model and the true quantity that we want to estimate. The variance is simply the variability of the model estimates, i.e. how much they oscillate around the expected estimate.</p>
+<p>Here is a plot of the variance. Indeed it can be seen that the variable-lapse model, which has more parameters, is the one that produces more variable estimates. There is however little difference between the other two models’ and the multi-model estimates <img src="/img/variance.png" alt="" style="width:60.0%" /></p>
+<p>And here is the bias. This is very satisfactory, as it shows that while all individual models produced biased estimates, the bias of the model-averaged estimates is zero, or very close to zero. <img src="/img/bias.png" alt="" style="width:60.0%" /> In sum, by averaging models of different levels of complexity according to their relative likelihood, I was able to simultaneously decrease both the variance and the bias of my estimates, and achieve a greater efficiency. Model averaging seems to be the ideal procedure in this specific settings where the observer would belong to one of the three categories (i.e., she/he would conform to one of the three assumptions) with equal probability. However I think (although I haven’t checked) that it would perform at least as well as any of the other model even in cases where a single category is largely predominant over the other.</p>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references">
+<div id="ref-Burnham2002a">
+<p>Burnham, Kenneth P., and David R. Anderson. 2002. <em>Model Selection and Multimodel Inference</em>. 2nd editio. New York, NY: Springer New York. doi:<a href="https://doi.org/10.1007/b97636">10.1007/b97636</a>.</p>
+</div>
+<div id="ref-Wichmann2001">
+<p>Wichmann, F a, and N J Hill. 2001. “The psychometric function: I. Fitting, sampling, and goodness of fit.” <em>Perception &amp; Psychophysics</em> 63 (8): 1293–1313. <a href="http://www.ncbi.nlm.nih.gov/pubmed/11800458" class="uri">http://www.ncbi.nlm.nih.gov/pubmed/11800458</a>.</p>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>The psychometric function is a statistical model that predicts the probabilities of the observer response (e.g. “stimulus A has a larger/smaller instensity than stimulus B”), conditional to the stimulus and the experimental condition.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>A good experimenter should do that. A bad experimenter might just be interested in obtaining <span class="math inline">\(p&lt;.05\)</span>. See <a href="http://cerco.ups-tlse.fr/-Charte-statistique-?lang=fr">this page</a>, compiled by Jean-Michel Hupé, for some references and guidelines against <span class="math inline">\(p\)</span>-hacking and the misuse of statistical tools in neuroscience.<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>The AIC of a model is computed as <span class="math inline">\({\rm{AIC}} = 2k - 2\log \left( \mathcal{L} \right)\)</span>, where <span class="math inline">\(k\)</span> is the number of free parameters, and <span class="math inline">\(\mathcal{L}\)</span> is the maximum value of the likelihood function of that model.<a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p>Here it is a parameter common to all models. See the book of Burnham &amp; Andersen for methods to methods to deal with different situations <span class="citation">(Burnham and Anderson 2002)</span>.<a href="#fnref4">↩</a></p></li>
+<li id="fn5"><p>Such correlation when present can be modelled using a mixed-effect approach. See my tutorial on mized-effects model in the <a href="https://mattelisi.github.io/#notes"></a> section of this website.<a href="#fnref5">↩</a></p></li>
+</ol>
+</div>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/r">R</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/psychophysics">psychophysics</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/sensitivity">sensitivity</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+
+
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mattelisi" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Matteo Lisi &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//mattelisi.disqus.com/count.js" async></script>
+    
+
+    
+    <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD12zE83xCTsL_ohYvAPoW43ZdpsvD_rGU"></script>
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+
