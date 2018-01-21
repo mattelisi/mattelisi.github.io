@@ -11,6 +11,60 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Generating correlated random variables with the Cholesky factorization</title>
+      <link>https://mattelisi.github.io/post/generating-correlated-random-variables-with-the-cholesky-factorization/</link>
+      <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattelisi.github.io/post/generating-correlated-random-variables-with-the-cholesky-factorization/</guid>
+      <description>&lt;p&gt;Generating random variables with given variance-covariance matrix can be useful for many purposes, for example for generating random intercepts and slopes given with given correlations when simulating a hierarchical, or mixed-effects, model. This can be achieved efficiently with the &lt;a href=&#34;https://en.wikipedia.org/wiki/Cholesky_decomposition&#34;&gt;Choleski factorization&lt;/a&gt;, which is a method to find the &lt;em&gt;square root&lt;/em&gt; of a matrix. (The square root of a matrix &lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt; is another matrix &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt; such that &lt;span class=&#34;math inline&#34;&gt;\({L^T}L = C\)&lt;/span&gt;.)&lt;/p&gt;
+&lt;p&gt;Suppose you want to create 2 variables, having a Gaussian distribution, and a positive correlation, say &lt;span class=&#34;math inline&#34;&gt;\(0.7\)&lt;/span&gt;. The first step is to define the correlation matrix &lt;span class=&#34;math display&#34;&gt;\[C = \left( {\begin{array}{*{20}{c}}
+1&amp;amp;{0.7}\\
+{0.7}&amp;amp;1
+\end{array}} \right)\]&lt;/span&gt; Elements in the diagonal can be understood as the correlation of each variable with itself, and therefore are 1, while elements outside the diagonal indicate the desired correlation. In R&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;C &amp;lt;- matrix(c(1,0.7,0.7,1),2,2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next one can use the &lt;code&gt;chol()&lt;/code&gt; function to compute the Cholesky factor. (The function provides the upper triangular square root of &lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt;).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;L &amp;lt;- chol(C)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you multiply the matrix &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt; with itself you get back the original correlation matrix.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t(L) %*% L&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      [,1] [,2]
+## [1,]  1.0  0.7
+## [2,]  0.7  1.0&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then we need another matrix with the desired standard deviation in the diagonal (in this example I choose 1 and 4)&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tau &amp;lt;- diag(c(1,4))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Multiply that matrix with the lower triangular square root of the correlation matrix (can be obtained by taking the transpose of &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt;)&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Lambda &amp;lt;- tau %*% t(L)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we can generate values for 2 independent random variables &lt;span class=&#34;math inline&#34;&gt;\(z\sim\cal N\left( {0,1} \right)\)&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Z &amp;lt;- rbind(rnorm(5000),rnorm(5000))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, to introduce the correlations , multiply them with the &lt;code&gt;Lambda&lt;/code&gt; obtained above&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;X &amp;lt;- Lambda %*% Z&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now plot the results &lt;img src=&#34;https://mattelisi.github.io/post/2018-01-21-generating-correlated-random-variables-with-the-cholesky-factorization_files/figure-html/fig1-1.png&#34; width=&#34;729.6&#34; /&gt; We can verify that the correlation as estimated from the sample corresponds (or is close enough) to the generative value.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# correlation in the generated sample
+cor(X[1,],X[2,])&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.6990432&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;why-does-it-work&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Why does it work?&lt;/h1&gt;
+&lt;p&gt;The covariance matrix of the initial, uncorrelated sample is &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{E} \left( Z Z^T \right) = I\)&lt;/span&gt;, that is the identity matrix, since they have zero mean and unit variance &lt;span class=&#34;math inline&#34;&gt;\(z\sim\cal N\left( {0,1} \right)\)&lt;/span&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Let’s suppose that the desired covariance matrix is &lt;span class=&#34;math inline&#34;&gt;\(\Sigma\)&lt;/span&gt;; since it is symmetric and positive defined it is possible to obtain the Cholesky factorization &lt;span class=&#34;math inline&#34;&gt;\({L^T}L = \Sigma\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;If we then compute a new random vector as &lt;span class=&#34;math inline&#34;&gt;\(X=LZ\)&lt;/span&gt;, we have that its covariance matrix is &lt;span class=&#34;math display&#34;&gt;\[
+\begin{align}
+\mathbb{E} \left(XX^T\right) &amp;amp;= \mathbb{E} \left((LZ)(LZ)^T \right) \\
+&amp;amp;= \mathbb{E} \left(LZ Z^T L^T\right) \\
+&amp;amp;= L \mathbb{E} \left(ZZ^T \right) L^T \\
+&amp;amp;= LIL^T = LL^T = \Sigma \\
+\end{align}
+\]&lt;/span&gt; Therefore the new random vector &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; has the covariance matrix &lt;span class=&#34;math inline&#34;&gt;\(\Sigma\)&lt;/span&gt;.&lt;br /&gt;
+(The third step is justified because the expected value is a linear operator, therefore &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{E}(cX) = c\mathbb{E}(X)\)&lt;/span&gt;.)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;More generally the variance-covariance matrix is &lt;span class=&#34;math inline&#34;&gt;\(\Sigma = \mathbb{E}\left( {X{X^T}} \right) - \mathbb{E}\left( X \right) \mathbb{E}\left(X \right)^T\)&lt;/span&gt;. &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{E}\)&lt;/span&gt; indicates the expected value.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Multi-model estimation of psychophysical parameters</title>
       <link>https://mattelisi.github.io/post/model-averaging/</link>
       <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
@@ -287,15 +341,6 @@ i^2 = j^2 = k^2 = ijk =  - 1
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://mattelisi.github.io/publication/desantis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Space coding for sensorimotor transformations can emerge through unsupervised learning</title>
-      <link>https://mattelisi.github.io/publication/unsupervised-space-coding/</link>
-      <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/publication/unsupervised-space-coding/</guid>
       <description></description>
     </item>
     
