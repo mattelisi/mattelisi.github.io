@@ -24,7 +24,7 @@
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;C &amp;lt;- matrix(c(1,0.7,0.7,1),2,2)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Next one can use the &lt;code&gt;chol()&lt;/code&gt; function to compute the Cholesky factor. (The function provides the upper triangular square root of &lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt;).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;L &amp;lt;- chol(C)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If you multiply the matrix &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt; with itself you get back the original correlation matrix.&lt;/p&gt;
+&lt;p&gt;If you multiply the matrix &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt; with itself you get back the original correlation matrix (R output below).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t(L) %*% L&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##      [,1] [,2]
 ## [1,]  1.0  0.7
@@ -40,7 +40,7 @@
 &lt;p&gt;Now plot the results &lt;img src=&#34;https://mattelisi.github.io/post/2018-01-21-generating-correlated-random-variables-with-the-cholesky-factorization_files/figure-html/fig1-1.png&#34; width=&#34;729.6&#34; /&gt; We can verify that the correlation as estimated from the sample corresponds (or is close enough) to the generative value.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# correlation in the generated sample
 cor(X[1,],X[2,])&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 0.6990432&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.6972576&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;why-does-it-work&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Why does it work?&lt;/h1&gt;
 &lt;p&gt;The covariance matrix of the initial, uncorrelated sample is &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{E} \left( Z Z^T \right) = I\)&lt;/span&gt;, that is the identity matrix, since they have zero mean and unit variance &lt;span class=&#34;math inline&#34;&gt;\(z\sim\cal N\left( {0,1} \right)\)&lt;/span&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;

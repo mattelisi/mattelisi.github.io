@@ -253,6 +253,9 @@
   <span class="article-categories">
     <i class="fa fa-folder"></i>
     
+    <a href="/categories/self-study">self-study</a
+    >, 
+    
     <a href="/categories/note">note</a
     >
     
@@ -316,7 +319,7 @@
 <pre class="r"><code>C &lt;- matrix(c(1,0.7,0.7,1),2,2)</code></pre>
 <p>Next one can use the <code>chol()</code> function to compute the Cholesky factor. (The function provides the upper triangular square root of <span class="math inline">\(C\)</span>).</p>
 <pre class="r"><code>L &lt;- chol(C)</code></pre>
-<p>If you multiply the matrix <span class="math inline">\(L\)</span> with itself you get back the original correlation matrix.</p>
+<p>If you multiply the matrix <span class="math inline">\(L\)</span> with itself you get back the original correlation matrix (R output below).</p>
 <pre class="r"><code>t(L) %*% L</code></pre>
 <pre><code>##      [,1] [,2]
 ## [1,]  1.0  0.7
@@ -332,7 +335,7 @@
 <p>Now plot the results <img src="/post/2018-01-21-generating-correlated-random-variables-with-the-cholesky-factorization_files/figure-html/fig1-1.png" width="729.6" /> We can verify that the correlation as estimated from the sample corresponds (or is close enough) to the generative value.</p>
 <pre class="r"><code># correlation in the generated sample
 cor(X[1,],X[2,])</code></pre>
-<pre><code>## [1] 0.6990432</code></pre>
+<pre><code>## [1] 0.6972576</code></pre>
 <div id="why-does-it-work" class="section level1">
 <h1>Why does it work?</h1>
 <p>The covariance matrix of the initial, uncorrelated sample is <span class="math inline">\(\mathbb{E} \left( Z Z^T \right) = I\)</span>, that is the identity matrix, since they have zero mean and unit variance <span class="math inline">\(z\sim\cal N\left( {0,1} \right)\)</span><a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p>
