@@ -28,9 +28,7 @@
   
     
     
-      
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-      
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
     
   
   
@@ -108,7 +106,7 @@
         <span class="icon-bar"></span>
       </button>
       
-      <a class="navbar-brand" href="/">juicy bits</a>
+      <a class="navbar-brand" href="/"><img src="/img/shademe.png" alt="juicy bits"></a>
     </div>
 
     
@@ -242,9 +240,6 @@
 
   
   
-  <span class="middot-divider"></span>
-  <a href="https://mattelisi.github.io/post/generating-correlated-random-variables-with-the-cholesky-factorization/#disqus_thread"></a>
-  
 
   
   
@@ -252,6 +247,9 @@
   <span class="middot-divider"></span>
   <span class="article-categories">
     <i class="fa fa-folder"></i>
+    
+    <a href="/categories/r">R</a
+    >, 
     
     <a href="/categories/self-study">self-study</a
     >, 
@@ -311,7 +309,7 @@
 
 
       <div class="article-style" itemprop="articleBody">
-        <p>Generating random variables with given variance-covariance matrix can be useful for many purposes, for example for generating random intercepts and slopes given with given correlations when simulating a hierarchical, or mixed-effects, model. This can be achieved efficiently with the <a href="https://en.wikipedia.org/wiki/Cholesky_decomposition">Choleski factorization</a>, which is a method to find the <em>square root</em> of a matrix. (The square root of a matrix <span class="math inline">\(C\)</span> is another matrix <span class="math inline">\(L\)</span> such that <span class="math inline">\({L^T}L = C\)</span>.)</p>
+        <p>Generating random variables with given variance-covariance matrix can be useful for many purposes. For example it is necessary for generating random intercepts and slopes with given correlations when simulating a hierarchical, or mixed-effects, model. This can be achieved efficiently with the <a href="https://en.wikipedia.org/wiki/Cholesky_decomposition">Choleski factorization</a>, which is a method to find the <em>square root</em> of a matrix. (The square root of a matrix <span class="math inline">\(C\)</span> is another matrix <span class="math inline">\(L\)</span> such that <span class="math inline">\({L^T}L = C\)</span>.)</p>
 <p>Suppose you want to create 2 variables, having a Gaussian distribution, and a positive correlation, say <span class="math inline">\(0.7\)</span>. The first step is to define the correlation matrix <span class="math display">\[C = \left( {\begin{array}{*{20}{c}}
 1&amp;{0.7}\\
 {0.7}&amp;1
@@ -320,10 +318,10 @@
 <p>Next one can use the <code>chol()</code> function to compute the Cholesky factor. (The function provides the upper triangular square root of <span class="math inline">\(C\)</span>).</p>
 <pre class="r"><code>L &lt;- chol(C)</code></pre>
 <p>If you multiply the matrix <span class="math inline">\(L\)</span> with itself you get back the original correlation matrix (R output below).</p>
-<pre class="r"><code>t(L) %*% L</code></pre>
-<pre><code>##      [,1] [,2]
-## [1,]  1.0  0.7
-## [2,]  0.7  1.0</code></pre>
+<pre class="r"><code>t(L) %*% L
+     [,1] [,2]
+[1,]  1.0  0.7
+[2,]  0.7  1.0</code></pre>
 <p>Then we need another matrix with the desired standard deviation in the diagonal (in this example I choose 1 and 4)</p>
 <pre class="r"><code>tau &lt;- diag(c(1,4))</code></pre>
 <p>Multiply that matrix with the lower triangular square root of the correlation matrix (can be obtained by taking the transpose of <span class="math inline">\(L\)</span>)</p>
@@ -334,12 +332,12 @@
 <pre class="r"><code>X &lt;- Lambda %*% Z</code></pre>
 <p>Now plot the results <img src="/post/2018-01-21-generating-correlated-random-variables-with-the-cholesky-factorization_files/figure-html/fig1-1.png" width="729.6" /> We can verify that the correlation as estimated from the sample corresponds (or is close enough) to the generative value.</p>
 <pre class="r"><code># correlation in the generated sample
-cor(X[1,],X[2,])</code></pre>
-<pre><code>## [1] 0.6972576</code></pre>
+cor(X[1,],X[2,])
+[1] 0.687126</code></pre>
 <div id="why-does-it-work" class="section level1">
 <h1>Why does it work?</h1>
 <p>The covariance matrix of the initial, uncorrelated sample is <span class="math inline">\(\mathbb{E} \left( Z Z^T \right) = I\)</span>, that is the identity matrix, since they have zero mean and unit variance <span class="math inline">\(z\sim\cal N\left( {0,1} \right)\)</span><a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p>
-<p>Let’s suppose that the desired covariance matrix is <span class="math inline">\(\Sigma\)</span>; since it is symmetric and positive defined it is possible to obtain the Cholesky factorization <span class="math inline">\({L^T}L = \Sigma\)</span>.</p>
+<p>Let’s suppose that the desired covariance matrix is <span class="math inline">\(\Sigma\)</span>; since it is symmetric and positive defined it is possible to obtain the Cholesky factorization <span class="math inline">\(L{L^T} = \Sigma\)</span>.</p>
 <p>If we then compute a new random vector as <span class="math inline">\(X=LZ\)</span>, we have that its covariance matrix is <span class="math display">\[
 \begin{align}
 \mathbb{E} \left(XX^T\right) &amp;= \mathbb{E} \left((LZ)(LZ)^T \right) \\
@@ -347,8 +345,8 @@ cor(X[1,],X[2,])</code></pre>
 &amp;= L \mathbb{E} \left(ZZ^T \right) L^T \\
 &amp;= LIL^T = LL^T = \Sigma \\
 \end{align}
-\]</span> Therefore the new random vector <span class="math inline">\(X\)</span> has the covariance matrix <span class="math inline">\(\Sigma\)</span>.<br />
-(The third step is justified because the expected value is a linear operator, therefore <span class="math inline">\(\mathbb{E}(cX) = c\mathbb{E}(X)\)</span>.)</p>
+\]</span> Therefore the new random vector <span class="math inline">\(X\)</span> has the covariance matrix <span class="math inline">\(\Sigma\)</span>.</p>
+<p>The third step is justified because the expected value is a linear operator, therefore <span class="math inline">\(\mathbb{E}(cX) = c\mathbb{E}(X)\)</span>. Also <span class="math inline">\((AB)^T = B^T A^T\)</span>, note that the order of the factor reverses.</p>
 </div>
 <div class="footnotes">
 <hr />
@@ -365,8 +363,6 @@ cor(X[1,],X[2,])</code></pre>
 <div class="article-tags">
   
   <a class="btn btn-primary btn-outline" href="/tags/r">R</a>
-  
-  <a class="btn btn-primary btn-outline" href="/tags/mixed-effects">mixed-effects</a>
   
   <a class="btn btn-primary btn-outline" href="/tags/cholesky">Cholesky</a>
   
@@ -394,6 +390,20 @@ cor(X[1,],X[2,])</code></pre>
 </div>
 
 
+
+<div class="container article-widget">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://mattelisi.github.io/post/model-averaging/"><span
+      aria-hidden="true">&larr;</span> Multi-model estimation of psychophysical parameters</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
 
 
 <div class="article-container">
@@ -474,8 +484,6 @@ cor(X[1,],X[2,])</code></pre>
 
     
     
-    <script id="dsq-count-scr" src="//mattelisi.disqus.com/count.js" async></script>
-    
 
     
     <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD12zE83xCTsL_ohYvAPoW43ZdpsvD_rGU"></script>
@@ -500,6 +508,8 @@ cor(X[1,],X[2,])</code></pre>
       <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
       
 
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
       
 
       
