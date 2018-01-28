@@ -333,7 +333,7 @@
 <p>Now plot the results <img src="/post/2018-01-21-generating-correlated-random-variables-with-the-cholesky-factorization_files/figure-html/fig1-1.png" width="729.6" /> We can verify that the correlation as estimated from the sample corresponds (or is close enough) to the generative value.</p>
 <pre class="r"><code># correlation in the generated sample
 cor(X[1,],X[2,])
-[1] 0.687126</code></pre>
+[1] 0.6904862</code></pre>
 <div id="why-does-it-work" class="section level1">
 <h1>Why does it work?</h1>
 <p>The covariance matrix of the initial, uncorrelated sample is <span class="math inline">\(\mathbb{E} \left( Z Z^T \right) = I\)</span>, that is the identity matrix, since they have zero mean and unit variance <span class="math inline">\(z\sim\cal N\left( {0,1} \right)\)</span><a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p>

@@ -234,7 +234,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    14 min read
+    12 min read
   </span>
   
 
@@ -358,8 +358,7 @@
 <p>The (clumsy written) code for the simulations is shown below:</p>
 <pre class="r"><code># This load some handy functions that are required below
 library(RCurl)
-script &lt;- getURL(&quot;https://raw.githubusercontent.com/mattelisi/miscR/master/miscFunctions.R&quot;, 
-    ssl.verifypeer = FALSE)
+script &lt;- getURL(&quot;https://raw.githubusercontent.com/mattelisi/miscR/master/miscFunctions.R&quot;, ssl.verifypeer = FALSE)
 eval(parse(text = script))
 
 set.seed(1)
@@ -369,187 +368,177 @@ n_sim &lt;- 100
 sample_sizes &lt;- seq(5, 100, 5)
 
 # parameters
-R &lt;- 3  # range of signal levels (-R, R)
+R &lt;- 3 # range of signal levels (-R, R)
 n_trial &lt;- 500
-mu_par &lt;- c(0, 0.25)  # population (mean, std.)
+mu_par &lt;- c(0, 0.25) # population (mean, std.)
 sigma_par &lt;- c(1, 0.25)
 sigmaDiff_par &lt;- c(1, 0.5)
 lapse_range &lt;- c(0.01, 0.1)
 
 # start
-res &lt;- {
-}
-for (n_subjects in sample_sizes) {
-    for (iteration in 1:n_sim) {
-        
-        # make dataset
-        d &lt;- {
+res &lt;- {}
+for(n_subjects in sample_sizes){
+for(iteration in 1:n_sim){  
+    
+    # make dataset
+    d &lt;- {}
+    for(i in 1:n_subjects){
+        d_ &lt;- data.frame(x=runif(n_trial)*2*R-R, 
+                    condition=as.factor(rep(1:2,n_trial/2)), 
+                    id=i, r=NA)
+
+        r_i &lt;- runif(1) # draw observer type (wrt lapses)
+
+        if(r_i&lt;1/3){
+            # no lapses
+            par1 &lt;- c(rnorm(1,mu_par[1],mu_par[2]), 
+                abs(rnorm(1,sigma_par[1],sigma_par[2])),
+                0)
+            par2 &lt;- c(par1[1], 
+                par1[2]+abs(rnorm(1,sigmaDiff_par[1],sigmaDiff_par[2])),
+                0) 
+
+        }else if(r_i&gt;=1/3 &amp; r_i&lt;2/3){
+            # fixed lapses
+            l_i &lt;- runif(1)*diff(lapse_range) + lapse_range[1]
+            par1 &lt;- c(rnorm(1,mu_par[1],mu_par[2]), 
+                abs(rnorm(1,sigma_par[1],sigma_par[2])),
+                l_i)
+            par2 &lt;- c(par1[1], 
+                par1[2]+abs(rnorm(1,sigmaDiff_par[1],sigmaDiff_par[2])), 
+                l_i) 
+
+        }else{
+            # varying lapses
+            l_i_1 &lt;- runif(1)*diff(lapse_range) + lapse_range[1]
+            l_i_2 &lt;- l_i_1 + (runif(1)*diff(lapse_range) + lapse_range[1])/2
+            par1 &lt;- c(rnorm(1,mu_par[1],mu_par[2]), 
+                abs(rnorm(1,sigma_par[1],sigma_par[2])),
+                l_i_1)
+            par2 &lt;- c(par1[1], 
+                par1[2]+abs(rnorm(1,sigmaDiff_par[1],sigmaDiff_par[2])), 
+                l_i_2) 
         }
-        for (i in 1:n_subjects) {
-            d_ &lt;- data.frame(x = runif(n_trial) * 2 * R - R, condition = as.factor(rep(1:2, 
-                n_trial/2)), id = i, r = NA)
-            
-            r_i &lt;- runif(1)  # draw observer type (wrt lapses)
-            
-            if (r_i &lt; 1/3) {
-                # no lapses
-                par1 &lt;- c(rnorm(1, mu_par[1], mu_par[2]), abs(rnorm(1, sigma_par[1], 
-                  sigma_par[2])), 0)
-                par2 &lt;- c(par1[1], par1[2] + abs(rnorm(1, sigmaDiff_par[1], 
-                  sigmaDiff_par[2])), 0)
-                
-            } else if (r_i &gt;= 1/3 &amp; r_i &lt; 2/3) {
-                # fixed lapses
-                l_i &lt;- runif(1) * diff(lapse_range) + lapse_range[1]
-                par1 &lt;- c(rnorm(1, mu_par[1], mu_par[2]), abs(rnorm(1, sigma_par[1], 
-                  sigma_par[2])), l_i)
-                par2 &lt;- c(par1[1], par1[2] + abs(rnorm(1, sigmaDiff_par[1], 
-                  sigmaDiff_par[2])), l_i)
-                
-            } else {
-                # varying lapses
-                l_i_1 &lt;- runif(1) * diff(lapse_range) + lapse_range[1]
-                l_i_2 &lt;- l_i_1 + (runif(1) * diff(lapse_range) + lapse_range[1])/2
-                par1 &lt;- c(rnorm(1, mu_par[1], mu_par[2]), abs(rnorm(1, sigma_par[1], 
-                  sigma_par[2])), l_i_1)
-                par2 &lt;- c(par1[1], par1[2] + abs(rnorm(1, sigmaDiff_par[1], 
-                  sigmaDiff_par[2])), l_i_2)
-            }
-            
-            ## simulate observer
-            for (i in 1:sum(d_$condition == &quot;1&quot;)) {
-                d_$r[d_$condition == &quot;1&quot;][i] &lt;- rbinom(1, 1, psy_3par(d_$x[d_$condition == 
-                  &quot;1&quot;][i], par1[1], par1[2], par1[3]))
-            }
-            for (i in 1:sum(d_$condition == &quot;2&quot;)) {
-                d_$r[d_$condition == &quot;2&quot;][i] &lt;- rbinom(1, 1, psy_3par(d_$x[d_$condition == 
-                  &quot;2&quot;][i], par2[1], par2[2], par2[3]))
-            }
-            d &lt;- rbind(d, d_)
+
+        ## simulate observer
+        for(i in 1:sum(d_$condition==&quot;1&quot;)){
+            d_$r[d_$condition==&quot;1&quot;][i] &lt;- rbinom(1,1,
+                psy_3par(d_$x[d_$condition==&quot;1&quot;][i],par1[1],par1[2],par1[3]))
         }
-        
-        
-        ## model fitting
-        
-        # lapse assumed to be 0
-        fit0 &lt;- {
+        for(i in 1:sum(d_$condition==&quot;2&quot;)){
+            d_$r[d_$condition==&quot;2&quot;][i] &lt;- rbinom(1,1,
+                psy_3par(d_$x[d_$condition==&quot;2&quot;][i],par2[1],par2[2],par2[3]))
         }
-        for (j in unique(d$id)) {
-            m0 &lt;- glm(r ~ x * condition, family = binomial(probit), d[d$id == 
-                j, ])
-            sigma_1 &lt;- 1/coef(m0)[2]
-            sigma_2 &lt;- 1/(coef(m0)[2] + coef(m0)[4])
-            fit0 &lt;- rbind(fit0, data.frame(id = j, sigma_1, sigma_2, loglik = logLik(m0), 
-                aic = AIC(m0), model = &quot;zero_lapse&quot;))
-        }
-        
-        # fix lapse rate
-        start_p &lt;- c(rep(c(0, 1), 2), 0)
-        l_b &lt;- c(rep(c(-5, 0.05), 2), 0)
-        u_b &lt;- c(rep(c(5, 20), 2), 0.5)
-        fit1 &lt;- {
-        }
-        
-        for (j in unique(d$id)) {
-            ftm &lt;- optimx::optimx(par = start_p, lnorm_3par_multi, d = d[d$id == 
-                j, ], method = &quot;bobyqa&quot;, lower = l_b, upper = u_b)
-            
-            negloglik &lt;- ftm$value
-            aic &lt;- 2 * 5 + 2 * negloglik
-            # fitted parameters are the first n numbers of optimx output
-            sigma_1 &lt;- unlist(ftm[1, 2])
-            sigma_2 &lt;- unlist(ftm[1, 4])
-            fit1 &lt;- rbind(fit1, data.frame(id = j, sigma_1, sigma_2, loglik = -negloglik, 
-                aic, model = &quot;fix_lapse&quot;))
-        }
-        
-        
-        # varying lapse rate
-        start_p &lt;- c(0, 1, 0)
-        l_b &lt;- c(-5, 0.05, 0)
-        u_b &lt;- c(5, 20, 0.5)
-        fit2 &lt;- {
-        }
-        for (j in unique(d$id)) {
-            # fit condition 1
-            ftm &lt;- optimx::optimx(par = start_p, lnorm_3par, d = d[d$id == j &amp; 
-                d$condition == &quot;1&quot;, ], method = &quot;bobyqa&quot;, lower = l_b, upper = u_b)
-            negloglik_1 &lt;- ftm$value
-            sigma_1 &lt;- unlist(ftm[1, 2])
-            # fit condition 2
-            ftm &lt;- optimx::optimx(par = start_p, lnorm_3par, d = d[d$id == j &amp; 
-                d$condition == &quot;2&quot;, ], method = &quot;bobyqa&quot;, lower = l_b, upper = u_b)
-            negloglik_2 &lt;- ftm$value
-            sigma_2 &lt;- unlist(ftm[1, 2])
-            
-            aic &lt;- 2 * 6 + 2 * (negloglik_1 + negloglik_2)
-            fit2 &lt;- rbind(fit2, data.frame(id = j, sigma_1, sigma_2, loglik = -negloglik_1 - 
-                negloglik_2, aic, model = &quot;var_lapse&quot;))
-        }
-        
-        # compute estimates of the change in slope
-        effect_0 &lt;- mean((fit0$sigma_2 - fit0$sigma_1))
-        effect_1 &lt;- mean((fit1$sigma_2 - fit1$sigma_1))
-        effect_2 &lt;- mean((fit2$sigma_2 - fit2$sigma_1))
-        
-        effect_av &lt;- {
-        }
-        for (j in unique(fit0$id)) {
-            dj &lt;- rbind(fit0[fit0$id == j, ], fit1[fit1$id == j, ], fit2[fit2$id == 
-                j, ])
-            min_aic &lt;- min(dj$aic)
-            dj$delta &lt;- dj$aic - min_aic
-            den &lt;- sum(exp(-0.5 * c(dj$delta)))
-            dj$w &lt;- exp(-0.5 * dj$delta)/den
-            effect_av &lt;- c(effect_av, sum((dj$sigma_2 - dj$sigma_1) * dj$w))
-        }
-        effect_av &lt;- mean(effect_av)
-        
-        # store results
-        res &lt;- rbind(res, data.frame(effect_0, effect_1, effect_2, effect_av, 
-            effect_true = sigmaDiff_par[1], n_subjects, n_trial, iteration))
-        
+        d &lt;- rbind(d,d_)
     }
+    
+    
+    ## model fitting
+
+    # lapse assumed to be 0
+    fit0 &lt;- {}
+    for(j in unique(d$id)){
+        m0 &lt;- glm(r~x*condition, family=binomial(probit),d[d$id==j,])
+        sigma_1 &lt;- 1/coef(m0)[2]
+        sigma_2 &lt;- 1/(coef(m0)[2] + coef(m0)[4])
+        fit0 &lt;- rbind(fit0, data.frame(id=j, sigma_1, sigma_2, 
+                loglik=logLik(m0), aic=AIC(m0), model=&quot;zero_lapse&quot;) )
+    }
+    
+    # fix lapse rate 
+    start_p &lt;- c(rep(c(0,1),2), 0)
+    l_b &lt;- c(rep(c(-5, 0.05),2), 0)
+    u_b &lt;- c(rep(c(5, 20), 2), 0.5)
+    fit1 &lt;- {}
+
+    for(j in unique(d$id)){
+        ftm &lt;- optimx::optimx(par = start_p, lnorm_3par_multi , 
+                d=d[d$id==j,],  method=&quot;bobyqa&quot;, 
+                lower =l_b, upper =u_b)
+        
+        negloglik &lt;- ftm$value
+        aic &lt;- 2*5 + 2*negloglik
+        # fitted parameters are the first n numbers of optimx output
+        sigma_1&lt;-unlist(ftm [1,2])
+        sigma_2&lt;-unlist(ftm [1,4])
+        fit1 &lt;- rbind(fit1, data.frame(id=j, sigma_1, sigma_2, 
+                loglik=-negloglik, aic, model=&quot;fix_lapse&quot;)  )
+    }
+    
+    
+    # varying lapse rate
+    start_p &lt;- c(0,1, 0)
+    l_b &lt;- c(-5, 0.05, 0)
+    u_b &lt;- c(5, 20, 0.5)
+    fit2 &lt;- {}
+    for(j in unique(d$id)){
+        # fit condition 1
+        ftm &lt;- optimx::optimx(par = start_p, lnorm_3par , 
+                d=d[d$id==j &amp; d$condition==&quot;1&quot;,],  
+                method=&quot;bobyqa&quot;, lower =l_b, upper =u_b) 
+        negloglik_1 &lt;- ftm$value; sigma_1 &lt;- unlist(ftm [1,2])
+        # fit condition 2
+        ftm &lt;- optimx::optimx(par = start_p, lnorm_3par , 
+                d=d[d$id==j &amp; d$condition==&quot;2&quot;,],  
+                method=&quot;bobyqa&quot;, lower =l_b, upper =u_b) 
+        negloglik_2 &lt;- ftm$value; sigma_2 &lt;- unlist(ftm [1,2])
+
+        aic &lt;- 2*6 + 2*(negloglik_1 + negloglik_2)
+        fit2 &lt;- rbind(fit2, data.frame(id=j, sigma_1, sigma_2, 
+                loglik=-negloglik_1-negloglik_2, aic, model=&quot;var_lapse&quot;))
+    }
+    
+    # compute estimates of the change in slope
+    effect_0 &lt;- mean((fit0$sigma_2-fit0$sigma_1))
+    effect_1 &lt;- mean((fit1$sigma_2-fit1$sigma_1))
+    effect_2 &lt;- mean((fit2$sigma_2-fit2$sigma_1))
+    
+    effect_av &lt;- {}
+    for(j in unique(fit0$id)){
+        dj &lt;- rbind(fit0[fit0$id==j,], fit1[fit1$id==j,], fit2[fit2$id==j,])
+        min_aic &lt;- min(dj$aic)
+        dj$delta &lt;- dj$aic - min_aic
+        den &lt;- sum(exp(-0.5*c(dj$delta)))
+        dj$w &lt;- exp(-0.5*dj$delta) / den
+        effect_av &lt;- c(effect_av, sum((dj$sigma_2-dj$sigma_1) * dj$w))
+    }
+    effect_av &lt;- mean(effect_av)
+    
+    # store results
+    res &lt;- rbind(res, data.frame(effect_0, effect_1, effect_2, 
+            effect_av, effect_true=sigmaDiff_par[1], 
+            n_subjects, n_trial, iteration))
+
+}
 }
 
 ## PLOT RESULTS
 library(ggplot2)
 library(reshape2)
 
-res$err0 &lt;- (res$effect_0 - 1)^2
-res$err1 &lt;- (res$effect_1 - 1)^2
-res$err2 &lt;- (res$effect_2 - 1)^2
-res$errav &lt;- (res$effect_av - 1)^2
+res$err0 &lt;- (res$effect_0 -1)^2
+res$err1 &lt;- (res$effect_1 -1)^2
+res$err2 &lt;- (res$effect_2 -1)^2
+res$errav &lt;- (res$effect_av -1)^2
 
 # plot MSE
-ares &lt;- aggregate(cbind(err0, err1, err2, errav) ~ n_subjects, res, mean)
-ares &lt;- melt(ares, id.vars = c(&quot;n_subjects&quot;))
-levels(ares$variable) &lt;- c(&quot;no lapses&quot;, &quot;fixed lapse rate&quot;, &quot;variable lapse rate&quot;, 
-    &quot;model averaged&quot;)
-ggplot(ares, aes(x = n_subjects, y = value, color = variable)) + geom_line(size = 1) + 
-    nice_theme + scale_color_brewer(palette = &quot;Dark2&quot;, name = &quot;model&quot;) + labs(x = &quot;number of subjects&quot;, 
-    y = &quot;mean squared error&quot;) + geom_hline(yintercept = 0, lty = 2, size = 0.2)
+ares &lt;- aggregate(cbind(err0,err1,err2,errav)~n_subjects, res, mean)
+ares &lt;- melt(ares, id.vars=c(&quot;n_subjects&quot;))
+levels(ares$variable) &lt;- c(&quot;no lapses&quot;, &quot;fixed lapse rate&quot;, &quot;variable lapse rate&quot;, &quot;model averaged&quot;)
+ggplot(ares,aes(x=n_subjects, y=value, color=variable))+geom_line(size=1)+nice_theme+scale_color_brewer(palette=&quot;Dark2&quot;,name=&quot;model&quot;)+labs(x=&quot;number of subjects&quot;,y=&quot;mean squared error&quot;)+geom_hline(yintercept=0,lty=2,size=0.2)
 
 # plot variance
-ares &lt;- aggregate(cbind(effect_0, effect_1, effect_2, effect_av) ~ n_subjects, 
-    res, var)
-ares &lt;- melt(ares, id.vars = c(&quot;n_subjects&quot;))
-levels(ares$variable) &lt;- c(&quot;no lapses&quot;, &quot;fixed lapse rate&quot;, &quot;variable lapse rate&quot;, 
-    &quot;model averaged&quot;)
-ggplot(ares, aes(x = n_subjects, y = value, color = variable)) + geom_line(size = 1) + 
-    nice_theme + scale_color_brewer(palette = &quot;Dark2&quot;, name = &quot;model&quot;) + labs(x = &quot;number of subjects&quot;, 
-    y = &quot;variance&quot;)
+ares &lt;- aggregate(cbind(effect_0,effect_1,effect_2,effect_av)~n_subjects, res, var)
+ares &lt;- melt(ares, id.vars=c(&quot;n_subjects&quot;))
+levels(ares$variable) &lt;- c(&quot;no lapses&quot;, &quot;fixed lapse rate&quot;, &quot;variable lapse rate&quot;, &quot;model averaged&quot;)
+ggplot(ares,aes(x=n_subjects, y=value, color=variable))+geom_line(size=1)+nice_theme+scale_color_brewer(palette=&quot;Dark2&quot;,name=&quot;model&quot;)+labs(x=&quot;number of subjects&quot;,y=&quot;variance&quot;)
 
 # plot bias
-ares &lt;- aggregate(cbind(effect_0, effect_1, effect_2, effect_av) ~ n_subjects, 
-    res, mean)
-ares &lt;- melt(ares, id.vars = c(&quot;n_subjects&quot;))
-levels(ares$variable) &lt;- c(&quot;no lapses&quot;, &quot;fixed lapse rate&quot;, &quot;variable lapse rate&quot;, 
-    &quot;model averaged&quot;)
-ares$value &lt;- ares$value - 1
-ggplot(ares, aes(x = n_subjects, y = value, color = variable)) + geom_hline(yintercept = 0, 
-    lty = 2, size = 0.2) + geom_line(size = 1) + nice_theme + scale_color_brewer(palette = &quot;Dark2&quot;, 
-    name = &quot;model&quot;) + labs(x = &quot;number of subjects&quot;, y = &quot;bias&quot;)</code></pre>
+ares &lt;- aggregate(cbind(effect_0,effect_1,effect_2,effect_av)~n_subjects, res, mean)
+ares &lt;- melt(ares, id.vars=c(&quot;n_subjects&quot;))
+levels(ares$variable) &lt;- c(&quot;no lapses&quot;, &quot;fixed lapse rate&quot;, &quot;variable lapse rate&quot;, &quot;model averaged&quot;)
+ares$value &lt;- ares$value -1
+ggplot(ares,aes(x=n_subjects, y=value, color=variable))+geom_hline(yintercept=0,lty=2,size=0.2)+geom_line(size=1)+nice_theme+scale_color_brewer(palette=&quot;Dark2&quot;,name=&quot;model&quot;)+labs(x=&quot;number of subjects&quot;,y=&quot;bias&quot;)</code></pre>
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1>References</h1>
