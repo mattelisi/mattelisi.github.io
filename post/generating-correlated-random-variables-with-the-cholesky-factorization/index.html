@@ -141,9 +141,9 @@
         
 
         <li class="nav-item">
-          <a href="/#notes">
+          <a href="/#about">
             
-            <span>/misc</span>
+            <span>/about</span>
             
           </a>
         </li>
@@ -158,9 +158,9 @@
         
 
         <li class="nav-item">
-          <a href="/#about">
+          <a href="/#notes">
             
-            <span>/about</span>
+            <span>/misc</span>
             
           </a>
         </li>
@@ -309,7 +309,7 @@
 
 
       <div class="article-style" itemprop="articleBody">
-        <p>Generating random variables with given variance-covariance matrix can be useful for many purposes. For example it is necessary for generating random intercepts and slopes with given correlations when simulating a hierarchical, or mixed-effects, model. This can be achieved efficiently with the <a href="https://en.wikipedia.org/wiki/Cholesky_decomposition">Choleski factorization</a>, which is a method to find the <em>square root</em> of a matrix. (The square root of a matrix <span class="math inline">\(C\)</span> is another matrix <span class="math inline">\(L\)</span> such that <span class="math inline">\({L^T}L = C\)</span>.)</p>
+        <p>Generating random variables with given variance-covariance matrix can be useful for many purposes. For example it is necessary for generating random intercepts and slopes with given correlations when simulating a multilevel, or mixed-effects, model (e.g. see <a href="https://rpubs.com/adrbart/random_slope_simulation">here</a>). This can be achieved efficiently with the <a href="https://en.wikipedia.org/wiki/Cholesky_decomposition">Choleski factorization</a>, which is a method to find the <em>square root</em> of a matrix. (The square root of a matrix <span class="math inline">\(C\)</span> is another matrix <span class="math inline">\(L\)</span> such that <span class="math inline">\({L^T}L = C\)</span>.)</p>
 <p>Suppose you want to create 2 variables, having a Gaussian distribution, and a positive correlation, say <span class="math inline">\(0.7\)</span>. The first step is to define the correlation matrix <span class="math display">\[C = \left( {\begin{array}{*{20}{c}}
 1&amp;{0.7}\\
 {0.7}&amp;1
@@ -333,7 +333,7 @@
 <p>Now plot the results <img src="/post/2018-01-21-generating-correlated-random-variables-with-the-cholesky-factorization_files/figure-html/fig1-1.png" width="729.6" /> We can verify that the correlation as estimated from the sample corresponds (or is close enough) to the generative value.</p>
 <pre class="r"><code># correlation in the generated sample
 cor(X[1,],X[2,])
-[1] 0.6904862</code></pre>
+[1] 0.7038513</code></pre>
 <div id="why-does-it-work" class="section level1">
 <h1>Why does it work?</h1>
 <p>The covariance matrix of the initial, uncorrelated sample is <span class="math inline">\(\mathbb{E} \left( Z Z^T \right) = I\)</span>, that is the identity matrix, since they have zero mean and unit variance <span class="math inline">\(z\sim\cal N\left( {0,1} \right)\)</span><a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p>
