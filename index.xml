@@ -11,6 +11,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Motion and position shifts induced by the double-drift stimulus are unaffected by attentional load</title>
+      <link>https://mattelisi.github.io/publication/dd_load/</link>
+      <pubDate>Sun, 04 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattelisi.github.io/publication/dd_load/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Generating correlated random variables with the Cholesky factorization</title>
       <link>https://mattelisi.github.io/post/generating-correlated-random-variables-with-the-cholesky-factorization/</link>
       <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
@@ -40,7 +49,7 @@
 &lt;p&gt;Now plot the results &lt;img src=&#34;https://mattelisi.github.io/post/2018-01-21-generating-correlated-random-variables-with-the-cholesky-factorization_files/figure-html/fig1-1.png&#34; width=&#34;729.6&#34; /&gt; We can verify that the correlation as estimated from the sample corresponds (or is close enough) to the generative value.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# correlation in the generated sample
 cor(X[1,],X[2,])
-[1] 0.7038513&lt;/code&gt;&lt;/pre&gt;
+[1] 0.7058302&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;why-does-it-work&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Why does it work?&lt;/h1&gt;
 &lt;p&gt;The covariance matrix of the initial, uncorrelated sample is &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{E} \left( Z Z^T \right) = I\)&lt;/span&gt;, that is the identity matrix, since they have zero mean and unit variance &lt;span class=&#34;math inline&#34;&gt;\(z\sim\cal N\left( {0,1} \right)\)&lt;/span&gt;&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
@@ -520,15 +529,6 @@ i^2 = j^2 = k^2 = ijk =  - 1
       <guid>https://mattelisi.github.io/publication/optokinetic/</guid>
       <description>&lt;p&gt;Mariagrazia Ranzini and Matteo Lisi contributed equally to the work&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>The prediction of visual stimuli influences auditory loudness discrimination</title>
-      <link>https://mattelisi.github.io/publication/desantis/</link>
-      <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/publication/desantis/</guid>
-      <description></description>
     </item>
     
   </channel>
