@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.31" />
+  <meta name="author" content="Matteo Lisi">
+  
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://mattelisi.github.io/post/bayesian-multilevel-models-r-stan/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7cMerriweather%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/override.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-107105934-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+  <link rel="alternate" href="https://mattelisi.github.io/index.xml" type="application/rss+xml" title="juicy bits">
+  <link rel="feed" href="https://mattelisi.github.io/index.xml" type="application/rss+xml" title="juicy bits">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://mattelisi.github.io/post/bayesian-multilevel-models-r-stan/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="juicy bits">
+  <meta property="og:url" content="https://mattelisi.github.io/post/bayesian-multilevel-models-r-stan/">
+  <meta property="og:title" content="Bayesian multilevel models using R and Stan (part 1) | juicy bits">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-03-01T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-03-01T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>Bayesian multilevel models using R and Stan (part 1) | juicy bits</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/"><img src="/img/shademe.png" alt="juicy bits"></a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>/blog</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>/about</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#notes">
+            
+            <span>/misc</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>/contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>/publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Bayesian multilevel models using R and Stan (part 1)</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-03-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Mar 1, 2018
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    12 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/r">R</a
+    >, 
+    
+    <a href="/categories/tutorial">tutorial</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Bayesian%20multilevel%20models%20using%20R%20and%20Stan%20%28part%201%29&amp;url=https%3a%2f%2fmattelisi.github.io%2fpost%2fbayesian-multilevel-models-r-stan%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmattelisi.github.io%2fpost%2fbayesian-multilevel-models-r-stan%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmattelisi.github.io%2fpost%2fbayesian-multilevel-models-r-stan%2f&amp;title=Bayesian%20multilevel%20models%20using%20R%20and%20Stan%20%28part%201%29"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fmattelisi.github.io%2fpost%2fbayesian-multilevel-models-r-stan%2f&amp;title=Bayesian%20multilevel%20models%20using%20R%20and%20Stan%20%28part%201%29"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Bayesian%20multilevel%20models%20using%20R%20and%20Stan%20%28part%201%29&amp;body=https%3a%2f%2fmattelisi.github.io%2fpost%2fbayesian-multilevel-models-r-stan%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        <div class="figure">
+<img src="/img/turtlepile.jpg" alt="Photo ©Roxie and Lee Carroll, www.akidsphoto.com." />
+<p class="caption">Photo ©Roxie and Lee Carroll, www.akidsphoto.com.</p>
+</div>
+<p>In my former lab I was known for promoting the use of multilevel, or mixed-effects model among my colleagues. (The slides on the <a href="https://mattelisi.github.io/#notes">/misc</a> section of this website represent part of this effort.) Multilevel models should be the standard approach in fields like experimental psychology and neuroscience, where the data is naturally grouped according to “observational units”, i.e. individual participants. I completely agree with Richard McElreath when he writes that <em>“multilevel regression deserves to be the default form of regression”</em> (see <a href="http://xcelab.net/rmpubs/rethinking/Statistical_Rethinking_sample.pdf">here</a>, section 1.3.2) and that, at least in our fields, studies not using a multilevel approach should justify the choice of not using it.</p>
+<p>In <span class="math inline">\(\textsf{R}\)</span>, the easiest way to fit multilevel linear and generalized-linear models is provided by the <code>lme4</code> library <span class="citation">(Bates et al. 2014)</span>. <code>lme4</code> is a great package, which allows users to test different models very easily and painlessly. However it has also some limitations: it can be used to fit only classical forms of linear and generalized linear models, and can’t, for example, use to fit psychometric functions that take attention lapses into account (see <a href="https://mattelisi.github.io/post/model-averaging/">here</a>). Also, <code>lme4</code> allows to fit multilevel models from a frequentist approach, and thus do not allow to incorporate prior knowledge into the model, or to use regularizing priors to reduce the risk of overfitting. For this reason, I have recently started using <a href="http://mc-stan.org">Stan</a>, through its <a href="http://mc-stan.org/users/interfaces/rstan.html"><span class="math inline">\(\textsf{R}\)</span>Stan</a> interface, to fit multilevel models in a Bayesian settings, and I find it great! It certainly requires more effort to define the models, however I think that the flexibility offered by a software like Stan is well worth the time spent to learning how to use it.</p>
+<p>For folks like me, coming from <code>lme4</code>, Stan can be a bit discouraing at first. The approach to write the model is very different, as it require specifying all the distributional assumptions of the model. Also, implementing models with correlated random effects requires some specific notions of algebra. So I decided to write a first tutorial showing how to analyse in Stan one of the most common introductory examples to mixed-effects models, the <code>sleepstudy</code> dataset (contained in the <code>lme4</code> package). This will be followed by another tutorial showing how to use this approach to fit dataset where the dependent variable is a binary outcome, as it is the case for most psychophysical data.</p>
+<div id="the-sleepstudy-example" class="section level1">
+<h1>The <code>sleepstudy</code> example</h1>
+<p>This dataset contains part of the data from a published study <span class="citation">(Belenky et al. 2003)</span> that examined the effect of sleep deprivation on reaction times. (This is a sensible topic: think for example to long-distance truck drivers.) The dataset contains the average reaction times for the 18 subjects of the sleep-deprived group, for the first 10 days of the study, up to the recovery period.</p>
+<pre class="r"><code>library(lme4)
+Loading required package: Matrix
+str(sleepstudy)
+&#39;data.frame&#39;:   180 obs. of  3 variables:
+ $ Reaction: num  250 259 251 321 357 ...
+ $ Days    : num  0 1 2 3 4 5 6 7 8 9 ...
+ $ Subject : Factor w/ 18 levels &quot;308&quot;,&quot;309&quot;,&quot;310&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<p>The model I want to fit to the data will contain both random intercepts and slopes; in addition the correlation between the random effects should also be estimated. Using <code>lme4</code>, this model could be estimated by using</p>
+<pre class="r"><code>lmer(Reaction ~ Days + (Days | Subject), sleepstudy)</code></pre>
+<p>The model could be formally notated as <span class="math display">\[
+y_{ij} = \beta_0 + u_{0j} + \left( \beta_1 + u_{1j} \right) \cdot {\rm{Days}} + e_i
+\]</span> where <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are the fixed effects parameters (intercept and slope), <span class="math inline">\(u_{0j}\)</span> and <span class="math inline">\(u_{1j}\)</span> are the subject specific random intercept and slope (the index <span class="math inline">\(j\)</span> denotes the subject), and <span class="math inline">\(e \sim\cal N \left( 0,\sigma_e^2 \right)\)</span> is the (normally distributed) residual error. The random effects <span class="math inline">\(u_0\)</span> and <span class="math inline">\(u_1\)</span> have a multivariate normal distribution, with mean 0 and covariance matrix <span class="math inline">\(\Omega\)</span> <span class="math display">\[
+\left[ {\begin{array}{*{20}{c}}
+{{u_0}}\\
+{{u_1}}
+\end{array}} \right] \sim\cal N \left( {\left[ {\begin{array}{*{20}{c}}
+0\\
+0
+\end{array}} \right],\Omega  = \left[ {\begin{array}{*{20}{c}}
+{\sigma _0^2}&amp;{{\mathop{\rm cov}} \left( {{u_0},{u_1}} \right)}\\
+{{\mathop{\rm cov}} \left( {{u_0},{u_1}} \right)}&amp;{\sigma _1^2}
+\end{array}} \right]} \right)
+\]</span></p>
+<p>In Stan, fitting this model requires preparing a separate text file (usually saved with the ‘.stan’ extension), containing several “blocks”. The 3 main types of blocks in Stan are:</p>
+<ul>
+<li><strong><code>data</code></strong> all the dependent and independent variables needs to be declared in this blocks</li>
+<li><strong><code>parameters</code></strong> here one should declare the free parameters of the model; what Stan do is essentially use a MCMC algorithm to draw samples from the posterior distribution of the parameters given the dataset</li>
+<li><strong><code>model</code></strong> here one should define the likelihood function and, if used, the priors</li>
+</ul>
+<p>Additionally, we will use two other types of blocks, <strong><code>transformed parameters</code></strong> and <strong><code>generated quantities</code></strong>. The first is necessary because we are estimating also the full correlation matrix of the random effects. We will parametrize the covariance matrix as the Cholesky factor of the correlation matrix (see <a href="https://mattelisi.github.io/post/simulating-correlated-variables-with-the-cholesky-factorization/">my post on the Cholesky factorization</a>), and in the <code>transformed parameters</code> block we will multiply the random effects with the Choleki factor, to transform them so that they have the intended correlation matrix. The <code>generated quantities</code> block can be used to compute any additional quantities we may want to compute once for each sample; I will use it to transform the Cholesky factor into the correlation matrix (this step is not essential but makes the examination of the model easier).</p>
+<div id="data" class="section level2">
+<h2>Data</h2>
+<p>RStan requires the data to be organized in a list object. It can be done with the following command</p>
+<pre class="r"><code>d_stan &lt;- list(Subject = as.numeric(factor(sleepstudy$Subject, 
+    labels = 1:length(unique(sleepstudy$Subject)))), Days = sleepstudy$Days, 
+    RT = sleepstudy$Reaction/1000, N = nrow(sleepstudy), J = length(unique(sleepstudy$Subject)))</code></pre>
+<p>Note that I also included two scalar variables, <code>N</code> and <code>J</code>, indicating respectively the number of observation and the number of subjects. Also, <code>Subject</code> was a categorical factor, but to input it in Stan I transformed it into an integer index. I also rescaled the reaction times, so that they are in seconds instead of milliseconds.</p>
+<p>These variables can be declared in Stan with the following block. We need to declare the variable type (e.g. real or integer, similarly to programming languages as C++) and for vectors we need to declare the length of the vectors (hence the need of the two scalar variables <code>N</code> and <code>J</code>). Also, note that variables can be given lower and upper bounds. See the Stan reference manual for more information of the variable types.</p>
+<pre><code>data {
+  int&lt;lower=1&gt; N;            //number of observations
+  real RT[N];                //reaction times
+
+  int&lt;lower=0,upper=9&gt; Days[N];   //predictor (days of sleep deprivation)
+
+  // grouping factor
+  int&lt;lower=1&gt; J;                   //number of subjects
+  int&lt;lower=1,upper=J&gt; Subject[N];  //subject id
+}</code></pre>
+</div>
+<div id="parameters" class="section level2">
+<h2>Parameters</h2>
+<p>Here is the parameter block. Stan will draw samples from the posterior distribution of all the parameters listed here. Note that for parameters representing standard deviations is necessary to set the lower bound to 0 (variances and standard deviations cannot be negative). This is equivalent to estimating the logarithm of the standard deviation (which can be both positive or negative) and exponentiating before computing the likelihood (because <span class="math inline">\(e^x&gt;0\)</span> for any <span class="math inline">\(x\)</span>). The random effects are parametrixed by a 2 x <code>J</code> random effect matrix <code>z_u</code>, and by the Cholesky factor of the correlation matrix <code>L_u</code>. I have added also the transformed parameters block, where the Cholesky factor is first multipled by the diagonal matrix formed by the vector of the random effect variances <code>sigma_u</code>, and then is multiplied with the random effect matrix, to obtain a random effects matrix with the intended correlations, which will be used in the model block below to compute the likelihood of the data.</p>
+<pre><code>parameters {
+  vector[2] beta;                   // fixed-effects parameters
+  real&lt;lower=0&gt; sigma_e;            //residual std
+  vector&lt;lower=0&gt;[2] sigma_u;       // random effects standard deviations
+
+  // declare L_u to be the Choleski factor of a 2x2 correlation matrix
+  cholesky_factor_corr[2] L_u;
+
+  matrix[2,J] z_u;                  // random effect matrix
+}
+
+transformed parameters {
+  // this transform random effects so that they have the correlation
+  // matrix specified by the correlation matrix above
+  matrix[2,J] u;
+  u = diag_pre_multiply(sigma_u, L_u) * z_u;
+
+}</code></pre>
+</div>
+<div id="model" class="section level2">
+<h2>Model</h2>
+<p>Finally the model block. Here we can define priors for the parameters, and then write the likelihood of the data given the parameters.</p>
+<pre><code>model {
+  real mu; // conditional mean of the dependent variable
+
+  //priors
+  L_u ~ lkj_corr_cholesky(1.5); // LKJ prior for the correlation matrix
+  to_vector(z_u) ~ normal(0,2);
+  sigma_e ~ normal(0, 5);       // prior for residual standard deviation
+  beta[1] ~ normal(0.3, 0.5);   // prior for fixed-effect intercept
+  beta[2] ~ normal(0.2, 2);     // prior for fixed-effect slope
+
+  //likelihood
+  for (i in 1:N){
+    mu = beta[1] + u[1,Subject[i]] + (beta[2] + u[2,Subject[i]])*Days[i];
+    RT[i] ~ normal(mu, sigma_e);
+  }
+}</code></pre>
+<p>For the correlation matrix, Stan allows the user to set a LKJ prior<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. This prior has one single shape parameters, <span class="math inline">\(\eta\)</span>: if you set <span class="math inline">\(\eta=1\)</span> then you have effectively a uniform prior distribution over any (Cholesky factor of) 2x2 correlation matrices. For values <span class="math inline">\(\eta&gt;1\)</span> instead you get a more conservative prior, with a mode in the identity matrix (where the correlations are 0). For more information about the LKJ prior see page 556 of Stan reference manual, version 2.17.0, and also <a href="http://www.psychstatistics.com/2014/12/27/d-lkj-priors/">this page</a> for an intuitive demonstration.</p>
+<p>I have used weakly informative priors for the fixed effect estimates. We know from the literature that simple reaction times are around 300ms, hence the prior for the intercept, which represents the avearage reaction times at Day 0, i.e. before the sleep deprivation. We expect the reaction times to increase with sleep deprivation, so I have used for the slope a Gaussian prior centered at a small positive value (0.2 seconds), which would represents the increase in reaction times with each day of sleep deprivation, however using a very broad standard deviation (2 seconds), which could accomodate also negative or very different slope values if needed. It may be useful to visualize with a plot the priors. <img src="/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig1-1.png" width="624" /></p>
+</div>
+<div id="generated-quantities" class="section level2">
+<h2>Generated quantities</h2>
+<p>Finally, we can add one last block to the model file, to store for each sampling iteration the correlation matrix of the random effect, which can be computed from the Cholesky factor.</p>
+<pre><code>generated quantities {
+  matrix[2, 2] Omega;
+  Omega = L_u * L_u&#39;; // so that it return the correlation matrix
+}</code></pre>
+</div>
+</div>
+<div id="estimating-the-model" class="section level1">
+<h1>Estimating the model</h1>
+<p>Having written all the above blocks in a separate text file (I called it “sleep_model.stan”), we can call Stan from R with following commands. I run 4 independent chains (each chain is a stochastic process which sequentially generate random values; they are called <em>chain</em> because each sample depends on the previous one), each for 2000 samples. The first 1000 samples are the <em>warmup</em> (or sometimes called <em>burn-in</em>), which are intended to allow the sampling process to settle into the posterior distribution; these samples will not be used for inference. Each chain is independent from the others, therefore having multiple chains is also useful to check the convergence (i.e. by looking if all chains converged to the same regions of the parameter space). Additionally, having multiple chain allows to compute a statistic which is also used to check convergence: this is called <span class="math inline">\(\hat R\)</span> and it corresponds to the ratio of the between-chain variance and the within-chain variance. If the sampling has converged then <span class="math inline">\({\hat R} \approx 1 \pm 0.01\)</span> When we call function <code>stan</code>, it will compile a C++ program which produces samples from the joint posterior of the parameter using a powerful variant of MCMC sampling, called <em>Hamiltomian Monte Carlo</em> (see <a href="http://elevanth.org/blog/2017/11/28/build-a-better-markov-chain/">here</a> for an intuitive explanation of the sampling algorithm).</p>
+<pre class="r"><code>library(rstan)
+options(mc.cores = parallel::detectCores())  # indicate stan to use multiple cores if available
+sleep_model &lt;- stan(file = &quot;sleep_model.stan&quot;, data = d_stan, 
+    iter = 2000, chains = 4)</code></pre>
+<p>One way to check the convergence of the model is to plot the chain of samples. They should look like a <em>“fat, hairy caterpillar which does not bend”</em> <span class="citation">(Sorensen, Hohenstein, and Vasishth 2016)</span>, suggesting that the sampling was stable at the posterior.</p>
+<pre class="r"><code>traceplot(sleep_model, pars = c(&quot;beta&quot;), inc_warmup = FALSE)</code></pre>
+<p><img src="/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig2-1.png" width="480" /> There is a <code>print()</code> method for visualising the estimates of the parameters. The values of the <span class="math inline">\({\hat R}\)</span> (<code>Rhat</code>) statistics also confirm that the chains converged. The method automatically report credible intervals for the parameters</p>
+<pre class="r"><code>print(sleep_model, pars = c(&quot;beta&quot;), probs = c(0.025, 0.975), 
+    digits = 3)
+Inference for Stan model: sleep_model.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+         mean se_mean    sd  2.5% 97.5% n_eff  Rhat
+beta[1] 0.251       0 0.008 0.236 0.267  2287 1.001
+beta[2] 0.010       0 0.002 0.007 0.014  2563 1.000
+
+Samples were drawn using NUTS(diag_e) at Mon Mar  5 18:48:35 2018.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).</code></pre>
+<p>And we can visualze the posterior distribution as histograms (here for the fixed effects parameters and the standard deviations of the corresponding random effects).</p>
+<pre class="r"><code>plot(sleep_model, plotfun = &quot;hist&quot;, pars = c(&quot;beta&quot;, &quot;sigma_u&quot;))
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig3-1.png" width="384" /> Finally, we can examine the correlation matrix of random-effects.</p>
+<pre class="r"><code>print(sleep_model, pars = c(&quot;Omega&quot;), digits = 3)
+Inference for Stan model: sleep_model.
+4 chains, each with iter=2000; warmup=1000; thin=1; 
+post-warmup draws per chain=1000, total post-warmup draws=4000.
+
+            mean se_mean   sd   2.5%    25%   50%   75% 97.5% n_eff  Rhat
+Omega[1,1] 1.000   0.000 0.00  1.000  1.000 1.000 1.000  1.00  4000   NaN
+Omega[1,2] 0.075   0.008 0.29 -0.476 -0.133 0.072 0.281  0.63  1344 1.003
+Omega[2,1] 0.075   0.008 0.29 -0.476 -0.133 0.072 0.281  0.63  1344 1.003
+Omega[2,2] 1.000   0.000 0.00  1.000  1.000 1.000 1.000  1.00  3901 0.999
+
+Samples were drawn using NUTS(diag_e) at Mon Mar  5 18:48:35 2018.
+For each parameter, n_eff is a crude measure of effective sample size,
+and Rhat is the potential scale reduction factor on split chains (at 
+convergence, Rhat=1).</code></pre>
+<p>The <code>Rhat</code> values for the first entry of the correlation matrix is NaN. This is expected for variables that remain constant during samples. We can check that this variable resulted in a series of identical values during sampling with the following command</p>
+<pre class="r"><code>all(unlist(extract(sleep_model, pars = &quot;Omega[1,1]&quot;)) == 1)  # all values are =1 ?
+[1] TRUE</code></pre>
+<p>That’s all! You can check by yourself that the values are the sufficiently similar to what we would obtain using <code>lmer</code>, and eventually experiment by yourself how the estimates changes when more informative priors are used.</p>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references">
+<div id="ref-Bates2014">
+<p>Bates, D, M Maechler, B Bolker, and S Walker. 2014. “lme4: Linear mixed-effects models using Eigen and S4.” R package version 1.1-7. <a href="http://cran.r-project.org/package=lme4" class="uri">http://cran.r-project.org/package=lme4</a>.</p>
+</div>
+<div id="ref-Belenky2003">
+<p>Belenky, Gregory, Nancy J Wesensten, David R Thorne, Maria L Thomas, Helen C Sing, Daniel P Redmond, Michael B Russo, and J Balkin, Thomas. 2003. “Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study.” <em>Journal of Sleep Research</em> 12 (1): 1–12. doi:<a href="https://doi.org/10.1046/j.1365-2869.2003.00337.x">10.1046/j.1365-2869.2003.00337.x</a>.</p>
+</div>
+<div id="ref-Sorensen2016">
+<p>Sorensen, Tanner, Sven Hohenstein, and Shravan Vasishth. 2016. “Bayesian linear mixed models using Stan: A tutorial for psychologists, linguists, and cognitive scientists.” <em>The Quantitative Methods for Psychology</em> 12 (3): 175–200. doi:<a href="https://doi.org/10.20982/tqmp.12.3.p175">10.20982/tqmp.12.3.p175</a>.</p>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>The LKJ prior is named after its authors, see: Lewandowski, D., Kurowicka, D., and Joe, H. (2009). Generating random correlation matrices based on vines and extended onion method. <em>Journal of Multivariate Analysis</em>, 100:1989–2001<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/r">R</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/bayesian-data-analysis">Bayesian data analysis</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/multilevel-models">multilevel models</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/mixed-effects">mixed-effects</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/post/simulating-correlated-variables-with-the-cholesky-factorization/">Simulating correlated variables with the Cholesky factorization</a></li>
+    
+    <li><a href="/post/model-averaging/">Multi-model estimation of psychophysical parameters</a></li>
+    
+  </ul>
+</div>
+
+
+
+<div class="container article-widget">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://mattelisi.github.io/post/simulating-correlated-variables-with-the-cholesky-factorization/"><span
+      aria-hidden="true">&larr;</span> Simulating correlated variables with the Cholesky factorization</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mattelisi" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Matteo Lisi &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD12zE83xCTsL_ohYvAPoW43ZdpsvD_rGU"></script>
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+
