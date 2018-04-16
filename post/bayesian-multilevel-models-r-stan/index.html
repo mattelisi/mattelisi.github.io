@@ -124,9 +124,9 @@
         
 
         <li class="nav-item">
-          <a href="/#posts">
+          <a href="/#about">
             
-            <span>/blog</span>
+            <span>/about</span>
             
           </a>
         </li>
@@ -141,9 +141,9 @@
         
 
         <li class="nav-item">
-          <a href="/#about">
+          <a href="/#posts">
             
-            <span>/about</span>
+            <span>/blog</span>
             
           </a>
         </li>
@@ -313,9 +313,9 @@
 <img src="/img/turtlepile.jpg" alt="Photo ©Roxie and Lee Carroll, www.akidsphoto.com." />
 <p class="caption">Photo ©Roxie and Lee Carroll, www.akidsphoto.com.</p>
 </div>
-<p>In my former lab I was known for promoting the use of multilevel, or mixed-effects model among my colleagues. (The slides on the <a href="https://mattelisi.github.io/#notes">/misc</a> section of this website represent part of this effort.) Multilevel models should be the standard approach in fields like experimental psychology and neuroscience, where the data is naturally grouped according to “observational units”, i.e. individual participants. I completely agree with Richard McElreath when he writes that <em>“multilevel regression deserves to be the default form of regression”</em> (see <a href="http://xcelab.net/rmpubs/rethinking/Statistical_Rethinking_sample.pdf">here</a>, section 1.3.2) and that, at least in our fields, studies not using a multilevel approach should justify the choice of not using it.</p>
+<p>In my previous lab I was known for promoting the use of multilevel, or mixed-effects model among my colleagues. (The slides on the <a href="https://mattelisi.github.io/#notes">/misc</a> section of this website are part of this effort.) Multilevel models should be the standard approach in fields like experimental psychology and neuroscience, where the data is naturally grouped according to “observational units”, i.e. individual participants. I completely agree with Richard McElreath when he writes that <em>“multilevel regression deserves to be the default form of regression”</em> (see <a href="http://xcelab.net/rmpubs/rethinking/Statistical_Rethinking_sample.pdf">here</a>, section 1.3.2) and that, at least in our fields, studies not using a multilevel approach should justify the choice of not using it.</p>
 <p>In <span class="math inline">\(\textsf{R}\)</span>, the easiest way to fit multilevel linear and generalized-linear models is provided by the <code>lme4</code> library <span class="citation">(Bates et al. 2014)</span>. <code>lme4</code> is a great package, which allows users to test different models very easily and painlessly. However it has also some limitations: it can be used to fit only classical forms of linear and generalized linear models, and can’t, for example, use to fit psychometric functions that take attention lapses into account (see <a href="https://mattelisi.github.io/post/model-averaging/">here</a>). Also, <code>lme4</code> allows to fit multilevel models from a frequentist approach, and thus do not allow to incorporate prior knowledge into the model, or to use regularizing priors to reduce the risk of overfitting. For this reason, I have recently started using <a href="http://mc-stan.org">Stan</a>, through its <a href="http://mc-stan.org/users/interfaces/rstan.html"><span class="math inline">\(\textsf{R}\)</span>Stan</a> interface, to fit multilevel models in a Bayesian settings, and I find it great! It certainly requires more effort to define the models, however I think that the flexibility offered by a software like Stan is well worth the time spent to learning how to use it.</p>
-<p>For folks like me, coming from <code>lme4</code>, Stan can be a bit discouraing at first. The approach to write the model is very different, as it requires specifying all the distributional assumptions of the model. Also, implementing models with correlated random effects requires some specific notions of algebra. So I decided to write a first tutorial showing how to analyse in Stan one of the most common introductory examples to mixed-effects models, the <code>sleepstudy</code> dataset (contained in the <code>lme4</code> package). This will be followed by another tutorial showing how to use this approach to fit dataset where the dependent variable is a binary outcome, as it is the case for most psychophysical data.</p>
+<p>For people like me, used to work with <code>lme4</code>, Stan can be a bit discouraing at first. The approach to write the model is quite different, and it requires specifying explicitly all the distributional assumptions. Also, implementing models with correlated random effects requires some specific notions of algebra. So I prepared a first tutorial showing how to analyse in Stan one of the most common introductory examples to mixed-effects models, the <code>sleepstudy</code> dataset (contained in the <code>lme4</code> package). This will be followed by another tutorial showing how to use this approach to fit dataset where the dependent variable is a binary outcome, as it is the case for most psychophysical data.</p>
 <div id="the-sleepstudy-example" class="section level1">
 <h1>The <code>sleepstudy</code> example</h1>
 <p>This dataset contains part of the data from a published study <span class="citation">(Belenky et al. 2003)</span> that examined the effect of sleep deprivation on reaction times. (This is a sensible topic: think for example to long-distance truck drivers.) The dataset contains the average reaction times for the 18 subjects of the sleep-deprived group, for the first 10 days of the study, up to the recovery period.</p>
