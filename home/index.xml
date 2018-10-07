@@ -38,7 +38,7 @@ I am a postdoc fellow in the Optometry Division of City University, in London. I
       
       <guid>https://mattelisi.github.io/home/notes/</guid>
       <description>Here is a list of miscellaneous resources (short notes, slides, code) designed for teaching.
- Multilevel modelling: frequentist and Bayesian approaches. These are the slides for a more advanced course on multilevel modeling. I start by introducing multilevel models from a frequentist perspective, then introduce the Bayesian approach. The analyses are performed using Stan and its R interface. Download also the R code that documents the analyses step-by-step, code, two dataset used in the examples (bisection, mixture) and the Stan code of the models discussed (sleepstudy, bisection, mixture).</description>
+ Multilevel modelling: frequentist and Bayesian approaches. These are the slides for a more advanced course on multilevel modeling. I start by introducing multilevel models from a frequentist perspective, then introduce the Bayesian approach. The analyses are performed using Stan and its R interface. Download also the R code that documents the analyses step-by-step (code); the two dataset used in the examples (bisection, mixture); the Stan code of the models discussed (sleepstudy, glmm, mixture).</description>
     </item>
     
     <item>
