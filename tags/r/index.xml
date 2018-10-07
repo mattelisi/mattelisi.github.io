@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on juicy bits</title>
+    <link>https://mattelisi.github.io/tags/r/</link>
+    <description>Recent content in R on juicy bits</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Matteo Lisi</copyright>
+    <lastBuildDate>Thu, 01 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mattelisi.github.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bayesian multilevel models using R and Stan (part 1)</title>
+      <link>https://mattelisi.github.io/post/bayesian-multilevel-models-r-stan/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattelisi.github.io/post/bayesian-multilevel-models-r-stan/</guid>
+      <description>Photo ©Roxie and Lee Carroll, www.akidsphoto.com.
+ In my previous lab I was known for promoting the use of multilevel, or mixed-effects model among my colleagues. (The slides on the /misc section of this website are part of this effort.) Multilevel models should be the standard approach in fields like experimental psychology and neuroscience, where the data is naturally grouped according to “observational units”, i.e. individual participants. I completely agree with Richard McElreath when he writes that “multilevel regression deserves to be the default form of regression” (see here, section 1.</description>
+    </item>
+    
+    <item>
+      <title>Simulating correlated variables with the Cholesky factorization</title>
+      <link>https://mattelisi.github.io/post/simulating-correlated-variables-with-the-cholesky-factorization/</link>
+      <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattelisi.github.io/post/simulating-correlated-variables-with-the-cholesky-factorization/</guid>
+      <description>Generating random variables with given variance-covariance matrix can be useful for many purposes. For example it is useful for generating random intercepts and slopes with given correlations when simulating a multilevel, or mixed-effects, model (e.g. see here). This can be achieved efficiently with the Choleski factorization. In linear algebra the factorization or decomposition of a matrix is the factorization of a matrix into a product of matrices. More specifically, the Choleski factorization is a decomposition of a positive-defined, symmetric1 matrix into a product of a triangular matrix and its conjugate transpose; in other words is a method to find the square root of a matrix.</description>
+    </item>
+    
+    <item>
+      <title>Multi-model estimation of psychophysical parameters</title>
+      <link>https://mattelisi.github.io/post/model-averaging/</link>
+      <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattelisi.github.io/post/model-averaging/</guid>
+      <description>In the study of human perception we often need to measure how sensitive is an observer to a stimulus variation, and how her/his sensitivity changes due to changes in the context or experimental manipulations. In many applications this can be done by estimating the slope of the psychometric function1, a parameter that relates to the precision with which the observer can make judgements about the stimulus. A psychometric function is generally characterized by 2-3 parameters: the slope, the threshold (or criterion), and an optional lapse parameter, which indicate the rate at which attention lapses (i.</description>
+    </item>
+    
+  </channel>
+</rss>

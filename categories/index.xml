@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on juicy bits</title>
+    <link>https://mattelisi.github.io/categories/</link>
+    <description>Recent content in Categories on juicy bits</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Matteo Lisi</copyright>
+    
+	<atom:link href="https://mattelisi.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R</title>
+      <link>https://mattelisi.github.io/categories/r/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattelisi.github.io/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stan</title>
+      <link>https://mattelisi.github.io/categories/stan/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattelisi.github.io/categories/stan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data-analysis</title>
+      <link>https://mattelisi.github.io/categories/data-analysis/</link>
+      <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattelisi.github.io/categories/data-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>eye movements</title>
+      <link>https://mattelisi.github.io/categories/eye-movements/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattelisi.github.io/categories/eye-movements/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>note</title>
+      <link>https://mattelisi.github.io/categories/note/</link>
+      <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattelisi.github.io/categories/note/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>psychophysics</title>
+      <link>https://mattelisi.github.io/categories/psychophysics/</link>
+      <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattelisi.github.io/categories/psychophysics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>self-study</title>
+      <link>https://mattelisi.github.io/categories/self-study/</link>
+      <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattelisi.github.io/categories/self-study/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://mattelisi.github.io/categories/tutorial/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattelisi.github.io/categories/tutorial/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

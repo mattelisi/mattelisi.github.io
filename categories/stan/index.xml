@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stan on juicy bits</title>
+    <link>https://mattelisi.github.io/categories/stan/</link>
+    <description>Recent content in Stan on juicy bits</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Matteo Lisi</copyright>
+    <lastBuildDate>Thu, 01 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mattelisi.github.io/categories/stan/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bayesian multilevel models using R and Stan (part 1)</title>
+      <link>https://mattelisi.github.io/post/bayesian-multilevel-models-r-stan/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattelisi.github.io/post/bayesian-multilevel-models-r-stan/</guid>
+      <description>Photo ©Roxie and Lee Carroll, www.akidsphoto.com.
+ In my previous lab I was known for promoting the use of multilevel, or mixed-effects model among my colleagues. (The slides on the /misc section of this website are part of this effort.) Multilevel models should be the standard approach in fields like experimental psychology and neuroscience, where the data is naturally grouped according to “observational units”, i.e. individual participants. I completely agree with Richard McElreath when he writes that “multilevel regression deserves to be the default form of regression” (see here, section 1.</description>
+    </item>
+    
+  </channel>
+</rss>

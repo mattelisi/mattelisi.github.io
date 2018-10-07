@@ -261,6 +261,56 @@
     
     <url>
     
+      <loc>https://mattelisi.github.io/publication_types/</loc>
+      <lastmod>2017-07-28T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://mattelisi.github.io/tags/r/</loc>
+      <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://mattelisi.github.io/categories/r/</loc>
+      <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://mattelisi.github.io/categories/stan/</loc>
+      <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://mattelisi.github.io/tags/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://mattelisi.github.io/categories/data-analysis/</loc>
       <lastmod>2017-12-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -283,6 +333,16 @@
     
       <loc>https://mattelisi.github.io/categories/eye-movements/</loc>
       <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://mattelisi.github.io/</loc>
+      <lastmod>2016-04-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -341,36 +401,6 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication_types/</loc>
-      <lastmod>2017-07-28T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/tags/r/</loc>
-      <lastmod>2018-03-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/categories/r/</loc>
-      <lastmod>2018-03-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>https://mattelisi.github.io/categories/self-study/</loc>
       <lastmod>2018-01-21T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -391,38 +421,8 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/categories/stan/</loc>
-      <lastmod>2018-03-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/tags/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>https://mattelisi.github.io/categories/tutorial/</loc>
       <lastmod>2018-03-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/</loc>
-      <lastmod>2016-04-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

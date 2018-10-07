@@ -8,7 +8,9 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Matteo Lisi</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/publication/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://mattelisi.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Cue-target contingencies modulate voluntary orienting of spatial attention: dissociable effects for speed and accuracy</title>
@@ -16,8 +18,7 @@
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>https://mattelisi.github.io/publication/validity_psyres/</guid>
-      <description>&lt;p&gt;Mario Bonato and Matteo Lisi contributed equally to the article and are listed in alphabetical order.&lt;/p&gt;
-</description>
+      <description>Mario Bonato and Matteo Lisi contributed equally to the article and are listed in alphabetical order.</description>
     </item>
     
     <item>
@@ -125,8 +126,7 @@
       <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://mattelisi.github.io/publication/optokinetic/</guid>
-      <description>&lt;p&gt;Mariagrazia Ranzini and Matteo Lisi contributed equally to the work&lt;/p&gt;
-</description>
+      <description>Mariagrazia Ranzini and Matteo Lisi contributed equally to the work</description>
     </item>
     
     <item>
@@ -145,6 +145,15 @@
       
       <guid>https://mattelisi.github.io/publication/unsupervised-space-coding/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Paying Attention through Eye Movements: A Computational Investigation of the Premotor Theory of Spatial Attention</title>
+      <link>https://mattelisi.github.io/publication/premotor-model/</link>
+      <pubDate>Tue, 29 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattelisi.github.io/publication/premotor-model/</guid>
+      <description>Marco Casarotti and Matteo Lisi contributed equally to the article and are listed in alphabetical order.</description>
     </item>
     
   </channel>

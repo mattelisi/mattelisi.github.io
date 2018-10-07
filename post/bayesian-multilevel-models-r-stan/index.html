@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.31" />
+  <meta name="generator" content="Hugo 0.49" />
   <meta name="author" content="Matteo Lisi">
   
 
@@ -321,6 +321,11 @@
 <p>This dataset contains part of the data from a published study <span class="citation">(Belenky et al. 2003)</span> that examined the effect of sleep deprivation on reaction times. (This is a sensible topic: think for example to long-distance truck drivers.) The dataset contains the average reaction times for the 18 subjects of the sleep-deprived group, for the first 10 days of the study, up to the recovery period.</p>
 <pre class="r"><code>library(lme4)
 Loading required package: Matrix
+
+Attaching package: &#39;lme4&#39;
+The following object is masked from &#39;package:stats&#39;:
+
+    sigma
 str(sleepstudy)
 &#39;data.frame&#39;:   180 obs. of  3 variables:
  $ Reaction: num  250 259 251 321 357 ...
@@ -433,15 +438,15 @@ sleep_model &lt;- stan(file = &quot;sleep_model.stan&quot;, data = d_stan,
 <p><img src="/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig2-1.png" width="480" /> There is a <code>print()</code> method for visualising the estimates of the parameters. The values of the <span class="math inline">\({\hat R}\)</span> (<code>Rhat</code>) statistics also confirm that the chains converged. The method automatically report credible intervals for the parameters (computed with the percentile method from the samples of the posterior distribution).</p>
 <pre class="r"><code>print(sleep_model, pars = c(&quot;beta&quot;), probs = c(0.025, 0.975), 
     digits = 3)
-Inference for Stan model: sleep_model.
-4 chains, each with iter=2000; warmup=1000; thin=1; 
-post-warmup draws per chain=1000, total post-warmup draws=4000.
+Inference for Stan model: sleep_model_v1.
+5 chains, each with iter=6000; warmup=3000; thin=1; 
+post-warmup draws per chain=3000, total post-warmup draws=15000.
 
-         mean se_mean    sd  2.5% 97.5% n_eff  Rhat
-beta[1] 0.251       0 0.008 0.236 0.267  2287 1.001
-beta[2] 0.010       0 0.002 0.007 0.014  2563 1.000
+         mean se_mean    sd  2.5% 97.5% n_eff Rhat
+beta[1] 0.255       0 0.006 0.243 0.268  6814    1
+beta[2] 0.011       0 0.001 0.008 0.013  7816    1
 
-Samples were drawn using NUTS(diag_e) at Mon Mar  5 18:48:35 2018.
+Samples were drawn using NUTS(diag_e) at Sat Sep 22 17:15:42 2018.
 For each parameter, n_eff is a crude measure of effective sample size,
 and Rhat is the potential scale reduction factor on split chains (at 
 convergence, Rhat=1).</code></pre>
@@ -450,17 +455,17 @@ convergence, Rhat=1).</code></pre>
 `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig3-1.png" width="384" /> Finally, we can also examine the correlation matrix of random-effects.</p>
 <pre class="r"><code>print(sleep_model, pars = c(&quot;Omega&quot;), digits = 3)
-Inference for Stan model: sleep_model.
-4 chains, each with iter=2000; warmup=1000; thin=1; 
-post-warmup draws per chain=1000, total post-warmup draws=4000.
+Inference for Stan model: sleep_model_v1.
+5 chains, each with iter=6000; warmup=3000; thin=1; 
+post-warmup draws per chain=3000, total post-warmup draws=15000.
 
-            mean se_mean   sd   2.5%    25%   50%   75% 97.5% n_eff  Rhat
-Omega[1,1] 1.000   0.000 0.00  1.000  1.000 1.000 1.000  1.00  4000   NaN
-Omega[1,2] 0.075   0.008 0.29 -0.476 -0.133 0.072 0.281  0.63  1344 1.003
-Omega[2,1] 0.075   0.008 0.29 -0.476 -0.133 0.072 0.281  0.63  1344 1.003
-Omega[2,2] 1.000   0.000 0.00  1.000  1.000 1.000 1.000  1.00  3901 0.999
+            mean se_mean    sd   2.5%   25%   50%   75% 97.5% n_eff  Rhat
+Omega[1,1] 1.000   0.000 0.000  1.000 1.000 1.000 1.000 1.000 15000   NaN
+Omega[1,2] 0.221   0.007 0.344 -0.546 0.011 0.251 0.467 0.807  2202 1.001
+Omega[2,1] 0.221   0.007 0.344 -0.546 0.011 0.251 0.467 0.807  2202 1.001
+Omega[2,2] 1.000   0.000 0.000  1.000 1.000 1.000 1.000 1.000   102 1.000
 
-Samples were drawn using NUTS(diag_e) at Mon Mar  5 18:48:35 2018.
+Samples were drawn using NUTS(diag_e) at Sat Sep 22 17:15:42 2018.
 For each parameter, n_eff is a crude measure of effective sample size,
 and Rhat is the potential scale reduction factor on split chains (at 
 convergence, Rhat=1).</code></pre>
@@ -549,7 +554,7 @@ convergence, Rhat=1).</code></pre>
   
 <section id="comments">
   <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
