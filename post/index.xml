@@ -49,5 +49,14 @@
       <description>Brief intro to the mathematical formalism used to describe rotations of the eyes in 3D (including the torsional component). The shape of the human eye is approximately a sphere with a diameter of 23 mm, and mechanically it behaves like a ball in a ball and socket joint. Because there is a functional distinguished axis - the visual axis, that is the line of gaze or more precisely the imaginary straight line passing through both the center of the pupil and the center of the fovea - the movements of the eyes are usually divided in gaze direction and cyclotorsion (or simply torsion): while gaze direction refers to the direction of the visual axis, the torsion indicates the rotation of the eyeball about the visual axis.</description>
     </item>
     
+    <item>
+      <title>Bayesian model selection at the group level</title>
+      <link>https://mattelisi.github.io/post/bms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mattelisi.github.io/post/bms/</guid>
+      <description>In experimental psychology and neuroscience the classical approach when comparing different models that make quantitative predictions about the behavior of participants is to aggregate the predictive ability of the model (e.g. as quantified by Akaike Information criterion) across participants, and then see which one provide on average the best performance. Although correct, this approach neglect the possibility that different participants might use different strategies that are best described by alternative, competing models.</description>
+    </item>
+    
   </channel>
 </rss>

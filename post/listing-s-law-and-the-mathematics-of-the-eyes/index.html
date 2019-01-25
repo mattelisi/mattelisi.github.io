@@ -234,7 +234,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    9 min read
+    10 min read
   </span>
   
 
@@ -358,7 +358,7 @@ i^2 = j^2 = k^2 = ijk =  - 1
 </div>
 <div id="donders-law-and-listings-law" class="section level1">
 <h1>Donder’s law and Listing’s law</h1>
-<p>Donder’s law (1848) states that the eye use only two degrees of freedom while fixating, although mechanically it has three. In othere words this means that the torsion component of the eye movement is not arbitrary but it is uniquely determined by the direction of the visual axis and is independent of the previous eye movements. From the material review above it should be clear how any 3D eye orientation can be fully described as a rotation abour a given axis from a primary reference position. This allows also to formulate Donder’s law more specifically,according to what is known as Listing’s law <span class="citation">(Helmholtz and Helmholtz 1910,<span class="citation">Haustein (1989)</span>)</span> “<em>There exists a certain eye position from which the eye may reach any other position of fixation by a rotation around an axis perpendicular to the visual axis. This particular position is called primary position</em>”. This means that <em>all possible eye positions</em> can be reached from the primary position by a single rotation about an axis perpendicular to the visual axis. Since they are all perpendicular to the visual axis, all rotation axis that satisfy Listing’s law are on the same plane (<em>Listing’s plane</em>). The law can be tested with eyetracking equipments that allows measuring also the torsional components (such as scleral coils): results have shown that the standard deviation from Listing’s plane of empirically measured rotation vectors is only about 0.5-1 deg <span class="citation">(Haslwanter 1995)</span>. Formally it can be written that for any orientation of the visual axis, defined by the rotation vector <span class="math inline">\(\vec{a}\)</span> and measured from the primary position <span class="math inline">\(\vec{h_1}=(1,0,0)\)</span>, <span class="math display">\[
+<p>Donder’s law (1848) states that the eye use only two degrees of freedom while fixating, although mechanically it has three. In othere words this means that the torsion component of the eye movement is not arbitrary but it is uniquely determined by the direction of the visual axis and is independent of the previous eye movements. From the material review above it should be clear how any 3D eye orientation can be fully described as a rotation abour a given axis from a primary reference position. This allows also to formulate Donder’s law more specifically,according to what is known as Listing’s law <span class="citation">(Helmholtz et al. 1910,<span class="citation">Haustein (1989)</span>)</span> “<em>There exists a certain eye position from which the eye may reach any other position of fixation by a rotation around an axis perpendicular to the visual axis. This particular position is called primary position</em>”. This means that <em>all possible eye positions</em> can be reached from the primary position by a single rotation about an axis perpendicular to the visual axis. Since they are all perpendicular to the visual axis, all rotation axis that satisfy Listing’s law are on the same plane (<em>Listing’s plane</em>). The law can be tested with eyetracking equipments that allows measuring also the torsional components (such as scleral coils): results have shown that the standard deviation from Listing’s plane of empirically measured rotation vectors is only about 0.5-1 deg <span class="citation">(Haslwanter 1995)</span>. Formally it can be written that for any orientation of the visual axis, defined by the rotation vector <span class="math inline">\(\vec{a}\)</span> and measured from the primary position <span class="math inline">\(\vec{h_1}=(1,0,0)\)</span>, <span class="math display">\[
 \vec{h_1} \cdot \vec{a} = 0
 \]</span> This indicates simply that the rotation about the visual axis is 0, and that as a consequence all the rotation axes lies in a frontal plane.</p>
 <p>Going back to the beginning, knowing the coordinates os Listing’s plane one can compute the rotation vector that correspond to the current eye position from the recording of the 2D gaze location on a screen. In the simplest case, we assume that the primary position corresponds to when the observer fixates the center of the screen, <span class="math inline">\((0,0)\)</span>. What is the rotation vector that describes the 3D eye orientation when the observer fixates the location <span class="math inline">\((s_x, s_y)\)</span> ? Let’s say the position on screen is defined in cm, and we know that the distance of the eye from the screen is <span class="math inline">\(L\)</span> cm. The rotation angle can be computed as <span class="math inline">\(\theta = \rm{atan} \frac{\sqrt{s_x^2+s_y^2}}{L}\)</span>, while the angle that defines the orientation of the rotation axis within Listing’s plane is <span class="math inline">\(\alpha = \rm{atan2}(s_y,s_x)\)</span>. The complete rotation vector is then <span class="math display">\[
@@ -380,7 +380,7 @@ i^2 = j^2 = k^2 = ijk =  - 1
 <p>Haustein, Werner. 1989. “Considerations on Listing’s Law and the primary position by means of a matrix description of eye position control.” <em>Biological Cybernetics</em> 60 (6): 411–20. doi:<a href="https://doi.org/10.1007/BF00204696">10.1007/BF00204696</a>.</p>
 </div>
 <div id="ref-Helmholtz1910">
-<p>Helmholtz, Hermann von, and Hermann von Helmholtz. 1910. <em>Handbuch der Physiologischen Optik</em>. Hamburg: Voss.</p>
+<p>Helmholtz, Hermann von, Hermann von Helmholtz, Hermann von Helmholtz, and Hermann von Helmholtz. 1910. <em>Handbuch der Physiologischen Optik</em>. Hamburg: Voss.</p>
 </div>
 <div id="ref-Tweed1990">
 <p>Tweed, Douglas, and Tutis Vilis. 1990. “Geometric relations of eye position and velocity vectors during saccades.” <em>Vision Research</em> 30 (1): 111–27. doi:<a href="https://doi.org/10.1016/0042-6989(90)90131-4">10.1016/0042-6989(90)90131-4</a>.</p>
@@ -420,6 +420,9 @@ i^2 = j^2 = k^2 = ijk =  - 1
 <div class="container article-widget">
   <nav>
   <ul class="pager">
+    
+    <li class="previous"><a href="https://mattelisi.github.io/post/bms/"><span
+      aria-hidden="true">&larr;</span> Bayesian model selection at the group level</a></li>
     
 
     

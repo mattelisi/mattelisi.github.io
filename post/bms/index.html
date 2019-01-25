@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.49" />
+  <meta name="author" content="Matteo Lisi">
+  
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://mattelisi.github.io/post/bms/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7cMerriweather%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/override.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-107105934-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+  <link rel="alternate" href="https://mattelisi.github.io/index.xml" type="application/rss+xml" title="juicy bits">
+  <link rel="feed" href="https://mattelisi.github.io/index.xml" type="application/rss+xml" title="juicy bits">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://mattelisi.github.io/post/bms/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="juicy bits">
+  <meta property="og:url" content="https://mattelisi.github.io/post/bms/">
+  <meta property="og:title" content="Bayesian model selection at the group level | juicy bits">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  
+  
+  
+
+  
+
+  <title>Bayesian model selection at the group level | juicy bits</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/"><img src="/img/shademe.png" alt="juicy bits"></a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>/about</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>/blog</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#notes">
+            
+            <span>/misc</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>/contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>/publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Bayesian model selection at the group level</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Jan 1, 0001
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    8 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/r">R</a
+    >, 
+    
+    <a href="/categories/tutorial">tutorial</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Bayesian%20model%20selection%20at%20the%20group%20level&amp;url=https%3a%2f%2fmattelisi.github.io%2fpost%2fbms%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmattelisi.github.io%2fpost%2fbms%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmattelisi.github.io%2fpost%2fbms%2f&amp;title=Bayesian%20model%20selection%20at%20the%20group%20level"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fmattelisi.github.io%2fpost%2fbms%2f&amp;title=Bayesian%20model%20selection%20at%20the%20group%20level"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Bayesian%20model%20selection%20at%20the%20group%20level&amp;body=https%3a%2f%2fmattelisi.github.io%2fpost%2fbms%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        <p>In experimental psychology and neuroscience the classical approach when comparing different models that make quantitative predictions about the behavior of participants is to aggregate the predictive ability of the model (e.g. as quantified by Akaike Information criterion) across participants, and then see which one provide on average the best performance. Although correct, this approach neglect the possibility that different participants might use different strategies that are best described by alternative, competing models. To account for this, Stephan et al. <span class="citation">(Stephan et al. 2009)</span> proposed a more conservative approach where models are treated as random effects that could differ between subjects and have a fixed (unknown) distribution in the population. The relevant statistical quantity is the frequency with which any model prevails in the population. Note that this is different from the definition of random-effects in classical statistic where random effects models have multiple sources of variation, e.g. within- and between- subject variance. An useful and popular way to summarize the results of this analysis is by reporting the model’s <em>exceedance probabilities</em>, which measures how likely it is that any given model is more frequent than all other models in the set. The following exposition is largerly based on Stephan et al’s paper <span class="citation">(Stephan et al. 2009)</span>.</p>
+<div id="model-evidence" class="section level1">
+<h1>Model evidence</h1>
+<p>Let’s say we have an experiment with <span class="math inline">\(\left(1,\dots,N\right)\)</span> participants. Their performance is quantitatively predicted by a set <span class="math inline">\(\left(1,\dots,K\right)\)</span> competing models. The behaviour of any subject <span class="math inline">\(n\)</span> can be fit by the model <span class="math inline">\(k\)</span> by finding the value(s) of the parameter(s) <span class="math inline">\(\theta_k\)</span> that maximize the marginal likelihood of the data <span class="math inline">\(y_n\)</span> given the model, that is <span class="math display">\[
+  p \left(y_n \mid k \right) = \int p\left(y_n \mid k, \theta_k \right) \, p\left(\theta_k \right) d\theta.
+\]</span> By integrating over the prior probability of parameters the marginal likelihood provide a measure of the evidence in favour of a specific model while taking into account the complexity of the model. We might also do something simpler and approximate the model evidence using e.g. the Akaike information criterion.</p>
+</div>
+<div id="models-as-random-effects" class="section level1">
+<h1>Models as random effects</h1>
+<p>We are interested in finding which model does better at predicting behavior, however we allow for different participants to use different strategies which can be represented by different models. To achieve that we treat the model as random effects and we assume that the frequency or probability of models in the population, <span class="math inline">\((r_1, \dots, r_K)\)</span>, is described by a Dirichlet distribution with parameters <span class="math inline">\(\boldsymbol{\alpha } = \alpha_1, \dots, \alpha_k\)</span>, <span class="math display">\[
+\begin{align}
+p\left(r \mid  \boldsymbol{\alpha } \right) &amp; = \text{Dir} \left(r, \boldsymbol{ \alpha } \right) \\
+&amp; = \frac{1}{\mathbf{B} \left(\boldsymbol{ \alpha }  \right)} \prod_{i=1}^K r_i^{\alpha_i -1} \nonumber
+\end{align}.
+\]</span> Where the normalizing constant <span class="math inline">\(\mathbf{B} \left(\boldsymbol{ \alpha } \right)\)</span> is the multivariate Beta function. The probabilities <span class="math inline">\(r\)</span> generates ‘switches’ or indicator variables <span class="math inline">\(m_n = m_1, \dots, m_N\)</span> where <span class="math inline">\(m \in \left \{ 0, 1\right \}\)</span> and <span class="math inline">\(\sum_1^K m_{nk}=1\)</span>. These indicator variables prescribe the model for the subjects <span class="math inline">\(n\)</span>, $ p(m_{nk}=1)=r_k$. Given the probabilities <span class="math inline">\(r\)</span>, the indicator variables have thus a multinomial distribution, that is <span class="math display">\[
+p\left(m_n \mid  \mathbf{r} \right) =  \prod_{k=1}^K r_k^{m_{nk}}.
+\]</span> The graphical model that summarizes these dependencies is shown the following graph:</p>
+<div class="figure">
+<img src="/img/bms.png" alt="" style="width:50.0%" />
+<p class="caption"></p>
+</div>
+</div>
+<div id="variational-bayesian-approach" class="section level1">
+<h1>Variational Bayesian approach</h1>
+<p>The goal is to estimate the parameters <span class="math inline">\(\boldsymbol{\alpha}\)</span> that define the posterior distribution of model frequencies given the data, $ p ( r | y)$. To do so we need an estimate of the model evidence <span class="math inline">\(p \left(m_{nk}=1 \mid y_n \right)\)</span>, that is the belief that the model <span class="math inline">\(k\)</span> generated data from subject <span class="math inline">\(m\)</span>. There are many possible approach that can be used to estimate the model evidence, either exactly or approximately. Importantly, these would need to be normalized so that they sum to one across models, so that is one were using the Akaike Information criterion, this should be transformed into Akaike weights <span class="citation">(Burnham and Anderson 2002)</span>.</p>
+<div id="generative-model" class="section level2">
+<h2>Generative model</h2>
+<p>Given the graphical model illustrated above, the joint probability of parameters and data can be expressed as <span class="math display">\[
+\begin{align}
+p \left( y, r, m \right) &amp; = p \left( y \mid m \right) \, p \left( m \mid r \right) \, p \left( r \mid \boldsymbol{\alpha} \right) \\
+&amp; = p \left( r \mid \boldsymbol{\alpha} \right) \left[ \prod_{n=1}^N p \left( y_n \mid m_n \right) \, p\left(m_n \mid r \right) \right] \nonumber \\
+&amp; = \frac{1}{\mathbf{B} \left(\boldsymbol{ \alpha }  \right)} \left[ \prod_{k=1}^K r_k^{\alpha_k -1} \right] \left[ \prod_{n=1}^N p \left( y_n \mid m_n\right) \, \prod_{k=1}^K r_k^{m_{nk}} \right] \nonumber \\
+&amp; = \frac{1}{\mathbf{B} \left(\boldsymbol{ \alpha }  \right)} \prod_{n=1}^N \left[ \prod_{k=1}^K \left[ p \left( y_n \mid m_{nk} \right) \, r_k \right]^{m_{nk}} \, r_k^{\alpha_k -1} \right]. \nonumber
+\end{align}
+\]</span> And the log probability is <span class="math display">\[
+\log p \left( y, r, m \right)  = - \log \mathbf{B} \left(\boldsymbol{ \alpha }  \right)
++ \sum_{n=1}^N \sum_{k=1}^K \left[ \left(\alpha_k -1 \right) \log r_k
++ m_{nk} \left( p \left( \log y_n \mid m_{nk} \right) + \log r_k\right)\right].
+\]</span></p>
+</div>
+<div id="variational-approximation" class="section level2">
+<h2>Variational approximation</h2>
+<p>In order to fit this hierarchical model following the variational approach one needs to define an approximate posterior distribution over model frequencies and assignments, <span class="math inline">\(q\left(r,m\right)\)</span>, which is assumed to be adequately described by a mean-field factorisation, that is <span class="math inline">\(q\left(r,m\right) = q\left(r\right) \, q\left(m\right)\)</span>. The two densities are proportional to the exponentiated <em>variational energies</em> <span class="math inline">\(I(m), I(r)\)</span>, which are essntially the un-normalized approximated log-posterior densities, that is <span class="math display">\[
+\begin{align}
+q\left(r\right) &amp; \propto e^{I(r)}, \, q\left(m\right)\propto e^{I(m)} \\
+I(r) &amp; = \left&lt; \log p \left( y, r, m \right) \right&gt;_{q(r)} \\
+I(m) &amp; = \left&lt; \log p \left( y, r, m \right) \right&gt;_{q(m)}
+\end{align}
+\]</span> For the approximate posterior over model assignment <span class="math inline">\(q(m)\)</span> we first compute <span class="math inline">\(I(m)\)</span> and then an appropriate normalization constant. From the expression above of the joint log-probability, and removing all the terms that do not depend on <span class="math inline">\(m\)</span> we have that the un-normalized approximate log-posterior (the variational energy) can be expressed as <span class="math display">\[
+\begin{align}
+I(m) &amp; = \int p \left( y, r, m \right) \, q(r) \, dr \\
+&amp; = \sum_{n=1}^N \sum_{k=1}^K m_{nk} \left[ p \left( \log y_n \mid m_{nk} \right) + \int q(r_k) \log r_k \, d r_k \right] \nonumber \\
+&amp; = \sum_{n=1}^N \sum_{k=1}^K m_{nk} \left[ p \left( \log y_n \mid m_{nk} \right) + \psi (\alpha_k) -\psi \left(  \alpha_S \right) \right] \nonumber
+\end{align}
+\]</span> where <span class="math inline">\(\alpha_S = \sum_{k=1}^K \alpha_k\)</span> and <span class="math inline">\(\psi\)</span> is the digamma function. If you wonder (as I did when reading this the first time) where the hell does the digamma function comes from here: well it is here due to a property of the Dirichlet distribution, which says that the expected value of <span class="math inline">\(\log r_k\)</span> can be computed as <span class="math display">\[
+\mathbb{E} \left[\log r_k \right] = \int p(r_k) \log r_k \, d r_k = \psi (\alpha_k) -\psi \left( \sum_{k=1}^K \alpha_k \right)
+\]</span></p>
+<p>From this, we have that the un-normalized posterior belief that model <span class="math inline">\(k\)</span> generated data from subject <span class="math inline">\(n\)</span> is <span class="math display">\[
+u_{nk} =  \exp {\left[ p \left( \log y_n \mid m_{nk} \right) + \psi (\alpha_k) -\psi \left(  \alpha_S \right) \right]}
+\]</span> and the normalized belief is <span class="math display">\[
+g_{nk} = \frac{u_{nk}}{\sum_{k=1}^K u_{nk}}
+\]</span></p>
+<p>We need also to compute the approximate posterior density <span class="math inline">\(q(r)\)</span>, and we begin as above by computing the un-normalized, approximate log-posterior or variational energy <span class="math display">\[
+\begin{align}
+I(r) &amp; = \int p \left( y, r, m \right) \, q(m) \, dm \\
+&amp; = \sum_{k=1}^K \left[\log r_k \left(\alpha_{0k} -1 \right) +  \sum_{n=1}^N g_{nk} \log r_k \right]
+\end{align}
+\]</span> The logarithm of a Dirichlet density is <span class="math inline">\(\log \text{Dir} (r , \boldsymbol{\alpha}) = \sum_{k=1}^K \log r_k \left(\alpha_{0k} -1 \right) + \dots\)</span>, therefore the parameters of the approximate posterior are <span class="math display">\[
+  \boldsymbol{\alpha} = \boldsymbol{\alpha}_0 + \sum_{n=1}^N g_{nk}
+\]</span></p>
+</div>
+<div id="iterative-algorithm" class="section level2">
+<h2>Iterative algorithm}</h2>
+<p>The algorithm <span class="citation">(Stephan et al. 2009)</span> proceeds by estimating iteratively the posterior belief that a given model generated the data from a certain subject, by integrating out the prior probabilities of the models (the <span class="math inline">\(r_k\)</span> predicted by the Dirichlet distribution that describes the frequency of models in the population) in log-space as described above. Next the parameters of the approximate Dirichlet posterior are updated, which gives new priors to integrate out from the model evidence, and so on until convergence.Convergence is assessed by keeping track of how much the vector $ $ change from one iteration to the next, i.e. is common to consider that the procedure has converged when <span class="math inline">\(\left\Vert \boldsymbol{\alpha}_{t-1} \cdot \boldsymbol{\alpha}_t \right\Vert &lt; 10^{-4}\)</span> (where <span class="math inline">\(\cdot\)</span> is the dot product).</p>
+</div>
+<div id="exceedance-probabilities" class="section level2">
+<h2>Exceedance probabilities</h2>
+<p>After having found the optimised values of <span class="math inline">\(\boldsymbol{\alpha}\)</span>, one popular way to report the results and rank the models is by their exceedance probability, which is defined as the (second order) probability that participants were more likely to choose a certain model to generate behavior rather than any other alternative model, that is <span class="math display">\[
+\forall j \in \left\{1, \dots, K, j \ne k \right\}, \,\,\, \varphi_k = p \left(r_k &gt; r_j \mid y, \boldsymbol{\alpha} \right).
+\]</span> In the case of <span class="math inline">\(K&gt;2\)</span> models, the exceedance probabilities <span class="math inline">\(\varphi_k\)</span> are computed by generating random samples from univariate Gamma densities and then normalizing. Specifically, each multivariate Dirichlet sample is composed of <span class="math inline">\(K\)</span> independent random samples <span class="math inline">\((x_1, \dots, x_K)\)</span> distributed according to the density <span class="math inline">\(\text{Gamma}\left(\alpha_i, 1\right) = \frac{x_i^{\alpha_i-1} e^{-x_i}}{\Gamma(\alpha_i)}\)</span>, and then set normalize them by taking <span class="math inline">\(z_i = \frac{x_i}{ \sum_{i=1}^K x_i}\)</span>. The exceedance probability <span class="math inline">\(\varphi_k\)</span> for each model <span class="math inline">\(k\)</span> is then computed as <span class="math display">\[
+\varphi_k = \frac{\sum \mathop{\bf{1}}_{z_k&gt;z_j, \forall j \in \left\{1, \dots, K, j \ne k \right\} }}{ \text{n. of samples}}
+\]</span> where <span class="math inline">\(\mathop{\bf{1}}_{\dots}\)</span> is the indicator function (<span class="math inline">\(\mathop{\bf{1}}_{x&gt;0} = 1\)</span> if <span class="math inline">\(x&gt;0\)</span> and <span class="math inline">\(0\)</span> otherwise), summed over the total number of multivariate samples drawn.</p>
+</div>
+</div>
+<div id="code" class="section level1">
+<h1>Code!</h1>
+<p>All this is already implementd in Matlab code in <a href="https://www.fil.ion.ucl.ac.uk/spm/software/spm12/">SPM 12</a>. However, if you don’t like Matlab, I have translated it into R, and put it into a <a href="https://github.com/mattelisi/bmsR">package on Github</a>.</p>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references">
+<div id="ref-Burnham2002">
+<p>Burnham, Kenneth P., and David R. Anderson. 2002. <em>Model Selection and Multimodel Inference: A Practical Information-Theoretic Approach</em>. 2nd editio. New York, US: Springer New York. doi:<a href="https://doi.org/10.1007/b97636">10.1007/b97636</a>.</p>
+</div>
+<div id="ref-Stephan2009">
+<p>Stephan, Klaas Enno, Will D. Penny, Jean Daunizeau, Rosalyn J. Moran, and Karl J. Friston. 2009. “Bayesian model selection for group studies.” <em>NeuroImage</em> 46 (4). Elsevier Inc.: 1004–17. doi:<a href="https://doi.org/10.1016/j.neuroimage.2009.03.025">10.1016/j.neuroimage.2009.03.025</a>.</p>
+</div>
+</div>
+</div>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/r">R</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/bayesian-data-analysis">Bayesian data analysis</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/model-selection">model-selection</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/post/bayesian-multilevel-models-r-stan/">Bayesian multilevel models using R and Stan (part 1)</a></li>
+    
+    <li><a href="/post/simulating-correlated-variables-with-the-cholesky-factorization/">Simulating correlated variables with the Cholesky factorization</a></li>
+    
+    <li><a href="/post/model-averaging/">Multi-model estimation of psychophysical parameters</a></li>
+    
+  </ul>
+</div>
+
+
+
+<div class="container article-widget">
+  <nav>
+  <ul class="pager">
+    
+
+    
+    <li class="next"><a href="https://mattelisi.github.io/post/listing-s-law-and-the-mathematics-of-the-eyes/">Listing&#39;s law, and the mathematics of the eyes <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mattelisi" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Matteo Lisi &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD12zE83xCTsL_ohYvAPoW43ZdpsvD_rGU"></script>
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+
