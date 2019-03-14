@@ -18,8 +18,8 @@
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>https://mattelisi.github.io/home/about/</guid>
-      <description>About me I&amp;rsquo;m Matteo Lisi, and this is my attempt at blogging. I will use this space to post ideas and my random thoughts about science, statistics, politics, and share notes about what I am learning.
-I am a postdoc fellow in the Optometry Division of City University, in London. I use psychophysics, eye-tracking, and computational modelling to investigate visual perception, broadly defined as the ability to assimilate information contained in visible light.</description>
+      <description>About I&amp;rsquo;m Matteo Lisi, and this is my attempt at blogging. I will use this space to post ideas and my random thoughts about science, statistics, politics, and share notes about what I am learning.
+I am currently a postdoc fellow in the Optometry Division of City University, in London. I use psychophysics, eye-tracking, and computational modelling to investigate visual perception, broadly defined as the ability to assimilate information contained in visible light.</description>
     </item>
     
     <item>
@@ -38,7 +38,7 @@ I am a postdoc fellow in the Optometry Division of City University, in London. I
       
       <guid>https://mattelisi.github.io/home/notes/</guid>
       <description>Here is a list of miscellaneous resources (short notes, slides, code) mostly designed for teaching.
- Bayesian model selection at the group level. This note illustrated the principles of Bayesian model selection at the group level, that is treating models as random effects and allowing for individual differences in the model that best describe the behavior of a given participant (see Penny, Daunizeau, Moran, and Friston. Bayesian model selection for group studies.</description>
+ Multilevel modelling: frequentist and Bayesian approaches. These are the slides for a more advanced course on multilevel modeling. I start by introducing multilevel models from a frequentist perspective, then introduce the Bayesian approach. The analyses are performed using Stan and its R interface. Download also the R code that documents the analyses step-by-step (code); the two dataset used in the examples (bisection, mixture); the Stan code of the models discussed (sleepstudy, glmm, mixture).</description>
     </item>
     
     <item>

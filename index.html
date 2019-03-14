@@ -294,11 +294,11 @@
 
     
 
-<h1 id="about-me">About me</h1>
+<h1 id="about">About</h1>
 
 <p>I&rsquo;m Matteo Lisi, and this is my attempt at blogging. I will use this space to post ideas and my random thoughts about science, statistics, politics, and share notes about what I am learning.</p>
 
-<p>I am a postdoc fellow in the <em>Optometry Division</em> of <a href="https://www.city.ac.uk/people/academics/matteo-lisi"><em>City University</em></a>, in London. I use psychophysics, eye-tracking, and computational modelling to investigate visual perception, broadly defined as the ability to assimilate information contained in visible light. I am also interested in decision-making and cognitive processes, both in healthy subjects and after cerebral damage. Before London I worked at the <a href="http://lpp.parisdescartes.cnrs.fr/home/"><em>Laboratoire Psychologie de la Perception</em></a>, at the <em>Université Paris Descartes</em> in Paris, and I did my PhD at the <a href="http://ccnl.psy.unipd.it"><em>CCNL</em></a>, at <em>University of Padova</em>, in Italy. Find my publications on <a href="https://scholar.google.com/citations?user=IabbkbEAAAAJ&amp;hl=en"><em>Scholar</em></a> or <a href="https://www.researchgate.net/profile/Matteo_Lisi"><em>RG</em></a>. I occasionally share code on <a href="https://github.com/mattelisi"><strong>GitHub</strong></a> and data on <a href="https://www.osf.io/maz33"><strong>OSF</strong></a>.</p>
+<p>I am currently a postdoc fellow in the <em>Optometry Division</em> of <a href="https://www.city.ac.uk/people/academics/matteo-lisi"><em>City University</em></a>, in London. I use psychophysics, eye-tracking, and computational modelling to investigate visual perception, broadly defined as the ability to assimilate information contained in visible light. I am also interested in decision-making and cognitive processes, both in healthy subjects and after cerebral damage. Before London I worked at the <a href="http://lpp.parisdescartes.cnrs.fr/home/"><em>Laboratoire Psychologie de la Perception</em></a>, at the <em>Université Paris Descartes</em> in Paris, and I did my PhD at the <a href="http://ccnl.psy.unipd.it"><em>CCNL</em></a>, at <em>University of Padova</em>, in Italy. Find my publications on <a href="https://scholar.google.com/citations?user=IabbkbEAAAAJ&amp;hl=en"><em>Scholar</em></a> or <a href="https://www.researchgate.net/profile/Matteo_Lisi"><em>RG</em></a>. I occasionally share code on <a href="https://github.com/mattelisi"><strong>GitHub</strong></a> and data on <a href="https://www.osf.io/maz33"><strong>OSF</strong></a>.</p>
 
 
     <div class="row">
@@ -548,9 +548,11 @@
     <p>Here is a list of miscellaneous resources (short notes, slides, code) mostly designed for teaching.</p>
 
 <ul>
+<li><p><a href="/files/GDR2018_slidesML.html"><strong>Multilevel modelling: frequentist and Bayesian approaches.</strong></a> These are the slides for a more advanced course on multilevel modeling. I start by introducing multilevel models from a frequentist perspective, then introduce the Bayesian approach. The analyses are performed using <a href="http://mc-stan.org/">Stan</a> and its <a href="[mc-stan.org/](http://mc-stan.org/)">R interface</a>. Download also the R code that documents the analyses step-by-step (<a href="/files/code_GDR2018.R"><em>code</em></a>); the two dataset used in the examples (<a href="/files/bisection2.txt"><em>bisection</em></a>, <a href="/files/cueingdd.txt">mixture</a>); the Stan code of the models discussed (<a href="/files/sleep_model_v2.stan"><em>sleepstudy</em></a>, <a href="/files/bisection_stan_v1.stan"><em>glmm</em></a>, <a href="/files/mixmodel_2.stan"><em>mixture</em></a>). You can also check the Github repository with the Rmarkdown script used to generate the presentation <a href="https://github.com/mattelisi/multilevel-course"><em>here</em></a>.</p></li>
+
 <li><p><a href="/files/bms_group.pdf"><strong>Bayesian model selection at the group level.</strong></a> This note illustrated the principles of Bayesian model selection at the group level, that is treating models as random effects and allowing for individual differences in the model that best describe the behavior of a given participant (see Penny, Daunizeau, Moran, and Friston. Bayesian model selection for group studies. NeuroImage, 46(4):1004–1017, 2009). I implemented (mainly: translated from Matlab, SPM 12) the iterative algorithm and computations to compute exceedance probabilities, and put them in an R package available at this <a href="https://github.com/mattelisi/bmsR"><em>Github repository</em></a>.</p></li>
 
-<li><p><a href="/files/GDR2018_slidesML.html"><strong>Multilevel modelling: frequentist and Bayesian approaches.</strong></a> These are the slides for a more advanced course on multilevel modeling. I start by introducing multilevel models from a frequentist perspective, then introduce the Bayesian approach. The analyses are performed using <a href="http://mc-stan.org/">Stan</a> and its <a href="[mc-stan.org/](http://mc-stan.org/)">R interface</a>. Download also the R code that documents the analyses step-by-step (<a href="/files/code_GDR2018.R"><em>code</em></a>); the two dataset used in the examples (<a href="/files/bisection2.txt"><em>bisection</em></a>, <a href="/files/cueingdd.txt">mixture</a>); the Stan code of the models discussed (<a href="/files/sleep_model_v2.stan"><em>sleepstudy</em></a>, <a href="/files/bisection_stan_v1.stan"><em>glmm</em></a>, <a href="/files/mixmodel_2.stan"><em>mixture</em></a>). You can also check the Github repository with the Rmarkdown script used to generate the presentation <a href="https://github.com/mattelisi/multilevel-course"><em>here</em></a>.</p></li>
+<li><p><a href="/files/slope_sweetpoint.pdf"><strong>Adaptive maximum likelihood estimation of psychometric slope.</strong></a> Short note illustrating how to set up an adaptive maximum likelihood procedure optimized to estimate the psychometric slope. Contains a closed-form expression of the expected variance of the slope that takes lapse rates into account (thus can be used to compute the so-called <em>sweet points</em>). A Matlab implementation can be found (in additiona to a simple implementation of the Quest+ procedure) in this <a href="https://github.com/mattelisi/questPlus-3par"><em>Github repo</em></a>.</p></li>
 
 <li><p><a href="/files/mm_slides.pdf"><strong>Linear and generalized linear mixed-effects models in <code>R</code>.</strong></a> These are the slides for an introductory class on mixed-effects models in <code>R</code>. Only assume some notions on linear models and some basic experience with <code>R</code>. Download also: <a href="/files/mm_script.R"><em>R script</em></a>; <a href="/files/blinkStudy.txt"><em>additional dataset</em></a>, for the last example.</p></li>
 
@@ -590,7 +592,7 @@
       
       <li>
         <i class="fa-li fa fa-envelope fa-2x" aria-hidden="true"></i>
-        <span id="person-email" itemprop="email"><a href="mailto:matteo.lisi@city.ac.uk">matteo.lisi@city.ac.uk</a></span>
+        <span id="person-email" itemprop="email"><a href="mailto:matteo.lisi@inventati.org">matteo.lisi@inventati.org</a></span>
       </li>
       
 
@@ -672,6 +674,40 @@
     
 
     
+    
+      
+        <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <span itemprop="author">
+    Gerrit Maus, Hannah Goh, Matteo Lisi</span>.
+  <a href="https://mattelisi.github.io/publication/motion-blink-preprint/" itemprop="name">Perceived compression of time during blinks revealed by moving objects</a>.
+  In <em>PsyArXiv</em>,&nbsp;2019.
+  <p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://doi.org/10.31234/osf.io/k5zqr" target="_blank" rel="noopener">
+  URL
+</a>
+
+</p>
+</div>
+
+      
     
       
         <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
@@ -767,44 +803,6 @@
 
 
 <a class="btn btn-primary btn-outline btn-xs" href="https://doi.org/10.1152/jn.00229.2017" target="_blank" rel="noopener">
-  URL
-</a>
-
-</p>
-</div>
-
-      
-    
-      
-        <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
-  <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
-  <span itemprop="author">
-    Matteo Lisi, Patrick Cavanagh</span>.
-  <a href="https://mattelisi.github.io/publication/double-drift-pointing/" itemprop="name">Different spatial representations guide eye and hand movements</a>.
-  In <em>Journal of Vision</em>,&nbsp;2017.
-  <p>
-
-
-
-
-
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://osf.io/kcsjv/" target="_blank" rel="noopener">
-  Dataset
-</a>
-
-
-
-
-
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="http://jov.arvojournals.org/article.aspx?articleid=2604720" target="_blank" rel="noopener">
   URL
 </a>
 
