@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>eye movements on juicy bits</title>
-    <link>https://mattelisi.github.io/categories/eye-movements/</link>
+    <link>/categories/eye-movements/</link>
     <description>Recent content in eye movements on juicy bits</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Matteo Lisi</copyright>
     <lastBuildDate>Wed, 27 Sep 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://mattelisi.github.io/categories/eye-movements/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/eye-movements/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Listing&#39;s law, and the mathematics of the eyes</title>
-      <link>https://mattelisi.github.io/post/listing-s-law-and-the-mathematics-of-the-eyes/</link>
+      <link>/post/listing-s-law-and-the-mathematics-of-the-eyes/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/post/listing-s-law-and-the-mathematics-of-the-eyes/</guid>
+      <guid>/post/listing-s-law-and-the-mathematics-of-the-eyes/</guid>
       <description>Brief intro to the mathematical formalism used to describe rotations of the eyes in 3D (including the torsional component). The shape of the human eye is approximately a sphere with a diameter of 23 mm, and mechanically it behaves like a ball in a ball and socket joint. Because there is a functional distinguished axis - the visual axis, that is the line of gaze or more precisely the imaginary straight line passing through both the center of the pupil and the center of the fovea - the movements of the eyes are usually divided in gaze direction and cyclotorsion (or simply torsion): while gaze direction refers to the direction of the visual axis, the torsion indicates the rotation of the eyeball about the visual axis.</description>
     </item>
     

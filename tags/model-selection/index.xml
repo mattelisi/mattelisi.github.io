@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>model-selection on juicy bits</title>
-    <link>https://mattelisi.github.io/tags/model-selection/</link>
+    <link>/tags/model-selection/</link>
     <description>Recent content in model-selection on juicy bits</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Matteo Lisi</copyright>
     <lastBuildDate>Fri, 25 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://mattelisi.github.io/tags/model-selection/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/model-selection/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bayesian model selection at the group level</title>
-      <link>https://mattelisi.github.io/post/bms/</link>
+      <link>/post/bms/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/post/bms/</guid>
+      <guid>/post/bms/</guid>
       <description>In experimental psychology and neuroscience the classical approach when comparing different models that make quantitative predictions about the behavior of participants is to aggregate the predictive ability of the model (e.g. as quantified by Akaike Information criterion) across participants, and then see which one provide on average the best performance. Although correct, this approach neglect the possibility that different participants might use different strategies that are best described by alternative, competing models.</description>
     </item>
     

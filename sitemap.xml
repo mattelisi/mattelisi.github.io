@@ -5,7 +5,16 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/motion-blink-preprint/</loc>
+      <loc>/post/ephemeral/</loc>
+      <lastmod>2019-04-05T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/publication/motion-blink-preprint/</loc>
       <lastmod>2019-02-04T00:00:00+00:00</lastmod>
     </url>
     
@@ -14,7 +23,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/post/bms/</loc>
+      <loc>/post/bms/</loc>
       <lastmod>2019-01-25T00:00:00+00:00</lastmod>
     </url>
     
@@ -23,7 +32,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/post/bayesian-multilevel-models-r-stan/</loc>
+      <loc>/post/bayesian-multilevel-models-r-stan/</loc>
       <lastmod>2018-03-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -32,7 +41,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/validity_psyres/</loc>
+      <loc>/publication/validity_psyres/</loc>
       <lastmod>2018-03-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -41,7 +50,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/dd_load/</loc>
+      <loc>/publication/dd_load/</loc>
       <lastmod>2018-02-04T00:00:00+00:00</lastmod>
     </url>
     
@@ -50,7 +59,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/post/simulating-correlated-variables-with-the-cholesky-factorization/</loc>
+      <loc>/post/simulating-correlated-variables-with-the-cholesky-factorization/</loc>
       <lastmod>2018-01-21T00:00:00+00:00</lastmod>
     </url>
     
@@ -59,7 +68,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/post/model-averaging/</loc>
+      <loc>/post/model-averaging/</loc>
       <lastmod>2017-12-08T00:00:00+00:00</lastmod>
     </url>
     
@@ -68,7 +77,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/post/listing-s-law-and-the-mathematics-of-the-eyes/</loc>
+      <loc>/post/listing-s-law-and-the-mathematics-of-the-eyes/</loc>
       <lastmod>2017-09-27T00:00:00+00:00</lastmod>
     </url>
     
@@ -77,7 +86,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/memory-delphine/</loc>
+      <loc>/publication/memory-delphine/</loc>
       <lastmod>2017-09-27T00:00:00+00:00</lastmod>
     </url>
     
@@ -86,7 +95,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/double-drift-pointing/</loc>
+      <loc>/publication/double-drift-pointing/</loc>
       <lastmod>2017-09-24T00:00:00+00:00</lastmod>
     </url>
     
@@ -95,7 +104,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/discrete-confidence/</loc>
+      <loc>/publication/discrete-confidence/</loc>
       <lastmod>2017-07-28T00:00:00+00:00</lastmod>
     </url>
     
@@ -104,7 +113,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/blink-adapt/</loc>
+      <loc>/publication/blink-adapt/</loc>
       <lastmod>2017-02-02T00:00:00+00:00</lastmod>
     </url>
     
@@ -113,7 +122,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/tags/academic/</loc>
+      <loc>/tags/academic/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -122,7 +131,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/post/</loc>
+      <loc>/post/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -131,7 +140,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/</loc>
+      <loc>/publication/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -140,7 +149,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/time-constancy/</loc>
+      <loc>/publication/time-constancy/</loc>
       <lastmod>2016-11-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -149,7 +158,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/voluntary-eye/</loc>
+      <loc>/publication/voluntary-eye/</loc>
       <lastmod>2016-02-02T00:00:00+00:00</lastmod>
     </url>
     
@@ -158,7 +167,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/double-drift-1/</loc>
+      <loc>/publication/double-drift-1/</loc>
       <lastmod>2015-09-24T00:00:00+00:00</lastmod>
     </url>
     
@@ -167,7 +176,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/load-erp/</loc>
+      <loc>/publication/load-erp/</loc>
       <lastmod>2015-09-03T00:00:00+00:00</lastmod>
     </url>
     
@@ -176,7 +185,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/load-pupil/</loc>
+      <loc>/publication/load-pupil/</loc>
       <lastmod>2015-09-03T00:00:00+00:00</lastmod>
     </url>
     
@@ -185,7 +194,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/spatial-constancy-attention/</loc>
+      <loc>/publication/spatial-constancy-attention/</loc>
       <lastmod>2015-05-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -194,7 +203,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/optokinetic/</loc>
+      <loc>/publication/optokinetic/</loc>
       <lastmod>2014-08-04T00:00:00+00:00</lastmod>
     </url>
     
@@ -203,7 +212,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/desantis/</loc>
+      <loc>/publication/desantis/</loc>
       <lastmod>2014-07-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -212,7 +221,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/unsupervised-space-coding/</loc>
+      <loc>/publication/unsupervised-space-coding/</loc>
       <lastmod>2012-08-30T00:00:00+00:00</lastmod>
     </url>
     
@@ -221,7 +230,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication/premotor-model/</loc>
+      <loc>/publication/premotor-model/</loc>
       <lastmod>2012-05-29T00:00:00+00:00</lastmod>
     </url>
     
@@ -230,7 +239,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication_types/0/</loc>
+      <loc>/publication_types/0/</loc>
       <lastmod>2019-02-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -240,7 +249,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication_types/2/</loc>
+      <loc>/publication_types/2/</loc>
       <lastmod>2018-03-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -250,7 +259,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/tags/bayesian-data-analysis/</loc>
+      <loc>/tags/bayesian-data-analysis/</loc>
       <lastmod>2019-01-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -260,7 +269,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/categories/</loc>
+      <loc>/categories/</loc>
       <priority>0</priority>
     </url>
     
@@ -269,7 +278,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/tags/cholesky/</loc>
+      <loc>/tags/cholesky/</loc>
       <lastmod>2018-01-21T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -279,7 +288,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/publication_types/</loc>
+      <loc>/publication_types/</loc>
       <lastmod>2019-02-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -289,7 +298,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/tags/r/</loc>
+      <loc>/categories/r/</loc>
       <lastmod>2019-01-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -299,7 +308,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/categories/r/</loc>
+      <loc>/tags/r/</loc>
       <lastmod>2019-01-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -309,7 +318,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/categories/stan/</loc>
+      <loc>/categories/stan/</loc>
       <lastmod>2018-03-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -319,7 +328,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/tags/</loc>
+      <loc>/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -329,7 +338,27 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/categories/data-analysis/</loc>
+      <loc>/categories/books/</loc>
+      <lastmod>2019-04-05T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/books/</loc>
+      <lastmod>2019-04-05T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/categories/data-analysis/</loc>
       <lastmod>2017-12-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -339,7 +368,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/tags/eye-movements/</loc>
+      <loc>/categories/eye-movements/</loc>
       <lastmod>2017-09-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -349,7 +378,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/categories/eye-movements/</loc>
+      <loc>/tags/eye-movements/</loc>
       <lastmod>2017-09-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -359,7 +388,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/</loc>
+      <loc>/</loc>
       <lastmod>2016-04-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -369,7 +398,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/tags/mixed-effects/</loc>
+      <loc>/tags/mixed-effects/</loc>
       <lastmod>2018-03-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -379,7 +408,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/tags/model-selection/</loc>
+      <loc>/tags/model-selection/</loc>
       <lastmod>2019-01-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -389,7 +418,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/tags/multilevel-models/</loc>
+      <loc>/tags/multilevel-models/</loc>
       <lastmod>2018-03-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -399,7 +428,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/categories/note/</loc>
+      <loc>/categories/note/</loc>
       <lastmod>2018-01-21T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -409,7 +438,17 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/tags/psychophysics/</loc>
+      <loc>/tags/philosophy/</loc>
+      <lastmod>2019-04-05T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/categories/psychophysics/</loc>
       <lastmod>2017-12-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -419,7 +458,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/categories/psychophysics/</loc>
+      <loc>/tags/psychophysics/</loc>
       <lastmod>2017-12-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -429,7 +468,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/categories/self-study/</loc>
+      <loc>/categories/self-study/</loc>
       <lastmod>2018-01-21T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -439,7 +478,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/tags/simulation/</loc>
+      <loc>/tags/simulation/</loc>
       <lastmod>2018-01-21T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -449,7 +488,7 @@
     
     <url>
     
-      <loc>https://mattelisi.github.io/categories/tutorial/</loc>
+      <loc>/categories/tutorial/</loc>
       <lastmod>2019-01-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
