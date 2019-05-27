@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>note on juicy bits</title>
-    <link>/categories/note/</link>
+    <link>https://mattelisi.github.io/categories/note/</link>
     <description>Recent content in note on juicy bits</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Matteo Lisi</copyright>
     <lastBuildDate>Sun, 21 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/note/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mattelisi.github.io/categories/note/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Simulating correlated variables with the Cholesky factorization</title>
-      <link>/post/simulating-correlated-variables-with-the-cholesky-factorization/</link>
+      <link>https://mattelisi.github.io/post/simulating-correlated-variables-with-the-cholesky-factorization/</link>
       <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/simulating-correlated-variables-with-the-cholesky-factorization/</guid>
+      <guid>https://mattelisi.github.io/post/simulating-correlated-variables-with-the-cholesky-factorization/</guid>
       <description>Generating random variables with given variance-covariance matrix can be useful for many purposes. For example it is useful for generating random intercepts and slopes with given correlations when simulating a multilevel, or mixed-effects, model (e.g. see here). This can be achieved efficiently with the Choleski factorization. In linear algebra the factorization or decomposition of a matrix is the factorization of a matrix into a product of matrices. More specifically, the Choleski factorization is a decomposition of a positive-defined, symmetric1 matrix into a product of a triangular matrix and its conjugate transpose; in other words is a method to find the square root of a matrix.</description>
     </item>
     
