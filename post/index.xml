@@ -2,80 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on juicy bits</title>
-    <link>https://mattelisi.github.io/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on juicy bits</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Matteo Lisi</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://mattelisi.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Everybody lose</title>
-      <link>https://mattelisi.github.io/post/eu/</link>
+      <title>Attitude shift towards Remain in European Elections obscured in press by rebranded Farage party</title>
+      <link>/post/eu/</link>
       <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/post/eu/</guid>
-      <description>Almost complete vote share results of UK’s EU elections 2019, put in perspective.
- Despite claims on the triumph of Farage’s party on the media, the numbers actually suggest a rising scepticism toward Brexit.
-(After making this plot I realized that the Guardian had written a similar perspective here])</description>
+      <guid>/post/eu/</guid>
+      <description>The European Election results reveal a shift towards parties that support a soft or no Brexit compared to votes in 2014. Instead, major news outlets in the UK and Europe claim that Hard Brexit has gained support. To see why this is a misguided conclusion, just look at the numbers:
+Almost complete vote share results of UK’s EU elections 2019, put in perspective.
+ Parties supporting strong UK independence have lost overwhelming numbers of voters, with UKIP losing 24.</description>
     </item>
     
     <item>
       <title>Ephemeral patterns of complexity</title>
-      <link>https://mattelisi.github.io/post/ephemeral/</link>
+      <link>/post/ephemeral/</link>
       <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/post/ephemeral/</guid>
+      <guid>/post/ephemeral/</guid>
       <description>From ‘The Big Picture: On the Origins of Life, Meaning, and the Universe Itself’ by Sean Carrol, www.preposterousuniverse.com/bigpicture
  </description>
     </item>
     
     <item>
       <title>Bayesian model selection at the group level</title>
-      <link>https://mattelisi.github.io/post/bms/</link>
+      <link>/post/bms/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/post/bms/</guid>
+      <guid>/post/bms/</guid>
       <description>In experimental psychology and neuroscience the classical approach when comparing different models that make quantitative predictions about the behavior of participants is to aggregate the predictive ability of the model (e.g. as quantified by Akaike Information criterion) across participants, and then see which one provide on average the best performance. Although correct, this approach neglect the possibility that different participants might use different strategies that are best described by alternative, competing models.</description>
     </item>
     
     <item>
       <title>Bayesian multilevel models using R and Stan (part 1)</title>
-      <link>https://mattelisi.github.io/post/bayesian-multilevel-models-r-stan/</link>
+      <link>/post/bayesian-multilevel-models-r-stan/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/post/bayesian-multilevel-models-r-stan/</guid>
+      <guid>/post/bayesian-multilevel-models-r-stan/</guid>
       <description>Photo ©Roxie and Lee Carroll, www.akidsphoto.com.
  In my previous lab I was known for promoting the use of multilevel, or mixed-effects model among my colleagues. (The slides on the /misc section of this website are part of this effort.) Multilevel models should be the standard approach in fields like experimental psychology and neuroscience, where the data is naturally grouped according to “observational units”, i.e. individual participants. I agree with Richard McElreath when he writes that “multilevel regression deserves to be the default form of regression” (see here, section 1.</description>
     </item>
     
     <item>
       <title>Simulating correlated variables with the Cholesky factorization</title>
-      <link>https://mattelisi.github.io/post/simulating-correlated-variables-with-the-cholesky-factorization/</link>
+      <link>/post/simulating-correlated-variables-with-the-cholesky-factorization/</link>
       <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/post/simulating-correlated-variables-with-the-cholesky-factorization/</guid>
+      <guid>/post/simulating-correlated-variables-with-the-cholesky-factorization/</guid>
       <description>Generating random variables with given variance-covariance matrix can be useful for many purposes. For example it is useful for generating random intercepts and slopes with given correlations when simulating a multilevel, or mixed-effects, model (e.g. see here). This can be achieved efficiently with the Choleski factorization. In linear algebra the factorization or decomposition of a matrix is the factorization of a matrix into a product of matrices. More specifically, the Choleski factorization is a decomposition of a positive-defined, symmetric1 matrix into a product of a triangular matrix and its conjugate transpose; in other words is a method to find the square root of a matrix.</description>
     </item>
     
     <item>
       <title>Multi-model estimation of psychophysical parameters</title>
-      <link>https://mattelisi.github.io/post/model-averaging/</link>
+      <link>/post/model-averaging/</link>
       <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/post/model-averaging/</guid>
+      <guid>/post/model-averaging/</guid>
       <description>In the study of human perception we often need to measure how sensitive is an observer to a stimulus variation, and how her/his sensitivity changes due to changes in the context or experimental manipulations. In many applications this can be done by estimating the slope of the psychometric function1, a parameter that relates to the precision with which the observer can make judgements about the stimulus. A psychometric function is generally characterized by 2-3 parameters: the slope, the threshold (or criterion), and an optional lapse parameter, which indicate the rate at which attention lapses (i.</description>
     </item>
     
     <item>
       <title>Listing&#39;s law, and the mathematics of the eyes</title>
-      <link>https://mattelisi.github.io/post/listing-s-law-and-the-mathematics-of-the-eyes/</link>
+      <link>/post/listing-s-law-and-the-mathematics-of-the-eyes/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://mattelisi.github.io/post/listing-s-law-and-the-mathematics-of-the-eyes/</guid>
+      <guid>/post/listing-s-law-and-the-mathematics-of-the-eyes/</guid>
       <description>Brief intro to the mathematical formalism used to describe rotations of the eyes in 3D (including the torsional component). The shape of the human eye is approximately a sphere with a diameter of 23 mm, and mechanically it behaves like a ball in a ball and socket joint. Because there is a functional distinguished axis - the visual axis, that is the line of gaze or more precisely the imaginary straight line passing through both the center of the pupil and the center of the fovea - the movements of the eyes are usually divided in gaze direction and cyclotorsion (or simply torsion): while gaze direction refers to the direction of the visual axis, the torsion indicates the rotation of the eyeball about the visual axis.</description>
     </item>
     
