@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Thérèse Collins | Matteo Lisi</title>
-    <link>/authors/therese-collins/</link>
-      <atom:link href="/authors/therese-collins/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://mlisi.xyz/authors/therese-collins/</link>
+      <atom:link href="http://mlisi.xyz/authors/therese-collins/index.xml" rel="self" type="application/rss+xml" />
     <description>Thérèse Collins</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Wed, 27 Sep 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/shademe.png</url>
+      <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Thérèse Collins</title>
-      <link>/authors/therese-collins/</link>
+      <link>http://mlisi.xyz/authors/therese-collins/</link>
     </image>
     
     <item>
       <title>Memory-guided saccades show effect of perceptual illusion whereas visually-guided saccades do not</title>
-      <link>/publication/memory-delphine/</link>
+      <link>http://mlisi.xyz/publication/memory-delphine/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      <guid>/publication/memory-delphine/</guid>
+      <guid>http://mlisi.xyz/publication/memory-delphine/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Target Displacements during Eye Blinks Trigger Automatic Recalibration of Gaze Direction</title>
-      <link>/publication/blink-adapt/</link>
+      <link>http://mlisi.xyz/publication/blink-adapt/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>/publication/blink-adapt/</guid>
+      <guid>http://mlisi.xyz/publication/blink-adapt/</guid>
       <description></description>
     </item>
     

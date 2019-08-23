@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tutorial | Matteo Lisi</title>
-    <link>/categories/tutorial/</link>
-      <atom:link href="/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://mlisi.xyz/categories/tutorial/</link>
+      <atom:link href="http://mlisi.xyz/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <description>tutorial</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Fri, 25 Jan 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/shademe.png</url>
+      <url>http://mlisi.xyz/img/shademe.png</url>
       <title>tutorial</title>
-      <link>/categories/tutorial/</link>
+      <link>http://mlisi.xyz/categories/tutorial/</link>
     </image>
     
     <item>
       <title>Bayesian model selection at the group level</title>
-      <link>/post/bms/</link>
+      <link>http://mlisi.xyz/post/bms/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/post/bms/</guid>
+      <guid>http://mlisi.xyz/post/bms/</guid>
       <description>
 
 
@@ -40,7 +40,7 @@ p\left(r \mid  \boldsymbol{\alpha } \right) &amp;amp; = \text{Dir} \left(r, \bol
 p\left(m_n \mid  \mathbf{r} \right) =  \prod_{k=1}^K r_k^{m_{nk}}.
 \]&lt;/span&gt; The graphical model that summarizes these dependencies is shown the following graph:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/bms.png&#34; alt=&#34;&#34; style=&#34;width:50.0%&#34; /&gt;
+&lt;img src=&#34;http://mlisi.xyz/img/bms.png&#34; alt=&#34;&#34; style=&#34;width:50.0%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -126,14 +126,14 @@ I(r) &amp;amp; = \int p \left( y, r, m \right) \, q(m) \, dm \\
     
     <item>
       <title>Bayesian multilevel models using R and Stan (part 1)</title>
-      <link>/post/bayesian-multilevel-models-r-stan/</link>
+      <link>http://mlisi.xyz/post/bayesian-multilevel-models-r-stan/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>/post/bayesian-multilevel-models-r-stan/</guid>
+      <guid>http://mlisi.xyz/post/bayesian-multilevel-models-r-stan/</guid>
       <description>
 
 
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/turtlepile.jpg&#34; alt=&#34;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&#34; /&gt;
+&lt;img src=&#34;http://mlisi.xyz/img/turtlepile.jpg&#34; alt=&#34;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;In my previous lab I was known for promoting the use of multilevel, or mixed-effects model among my colleagues. (The slides on the &lt;a href=&#34;https://mattelisi.github.io/#notes&#34;&gt;/misc&lt;/a&gt; section of this website are part of this effort.) Multilevel models should be the standard approach in fields like experimental psychology and neuroscience, where the data is naturally grouped according to “observational units”, i.e. individual participants. I agree with Richard McElreath when he writes that &lt;em&gt;“multilevel regression deserves to be the default form of regression”&lt;/em&gt; (see &lt;a href=&#34;http://xcelab.net/rmpubs/rethinking/Statistical_Rethinking_sample.pdf&#34;&gt;here&lt;/a&gt;, section 1.3.2) and that, at least in our fields, studies not using a multilevel approach should justify the choice of not using it.&lt;/p&gt;
@@ -233,7 +233,7 @@ transformed parameters {
   }
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;For the correlation matrix, Stan manual suggest to use a LKJ prior&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. This prior has one single shape parameters, &lt;span class=&#34;math inline&#34;&gt;\(\eta\)&lt;/span&gt;: if you set &lt;span class=&#34;math inline&#34;&gt;\(\eta=1\)&lt;/span&gt; then you have effectively a uniform prior distribution over any (Cholesky factor of) 2x2 correlation matrices. For values &lt;span class=&#34;math inline&#34;&gt;\(\eta&amp;gt;1\)&lt;/span&gt; instead you get a more conservative prior, with a mode in the identity matrix (where the correlations are 0). For more information about the LKJ prior see page 556 of Stan reference manual, version 2.17.0, and also &lt;a href=&#34;http://www.psychstatistics.com/2014/12/27/d-lkj-priors/&#34;&gt;this page&lt;/a&gt; for an intuitive demonstration.&lt;/p&gt;
-&lt;p&gt;Importantly, I have used (weakly) informative priors for the fixed effect estimates. We know from the literature that simple reaction times are around 300ms, hence the prior for the intercept, which represents the avearage reaction times at Day 0, i.e. before the sleep deprivation. We expect the reaction times to increase with sleep deprivation, so I have used for the slope a Gaussian prior centered at a small positive value (0.2 seconds), which would represents the increase in reaction times with each day of sleep deprivation, however using a very broad standard deviation (2 seconds), which could accomodate also negative or very different slope values if needed. It may be useful to visualize with a plot the priors. &lt;img src=&#34;/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig1-1.png&#34; width=&#34;624&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Importantly, I have used (weakly) informative priors for the fixed effect estimates. We know from the literature that simple reaction times are around 300ms, hence the prior for the intercept, which represents the avearage reaction times at Day 0, i.e. before the sleep deprivation. We expect the reaction times to increase with sleep deprivation, so I have used for the slope a Gaussian prior centered at a small positive value (0.2 seconds), which would represents the increase in reaction times with each day of sleep deprivation, however using a very broad standard deviation (2 seconds), which could accomodate also negative or very different slope values if needed. It may be useful to visualize with a plot the priors. &lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig1-1.png&#34; width=&#34;624&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;generated-quantities&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Generated quantities&lt;/h2&gt;
@@ -253,7 +253,7 @@ sleep_model &amp;lt;- stan(file = &amp;quot;sleep_model.stan&amp;quot;, data = d
     iter = 2000, chains = 4)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;One way to check the convergence of the model is to plot the chain of samples. They should look like a &lt;em&gt;“fat, hairy caterpillar which does not bend”&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;(Sorensen, Hohenstein, and Vasishth 2016)&lt;/span&gt;, suggesting that the sampling was stable at the posterior.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;traceplot(sleep_model, pars = c(&amp;quot;beta&amp;quot;), inc_warmup = FALSE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig2-1.png&#34; width=&#34;480&#34; /&gt; There is a &lt;code&gt;print()&lt;/code&gt; method for visualising the estimates of the parameters. The values of the &lt;span class=&#34;math inline&#34;&gt;\({\hat R}\)&lt;/span&gt; (&lt;code&gt;Rhat&lt;/code&gt;) statistics also confirm that the chains converged. The method automatically report credible intervals for the parameters (computed with the percentile method from the samples of the posterior distribution).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig2-1.png&#34; width=&#34;480&#34; /&gt; There is a &lt;code&gt;print()&lt;/code&gt; method for visualising the estimates of the parameters. The values of the &lt;span class=&#34;math inline&#34;&gt;\({\hat R}\)&lt;/span&gt; (&lt;code&gt;Rhat&lt;/code&gt;) statistics also confirm that the chains converged. The method automatically report credible intervals for the parameters (computed with the percentile method from the samples of the posterior distribution).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(sleep_model, pars = c(&amp;quot;beta&amp;quot;), probs = c(0.025, 0.975), 
     digits = 3)
 Inference for Stan model: sleep_model_v1.
@@ -271,7 +271,7 @@ convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And we can visualze the posterior distribution as histograms (here for the fixed effects parameters and the standard deviations of the corresponding random effects).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(sleep_model, plotfun = &amp;quot;hist&amp;quot;, pars = c(&amp;quot;beta&amp;quot;, &amp;quot;sigma_u&amp;quot;))
 `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig3-1.png&#34; width=&#34;384&#34; /&gt; Finally, we can also examine the correlation matrix of random-effects.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig3-1.png&#34; width=&#34;384&#34; /&gt; Finally, we can also examine the correlation matrix of random-effects.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(sleep_model, pars = c(&amp;quot;Omega&amp;quot;), digits = 3)
 Inference for Stan model: sleep_model_v1.
 5 chains, each with iter=6000; warmup=3000; thin=1; 
@@ -317,13 +317,13 @@ convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Listing&#39;s law, and the mathematics of the eyes</title>
-      <link>/post/listing-s-law-and-the-mathematics-of-the-eyes/</link>
+      <link>http://mlisi.xyz/post/listing-s-law-and-the-mathematics-of-the-eyes/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      <guid>/post/listing-s-law-and-the-mathematics-of-the-eyes/</guid>
+      <guid>http://mlisi.xyz/post/listing-s-law-and-the-mathematics-of-the-eyes/</guid>
       <description>
 
 
-&lt;p&gt;&lt;em&gt;Brief intro to the mathematical formalism used to describe rotations of the eyes in 3D (including the torsional component).&lt;/em&gt; &lt;img src=&#34;/img/3Deyecoord_Haslwanter1995.png&#34; alt=&#34;3D eye coordinate systems in the primary reference position, left panel, and after a leftward rotation, right panel (Haslwanter 1995). &#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Brief intro to the mathematical formalism used to describe rotations of the eyes in 3D (including the torsional component).&lt;/em&gt; &lt;img src=&#34;http://mlisi.xyz/img/3Deyecoord_Haslwanter1995.png&#34; alt=&#34;3D eye coordinate systems in the primary reference position, left panel, and after a leftward rotation, right panel (Haslwanter 1995). &#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The shape of the human eye is approximately a sphere with a diameter of 23 mm, and mechanically it behaves like a ball in a ball and socket joint. Because there is a functional distinguished axis - the visual axis, that is the line of gaze or more precisely the imaginary straight line passing through both the center of the pupil and the center of the fovea - the movements of the eyes are usually divided in &lt;em&gt;gaze direction&lt;/em&gt; and &lt;em&gt;cyclotorsion&lt;/em&gt; (or simply &lt;em&gt;torsion&lt;/em&gt;): while gaze direction refers to the direction of the visual axis, the torsion indicates the rotation of the eyeball about the visual axis. While modern video-based eyetrackers allow to record movements of the visual axis, they do not provide data about torsion. It turns out that there is a nice mathematical relationship that constrains the torsion of the eye in every direction of the gaze. This relationship is known as Listing’s law, and was named after the german mathematician &lt;a href=&#34;https://en.wikipedia.org/wiki/Johann_Benedict_Listing&#34;&gt;Johann Benedict Listing (1808-1882)&lt;/a&gt;. Listing’s law can be better understood by looking at how the 3D orientation of the eye can be formally described.&lt;/p&gt;
 &lt;div id=&#34;mathematics-of-3d-eye-movements&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Mathematics of 3D eye movements&lt;/h1&gt;
@@ -356,7 +356,7 @@ q_0 + q_1i + q_2j + q_3k = \left( q_0,\vec{q} \cdot \vec{I} \right) = \left( r,\
 i^2 = j^2 = k^2 = ijk =  - 1
 \]&lt;/span&gt; This formula may seems strange but it determines all the possible products of &lt;span class=&#34;math inline&#34;&gt;\(i,j,k\)&lt;/span&gt;, such as &lt;span class=&#34;math inline&#34;&gt;\(ij=k\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(ji=-k\)&lt;/span&gt;. Note that the product of the basis are not commutative. There is a visual trick to remember the multiplication rules, based on the following diagram:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/quatrule.png&#34; alt=&#34;Multiplying quaternions. Multiplying two elements in the clockwise direction gives the next element along the same direction (e.g. jk=i). The same is for counter-clockwise directions, except that the result is negative (e.g. kj=-i). &#34; /&gt;
+&lt;img src=&#34;http://mlisi.xyz/img/quatrule.png&#34; alt=&#34;Multiplying quaternions. Multiplying two elements in the clockwise direction gives the next element along the same direction (e.g. jk=i). The same is for counter-clockwise directions, except that the result is negative (e.g. kj=-i). &#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Multiplying quaternions. Multiplying two elements in the clockwise direction gives the next element along the same direction (e.g. &lt;span class=&#34;math inline&#34;&gt;\(jk=i\)&lt;/span&gt;). The same is for counter-clockwise directions, except that the result is negative (e.g. &lt;span class=&#34;math inline&#34;&gt;\(kj=-i\)&lt;/span&gt;). &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Quaternions can be used to represent rotations. For example, a rotation of an angle &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; around the axis define by the unit vector &lt;span class=&#34;math inline&#34;&gt;\(\vec{u} = (u_1, u_2,u_3) = u_1i + u_2j + u_3k\)&lt;/span&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; can be described by the following quaternion &lt;span class=&#34;math display&#34;&gt;\[

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>model-selection | Matteo Lisi</title>
-    <link>/tags/model-selection/</link>
-      <atom:link href="/tags/model-selection/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://mlisi.xyz/tags/model-selection/</link>
+      <atom:link href="http://mlisi.xyz/tags/model-selection/index.xml" rel="self" type="application/rss+xml" />
     <description>model-selection</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Fri, 25 Jan 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/shademe.png</url>
+      <url>http://mlisi.xyz/img/shademe.png</url>
       <title>model-selection</title>
-      <link>/tags/model-selection/</link>
+      <link>http://mlisi.xyz/tags/model-selection/</link>
     </image>
     
     <item>
       <title>Bayesian model selection at the group level</title>
-      <link>/post/bms/</link>
+      <link>http://mlisi.xyz/post/bms/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/post/bms/</guid>
+      <guid>http://mlisi.xyz/post/bms/</guid>
       <description>
 
 
@@ -40,7 +40,7 @@ p\left(r \mid  \boldsymbol{\alpha } \right) &amp;amp; = \text{Dir} \left(r, \bol
 p\left(m_n \mid  \mathbf{r} \right) =  \prod_{k=1}^K r_k^{m_{nk}}.
 \]&lt;/span&gt; The graphical model that summarizes these dependencies is shown the following graph:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/bms.png&#34; alt=&#34;&#34; style=&#34;width:50.0%&#34; /&gt;
+&lt;img src=&#34;http://mlisi.xyz/img/bms.png&#34; alt=&#34;&#34; style=&#34;width:50.0%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

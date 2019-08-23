@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Simone Cutini | Matteo Lisi</title>
-    <link>/authors/simone-cutini/</link>
-      <atom:link href="/authors/simone-cutini/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://mlisi.xyz/authors/simone-cutini/</link>
+      <atom:link href="http://mlisi.xyz/authors/simone-cutini/index.xml" rel="self" type="application/rss+xml" />
     <description>Simone Cutini</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Thu, 30 Aug 2012 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/shademe.png</url>
+      <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Simone Cutini</title>
-      <link>/authors/simone-cutini/</link>
+      <link>http://mlisi.xyz/authors/simone-cutini/</link>
     </image>
     
     <item>
       <title>Space coding for sensorimotor transformations can emerge through unsupervised learning</title>
-      <link>/publication/unsupervised-space-coding/</link>
+      <link>http://mlisi.xyz/publication/unsupervised-space-coding/</link>
       <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
-      <guid>/publication/unsupervised-space-coding/</guid>
+      <guid>http://mlisi.xyz/publication/unsupervised-space-coding/</guid>
       <description></description>
     </item>
     

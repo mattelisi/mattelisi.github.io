@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>philosophy | Matteo Lisi</title>
-    <link>/tags/philosophy/</link>
-      <atom:link href="/tags/philosophy/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://mlisi.xyz/tags/philosophy/</link>
+      <atom:link href="http://mlisi.xyz/tags/philosophy/index.xml" rel="self" type="application/rss+xml" />
     <description>philosophy</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Fri, 05 Apr 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/shademe.png</url>
+      <url>http://mlisi.xyz/img/shademe.png</url>
       <title>philosophy</title>
-      <link>/tags/philosophy/</link>
+      <link>http://mlisi.xyz/tags/philosophy/</link>
     </image>
     
     <item>
       <title>Ephemeral patterns of complexity</title>
-      <link>/post/ephemeral/</link>
+      <link>http://mlisi.xyz/post/ephemeral/</link>
       <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/post/ephemeral/</guid>
+      <guid>http://mlisi.xyz/post/ephemeral/</guid>
       <description>
 
 
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/complexity.png&#34; alt=&#34;From The Big Picture: On the Origins of Life, Meaning, and the Universe Itself by Sean Carrol, www.preposterousuniverse.com/bigpicture&#34; /&gt;
+&lt;img src=&#34;http://mlisi.xyz/img/complexity.png&#34; alt=&#34;From The Big Picture: On the Origins of Life, Meaning, and the Universe Itself by Sean Carrol, www.preposterousuniverse.com/bigpicture&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;From ‘&lt;em&gt;The Big Picture: On the Origins of Life, Meaning, and the Universe Itself&lt;/em&gt;’ by Sean Carrol, &lt;a href=&#34;https://www.preposterousuniverse.com/bigpicture/&#34;&gt;www.preposterousuniverse.com/bigpicture&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>

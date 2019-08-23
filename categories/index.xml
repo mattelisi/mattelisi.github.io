@@ -2,93 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories | Matteo Lisi</title>
-    <link>/categories/</link>
-      <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://mlisi.xyz/categories/</link>
+      <atom:link href="http://mlisi.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Mon, 27 May 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/shademe.png</url>
+      <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Categories</title>
-      <link>/categories/</link>
+      <link>http://mlisi.xyz/categories/</link>
     </image>
     
     <item>
       <title>politics</title>
-      <link>/categories/politics/</link>
+      <link>http://mlisi.xyz/categories/politics/</link>
       <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
-      <guid>/categories/politics/</guid>
+      <guid>http://mlisi.xyz/categories/politics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>books</title>
-      <link>/categories/books/</link>
+      <link>http://mlisi.xyz/categories/books/</link>
       <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/categories/books/</guid>
+      <guid>http://mlisi.xyz/categories/books/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>/categories/r/</link>
+      <link>http://mlisi.xyz/categories/r/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/categories/r/</guid>
+      <guid>http://mlisi.xyz/categories/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tutorial</title>
-      <link>/categories/tutorial/</link>
+      <link>http://mlisi.xyz/categories/tutorial/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>/categories/tutorial/</guid>
+      <guid>http://mlisi.xyz/categories/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Stan</title>
-      <link>/categories/stan/</link>
+      <link>http://mlisi.xyz/categories/stan/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>/categories/stan/</guid>
+      <guid>http://mlisi.xyz/categories/stan/</guid>
       <description></description>
     </item>
     
     <item>
       <title>note</title>
-      <link>/categories/note/</link>
+      <link>http://mlisi.xyz/categories/note/</link>
       <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>/categories/note/</guid>
+      <guid>http://mlisi.xyz/categories/note/</guid>
       <description></description>
     </item>
     
     <item>
       <title>self-study</title>
-      <link>/categories/self-study/</link>
+      <link>http://mlisi.xyz/categories/self-study/</link>
       <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>/categories/self-study/</guid>
+      <guid>http://mlisi.xyz/categories/self-study/</guid>
       <description></description>
     </item>
     
     <item>
       <title>data-analysis</title>
-      <link>/categories/data-analysis/</link>
+      <link>http://mlisi.xyz/categories/data-analysis/</link>
       <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>/categories/data-analysis/</guid>
+      <guid>http://mlisi.xyz/categories/data-analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>psychophysics</title>
-      <link>/categories/psychophysics/</link>
+      <link>http://mlisi.xyz/categories/psychophysics/</link>
       <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>/categories/psychophysics/</guid>
+      <guid>http://mlisi.xyz/categories/psychophysics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>eye movements</title>
-      <link>/categories/eye-movements/</link>
+      <link>http://mlisi.xyz/categories/eye-movements/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      <guid>/categories/eye-movements/</guid>
+      <guid>http://mlisi.xyz/categories/eye-movements/</guid>
       <description></description>
     </item>
     

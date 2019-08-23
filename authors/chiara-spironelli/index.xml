@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chiara Spironelli | Matteo Lisi</title>
-    <link>/authors/chiara-spironelli/</link>
-      <atom:link href="/authors/chiara-spironelli/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://mlisi.xyz/authors/chiara-spironelli/</link>
+      <atom:link href="http://mlisi.xyz/authors/chiara-spironelli/index.xml" rel="self" type="application/rss+xml" />
     <description>Chiara Spironelli</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Thu, 03 Sep 2015 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/shademe.png</url>
+      <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Chiara Spironelli</title>
-      <link>/authors/chiara-spironelli/</link>
+      <link>http://mlisi.xyz/authors/chiara-spironelli/</link>
     </image>
     
     <item>
       <title>Effects of Multimodal Load on Spatial Monitoring as Revealed by ERPs</title>
-      <link>/publication/load-erp/</link>
+      <link>http://mlisi.xyz/publication/load-erp/</link>
       <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>/publication/load-erp/</guid>
+      <guid>http://mlisi.xyz/publication/load-erp/</guid>
       <description></description>
     </item>
     

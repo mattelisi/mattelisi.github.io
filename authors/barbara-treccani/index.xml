@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Barbara Treccani | Matteo Lisi</title>
-    <link>/authors/barbara-treccani/</link>
-      <atom:link href="/authors/barbara-treccani/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://mlisi.xyz/authors/barbara-treccani/</link>
+      <atom:link href="http://mlisi.xyz/authors/barbara-treccani/index.xml" rel="self" type="application/rss+xml" />
     <description>Barbara Treccani</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Mon, 04 Aug 2014 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/shademe.png</url>
+      <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Barbara Treccani</title>
-      <link>/authors/barbara-treccani/</link>
+      <link>http://mlisi.xyz/authors/barbara-treccani/</link>
     </image>
     
     <item>
       <title>Larger, smaller, odd or even? Task-specific effects of optokinetic stimulation on the mental number space</title>
-      <link>/publication/optokinetic/</link>
+      <link>http://mlisi.xyz/publication/optokinetic/</link>
       <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
-      <guid>/publication/optokinetic/</guid>
+      <guid>http://mlisi.xyz/publication/optokinetic/</guid>
       <description>&lt;p&gt;Mariagrazia Ranzini and Matteo Lisi contributed equally to the work&lt;/p&gt;
 </description>
     </item>

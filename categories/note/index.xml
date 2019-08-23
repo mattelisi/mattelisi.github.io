@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>note | Matteo Lisi</title>
-    <link>/categories/note/</link>
-      <atom:link href="/categories/note/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://mlisi.xyz/categories/note/</link>
+      <atom:link href="http://mlisi.xyz/categories/note/index.xml" rel="self" type="application/rss+xml" />
     <description>note</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Sun, 21 Jan 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/shademe.png</url>
+      <url>http://mlisi.xyz/img/shademe.png</url>
       <title>note</title>
-      <link>/categories/note/</link>
+      <link>http://mlisi.xyz/categories/note/</link>
     </image>
     
     <item>
       <title>Simulating correlated variables with the Cholesky factorization</title>
-      <link>/post/simulating-correlated-variables-with-the-cholesky-factorization/</link>
+      <link>http://mlisi.xyz/post/simulating-correlated-variables-with-the-cholesky-factorization/</link>
       <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>/post/simulating-correlated-variables-with-the-cholesky-factorization/</guid>
+      <guid>http://mlisi.xyz/post/simulating-correlated-variables-with-the-cholesky-factorization/</guid>
       <description>
 
 
@@ -41,7 +41,7 @@
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Z &amp;lt;- rbind(rnorm(1e4),rnorm(1e4))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Finally, to introduce the correlations , multiply them with the &lt;code&gt;Lambda&lt;/code&gt; obtained above&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;X &amp;lt;- Lambda %*% Z&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now plot the results &lt;img src=&#34;/post/2018-01-21-generating-correlated-random-variables-with-the-cholesky-factorization_files/figure-html/fig1-1.png&#34; width=&#34;729.6&#34; /&gt; We can verify that the correlation as estimated from the sample corresponds (or is close enough) to the generative value.&lt;/p&gt;
+&lt;p&gt;Now plot the results &lt;img src=&#34;http://mlisi.xyz/post/2018-01-21-generating-correlated-random-variables-with-the-cholesky-factorization_files/figure-html/fig1-1.png&#34; width=&#34;729.6&#34; /&gt; We can verify that the correlation as estimated from the sample corresponds (or is close enough) to the generative value.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# correlation in the generated sample
 cor(X[1,],X[2,])
 [1] 0.7093591&lt;/code&gt;&lt;/pre&gt;
