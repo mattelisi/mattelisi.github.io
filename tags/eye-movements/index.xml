@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>eye movements | Matteo Lisi</title>
-    <link>http://mlisi.xyz/tags/eye-movements/</link>
-      <atom:link href="http://mlisi.xyz/tags/eye-movements/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/eye-movements/</link>
+      <atom:link href="/tags/eye-movements/index.xml" rel="self" type="application/rss+xml" />
     <description>eye movements</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Wed, 27 Sep 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>eye movements</title>
-      <link>http://mlisi.xyz/tags/eye-movements/</link>
+      <link>/tags/eye-movements/</link>
     </image>
     
     <item>
       <title>Listing&#39;s law, and the mathematics of the eyes</title>
-      <link>http://mlisi.xyz/post/listing-s-law-and-the-mathematics-of-the-eyes/</link>
+      <link>/post/listing-s-law-and-the-mathematics-of-the-eyes/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/listing-s-law-and-the-mathematics-of-the-eyes/</guid>
+      <guid>/post/listing-s-law-and-the-mathematics-of-the-eyes/</guid>
       <description>
 
 
-&lt;p&gt;&lt;em&gt;Brief intro to the mathematical formalism used to describe rotations of the eyes in 3D (including the torsional component).&lt;/em&gt; &lt;img src=&#34;http://mlisi.xyz/img/3Deyecoord_Haslwanter1995.png&#34; alt=&#34;3D eye coordinate systems in the primary reference position, left panel, and after a leftward rotation, right panel (Haslwanter 1995). &#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Brief intro to the mathematical formalism used to describe rotations of the eyes in 3D (including the torsional component).&lt;/em&gt; &lt;img src=&#34;/img/3Deyecoord_Haslwanter1995.png&#34; alt=&#34;3D eye coordinate systems in the primary reference position, left panel, and after a leftward rotation, right panel (Haslwanter 1995). &#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The shape of the human eye is approximately a sphere with a diameter of 23 mm, and mechanically it behaves like a ball in a ball and socket joint. Because there is a functional distinguished axis - the visual axis, that is the line of gaze or more precisely the imaginary straight line passing through both the center of the pupil and the center of the fovea - the movements of the eyes are usually divided in &lt;em&gt;gaze direction&lt;/em&gt; and &lt;em&gt;cyclotorsion&lt;/em&gt; (or simply &lt;em&gt;torsion&lt;/em&gt;): while gaze direction refers to the direction of the visual axis, the torsion indicates the rotation of the eyeball about the visual axis. While modern video-based eyetrackers allow to record movements of the visual axis, they do not provide data about torsion. It turns out that there is a nice mathematical relationship that constrains the torsion of the eye in every direction of the gaze. This relationship is known as Listing’s law, and was named after the german mathematician &lt;a href=&#34;https://en.wikipedia.org/wiki/Johann_Benedict_Listing&#34;&gt;Johann Benedict Listing (1808-1882)&lt;/a&gt;. Listing’s law can be better understood by looking at how the 3D orientation of the eye can be formally described.&lt;/p&gt;
 &lt;div id=&#34;mathematics-of-3d-eye-movements&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Mathematics of 3D eye movements&lt;/h1&gt;
@@ -53,7 +53,7 @@ q_0 + q_1i + q_2j + q_3k = \left( q_0,\vec{q} \cdot \vec{I} \right) = \left( r,\
 i^2 = j^2 = k^2 = ijk =  - 1
 \]&lt;/span&gt; This formula may seems strange but it determines all the possible products of &lt;span class=&#34;math inline&#34;&gt;\(i,j,k\)&lt;/span&gt;, such as &lt;span class=&#34;math inline&#34;&gt;\(ij=k\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(ji=-k\)&lt;/span&gt;. Note that the product of the basis are not commutative. There is a visual trick to remember the multiplication rules, based on the following diagram:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://mlisi.xyz/img/quatrule.png&#34; alt=&#34;Multiplying quaternions. Multiplying two elements in the clockwise direction gives the next element along the same direction (e.g. jk=i). The same is for counter-clockwise directions, except that the result is negative (e.g. kj=-i). &#34; /&gt;
+&lt;img src=&#34;/img/quatrule.png&#34; alt=&#34;Multiplying quaternions. Multiplying two elements in the clockwise direction gives the next element along the same direction (e.g. jk=i). The same is for counter-clockwise directions, except that the result is negative (e.g. kj=-i). &#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Multiplying quaternions. Multiplying two elements in the clockwise direction gives the next element along the same direction (e.g. &lt;span class=&#34;math inline&#34;&gt;\(jk=i\)&lt;/span&gt;). The same is for counter-clockwise directions, except that the result is negative (e.g. &lt;span class=&#34;math inline&#34;&gt;\(kj=-i\)&lt;/span&gt;). &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Quaternions can be used to represent rotations. For example, a rotation of an angle &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; around the axis define by the unit vector &lt;span class=&#34;math inline&#34;&gt;\(\vec{u} = (u_1, u_2,u_3) = u_1i + u_2j + u_3k\)&lt;/span&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; can be described by the following quaternion &lt;span class=&#34;math display&#34;&gt;\[

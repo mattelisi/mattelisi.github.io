@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mariagrazia Ranzini | Matteo Lisi</title>
-    <link>http://mlisi.xyz/authors/mariagrazia-ranzini/</link>
-      <atom:link href="http://mlisi.xyz/authors/mariagrazia-ranzini/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/mariagrazia-ranzini/</link>
+      <atom:link href="/authors/mariagrazia-ranzini/index.xml" rel="self" type="application/rss+xml" />
     <description>Mariagrazia Ranzini</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Tue, 02 Feb 2016 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>Mariagrazia Ranzini</title>
-      <link>http://mlisi.xyz/authors/mariagrazia-ranzini/</link>
+      <link>/authors/mariagrazia-ranzini/</link>
     </image>
     
     <item>
       <title>Voluntary eye movements direct attention on the mental number space</title>
-      <link>http://mlisi.xyz/publication/voluntary-eye/</link>
+      <link>/publication/voluntary-eye/</link>
       <pubDate>Tue, 02 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/voluntary-eye/</guid>
+      <guid>/publication/voluntary-eye/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Larger, smaller, odd or even? Task-specific effects of optokinetic stimulation on the mental number space</title>
-      <link>http://mlisi.xyz/publication/optokinetic/</link>
+      <link>/publication/optokinetic/</link>
       <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/optokinetic/</guid>
+      <guid>/publication/optokinetic/</guid>
       <description>&lt;p&gt;Mariagrazia Ranzini and Matteo Lisi contributed equally to the work&lt;/p&gt;
 </description>
     </item>

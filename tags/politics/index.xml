@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>politics | Matteo Lisi</title>
-    <link>http://mlisi.xyz/tags/politics/</link>
-      <atom:link href="http://mlisi.xyz/tags/politics/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/politics/</link>
+      <atom:link href="/tags/politics/index.xml" rel="self" type="application/rss+xml" />
     <description>politics</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Mon, 27 May 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>politics</title>
-      <link>http://mlisi.xyz/tags/politics/</link>
+      <link>/tags/politics/</link>
     </image>
     
     <item>
       <title>Attitude shift towards Remain in European Elections obscured in press by rebranded Farage party</title>
-      <link>http://mlisi.xyz/post/eu/</link>
+      <link>/post/eu/</link>
       <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/eu/</guid>
+      <guid>/post/eu/</guid>
       <description>
 
 
 &lt;p&gt;The European Election results reveal a shift towards parties that support a soft or no Brexit compared to votes in 2014. Instead, major news outlets in the UK and Europe claim that Hard Brexit has gained support. To see why this is a misguided conclusion, just look at the numbers:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://mlisi.xyz/img/EU_election.png&#34; alt=&#34;Almost complete vote share results of UK’s EU elections 2019, put in perspective.&#34; /&gt;
+&lt;img src=&#34;/img/EU_election.png&#34; alt=&#34;Almost complete vote share results of UK’s EU elections 2019, put in perspective.&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Almost complete vote share results of UK’s EU elections 2019, put in perspective.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Parties supporting strong UK independence have lost overwhelming numbers of voters, with UKIP losing 24.2% of the votes, and conservative losing 14.8%. This loss is only partially recovered by Farage’s Brexit Party, which gained 31.6%, suggesting that a substantial proportion of voters switched to parties favoring a soft or no Brexit.&lt;/p&gt;

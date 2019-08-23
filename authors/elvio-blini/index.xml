@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Elvio Blini | Matteo Lisi</title>
-    <link>http://mlisi.xyz/authors/elvio-blini/</link>
-      <atom:link href="http://mlisi.xyz/authors/elvio-blini/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/elvio-blini/</link>
+      <atom:link href="/authors/elvio-blini/index.xml" rel="self" type="application/rss+xml" />
     <description>Elvio Blini</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Mon, 04 Aug 2014 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>Elvio Blini</title>
-      <link>http://mlisi.xyz/authors/elvio-blini/</link>
+      <link>/authors/elvio-blini/</link>
     </image>
     
     <item>
       <title>Larger, smaller, odd or even? Task-specific effects of optokinetic stimulation on the mental number space</title>
-      <link>http://mlisi.xyz/publication/optokinetic/</link>
+      <link>/publication/optokinetic/</link>
       <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/optokinetic/</guid>
+      <guid>/publication/optokinetic/</guid>
       <description>&lt;p&gt;Mariagrazia Ranzini and Matteo Lisi contributed equally to the work&lt;/p&gt;
 </description>
     </item>

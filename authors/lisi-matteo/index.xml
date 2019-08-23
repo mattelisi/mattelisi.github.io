@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lisi Matteo | Matteo Lisi</title>
-    <link>http://mlisi.xyz/authors/lisi-matteo/</link>
-      <atom:link href="http://mlisi.xyz/authors/lisi-matteo/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/lisi-matteo/</link>
+      <atom:link href="/authors/lisi-matteo/index.xml" rel="self" type="application/rss+xml" />
     <description>Lisi Matteo</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Tue, 29 May 2012 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>Lisi Matteo</title>
-      <link>http://mlisi.xyz/authors/lisi-matteo/</link>
+      <link>/authors/lisi-matteo/</link>
     </image>
     
     <item>
       <title>Paying Attention through Eye Movements: A Computational Investigation of the Premotor Theory of Spatial Attention</title>
-      <link>http://mlisi.xyz/publication/premotor-model/</link>
+      <link>/publication/premotor-model/</link>
       <pubDate>Tue, 29 May 2012 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/premotor-model/</guid>
+      <guid>/publication/premotor-model/</guid>
       <description>&lt;p&gt;Marco Casarotti and Matteo Lisi contributed equally to the article and are listed in alphabetical order.&lt;/p&gt;
 </description>
     </item>

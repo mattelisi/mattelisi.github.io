@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Michael J. Morgan | Matteo Lisi</title>
-    <link>http://mlisi.xyz/authors/michael-j.-morgan/</link>
-      <atom:link href="http://mlisi.xyz/authors/michael-j.-morgan/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/michael-j.-morgan/</link>
+      <atom:link href="/authors/michael-j.-morgan/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael J. Morgan</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>Michael J. Morgan</title>
-      <link>http://mlisi.xyz/authors/michael-j.-morgan/</link>
+      <link>/authors/michael-j.-morgan/</link>
     </image>
     
     <item>
       <title>Gain control of saccadic eye movements is probabilistic</title>
-      <link>http://mlisi.xyz/publication/gainpnas/</link>
+      <link>/publication/gainpnas/</link>
       <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/gainpnas/</guid>
+      <guid>/publication/gainpnas/</guid>
       <description></description>
     </item>
     
