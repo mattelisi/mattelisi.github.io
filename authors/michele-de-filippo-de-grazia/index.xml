@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Michele De Filippo De Grazia | Matteo Lisi</title>
+    <link>http://mlisi.xyz/authors/michele-de-filippo-de-grazia/</link>
+      <atom:link href="http://mlisi.xyz/authors/michele-de-filippo-de-grazia/index.xml" rel="self" type="application/rss+xml" />
+    <description>Michele De Filippo De Grazia</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Thu, 30 Aug 2012 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://mlisi.xyz/img/shademe.png</url>
+      <title>Michele De Filippo De Grazia</title>
+      <link>http://mlisi.xyz/authors/michele-de-filippo-de-grazia/</link>
+    </image>
+    
+    <item>
+      <title>Space coding for sensorimotor transformations can emerge through unsupervised learning</title>
+      <link>http://mlisi.xyz/publication/unsupervised-space-coding/</link>
+      <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/unsupervised-space-coding/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,24 +1,127 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>model-selection on juicy bits</title>
-    <link>https://mattelisi.github.io/tags/model-selection/</link>
-    <description>Recent content in model-selection on juicy bits</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2019 Matteo Lisi</copyright>
-    <lastBuildDate>Fri, 25 Jan 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mattelisi.github.io/tags/model-selection/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>model-selection | Matteo Lisi</title>
+    <link>http://mlisi.xyz/tags/model-selection/</link>
+      <atom:link href="http://mlisi.xyz/tags/model-selection/index.xml" rel="self" type="application/rss+xml" />
+    <description>model-selection</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Fri, 25 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://mlisi.xyz/img/shademe.png</url>
+      <title>model-selection</title>
+      <link>http://mlisi.xyz/tags/model-selection/</link>
+    </image>
     
     <item>
       <title>Bayesian model selection at the group level</title>
-      <link>https://mattelisi.github.io/post/bms/</link>
+      <link>http://mlisi.xyz/post/bms/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/post/bms/</guid>
-      <description>In experimental psychology and neuroscience the classical approach when comparing different models that make quantitative predictions about the behavior of participants is to aggregate the predictive ability of the model (e.g. as quantified by Akaike Information criterion) across participants, and then see which one provide on average the best performance. Although correct, this approach neglect the possibility that different participants might use different strategies that are best described by alternative, competing models.</description>
+      <guid>http://mlisi.xyz/post/bms/</guid>
+      <description>
+
+
+
+
+&lt;p&gt;In experimental psychology and neuroscience the classical approach when comparing different models that make quantitative predictions about the behavior of participants is to aggregate the predictive ability of the model (e.g. as quantified by Akaike Information criterion) across participants, and then see which one provide on average the best performance. Although correct, this approach neglect the possibility that different participants might use different strategies that are best described by alternative, competing models. To account for this, Stephan et al. &lt;span class=&#34;citation&#34;&gt;(Stephan et al. 2009)&lt;/span&gt; proposed a more conservative approach where models are treated as random effects that could differ between subjects and have a fixed (unknown) distribution in the population. The relevant statistical quantity is the frequency with which any model prevails in the population. Note that this is different from the definition of random-effects in classical statistic where random effects models have multiple sources of variation, e.g. within- and between- subject variance. An useful and popular way to summarize the results of this analysis is by reporting the model’s &lt;em&gt;exceedance probabilities&lt;/em&gt;, which measures how likely it is that any given model is more frequent than all other models in the set. The following exposition is largerly based on Stephan et al’s paper &lt;span class=&#34;citation&#34;&gt;(Stephan et al. 2009)&lt;/span&gt;.&lt;/p&gt;
+&lt;div id=&#34;model-evidence&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Model evidence&lt;/h1&gt;
+&lt;p&gt;Let’s say we have an experiment with &lt;span class=&#34;math inline&#34;&gt;\(\left(1,\dots,N\right)\)&lt;/span&gt; participants. Their performance is quantitatively predicted by a set &lt;span class=&#34;math inline&#34;&gt;\(\left(1,\dots,K\right)\)&lt;/span&gt; competing models. The behaviour of any subject &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; can be fit by the model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; by finding the value(s) of the parameter(s) &lt;span class=&#34;math inline&#34;&gt;\(\theta_k\)&lt;/span&gt; that maximize the likelihood of the data &lt;span class=&#34;math inline&#34;&gt;\(y_n\)&lt;/span&gt; under the model. In a fully Bayesian setting each unknown parameter would have a prior probability distribution, and the quantity of choice ofr comparing the goodness of fit of the model is the marginal likelihood, that is &lt;span class=&#34;math display&#34;&gt;\[
+  p \left(y_n \mid k \right) = \int p\left(y_n \mid k, \theta_k \right) \, p\left(\theta_k \right) d\theta.
+\]&lt;/span&gt; By integrating over the prior probability of parameters the marginal likelihood provide a measure of the evidence in favour of a specific model while taking into account the complexity of the model. We might also do something simpler and approximate the model evidence using e.g. the Akaike information criterion.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;models-as-random-effects&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Models as random effects&lt;/h1&gt;
+&lt;p&gt;We are interested in finding which model does better at predicting behavior, however we allow for different participants to use different strategies which can be represented by different models. To achieve that we treat the model as random effects and we assume that the frequency or probability of models in the population, &lt;span class=&#34;math inline&#34;&gt;\((r_1, \dots, r_K)\)&lt;/span&gt;, is described by a Dirichlet distribution with parameters &lt;span class=&#34;math inline&#34;&gt;\(\boldsymbol{\alpha } = \alpha_1, \dots, \alpha_k\)&lt;/span&gt;, &lt;span class=&#34;math display&#34;&gt;\[
+\begin{align}
+p\left(r \mid  \boldsymbol{\alpha } \right) &amp;amp; = \text{Dir} \left(r, \boldsymbol{ \alpha } \right) \\
+&amp;amp; = \frac{1}{\mathbf{B} \left(\boldsymbol{ \alpha }  \right)} \prod_{i=1}^K r_i^{\alpha_i -1} \nonumber
+\end{align}.
+\]&lt;/span&gt; Where the normalizing constant &lt;span class=&#34;math inline&#34;&gt;\(\mathbf{B} \left(\boldsymbol{ \alpha } \right)\)&lt;/span&gt; is the multivariate Beta function. The probabilities &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt; generates ‘switches’ or indicator variables &lt;span class=&#34;math inline&#34;&gt;\(m_n = m_1, \dots, m_N\)&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(m \in \left \{ 0, 1\right \}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\sum_1^K m_{nk}=1\)&lt;/span&gt;. These indicator variables prescribe the model for the subjects &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;, $ p(m_{nk}=1)=r_k$. Given the probabilities &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt;, the indicator variables have thus a multinomial distribution, that is &lt;span class=&#34;math display&#34;&gt;\[
+p\left(m_n \mid  \mathbf{r} \right) =  \prod_{k=1}^K r_k^{m_{nk}}.
+\]&lt;/span&gt; The graphical model that summarizes these dependencies is shown the following graph:&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://mlisi.xyz/img/bms.png&#34; alt=&#34;&#34; style=&#34;width:50.0%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;variational-bayesian-approach&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Variational Bayesian approach&lt;/h1&gt;
+&lt;p&gt;The goal is to estimate the parameters &lt;span class=&#34;math inline&#34;&gt;\(\boldsymbol{\alpha}\)&lt;/span&gt; that define the posterior distribution of model frequencies given the data, $ p ( r | y)$. To do so we need an estimate of the model evidence &lt;span class=&#34;math inline&#34;&gt;\(p \left(m_{nk}=1 \mid y_n \right)\)&lt;/span&gt;, that is the belief that the model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; generated data from subject &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt;. There are many possible approach that can be used to estimate the model evidence, either exactly or approximately. Importantly, these would need to be normalized so that they sum to one across models, so that is one were using the Akaike Information criterion, this should be transformed into Akaike weights &lt;span class=&#34;citation&#34;&gt;(Burnham and Anderson 2002)&lt;/span&gt;.&lt;/p&gt;
+&lt;div id=&#34;generative-model&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Generative model&lt;/h2&gt;
+&lt;p&gt;Given the graphical model illustrated above, the joint probability of parameters and data can be expressed as &lt;span class=&#34;math display&#34;&gt;\[
+\begin{align}
+p \left( y, r, m \right) &amp;amp; = p \left( y \mid m \right) \, p \left( m \mid r \right) \, p \left( r \mid \boldsymbol{\alpha} \right) \\
+&amp;amp; = p \left( r \mid \boldsymbol{\alpha} \right) \left[ \prod_{n=1}^N p \left( y_n \mid m_n \right) \, p\left(m_n \mid r \right) \right] \nonumber \\
+&amp;amp; = \frac{1}{\mathbf{B} \left(\boldsymbol{ \alpha }  \right)} \left[ \prod_{k=1}^K r_k^{\alpha_k -1} \right] \left[ \prod_{n=1}^N p \left( y_n \mid m_n\right) \, \prod_{k=1}^K r_k^{m_{nk}} \right] \nonumber \\
+&amp;amp; = \frac{1}{\mathbf{B} \left(\boldsymbol{ \alpha }  \right)} \prod_{n=1}^N \left[ \prod_{k=1}^K \left[ p \left( y_n \mid m_{nk} \right) \, r_k \right]^{m_{nk}} \, r_k^{\alpha_k -1} \right]. \nonumber
+\end{align}
+\]&lt;/span&gt; And the log probability is &lt;span class=&#34;math display&#34;&gt;\[
+\log p \left( y, r, m \right)  = - \log \mathbf{B} \left(\boldsymbol{ \alpha }  \right)
++ \sum_{n=1}^N \sum_{k=1}^K \left[ \left(\alpha_k -1 \right) \log r_k
++ m_{nk} \left( p \left( \log y_n \mid m_{nk} \right) + \log r_k\right)\right].
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;variational-approximation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Variational approximation&lt;/h2&gt;
+&lt;p&gt;In order to fit this hierarchical model following the variational approach one needs to define an approximate posterior distribution over model frequencies and assignments, &lt;span class=&#34;math inline&#34;&gt;\(q\left(r,m\right)\)&lt;/span&gt;, which is assumed to be adequately described by a mean-field factorisation, that is &lt;span class=&#34;math inline&#34;&gt;\(q\left(r,m\right) = q\left(r\right) \, q\left(m\right)\)&lt;/span&gt;. The two densities are proportional to the exponentiated &lt;em&gt;variational energies&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(I(m), I(r)\)&lt;/span&gt;, which are essentially the un-normalized approximated log-posterior densities, that is &lt;span class=&#34;math display&#34;&gt;\[
+\begin{align}
+q\left(r\right) &amp;amp; \propto e^{I(r)}, \, q\left(m\right)\propto e^{I(m)} \\
+I(r) &amp;amp; = \left&amp;lt; \log p \left( y, r, m \right) \right&amp;gt;_{q(r)} \\
+I(m) &amp;amp; = \left&amp;lt; \log p \left( y, r, m \right) \right&amp;gt;_{q(m)}
+\end{align}
+\]&lt;/span&gt; For the approximate posterior over model assignment &lt;span class=&#34;math inline&#34;&gt;\(q(m)\)&lt;/span&gt; we first compute &lt;span class=&#34;math inline&#34;&gt;\(I(m)\)&lt;/span&gt; and then an appropriate normalization constant. From the expression above of the joint log-probability, and removing all the terms that do not depend on &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; we have that the un-normalized approximate log-posterior (the variational energy) can be expressed as &lt;span class=&#34;math display&#34;&gt;\[
+\begin{align}
+I(m) &amp;amp; = \int p \left( y, r, m \right) \, q(r) \, dr \\
+&amp;amp; = \sum_{n=1}^N \sum_{k=1}^K m_{nk} \left[ p \left( \log y_n \mid m_{nk} \right) + \int q(r_k) \log r_k \, d r_k \right] \nonumber \\
+&amp;amp; = \sum_{n=1}^N \sum_{k=1}^K m_{nk} \left[ p \left( \log y_n \mid m_{nk} \right) + \psi (\alpha_k) -\psi \left(  \alpha_S \right) \right] \nonumber
+\end{align}
+\]&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(\alpha_S = \sum_{k=1}^K \alpha_k\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\psi\)&lt;/span&gt; is the digamma function. If you wonder (as I did when reading this the first time) where the hell does the digamma function comes from here: well it is here due to a property of the Dirichlet distribution, which says that the expected value of &lt;span class=&#34;math inline&#34;&gt;\(\log r_k\)&lt;/span&gt; can be computed as &lt;span class=&#34;math display&#34;&gt;\[
+\mathbb{E} \left[\log r_k \right] = \int p(r_k) \log r_k \, d r_k = \psi (\alpha_k) -\psi \left( \sum_{k=1}^K \alpha_k \right)
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;From this, we have that the un-normalized posterior belief that model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; generated data from subject &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; is &lt;span class=&#34;math display&#34;&gt;\[
+u_{nk} =  \exp {\left[ p \left( \log y_n \mid m_{nk} \right) + \psi (\alpha_k) -\psi \left(  \alpha_S \right) \right]}
+\]&lt;/span&gt; and the normalized belief is &lt;span class=&#34;math display&#34;&gt;\[
+g_{nk} = \frac{u_{nk}}{\sum_{k=1}^K u_{nk}}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;We need also to compute the approximate posterior density &lt;span class=&#34;math inline&#34;&gt;\(q(r)\)&lt;/span&gt;, and we begin as above by computing the un-normalized, approximate log-posterior or variational energy &lt;span class=&#34;math display&#34;&gt;\[
+\begin{align}
+I(r) &amp;amp; = \int p \left( y, r, m \right) \, q(m) \, dm \\
+&amp;amp; = \sum_{k=1}^K \left[\log r_k \left(\alpha_{0k} -1 \right) +  \sum_{n=1}^N g_{nk} \log r_k \right]
+\end{align}
+\]&lt;/span&gt; The logarithm of a Dirichlet density is &lt;span class=&#34;math inline&#34;&gt;\(\log \text{Dir} (r , \boldsymbol{\alpha}) = \sum_{k=1}^K \log r_k \left(\alpha_{0k} -1 \right) + \dots\)&lt;/span&gt;, therefore the parameters of the approximate posterior are &lt;span class=&#34;math display&#34;&gt;\[
+  \boldsymbol{\alpha} = \boldsymbol{\alpha}_0 + \sum_{n=1}^N g_{nk}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;iterative-algorithm&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Iterative algorithm}&lt;/h2&gt;
+&lt;p&gt;The algorithm &lt;span class=&#34;citation&#34;&gt;(Stephan et al. 2009)&lt;/span&gt; proceeds by estimating iteratively the posterior belief that a given model generated the data from a certain subject, by integrating out the prior probabilities of the models (the &lt;span class=&#34;math inline&#34;&gt;\(r_k\)&lt;/span&gt; predicted by the Dirichlet distribution that describes the frequency of models in the population) in log-space as described above. Next the parameters of the approximate Dirichlet posterior are updated, which gives new priors to integrate out from the model evidence, and so on until convergence.Convergence is assessed by keeping track of how much the vector $ $ change from one iteration to the next, i.e. is common to consider that the procedure has converged when &lt;span class=&#34;math inline&#34;&gt;\(\left\Vert \boldsymbol{\alpha}_{t-1} \cdot \boldsymbol{\alpha}_t \right\Vert &amp;lt; 10^{-4}\)&lt;/span&gt; (where &lt;span class=&#34;math inline&#34;&gt;\(\cdot\)&lt;/span&gt; is the dot product).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exceedance-probabilities&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exceedance probabilities&lt;/h2&gt;
+&lt;p&gt;After having found the optimised values of &lt;span class=&#34;math inline&#34;&gt;\(\boldsymbol{\alpha}\)&lt;/span&gt;, one popular way to report the results and rank the models is by their exceedance probability, which is defined as the (second order) probability that participants were more likely to choose a certain model to generate behavior rather than any other alternative model, that is &lt;span class=&#34;math display&#34;&gt;\[
+\forall j \in \left\{1, \dots, K, j \ne k \right\}, \,\,\, \varphi_k = p \left(r_k &amp;gt; r_j \mid y, \boldsymbol{\alpha} \right).
+\]&lt;/span&gt; In the case of &lt;span class=&#34;math inline&#34;&gt;\(K&amp;gt;2\)&lt;/span&gt; models, the exceedance probabilities &lt;span class=&#34;math inline&#34;&gt;\(\varphi_k\)&lt;/span&gt; are computed by generating random samples from univariate Gamma densities and then normalizing. Specifically, each multivariate Dirichlet sample is composed of &lt;span class=&#34;math inline&#34;&gt;\(K\)&lt;/span&gt; independent random samples &lt;span class=&#34;math inline&#34;&gt;\((x_1, \dots, x_K)\)&lt;/span&gt; distributed according to the density &lt;span class=&#34;math inline&#34;&gt;\(\text{Gamma}\left(\alpha_i, 1\right) = \frac{x_i^{\alpha_i-1} e^{-x_i}}{\Gamma(\alpha_i)}\)&lt;/span&gt;, and then set normalize them by taking &lt;span class=&#34;math inline&#34;&gt;\(z_i = \frac{x_i}{ \sum_{i=1}^K x_i}\)&lt;/span&gt;. The exceedance probability &lt;span class=&#34;math inline&#34;&gt;\(\varphi_k\)&lt;/span&gt; for each model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; is then computed as &lt;span class=&#34;math display&#34;&gt;\[
+\varphi_k = \frac{\sum \mathop{\bf{1}}_{z_k&amp;gt;z_j, \forall j \in \left\{1, \dots, K, j \ne k \right\} }}{ \text{n. of samples}}
+\]&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(\mathop{\bf{1}}_{\dots}\)&lt;/span&gt; is the indicator function (&lt;span class=&#34;math inline&#34;&gt;\(\mathop{\bf{1}}_{x&amp;gt;0} = 1\)&lt;/span&gt; if &lt;span class=&#34;math inline&#34;&gt;\(x&amp;gt;0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; otherwise), summed over the total number of multivariate samples drawn.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;code&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Code!&lt;/h1&gt;
+&lt;p&gt;All this is already implementd in Matlab code in &lt;a href=&#34;https://www.fil.ion.ucl.ac.uk/spm/software/spm12/&#34;&gt;SPM 12&lt;/a&gt;. However, if you don’t like Matlab, I have translated it into R, and put it into a &lt;a href=&#34;https://github.com/mattelisi/bmsR&#34;&gt;package on Github&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level1 unnumbered&#34;&gt;
+&lt;h1&gt;References&lt;/h1&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-Burnham2002&#34;&gt;
+&lt;p&gt;Burnham, Kenneth P., and David R. Anderson. 2002. &lt;em&gt;Model Selection and Multimodel Inference: A Practical Information-Theoretic Approach&lt;/em&gt;. 2nd editio. New York, US: Springer New York. doi:&lt;a href=&#34;https://doi.org/10.1007/b97636&#34;&gt;10.1007/b97636&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Stephan2009&#34;&gt;
+&lt;p&gt;Stephan, Klaas Enno, Will D. Penny, Jean Daunizeau, Rosalyn J. Moran, and Karl J. Friston. 2009. “Bayesian model selection for group studies.” &lt;em&gt;NeuroImage&lt;/em&gt; 46 (4). Elsevier Inc.: 1004–17. doi:&lt;a href=&#34;https://doi.org/10.1016/j.neuroimage.2009.03.025&#34;&gt;10.1016/j.neuroimage.2009.03.025&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Andrea Desantis | Matteo Lisi</title>
+    <link>http://mlisi.xyz/authors/andrea-desantis/</link>
+      <atom:link href="http://mlisi.xyz/authors/andrea-desantis/index.xml" rel="self" type="application/rss+xml" />
+    <description>Andrea Desantis</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Tue, 01 Jul 2014 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://mlisi.xyz/img/shademe.png</url>
+      <title>Andrea Desantis</title>
+      <link>http://mlisi.xyz/authors/andrea-desantis/</link>
+    </image>
+    
+    <item>
+      <title>The prediction of visual stimuli influences auditory loudness discrimination</title>
+      <link>http://mlisi.xyz/publication/desantis/</link>
+      <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/desantis/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

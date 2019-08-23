@@ -1,24 +1,73 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>simulation on juicy bits</title>
-    <link>https://mattelisi.github.io/tags/simulation/</link>
-    <description>Recent content in simulation on juicy bits</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2019 Matteo Lisi</copyright>
-    <lastBuildDate>Sun, 21 Jan 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mattelisi.github.io/tags/simulation/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>simulation | Matteo Lisi</title>
+    <link>http://mlisi.xyz/tags/simulation/</link>
+      <atom:link href="http://mlisi.xyz/tags/simulation/index.xml" rel="self" type="application/rss+xml" />
+    <description>simulation</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Sun, 21 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://mlisi.xyz/img/shademe.png</url>
+      <title>simulation</title>
+      <link>http://mlisi.xyz/tags/simulation/</link>
+    </image>
     
     <item>
       <title>Simulating correlated variables with the Cholesky factorization</title>
-      <link>https://mattelisi.github.io/post/simulating-correlated-variables-with-the-cholesky-factorization/</link>
+      <link>http://mlisi.xyz/post/simulating-correlated-variables-with-the-cholesky-factorization/</link>
       <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/post/simulating-correlated-variables-with-the-cholesky-factorization/</guid>
-      <description>Generating random variables with given variance-covariance matrix can be useful for many purposes. For example it is useful for generating random intercepts and slopes with given correlations when simulating a multilevel, or mixed-effects, model (e.g. see here). This can be achieved efficiently with the Choleski factorization. In linear algebra the factorization or decomposition of a matrix is the factorization of a matrix into a product of matrices. More specifically, the Choleski factorization is a decomposition of a positive-defined, symmetric1 matrix into a product of a triangular matrix and its conjugate transpose; in other words is a method to find the square root of a matrix.</description>
+      <guid>http://mlisi.xyz/post/simulating-correlated-variables-with-the-cholesky-factorization/</guid>
+      <description>
+
+
+&lt;p&gt;Generating random variables with given variance-covariance matrix can be useful for many purposes. For example it is useful for generating random intercepts and slopes with given correlations when simulating a multilevel, or mixed-effects, model (e.g. see &lt;a href=&#34;https://rpubs.com/adrbart/random_slope_simulation&#34;&gt;here&lt;/a&gt;). This can be achieved efficiently with the &lt;a href=&#34;https://en.wikipedia.org/wiki/Cholesky_decomposition&#34;&gt;Choleski factorization&lt;/a&gt;. In linear algebra the factorization or decomposition of a matrix is the factorization of a matrix into a product of matrices. More specifically, the Choleski factorization is a decomposition of a positive-defined, symmetric&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; matrix into a product of a triangular matrix and its conjugate transpose; in other words is a method to find the &lt;em&gt;square root&lt;/em&gt; of a matrix. The square root of a matrix &lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt; is another matrix &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt; such that &lt;span class=&#34;math inline&#34;&gt;\({L^T}L = C\)&lt;/span&gt;.&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Suppose you want to create 2 variables, having a Gaussian distribution, and a positive correlation, say &lt;span class=&#34;math inline&#34;&gt;\(0.7\)&lt;/span&gt;. The first step is to define the correlation matrix &lt;span class=&#34;math display&#34;&gt;\[C = \left( {\begin{array}{*{20}{c}}
+1&amp;amp;{0.7}\\
+{0.7}&amp;amp;1
+\end{array}} \right)\]&lt;/span&gt; Elements in the diagonal can be understood as the correlation of each variable with itself, and therefore are 1, while elements outside the diagonal indicate the desired correlation. In &lt;span class=&#34;math inline&#34;&gt;\(\textsf{R}\)&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;C &amp;lt;- matrix(c(1,0.7,0.7,1),2,2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next one can use the &lt;code&gt;chol()&lt;/code&gt; function to compute the Cholesky factor. (The function provides the upper triangular square root of &lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt;).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;L &amp;lt;- chol(C)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you multiply the matrix &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt; with itself you get back the original correlation matrix (&lt;span class=&#34;math inline&#34;&gt;\(\textsf{R}\)&lt;/span&gt; output below).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t(L) %*% L
+     [,1] [,2]
+[1,]  1.0  0.7
+[2,]  0.7  1.0&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then we need another matrix with the desired standard deviation in the diagonal (in this example I choose 1 and 2)&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tau &amp;lt;- diag(c(1,2))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Multiply that matrix with the lower triangular square root of the correlation matrix (can be obtained by taking the transpose of &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt;)&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Lambda &amp;lt;- tau %*% t(L)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we can generate values for 2 independent random variables &lt;span class=&#34;math inline&#34;&gt;\(z\sim\cal N\left( {0,1} \right)\)&lt;/span&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Z &amp;lt;- rbind(rnorm(1e4),rnorm(1e4))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, to introduce the correlations , multiply them with the &lt;code&gt;Lambda&lt;/code&gt; obtained above&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;X &amp;lt;- Lambda %*% Z&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now plot the results &lt;img src=&#34;http://mlisi.xyz/post/2018-01-21-generating-correlated-random-variables-with-the-cholesky-factorization_files/figure-html/fig1-1.png&#34; width=&#34;729.6&#34; /&gt; We can verify that the correlation as estimated from the sample corresponds (or is close enough) to the generative value.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# correlation in the generated sample
+cor(X[1,],X[2,])
+[1] 0.7093591&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;why-does-it-work&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Why does it work?&lt;/h1&gt;
+&lt;p&gt;The covariance matrix of the initial, uncorrelated sample is &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{E} \left( Z Z^T \right) = I\)&lt;/span&gt;, that is the identity matrix, since they have zero mean and unit variance &lt;span class=&#34;math inline&#34;&gt;\(z\sim\cal N\left( {0,1} \right)\)&lt;/span&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnoteRef&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Let’s suppose that the desired covariance matrix is &lt;span class=&#34;math inline&#34;&gt;\(\Sigma\)&lt;/span&gt;; since it is symmetric and positive defined it is possible to obtain the Cholesky factorization &lt;span class=&#34;math inline&#34;&gt;\(L{L^T} = \Sigma\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;If we then compute a new random vector as &lt;span class=&#34;math inline&#34;&gt;\(X=LZ\)&lt;/span&gt;, we have that its covariance matrix is &lt;span class=&#34;math display&#34;&gt;\[
+\begin{align}
+\mathbb{E} \left(XX^T\right) &amp;amp;= \mathbb{E} \left((LZ)(LZ)^T \right) \\
+&amp;amp;= \mathbb{E} \left(LZ Z^T L^T\right) \\
+&amp;amp;= L \mathbb{E} \left(ZZ^T \right) L^T \\
+&amp;amp;= LIL^T = LL^T = \Sigma \\
+\end{align}
+\]&lt;/span&gt; Therefore the new random vector &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; has the covariance matrix &lt;span class=&#34;math inline&#34;&gt;\(\Sigma\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The third step is justified because the expected value is a linear operator, therefore &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{E}(cX) = c\mathbb{E}(X)\)&lt;/span&gt;. Also &lt;span class=&#34;math inline&#34;&gt;\((AB)^T = B^T A^T\)&lt;/span&gt;, note that the order of the factor reverses.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Actually Choleski factorization can be obtained from all &lt;a href=&#34;https://en.wikipedia.org/wiki/Hermitian_matrix&#34;&gt;&lt;em&gt;Hermitian&lt;/em&gt;&lt;/a&gt; matrices. Hermitian matrices are a complex extension of real symmetric matrices. A symmetric matrices is one that it is equal to its transpose, which implies that its entries are symmetric with respect to the diagonal. In a Hermitian matrix, symmetric entries with respect to the diagonal are complex conjugates, i.e. they have the same real part, and an imaginary part with equal magnitude but opposite in sign. For example, the complex conjugate of &lt;span class=&#34;math inline&#34;&gt;\(x+iy\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(x-iy\)&lt;/span&gt; (or, equivalently, &lt;span class=&#34;math inline&#34;&gt;\(re^{i\theta}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(re^{-i\theta}\)&lt;/span&gt;). Real symmetric matrices can be considered a special case of Hermitian matrices where the imaginary component &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; (or &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;) is &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Note that I am using the convention of &lt;span class=&#34;math inline&#34;&gt;\(\textsf{R}\)&lt;/span&gt; software, where the function &lt;code&gt;chol()&lt;/code&gt;, which compute the factorization, returns the &lt;em&gt;upper triangular&lt;/em&gt; factor of the Choleski decomposition. I think that is more commonly assumed that the Choleski decomposition returns the &lt;em&gt;lower triangular&lt;/em&gt; factor &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt;, in which case &lt;span class=&#34;math inline&#34;&gt;\(L{L^T} = C\)&lt;/span&gt;.&lt;a href=&#34;#fnref2&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;More generally the variance-covariance matrix is &lt;span class=&#34;math inline&#34;&gt;\(\Sigma = \mathbb{E}\left( {X{X^T}} \right) - \mathbb{E}\left( X \right) \mathbb{E}\left(X \right)^T\)&lt;/span&gt;. &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{E}\)&lt;/span&gt; indicates the expected value.&lt;a href=&#34;#fnref3&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gerrit Maus | Matteo Lisi</title>
+    <link>http://mlisi.xyz/authors/gerrit-maus/</link>
+      <atom:link href="http://mlisi.xyz/authors/gerrit-maus/index.xml" rel="self" type="application/rss+xml" />
+    <description>Gerrit Maus</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Mon, 04 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://mlisi.xyz/img/shademe.png</url>
+      <title>Gerrit Maus</title>
+      <link>http://mlisi.xyz/authors/gerrit-maus/</link>
+    </image>
+    
+    <item>
+      <title>Perceived compression of time during blinks revealed by moving objects</title>
+      <link>http://mlisi.xyz/publication/motion-blink-preprint/</link>
+      <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/motion-blink-preprint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Target Displacements during Eye Blinks Trigger Automatic Recalibration of Gaze Direction</title>
+      <link>http://mlisi.xyz/publication/blink-adapt/</link>
+      <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/blink-adapt/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

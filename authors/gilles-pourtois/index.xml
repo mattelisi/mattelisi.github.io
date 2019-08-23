@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gilles Pourtois | Matteo Lisi</title>
+    <link>http://mlisi.xyz/authors/gilles-pourtois/</link>
+      <atom:link href="http://mlisi.xyz/authors/gilles-pourtois/index.xml" rel="self" type="application/rss+xml" />
+    <description>Gilles Pourtois</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Thu, 01 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://mlisi.xyz/img/shademe.png</url>
+      <title>Gilles Pourtois</title>
+      <link>http://mlisi.xyz/authors/gilles-pourtois/</link>
+    </image>
+    
+    <item>
+      <title>Cue-target contingencies modulate voluntary orienting of spatial attention: dissociable effects for speed and accuracy</title>
+      <link>http://mlisi.xyz/publication/validity_psyres/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/validity_psyres/</guid>
+      <description>&lt;p&gt;Mario Bonato and Matteo Lisi contributed equally to the article and are listed in alphabetical order.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

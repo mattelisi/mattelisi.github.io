@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>juicy bits on juicy bits</title>
-    <link>https://mattelisi.github.io/</link>
-    <description>Recent content in juicy bits on juicy bits</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2019 Matteo Lisi</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
+    <title>Matteo Lisi</title>
+    <link>http://mlisi.xyz/</link>
+      <atom:link href="http://mlisi.xyz/index.xml" rel="self" type="application/rss+xml" />
+    <description>Matteo Lisi</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://mlisi.xyz/img/shademe.png</url>
+      <title>Matteo Lisi</title>
+      <link>http://mlisi.xyz/</link>
+    </image>
+    
+    <item>
+      <title>Gain control of saccadic eye movements is probabilistic</title>
+      <link>http://mlisi.xyz/publication/gainpnas/</link>
+      <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/gainpnas/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Attitude shift towards Remain in European Elections obscured in press by rebranded Farage party</title>
-      <link>https://mattelisi.github.io/post/eu/</link>
+      <link>http://mlisi.xyz/post/eu/</link>
       <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/post/eu/</guid>
-      <description>&lt;p&gt;The European Election results reveal a shift towards parties that support a soft or no Brexit compared to votes in 2014. Instead, major news outlets in the UK and Europe claim that Hard Brexit has gained support. To see why this is a misguided conclusion, just look at the numbers:&lt;/p&gt;
+      <guid>http://mlisi.xyz/post/eu/</guid>
+      <description>
+
+
+&lt;p&gt;The European Election results reveal a shift towards parties that support a soft or no Brexit compared to votes in 2014. Instead, major news outlets in the UK and Europe claim that Hard Brexit has gained support. To see why this is a misguided conclusion, just look at the numbers:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://mattelisi.github.io/img/EU_election.png&#34; alt=&#34;Almost complete vote share results of UK’s EU elections 2019, put in perspective.&#34; /&gt;
+&lt;img src=&#34;http://mlisi.xyz/img/EU_election.png&#34; alt=&#34;Almost complete vote share results of UK’s EU elections 2019, put in perspective.&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Almost complete vote share results of UK’s EU elections 2019, put in perspective.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Parties supporting strong UK independence have lost overwhelming numbers of voters, with UKIP losing 24.2% of the votes, and conservative losing 14.8%. This loss is only partially recovered by Farage’s Brexit Party, which gained 31.6%, suggesting that a substantial proportion of voters switched to parties favoring a soft or no Brexit.&lt;/p&gt;
@@ -32,12 +44,14 @@
     
     <item>
       <title>Ephemeral patterns of complexity</title>
-      <link>https://mattelisi.github.io/post/ephemeral/</link>
+      <link>http://mlisi.xyz/post/ephemeral/</link>
       <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/post/ephemeral/</guid>
-      <description>&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://mattelisi.github.io/img/complexity.png&#34; alt=&#34;From The Big Picture: On the Origins of Life, Meaning, and the Universe Itself by Sean Carrol, www.preposterousuniverse.com/bigpicture&#34; /&gt;
+      <guid>http://mlisi.xyz/post/ephemeral/</guid>
+      <description>
+
+
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://mlisi.xyz/img/complexity.png&#34; alt=&#34;From The Big Picture: On the Origins of Life, Meaning, and the Universe Itself by Sean Carrol, www.preposterousuniverse.com/bigpicture&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;From ‘&lt;em&gt;The Big Picture: On the Origins of Life, Meaning, and the Universe Itself&lt;/em&gt;’ by Sean Carrol, &lt;a href=&#34;https://www.preposterousuniverse.com/bigpicture/&#34;&gt;www.preposterousuniverse.com/bigpicture&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -45,20 +59,23 @@
     
     <item>
       <title>Perceived compression of time during blinks revealed by moving objects</title>
-      <link>https://mattelisi.github.io/publication/motion-blink-preprint/</link>
+      <link>http://mlisi.xyz/publication/motion-blink-preprint/</link>
       <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/publication/motion-blink-preprint/</guid>
+      <guid>http://mlisi.xyz/publication/motion-blink-preprint/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bayesian model selection at the group level</title>
-      <link>https://mattelisi.github.io/post/bms/</link>
+      <link>http://mlisi.xyz/post/bms/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/post/bms/</guid>
-      <description>&lt;p&gt;In experimental psychology and neuroscience the classical approach when comparing different models that make quantitative predictions about the behavior of participants is to aggregate the predictive ability of the model (e.g. as quantified by Akaike Information criterion) across participants, and then see which one provide on average the best performance. Although correct, this approach neglect the possibility that different participants might use different strategies that are best described by alternative, competing models. To account for this, Stephan et al. &lt;span class=&#34;citation&#34;&gt;(Stephan et al. 2009)&lt;/span&gt; proposed a more conservative approach where models are treated as random effects that could differ between subjects and have a fixed (unknown) distribution in the population. The relevant statistical quantity is the frequency with which any model prevails in the population. Note that this is different from the definition of random-effects in classical statistic where random effects models have multiple sources of variation, e.g. within- and between- subject variance. An useful and popular way to summarize the results of this analysis is by reporting the model’s &lt;em&gt;exceedance probabilities&lt;/em&gt;, which measures how likely it is that any given model is more frequent than all other models in the set. The following exposition is largerly based on Stephan et al’s paper &lt;span class=&#34;citation&#34;&gt;(Stephan et al. 2009)&lt;/span&gt;.&lt;/p&gt;
+      <guid>http://mlisi.xyz/post/bms/</guid>
+      <description>
+
+
+
+
+&lt;p&gt;In experimental psychology and neuroscience the classical approach when comparing different models that make quantitative predictions about the behavior of participants is to aggregate the predictive ability of the model (e.g. as quantified by Akaike Information criterion) across participants, and then see which one provide on average the best performance. Although correct, this approach neglect the possibility that different participants might use different strategies that are best described by alternative, competing models. To account for this, Stephan et al. &lt;span class=&#34;citation&#34;&gt;(Stephan et al. 2009)&lt;/span&gt; proposed a more conservative approach where models are treated as random effects that could differ between subjects and have a fixed (unknown) distribution in the population. The relevant statistical quantity is the frequency with which any model prevails in the population. Note that this is different from the definition of random-effects in classical statistic where random effects models have multiple sources of variation, e.g. within- and between- subject variance. An useful and popular way to summarize the results of this analysis is by reporting the model’s &lt;em&gt;exceedance probabilities&lt;/em&gt;, which measures how likely it is that any given model is more frequent than all other models in the set. The following exposition is largerly based on Stephan et al’s paper &lt;span class=&#34;citation&#34;&gt;(Stephan et al. 2009)&lt;/span&gt;.&lt;/p&gt;
 &lt;div id=&#34;model-evidence&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Model evidence&lt;/h1&gt;
 &lt;p&gt;Let’s say we have an experiment with &lt;span class=&#34;math inline&#34;&gt;\(\left(1,\dots,N\right)\)&lt;/span&gt; participants. Their performance is quantitatively predicted by a set &lt;span class=&#34;math inline&#34;&gt;\(\left(1,\dots,K\right)\)&lt;/span&gt; competing models. The behaviour of any subject &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; can be fit by the model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; by finding the value(s) of the parameter(s) &lt;span class=&#34;math inline&#34;&gt;\(\theta_k\)&lt;/span&gt; that maximize the likelihood of the data &lt;span class=&#34;math inline&#34;&gt;\(y_n\)&lt;/span&gt; under the model. In a fully Bayesian setting each unknown parameter would have a prior probability distribution, and the quantity of choice ofr comparing the goodness of fit of the model is the marginal likelihood, that is &lt;span class=&#34;math display&#34;&gt;\[
@@ -76,7 +93,7 @@ p\left(r \mid  \boldsymbol{\alpha } \right) &amp;amp; = \text{Dir} \left(r, \bol
 p\left(m_n \mid  \mathbf{r} \right) =  \prod_{k=1}^K r_k^{m_{nk}}.
 \]&lt;/span&gt; The graphical model that summarizes these dependencies is shown the following graph:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://mattelisi.github.io/img/bms.png&#34; alt=&#34;&#34; style=&#34;width:50.0%&#34; /&gt;
+&lt;img src=&#34;http://mlisi.xyz/img/bms.png&#34; alt=&#34;&#34; style=&#34;width:50.0%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -162,12 +179,14 @@ I(r) &amp;amp; = \int p \left( y, r, m \right) \, q(m) \, dm \\
     
     <item>
       <title>Bayesian multilevel models using R and Stan (part 1)</title>
-      <link>https://mattelisi.github.io/post/bayesian-multilevel-models-r-stan/</link>
+      <link>http://mlisi.xyz/post/bayesian-multilevel-models-r-stan/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/post/bayesian-multilevel-models-r-stan/</guid>
-      <description>&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://mattelisi.github.io/img/turtlepile.jpg&#34; alt=&#34;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&#34; /&gt;
+      <guid>http://mlisi.xyz/post/bayesian-multilevel-models-r-stan/</guid>
+      <description>
+
+
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://mlisi.xyz/img/turtlepile.jpg&#34; alt=&#34;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;In my previous lab I was known for promoting the use of multilevel, or mixed-effects model among my colleagues. (The slides on the &lt;a href=&#34;https://mattelisi.github.io/#notes&#34;&gt;/misc&lt;/a&gt; section of this website are part of this effort.) Multilevel models should be the standard approach in fields like experimental psychology and neuroscience, where the data is naturally grouped according to “observational units”, i.e. individual participants. I agree with Richard McElreath when he writes that &lt;em&gt;“multilevel regression deserves to be the default form of regression”&lt;/em&gt; (see &lt;a href=&#34;http://xcelab.net/rmpubs/rethinking/Statistical_Rethinking_sample.pdf&#34;&gt;here&lt;/a&gt;, section 1.3.2) and that, at least in our fields, studies not using a multilevel approach should justify the choice of not using it.&lt;/p&gt;
@@ -267,7 +286,7 @@ transformed parameters {
   }
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;For the correlation matrix, Stan manual suggest to use a LKJ prior&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. This prior has one single shape parameters, &lt;span class=&#34;math inline&#34;&gt;\(\eta\)&lt;/span&gt;: if you set &lt;span class=&#34;math inline&#34;&gt;\(\eta=1\)&lt;/span&gt; then you have effectively a uniform prior distribution over any (Cholesky factor of) 2x2 correlation matrices. For values &lt;span class=&#34;math inline&#34;&gt;\(\eta&amp;gt;1\)&lt;/span&gt; instead you get a more conservative prior, with a mode in the identity matrix (where the correlations are 0). For more information about the LKJ prior see page 556 of Stan reference manual, version 2.17.0, and also &lt;a href=&#34;http://www.psychstatistics.com/2014/12/27/d-lkj-priors/&#34;&gt;this page&lt;/a&gt; for an intuitive demonstration.&lt;/p&gt;
-&lt;p&gt;Importantly, I have used (weakly) informative priors for the fixed effect estimates. We know from the literature that simple reaction times are around 300ms, hence the prior for the intercept, which represents the avearage reaction times at Day 0, i.e. before the sleep deprivation. We expect the reaction times to increase with sleep deprivation, so I have used for the slope a Gaussian prior centered at a small positive value (0.2 seconds), which would represents the increase in reaction times with each day of sleep deprivation, however using a very broad standard deviation (2 seconds), which could accomodate also negative or very different slope values if needed. It may be useful to visualize with a plot the priors. &lt;img src=&#34;https://mattelisi.github.io/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig1-1.png&#34; width=&#34;624&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Importantly, I have used (weakly) informative priors for the fixed effect estimates. We know from the literature that simple reaction times are around 300ms, hence the prior for the intercept, which represents the avearage reaction times at Day 0, i.e. before the sleep deprivation. We expect the reaction times to increase with sleep deprivation, so I have used for the slope a Gaussian prior centered at a small positive value (0.2 seconds), which would represents the increase in reaction times with each day of sleep deprivation, however using a very broad standard deviation (2 seconds), which could accomodate also negative or very different slope values if needed. It may be useful to visualize with a plot the priors. &lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig1-1.png&#34; width=&#34;624&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;generated-quantities&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Generated quantities&lt;/h2&gt;
@@ -287,7 +306,7 @@ sleep_model &amp;lt;- stan(file = &amp;quot;sleep_model.stan&amp;quot;, data = d
     iter = 2000, chains = 4)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;One way to check the convergence of the model is to plot the chain of samples. They should look like a &lt;em&gt;“fat, hairy caterpillar which does not bend”&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;(Sorensen, Hohenstein, and Vasishth 2016)&lt;/span&gt;, suggesting that the sampling was stable at the posterior.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;traceplot(sleep_model, pars = c(&amp;quot;beta&amp;quot;), inc_warmup = FALSE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://mattelisi.github.io/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig2-1.png&#34; width=&#34;480&#34; /&gt; There is a &lt;code&gt;print()&lt;/code&gt; method for visualising the estimates of the parameters. The values of the &lt;span class=&#34;math inline&#34;&gt;\({\hat R}\)&lt;/span&gt; (&lt;code&gt;Rhat&lt;/code&gt;) statistics also confirm that the chains converged. The method automatically report credible intervals for the parameters (computed with the percentile method from the samples of the posterior distribution).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig2-1.png&#34; width=&#34;480&#34; /&gt; There is a &lt;code&gt;print()&lt;/code&gt; method for visualising the estimates of the parameters. The values of the &lt;span class=&#34;math inline&#34;&gt;\({\hat R}\)&lt;/span&gt; (&lt;code&gt;Rhat&lt;/code&gt;) statistics also confirm that the chains converged. The method automatically report credible intervals for the parameters (computed with the percentile method from the samples of the posterior distribution).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(sleep_model, pars = c(&amp;quot;beta&amp;quot;), probs = c(0.025, 0.975), 
     digits = 3)
 Inference for Stan model: sleep_model_v1.
@@ -305,7 +324,7 @@ convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And we can visualze the posterior distribution as histograms (here for the fixed effects parameters and the standard deviations of the corresponding random effects).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(sleep_model, plotfun = &amp;quot;hist&amp;quot;, pars = c(&amp;quot;beta&amp;quot;, &amp;quot;sigma_u&amp;quot;))
 `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://mattelisi.github.io/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig3-1.png&#34; width=&#34;384&#34; /&gt; Finally, we can also examine the correlation matrix of random-effects.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig3-1.png&#34; width=&#34;384&#34; /&gt; Finally, we can also examine the correlation matrix of random-effects.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(sleep_model, pars = c(&amp;quot;Omega&amp;quot;), digits = 3)
 Inference for Stan model: sleep_model_v1.
 5 chains, each with iter=6000; warmup=3000; thin=1; 
@@ -351,30 +370,30 @@ convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Cue-target contingencies modulate voluntary orienting of spatial attention: dissociable effects for speed and accuracy</title>
-      <link>https://mattelisi.github.io/publication/validity_psyres/</link>
+      <link>http://mlisi.xyz/publication/validity_psyres/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/publication/validity_psyres/</guid>
+      <guid>http://mlisi.xyz/publication/validity_psyres/</guid>
       <description>&lt;p&gt;Mario Bonato and Matteo Lisi contributed equally to the article and are listed in alphabetical order.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Motion and position shifts induced by the double-drift stimulus are unaffected by attentional load</title>
-      <link>https://mattelisi.github.io/publication/dd_load/</link>
+      <link>http://mlisi.xyz/publication/dd_load/</link>
       <pubDate>Sun, 04 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/publication/dd_load/</guid>
+      <guid>http://mlisi.xyz/publication/dd_load/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Simulating correlated variables with the Cholesky factorization</title>
-      <link>https://mattelisi.github.io/post/simulating-correlated-variables-with-the-cholesky-factorization/</link>
+      <link>http://mlisi.xyz/post/simulating-correlated-variables-with-the-cholesky-factorization/</link>
       <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/post/simulating-correlated-variables-with-the-cholesky-factorization/</guid>
-      <description>&lt;p&gt;Generating random variables with given variance-covariance matrix can be useful for many purposes. For example it is useful for generating random intercepts and slopes with given correlations when simulating a multilevel, or mixed-effects, model (e.g. see &lt;a href=&#34;https://rpubs.com/adrbart/random_slope_simulation&#34;&gt;here&lt;/a&gt;). This can be achieved efficiently with the &lt;a href=&#34;https://en.wikipedia.org/wiki/Cholesky_decomposition&#34;&gt;Choleski factorization&lt;/a&gt;. In linear algebra the factorization or decomposition of a matrix is the factorization of a matrix into a product of matrices. More specifically, the Choleski factorization is a decomposition of a positive-defined, symmetric&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; matrix into a product of a triangular matrix and its conjugate transpose; in other words is a method to find the &lt;em&gt;square root&lt;/em&gt; of a matrix. The square root of a matrix &lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt; is another matrix &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt; such that &lt;span class=&#34;math inline&#34;&gt;\({L^T}L = C\)&lt;/span&gt;.&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+      <guid>http://mlisi.xyz/post/simulating-correlated-variables-with-the-cholesky-factorization/</guid>
+      <description>
+
+
+&lt;p&gt;Generating random variables with given variance-covariance matrix can be useful for many purposes. For example it is useful for generating random intercepts and slopes with given correlations when simulating a multilevel, or mixed-effects, model (e.g. see &lt;a href=&#34;https://rpubs.com/adrbart/random_slope_simulation&#34;&gt;here&lt;/a&gt;). This can be achieved efficiently with the &lt;a href=&#34;https://en.wikipedia.org/wiki/Cholesky_decomposition&#34;&gt;Choleski factorization&lt;/a&gt;. In linear algebra the factorization or decomposition of a matrix is the factorization of a matrix into a product of matrices. More specifically, the Choleski factorization is a decomposition of a positive-defined, symmetric&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; matrix into a product of a triangular matrix and its conjugate transpose; in other words is a method to find the &lt;em&gt;square root&lt;/em&gt; of a matrix. The square root of a matrix &lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt; is another matrix &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt; such that &lt;span class=&#34;math inline&#34;&gt;\({L^T}L = C\)&lt;/span&gt;.&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Suppose you want to create 2 variables, having a Gaussian distribution, and a positive correlation, say &lt;span class=&#34;math inline&#34;&gt;\(0.7\)&lt;/span&gt;. The first step is to define the correlation matrix &lt;span class=&#34;math display&#34;&gt;\[C = \left( {\begin{array}{*{20}{c}}
 1&amp;amp;{0.7}\\
 {0.7}&amp;amp;1
@@ -395,7 +414,7 @@ convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Z &amp;lt;- rbind(rnorm(1e4),rnorm(1e4))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Finally, to introduce the correlations , multiply them with the &lt;code&gt;Lambda&lt;/code&gt; obtained above&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;X &amp;lt;- Lambda %*% Z&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now plot the results &lt;img src=&#34;https://mattelisi.github.io/post/2018-01-21-generating-correlated-random-variables-with-the-cholesky-factorization_files/figure-html/fig1-1.png&#34; width=&#34;729.6&#34; /&gt; We can verify that the correlation as estimated from the sample corresponds (or is close enough) to the generative value.&lt;/p&gt;
+&lt;p&gt;Now plot the results &lt;img src=&#34;http://mlisi.xyz/post/2018-01-21-generating-correlated-random-variables-with-the-cholesky-factorization_files/figure-html/fig1-1.png&#34; width=&#34;729.6&#34; /&gt; We can verify that the correlation as estimated from the sample corresponds (or is close enough) to the generative value.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# correlation in the generated sample
 cor(X[1,],X[2,])
 [1] 0.7093591&lt;/code&gt;&lt;/pre&gt;
@@ -426,14 +445,16 @@ cor(X[1,],X[2,])
     
     <item>
       <title>Multi-model estimation of psychophysical parameters</title>
-      <link>https://mattelisi.github.io/post/model-averaging/</link>
+      <link>http://mlisi.xyz/post/model-averaging/</link>
       <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/post/model-averaging/</guid>
-      <description>&lt;p&gt;In the study of human perception we often need to measure how sensitive is an observer to a stimulus variation, and how her/his sensitivity changes due to changes in the context or experimental manipulations. In many applications this can be done by estimating the slope of the psychometric function&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;, a parameter that relates to the precision with which the observer can make judgements about the stimulus. A psychometric function is generally characterized by 2-3 parameters: the slope, the threshold (or criterion), and an optional lapse parameter, which indicate the rate at which attention lapses (i.e. &lt;em&gt;stimulus-independent&lt;/em&gt; errors) occur.&lt;/p&gt;
+      <guid>http://mlisi.xyz/post/model-averaging/</guid>
+      <description>
+
+
+&lt;p&gt;In the study of human perception we often need to measure how sensitive is an observer to a stimulus variation, and how her/his sensitivity changes due to changes in the context or experimental manipulations. In many applications this can be done by estimating the slope of the psychometric function&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;, a parameter that relates to the precision with which the observer can make judgements about the stimulus. A psychometric function is generally characterized by 2-3 parameters: the slope, the threshold (or criterion), and an optional lapse parameter, which indicate the rate at which attention lapses (i.e. &lt;em&gt;stimulus-independent&lt;/em&gt; errors) occur.&lt;/p&gt;
 &lt;p&gt;As an example, consider the situation where an observer is asked to judge whether a signal (can be anything, from the orientation angle of a line on a screen, or the pitch of a tone, to the speed of a car or the approximate number of people in a crowd, etc.) is above or below a given reference value, call it zero. The experimenter presents the observers with many signals of different intensities, and the observer is asked to respond by making a binary choice (larger/smaller than the reference), under two different contextual conditions (before/after having a pint, with different headphones, etc.). These two conditions are expected to results in different sensitivity, and the experimenter is interested in estimating as precisely as possible the difference in sensitivity&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;. The psychometric function for one observer in the two conditions might look like this (figure below).&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://mattelisi.github.io/img/psyfun.png&#34; alt=&#34;Psychometric functions. Each points is a response (0 or 1 ; some vertical jitter is added for clarity), and the lines represent the fitted psychometric model (here a cumulative Gaussian psychometric function). The two facets of the plots represent the two different conditions. It can be seen that the precision seems to be different across conditions: judgements made under condition 2 are more variable, indicating reduced sensitivity. &#34; style=&#34;width:70.0%&#34; /&gt;
+&lt;img src=&#34;http://mlisi.xyz/img/psyfun.png&#34; alt=&#34;Psychometric functions. Each points is a response (0 or 1 ; some vertical jitter is added for clarity), and the lines represent the fitted psychometric model (here a cumulative Gaussian psychometric function). The two facets of the plots represent the two different conditions. It can be seen that the precision seems to be different across conditions: judgements made under condition 2 are more variable, indicating reduced sensitivity. &#34; style=&#34;width:70.0%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Psychometric functions. Each points is a response (0 or 1 ; some vertical jitter is added for clarity), and the lines represent the fitted psychometric model (here a cumulative Gaussian psychometric function). The two facets of the plots represent the two different conditions. It can be seen that the precision seems to be different across conditions: judgements made under condition ‘2’ are more variable, indicating reduced sensitivity. &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Our focus is on the psychometric slope, and we are not really interested in measuring the lapse rate; however it is still important to take lapses into account: it has been shown that not accounting for lapses can have a large influence on the estimates of the slope &lt;span class=&#34;citation&#34;&gt;(Wichmann and Hill 2001)&lt;/span&gt;.&lt;/p&gt;
@@ -470,9 +491,9 @@ cor(X[1,],X[2,])
 &lt;h1&gt;Simulation results&lt;/h1&gt;
 &lt;p&gt;Model averaging seems a sensitive approach to deal with the uncertainty about which form of the model is best suited to our data. To see whether it is worth doing the extra work of fitting 3 models instead of just one, I run a simulation, where I repeatedly fit and compare the estimates of the three models, with the model-averaged estimate, for different values of sample sizes. In all the simulations, each observer is generated by randomly drawing parameters from a Gaussian distribution which summarize the distribution of the parameters in the population. Hence, I know the &lt;em&gt;true&lt;/em&gt; difference in sensitivity in the population, and by simulating and fitting the models I can test which estimating procedure is more &lt;em&gt;efficient&lt;/em&gt;. In statistics a procedure or an estimator is said to be more efficient than another one when it provides a better estimate with the same number or fewer observations. The notion of “better” clearly relies on the choice of a cost function, which for example can be the mean squared error (it is here).&lt;/p&gt;
 &lt;p&gt;Additionally, in my simulations each simulated observer could, &lt;em&gt;with equal probability&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(\frac{1}{3}\)&lt;/span&gt;, either never lapse, lapse with a constant rate across conditions, or lapse at a higher rate in the more difficult condition (condition ‘2’ where the judgements are less precise). The lapse rates were draw uniformly from the interval [0.01, 0.1], and could get as high as 0.15 in condition ‘2’. Each simulated observer ran 250 trials per condition (similar to the figure at the top of this page). I simulated dataset from &lt;span class=&#34;math inline&#34;&gt;\(n=5\)&lt;/span&gt; to &lt;span class=&#34;math inline&#34;&gt;\(n=50\)&lt;/span&gt;, using 100 iterations for each sample size (only 85 in the case of &lt;span class=&#34;math inline&#34;&gt;\(n=50\)&lt;/span&gt; because the simulation was taking too long and I needed my laptop for other stuff). For simplicity I assumed that the different parameters were not correlated across observers&lt;a href=&#34;#fn5&#34; class=&#34;footnoteRef&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;. I also had my simulated observer using the same criterion across the two conditions, although this may not necessarily be true. The quantity of interest here is the difference in slope between the two condition, that is &lt;span class=&#34;math inline&#34;&gt;\(\sigma_2 - \sigma_1\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;First, I examined the mean squared error of each of the models’ estimates, and of the model-averaged estimate. This is the average squared difference between the estimate and the true value. &lt;img src=&#34;https://mattelisi.github.io/img/mse.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt; The results shows (unless my color blindness fooled me) that the model-averaged estimate attains always the smaller error. Note also that the error tend to decrease exponentially with the sample size. Interestingly, the worst model seems to be the one that allow for the lapses to vary across conditions. This may be because the change in the lapse rate across condition was - when present - relatively small, but also because this model has a larger number of parameters, and thus produces more variable estimates (that is with higher standard errors) than smaller model. Indeed, given that I know the ‘true’ value of the parameres in this simulation settings, I can divide the error into the two subcomponents of variance and bias (see &lt;a href=&#34;http://scott.fortmann-roe.com/docs/BiasVariance.html&#34;&gt;this page&lt;/a&gt; for a nice introduction to the bias-variance tradeoff). The bias is the difference between the expected estimate (averaged over many repetitions/iterations) of the same model and the true quantity that we want to estimate. The variance is simply the variability of the model estimates, i.e. how much they oscillate around the expected estimate.&lt;/p&gt;
-&lt;p&gt;Here is a plot of the variance. Indeed it can be seen that the variable-lapse model, which has more parameters, is the one that produces more variable estimates. There is however little difference between the other two models’ and the multi-model estimates &lt;img src=&#34;https://mattelisi.github.io/img/variance.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;And here is the bias. This is very satisfactory, as it shows that while all individual models produced biased estimates, the bias of the model-averaged estimates is zero, or very close to zero. &lt;img src=&#34;https://mattelisi.github.io/img/bias.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt; In sum, by averaging models of different levels of complexity according to their relative likelihood, I was able to simultaneously minimize the variance and decrease the bias of my estimates, and achieve a greater efficiency. Model averaging seems to be the ideal procedure in this specific settings where the observer would belong to one of the three categories (i.e., she/he would conform to one of the three assumptions) with equal probability. However I think (although I haven’t checked) that it would perform well even in cases where a single “type” of observers is largely predominant over the other.&lt;/p&gt;
+&lt;p&gt;First, I examined the mean squared error of each of the models’ estimates, and of the model-averaged estimate. This is the average squared difference between the estimate and the true value. &lt;img src=&#34;http://mlisi.xyz/img/mse.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt; The results shows (unless my color blindness fooled me) that the model-averaged estimate attains always the smaller error. Note also that the error tend to decrease exponentially with the sample size. Interestingly, the worst model seems to be the one that allow for the lapses to vary across conditions. This may be because the change in the lapse rate across condition was - when present - relatively small, but also because this model has a larger number of parameters, and thus produces more variable estimates (that is with higher standard errors) than smaller model. Indeed, given that I know the ‘true’ value of the parameres in this simulation settings, I can divide the error into the two subcomponents of variance and bias (see &lt;a href=&#34;http://scott.fortmann-roe.com/docs/BiasVariance.html&#34;&gt;this page&lt;/a&gt; for a nice introduction to the bias-variance tradeoff). The bias is the difference between the expected estimate (averaged over many repetitions/iterations) of the same model and the true quantity that we want to estimate. The variance is simply the variability of the model estimates, i.e. how much they oscillate around the expected estimate.&lt;/p&gt;
+&lt;p&gt;Here is a plot of the variance. Indeed it can be seen that the variable-lapse model, which has more parameters, is the one that produces more variable estimates. There is however little difference between the other two models’ and the multi-model estimates &lt;img src=&#34;http://mlisi.xyz/img/variance.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;And here is the bias. This is very satisfactory, as it shows that while all individual models produced biased estimates, the bias of the model-averaged estimates is zero, or very close to zero. &lt;img src=&#34;http://mlisi.xyz/img/bias.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt; In sum, by averaging models of different levels of complexity according to their relative likelihood, I was able to simultaneously minimize the variance and decrease the bias of my estimates, and achieve a greater efficiency. Model averaging seems to be the ideal procedure in this specific settings where the observer would belong to one of the three categories (i.e., she/he would conform to one of the three assumptions) with equal probability. However I think (although I haven’t checked) that it would perform well even in cases where a single “type” of observers is largely predominant over the other.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;code&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Code&lt;/h1&gt;
@@ -687,11 +708,13 @@ ggplot(ares,aes(x=n_subjects, y=value, color=variable))+geom_hline(yintercept=0,
     
     <item>
       <title>Listing&#39;s law, and the mathematics of the eyes</title>
-      <link>https://mattelisi.github.io/post/listing-s-law-and-the-mathematics-of-the-eyes/</link>
+      <link>http://mlisi.xyz/post/listing-s-law-and-the-mathematics-of-the-eyes/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/post/listing-s-law-and-the-mathematics-of-the-eyes/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Brief intro to the mathematical formalism used to describe rotations of the eyes in 3D (including the torsional component).&lt;/em&gt; &lt;img src=&#34;https://mattelisi.github.io/img/3Deyecoord_Haslwanter1995.png&#34; alt=&#34;3D eye coordinate systems in the primary reference position, left panel, and after a leftward rotation, right panel (Haslwanter 1995). &#34; /&gt;&lt;/p&gt;
+      <guid>http://mlisi.xyz/post/listing-s-law-and-the-mathematics-of-the-eyes/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;em&gt;Brief intro to the mathematical formalism used to describe rotations of the eyes in 3D (including the torsional component).&lt;/em&gt; &lt;img src=&#34;http://mlisi.xyz/img/3Deyecoord_Haslwanter1995.png&#34; alt=&#34;3D eye coordinate systems in the primary reference position, left panel, and after a leftward rotation, right panel (Haslwanter 1995). &#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The shape of the human eye is approximately a sphere with a diameter of 23 mm, and mechanically it behaves like a ball in a ball and socket joint. Because there is a functional distinguished axis - the visual axis, that is the line of gaze or more precisely the imaginary straight line passing through both the center of the pupil and the center of the fovea - the movements of the eyes are usually divided in &lt;em&gt;gaze direction&lt;/em&gt; and &lt;em&gt;cyclotorsion&lt;/em&gt; (or simply &lt;em&gt;torsion&lt;/em&gt;): while gaze direction refers to the direction of the visual axis, the torsion indicates the rotation of the eyeball about the visual axis. While modern video-based eyetrackers allow to record movements of the visual axis, they do not provide data about torsion. It turns out that there is a nice mathematical relationship that constrains the torsion of the eye in every direction of the gaze. This relationship is known as Listing’s law, and was named after the german mathematician &lt;a href=&#34;https://en.wikipedia.org/wiki/Johann_Benedict_Listing&#34;&gt;Johann Benedict Listing (1808-1882)&lt;/a&gt;. Listing’s law can be better understood by looking at how the 3D orientation of the eye can be formally described.&lt;/p&gt;
 &lt;div id=&#34;mathematics-of-3d-eye-movements&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Mathematics of 3D eye movements&lt;/h1&gt;
@@ -724,7 +747,7 @@ q_0 + q_1i + q_2j + q_3k = \left( q_0,\vec{q} \cdot \vec{I} \right) = \left( r,\
 i^2 = j^2 = k^2 = ijk =  - 1
 \]&lt;/span&gt; This formula may seems strange but it determines all the possible products of &lt;span class=&#34;math inline&#34;&gt;\(i,j,k\)&lt;/span&gt;, such as &lt;span class=&#34;math inline&#34;&gt;\(ij=k\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(ji=-k\)&lt;/span&gt;. Note that the product of the basis are not commutative. There is a visual trick to remember the multiplication rules, based on the following diagram:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://mattelisi.github.io/img/quatrule.png&#34; alt=&#34;Multiplying quaternions. Multiplying two elements in the clockwise direction gives the next element along the same direction (e.g. jk=i). The same is for counter-clockwise directions, except that the result is negative (e.g. kj=-i). &#34; /&gt;
+&lt;img src=&#34;http://mlisi.xyz/img/quatrule.png&#34; alt=&#34;Multiplying quaternions. Multiplying two elements in the clockwise direction gives the next element along the same direction (e.g. jk=i). The same is for counter-clockwise directions, except that the result is negative (e.g. kj=-i). &#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Multiplying quaternions. Multiplying two elements in the clockwise direction gives the next element along the same direction (e.g. &lt;span class=&#34;math inline&#34;&gt;\(jk=i\)&lt;/span&gt;). The same is for counter-clockwise directions, except that the result is negative (e.g. &lt;span class=&#34;math inline&#34;&gt;\(kj=-i\)&lt;/span&gt;). &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Quaternions can be used to represent rotations. For example, a rotation of an angle &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; around the axis define by the unit vector &lt;span class=&#34;math inline&#34;&gt;\(\vec{u} = (u_1, u_2,u_3) = u_1i + u_2j + u_3k\)&lt;/span&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; can be described by the following quaternion &lt;span class=&#34;math display&#34;&gt;\[
@@ -784,47 +807,116 @@ i^2 = j^2 = k^2 = ijk =  - 1
     
     <item>
       <title>Memory-guided saccades show effect of perceptual illusion whereas visually-guided saccades do not</title>
-      <link>https://mattelisi.github.io/publication/memory-delphine/</link>
+      <link>http://mlisi.xyz/publication/memory-delphine/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/publication/memory-delphine/</guid>
+      <guid>http://mlisi.xyz/publication/memory-delphine/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Different spatial representations guide eye and hand movements</title>
-      <link>https://mattelisi.github.io/publication/double-drift-pointing/</link>
+      <link>http://mlisi.xyz/publication/double-drift-pointing/</link>
       <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/publication/double-drift-pointing/</guid>
+      <guid>http://mlisi.xyz/publication/double-drift-pointing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Discrete confidence levels revealed by sequential decisions</title>
-      <link>https://mattelisi.github.io/publication/discrete-confidence/</link>
+      <link>http://mlisi.xyz/publication/discrete-confidence/</link>
       <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/publication/discrete-confidence/</guid>
+      <guid>http://mlisi.xyz/publication/discrete-confidence/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Target Displacements during Eye Blinks Trigger Automatic Recalibration of Gaze Direction</title>
-      <link>https://mattelisi.github.io/publication/blink-adapt/</link>
+      <link>http://mlisi.xyz/publication/blink-adapt/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/publication/blink-adapt/</guid>
+      <guid>http://mlisi.xyz/publication/blink-adapt/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Time Costancy in human perception</title>
-      <link>https://mattelisi.github.io/publication/time-constancy/</link>
+      <link>http://mlisi.xyz/publication/time-constancy/</link>
       <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/publication/time-constancy/</guid>
+      <guid>http://mlisi.xyz/publication/time-constancy/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Voluntary eye movements direct attention on the mental number space</title>
+      <link>http://mlisi.xyz/publication/voluntary-eye/</link>
+      <pubDate>Tue, 02 Feb 2016 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/voluntary-eye/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dissociation between the Perceptual and Saccadic Localization of Moving Objects</title>
+      <link>http://mlisi.xyz/publication/double-drift-1/</link>
+      <pubDate>Thu, 24 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/double-drift-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Effects of Multimodal Load on Spatial Monitoring as Revealed by ERPs</title>
+      <link>http://mlisi.xyz/publication/load-erp/</link>
+      <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/load-erp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pupil dilation reveals top-down attentional load during spatial monitoring</title>
+      <link>http://mlisi.xyz/publication/load-pupil/</link>
+      <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/load-pupil/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spatial constancy of attention across eye movements is mediated by the presence of visual objects</title>
+      <link>http://mlisi.xyz/publication/spatial-constancy-attention/</link>
+      <pubDate>Fri, 01 May 2015 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/spatial-constancy-attention/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Larger, smaller, odd or even? Task-specific effects of optokinetic stimulation on the mental number space</title>
+      <link>http://mlisi.xyz/publication/optokinetic/</link>
+      <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/optokinetic/</guid>
+      <description>&lt;p&gt;Mariagrazia Ranzini and Matteo Lisi contributed equally to the work&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The prediction of visual stimuli influences auditory loudness discrimination</title>
+      <link>http://mlisi.xyz/publication/desantis/</link>
+      <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/desantis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Space coding for sensorimotor transformations can emerge through unsupervised learning</title>
+      <link>http://mlisi.xyz/publication/unsupervised-space-coding/</link>
+      <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/unsupervised-space-coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paying Attention through Eye Movements: A Computational Investigation of the Premotor Theory of Spatial Attention</title>
+      <link>http://mlisi.xyz/publication/premotor-model/</link>
+      <pubDate>Tue, 29 May 2012 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/premotor-model/</guid>
+      <description>&lt;p&gt;Marco Casarotti and Matteo Lisi contributed equally to the article and are listed in alphabetical order.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

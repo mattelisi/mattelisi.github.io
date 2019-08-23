@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>0 on juicy bits</title>
-    <link>https://mattelisi.github.io/publication_types/0/</link>
-    <description>Recent content in 0 on juicy bits</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2019 Matteo Lisi</copyright>
-    <lastBuildDate>Mon, 04 Feb 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mattelisi.github.io/publication_types/0/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>0 | Matteo Lisi</title>
+    <link>http://mlisi.xyz/publication_types/0/</link>
+      <atom:link href="http://mlisi.xyz/publication_types/0/index.xml" rel="self" type="application/rss+xml" />
+    <description>0</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Mon, 04 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://mlisi.xyz/img/shademe.png</url>
+      <title>0</title>
+      <link>http://mlisi.xyz/publication_types/0/</link>
+    </image>
     
     <item>
       <title>Perceived compression of time during blinks revealed by moving objects</title>
-      <link>https://mattelisi.github.io/publication/motion-blink-preprint/</link>
+      <link>http://mlisi.xyz/publication/motion-blink-preprint/</link>
       <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/publication/motion-blink-preprint/</guid>
+      <guid>http://mlisi.xyz/publication/motion-blink-preprint/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Discrete confidence levels revealed by sequential decisions</title>
-      <link>https://mattelisi.github.io/publication/discrete-confidence/</link>
+      <link>http://mlisi.xyz/publication/discrete-confidence/</link>
       <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/publication/discrete-confidence/</guid>
+      <guid>http://mlisi.xyz/publication/discrete-confidence/</guid>
       <description></description>
     </item>
     

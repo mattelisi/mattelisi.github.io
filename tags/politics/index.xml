@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>politics on juicy bits</title>
-    <link>https://mattelisi.github.io/tags/politics/</link>
-    <description>Recent content in politics on juicy bits</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2019 Matteo Lisi</copyright>
-    <lastBuildDate>Mon, 27 May 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mattelisi.github.io/tags/politics/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>politics | Matteo Lisi</title>
+    <link>http://mlisi.xyz/tags/politics/</link>
+      <atom:link href="http://mlisi.xyz/tags/politics/index.xml" rel="self" type="application/rss+xml" />
+    <description>politics</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Mon, 27 May 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://mlisi.xyz/img/shademe.png</url>
+      <title>politics</title>
+      <link>http://mlisi.xyz/tags/politics/</link>
+    </image>
     
     <item>
       <title>Attitude shift towards Remain in European Elections obscured in press by rebranded Farage party</title>
-      <link>https://mattelisi.github.io/post/eu/</link>
+      <link>http://mlisi.xyz/post/eu/</link>
       <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://mattelisi.github.io/post/eu/</guid>
-      <description>The European Election results reveal a shift towards parties that support a soft or no Brexit compared to votes in 2014. Instead, major news outlets in the UK and Europe claim that Hard Brexit has gained support. To see why this is a misguided conclusion, just look at the numbers:
-Almost complete vote share results of UK’s EU elections 2019, put in perspective.
- Parties supporting strong UK independence have lost overwhelming numbers of voters, with UKIP losing 24.</description>
+      <guid>http://mlisi.xyz/post/eu/</guid>
+      <description>
+
+
+&lt;p&gt;The European Election results reveal a shift towards parties that support a soft or no Brexit compared to votes in 2014. Instead, major news outlets in the UK and Europe claim that Hard Brexit has gained support. To see why this is a misguided conclusion, just look at the numbers:&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://mlisi.xyz/img/EU_election.png&#34; alt=&#34;Almost complete vote share results of UK’s EU elections 2019, put in perspective.&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Almost complete vote share results of UK’s EU elections 2019, put in perspective.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Parties supporting strong UK independence have lost overwhelming numbers of voters, with UKIP losing 24.2% of the votes, and conservative losing 14.8%. This loss is only partially recovered by Farage’s Brexit Party, which gained 31.6%, suggesting that a substantial proportion of voters switched to parties favoring a soft or no Brexit.&lt;/p&gt;
+&lt;p&gt;Amongst parties favoring closer European connections, those vocally against Brexit show major wins (Lib Dem, 13.4%, Green 4.2%), whilst the Labor party without clear Brexit stance, has lost 11.3% of its votes.&lt;/p&gt;
+&lt;p&gt;The numerical shift towards parties against Brexit, is obscured by Farage’s clever rebranding of UKIP. The apparent overnight success of Farage’s new Brexit party, now the largest party around, is interpreted in major news outlets such as the Guardian and the French24, as a victory for hard Brexiteers. This conclusion overlooks that the vast majority of the gained votes are funneled directly from Farrage’s own former party UKIP. This rebranding allows the Farage to claim a victory of 28 new seats over 2014, instead of the correct increase of 5.&lt;/p&gt;
+&lt;p&gt;Despite claims on the triumph of Farage’s party on the media, the numbers actually suggest a rising scepticism toward Brexit.&lt;/p&gt;
+&lt;p&gt;(After making this plot we realized that the Guardian had written a &lt;a href=&#34;https://www.theguardian.com/politics/2019/may/27/remain-hard-brexit-what-uk-european-election-results-tell-us&#34;&gt;perspective article&lt;/a&gt; on the same lines.).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ucl.ac.uk/~ucjttb1/&#34;&gt;Tessa Dekker&lt;/a&gt; &amp;amp; Matteo Lisi&lt;/p&gt;
+</description>
     </item>
     
   </channel>

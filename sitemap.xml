@@ -1,536 +1,459 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/post/eu/</loc>
-      <lastmod>2019-05-27T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/publication_types/2/</loc>
+    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/post/ephemeral/</loc>
-      <lastmod>2019-04-05T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/authors/</loc>
+    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/motion-blink-preprint/</loc>
-      <lastmod>2019-02-04T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/publication/gainpnas/</loc>
+    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/post/bms/</loc>
-      <lastmod>2019-01-25T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/authors/joshua-a.-solomon/</loc>
+    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/post/bayesian-multilevel-models-r-stan/</loc>
-      <lastmod>2018-03-01T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/</loc>
+    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/validity_psyres/</loc>
-      <lastmod>2018-03-01T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/authors/matteo-lisi/</loc>
+    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/dd_load/</loc>
-      <lastmod>2018-02-04T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/authors/michael-j.-morgan/</loc>
+    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/post/simulating-correlated-variables-with-the-cholesky-factorization/</loc>
-      <lastmod>2018-01-21T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/publication_types/</loc>
+    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/post/model-averaging/</loc>
-      <lastmod>2017-12-08T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/publication/</loc>
+    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/post/listing-s-law-and-the-mathematics-of-the-eyes/</loc>
-      <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/post/eu/</loc>
+    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/memory-delphine/</loc>
-      <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/tags/brexit/</loc>
+    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/double-drift-pointing/</loc>
-      <lastmod>2017-09-24T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/categories/</loc>
+    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/discrete-confidence/</loc>
-      <lastmod>2017-07-28T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/tags/politics/</loc>
+    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/blink-adapt/</loc>
-      <lastmod>2017-02-02T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/categories/politics/</loc>
+    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/tags/academic/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/post/</loc>
+    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/post/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/tags/</loc>
+    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/tags/books/</loc>
+    <lastmod>2019-04-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/time-constancy/</loc>
-      <lastmod>2016-11-01T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/categories/books/</loc>
+    <lastmod>2019-04-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/voluntary-eye/</loc>
-      <lastmod>2016-02-02T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/post/ephemeral/</loc>
+    <lastmod>2019-04-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/double-drift-1/</loc>
-      <lastmod>2015-09-24T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/tags/philosophy/</loc>
+    <lastmod>2019-04-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/load-erp/</loc>
-      <lastmod>2015-09-03T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/publication_types/0/</loc>
+    <lastmod>2019-02-04T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/load-pupil/</loc>
-      <lastmod>2015-09-03T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/authors/gerrit-maus/</loc>
+    <lastmod>2019-02-04T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/spatial-constancy-attention/</loc>
-      <lastmod>2015-05-01T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/authors/hannah-goh/</loc>
+    <lastmod>2019-02-04T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/optokinetic/</loc>
-      <lastmod>2014-08-04T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/publication/motion-blink-preprint/</loc>
+    <lastmod>2019-02-04T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/desantis/</loc>
-      <lastmod>2014-07-01T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/tags/bayesian-data-analysis/</loc>
+    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/unsupervised-space-coding/</loc>
-      <lastmod>2012-08-30T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/post/bms/</loc>
+    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication/premotor-model/</loc>
-      <lastmod>2012-05-29T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/tags/model-selection/</loc>
+    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication_types/0/</loc>
-      <lastmod>2019-02-04T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/categories/r/</loc>
+    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication_types/2/</loc>
-      <lastmod>2018-03-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/tags/r/</loc>
+    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/tags/bayesian-data-analysis/</loc>
-      <lastmod>2019-01-25T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/categories/tutorial/</loc>
+    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/categories/</loc>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/post/bayesian-multilevel-models-r-stan/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/tags/cholesky/</loc>
-      <lastmod>2018-01-21T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/publication/validity_psyres/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/publication_types/</loc>
-      <lastmod>2019-02-04T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/authors/gilles-pourtois/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/categories/r/</loc>
-      <lastmod>2019-01-25T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/authors/mario-bonato/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/tags/r/</loc>
-      <lastmod>2019-01-25T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/tags/mixed-effects/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/categories/stan/</loc>
-      <lastmod>2018-03-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/tags/multilevel-models/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/tags/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/authors/sara-pegoraro/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/categories/books/</loc>
-      <lastmod>2019-04-05T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/categories/stan/</loc>
+    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/tags/books/</loc>
-      <lastmod>2019-04-05T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/authors/harry-haladjian/</loc>
+    <lastmod>2018-02-04T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/tags/brexit/</loc>
-      <lastmod>2019-05-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/publication/dd_load/</loc>
+    <lastmod>2018-02-04T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/categories/data-analysis/</loc>
-      <lastmod>2017-12-08T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/authors/patrick-cavanagh/</loc>
+    <lastmod>2018-02-04T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/categories/eye-movements/</loc>
-      <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/tags/cholesky/</loc>
+    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/tags/eye-movements/</loc>
-      <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/categories/note/</loc>
+    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/</loc>
-      <lastmod>2016-04-20T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/categories/self-study/</loc>
+    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/tags/mixed-effects/</loc>
-      <lastmod>2018-03-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/post/simulating-correlated-variables-with-the-cholesky-factorization/</loc>
+    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/tags/model-selection/</loc>
-      <lastmod>2019-01-25T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/tags/simulation/</loc>
+    <lastmod>2018-01-21T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/tags/multilevel-models/</loc>
-      <lastmod>2018-03-01T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/categories/data-analysis/</loc>
+    <lastmod>2017-12-08T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/categories/note/</loc>
-      <lastmod>2018-01-21T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/post/model-averaging/</loc>
+    <lastmod>2017-12-08T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/tags/philosophy/</loc>
-      <lastmod>2019-04-05T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/categories/psychophysics/</loc>
+    <lastmod>2017-12-08T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/categories/politics/</loc>
-      <lastmod>2019-05-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/tags/psychophysics/</loc>
+    <lastmod>2017-12-08T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/tags/politics/</loc>
-      <lastmod>2019-05-27T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/authors/delphine-massendari/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/categories/psychophysics/</loc>
-      <lastmod>2017-12-08T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/tags/eye-movements/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/tags/psychophysics/</loc>
-      <lastmod>2017-12-08T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/categories/eye-movements/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/categories/self-study/</loc>
-      <lastmod>2018-01-21T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/post/listing-s-law-and-the-mathematics-of-the-eyes/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/tags/simulation/</loc>
-      <lastmod>2018-01-21T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/publication/memory-delphine/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    
-    <url>
-    
-      <loc>https://mattelisi.github.io/categories/tutorial/</loc>
-      <lastmod>2019-01-25T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>http://mlisi.xyz/authors/therese-collins/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication/double-drift-pointing/</loc>
+    <lastmod>2017-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/andrei-gorea/</loc>
+    <lastmod>2017-07-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication/discrete-confidence/</loc>
+    <lastmod>2017-07-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/gianluigi-mongillo/</loc>
+    <lastmod>2017-07-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/david-whitney/</loc>
+    <lastmod>2017-02-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/marianne-dyuck/</loc>
+    <lastmod>2017-02-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication/blink-adapt/</loc>
+    <lastmod>2017-02-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication/time-constancy/</loc>
+    <lastmod>2016-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/marco-zorzi/</loc>
+    <lastmod>2016-02-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/mariagrazia-ranzini/</loc>
+    <lastmod>2016-02-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication/voluntary-eye/</loc>
+    <lastmod>2016-02-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication/double-drift-1/</loc>
+    <lastmod>2015-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/chiara-spironelli/</loc>
+    <lastmod>2015-09-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication/load-erp/</loc>
+    <lastmod>2015-09-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/kostantinos-priftis/</loc>
+    <lastmod>2015-09-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication/load-pupil/</loc>
+    <lastmod>2015-09-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication/spatial-constancy-attention/</loc>
+    <lastmod>2015-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/barbara-treccani/</loc>
+    <lastmod>2014-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/elvio-blini/</loc>
+    <lastmod>2014-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/konstantinos-priftis/</loc>
+    <lastmod>2014-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication/optokinetic/</loc>
+    <lastmod>2014-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/marco-pitteri/</loc>
+    <lastmod>2014-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/andrea-desantis/</loc>
+    <lastmod>2014-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/florian-waszak/</loc>
+    <lastmod>2014-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/pascal-mamassian/</loc>
+    <lastmod>2014-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication/desantis/</loc>
+    <lastmod>2014-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/michele-de-filippo-de-grazia/</loc>
+    <lastmod>2012-08-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/simone-cutini/</loc>
+    <lastmod>2012-08-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication/unsupervised-space-coding/</loc>
+    <lastmod>2012-08-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/casarotti-marco/</loc>
+    <lastmod>2012-05-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/lisi-matteo/</loc>
+    <lastmod>2012-05-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication/premotor-model/</loc>
+    <lastmod>2012-05-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/umilta-carlo/</loc>
+    <lastmod>2012-05-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/zorzi-marco/</loc>
+    <lastmod>2012-05-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/admin/</loc>
+  </url>
   
 </urlset>
