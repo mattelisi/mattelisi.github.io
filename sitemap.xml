@@ -48,6 +48,56 @@
   </url>
   
   <url>
+    <loc>http://mlisi.xyz/categories/</loc>
+    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/tags/centos/</loc>
+    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/tags/cluster/</loc>
+    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/post/rstan-cluster/</loc>
+    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/post/</loc>
+    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/tags/r/</loc>
+    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/categories/r/</loc>
+    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/categories/stan/</loc>
+    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/tags/stan/</loc>
+    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/tags/</loc>
+    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://mlisi.xyz/post/eu/</loc>
     <lastmod>2019-05-27T00:00:00+00:00</lastmod>
   </url>
@@ -58,27 +108,12 @@
   </url>
   
   <url>
-    <loc>http://mlisi.xyz/categories/</loc>
-    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mlisi.xyz/tags/politics/</loc>
-    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://mlisi.xyz/categories/politics/</loc>
     <lastmod>2019-05-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://mlisi.xyz/post/</loc>
-    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mlisi.xyz/tags/</loc>
+    <loc>http://mlisi.xyz/tags/politics/</loc>
     <lastmod>2019-05-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -138,16 +173,6 @@
   </url>
   
   <url>
-    <loc>http://mlisi.xyz/tags/r/</loc>
-    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mlisi.xyz/categories/r/</loc>
-    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://mlisi.xyz/categories/tutorial/</loc>
     <lastmod>2019-01-25T00:00:00+00:00</lastmod>
   </url>
@@ -184,11 +209,6 @@
   
   <url>
     <loc>http://mlisi.xyz/authors/sara-pegoraro/</loc>
-    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mlisi.xyz/categories/stan/</loc>
     <lastmod>2018-03-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -243,12 +263,12 @@
   </url>
   
   <url>
-    <loc>http://mlisi.xyz/categories/psychophysics/</loc>
+    <loc>http://mlisi.xyz/tags/psychophysics/</loc>
     <lastmod>2017-12-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://mlisi.xyz/tags/psychophysics/</loc>
+    <loc>http://mlisi.xyz/categories/psychophysics/</loc>
     <lastmod>2017-12-08T00:00:00+00:00</lastmod>
   </url>
   

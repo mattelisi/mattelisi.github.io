@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CentOS | Matteo Lisi</title>
+    <link>http://mlisi.xyz/tags/centos/</link>
+      <atom:link href="http://mlisi.xyz/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    <description>CentOS</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Sun, 04 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://mlisi.xyz/img/shademe.png</url>
+      <title>CentOS</title>
+      <link>http://mlisi.xyz/tags/centos/</link>
+    </image>
+    
+    <item>
+      <title>Installing RStan on HPC cluster</title>
+      <link>http://mlisi.xyz/post/rstan-cluster/</link>
+      <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/post/rstan-cluster/</guid>
+      <description>
+
+
+&lt;p&gt;This took me some time to make it work, so I’ll write the details here for the benefit of my future self and anyone else facing similar issues.&lt;/p&gt;
+&lt;p&gt;To run R in the &lt;a href=&#34;https://docs.hpc.qmul.ac.uk/&#34;&gt;Apocrita&lt;/a&gt; cluster (which runs CentOS 7) first load the modules&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;module load R
+module load gcc&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;(gcc is required to compile the packages from source.)&lt;/p&gt;
+&lt;p&gt;Before starting you should make sure that you don’t have any previous installation of RStan in your system. From an R terminal, type:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;remove.packages(&amp;quot;rstan&amp;quot;)
+remove.packages(&amp;quot;StanHeaders&amp;quot;)
+if (file.exists(&amp;quot;.RData&amp;quot;)) file.remove(&amp;quot;.RData&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;One problem that I had initially was (I think) due to the fact that Rcpp and rstan had been installed with different compiler or compilation flags. Thanks to the IT support at Queen Mary University, the correct C++ toolchain configuration that made the trick for me is the following:&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;CXX14 = g++ -std=c++1y
+CXX14FLAGS = -O3 -Wno-unused-variable -Wno-unused-function -fPIC&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To write the correct configuration in the &lt;code&gt;~/.R/Makevars&lt;/code&gt; file from an R terminal:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dotR &amp;lt;- file.path(Sys.getenv(&amp;quot;HOME&amp;quot;), &amp;quot;.R&amp;quot;)
+if (!file.exists(dotR)) dir.create(dotR)
+M &amp;lt;- file.path(dotR, &amp;quot;Makevars&amp;quot;)
+if (!file.exists(M)) file.create(M)
+cat(&amp;quot;\nCXX14 = g++ -std=c++1y&amp;quot;, &amp;quot;CXX14FLAGS = -O3 -Wno-unused-variable -Wno-unused-function -fPIC&amp;quot;, file = M, sep = &amp;quot;\n&amp;quot;, append = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, install RStan:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Sys.setenv(MAKEFLAGS = &amp;quot;-j4&amp;quot;) # four cores used for building install
+install.packages(&amp;quot;rstan&amp;quot;, type = &amp;quot;source&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that in my case it worked correctly without requiring to run the instructions specific for CentOS 7.0 indicated at &lt;a href=&#34;https://github.com/stan-dev/rstan/wiki/Installing-RStan-on-Linux#special-note-centos-70&#34;&gt;rstan installation page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Another thing that I did, although I am not sure it is strictly necessary, was to install RStan on a new R library, that is in a directory that contained only packages necessary to run RStan.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

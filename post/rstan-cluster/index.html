@@ -28,10 +28,13 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="This took me some time to make it work, so I’ll write the details here for the benefit of my future self and anyone else facing similar issues.
+To run R in the Apocrita cluster (which runs CentOS 7) first load the modules
+module load R module load gcc (gcc is required to compile the packages from source.)
+Before starting you should make sure that you don’t have any previous installation of RStan in your system.">
 
   
-  <link rel="alternate" hreflang="en-us" href="http://mlisi.xyz/post/">
+  <link rel="alternate" hreflang="en-us" href="http://mlisi.xyz/post/rstan-cluster/">
 
   
 
@@ -103,14 +106,12 @@
   
 
   
-  <link rel="alternate" href="/post/index.xml" type="application/rss+xml" title="Matteo Lisi">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="http://mlisi.xyz/post/">
+  <link rel="canonical" href="http://mlisi.xyz/post/rstan-cluster/">
 
   
   
@@ -123,12 +124,18 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Matteo Lisi">
-  <meta property="og:url" content="http://mlisi.xyz/post/">
-  <meta property="og:title" content="Posts | Matteo Lisi">
-  <meta property="og:description" content=""><meta property="og:image" content="http://mlisi.xyz/img/shademe.png">
+  <meta property="og:url" content="http://mlisi.xyz/post/rstan-cluster/">
+  <meta property="og:title" content="Installing RStan on HPC cluster | Matteo Lisi">
+  <meta property="og:description" content="This took me some time to make it work, so I’ll write the details here for the benefit of my future self and anyone else facing similar issues.
+To run R in the Apocrita cluster (which runs CentOS 7) first load the modules
+module load R module load gcc (gcc is required to compile the packages from source.)
+Before starting you should make sure that you don’t have any previous installation of RStan in your system."><meta property="og:image" content="http://mlisi.xyz/img/shademe.png">
   <meta property="twitter:image" content="http://mlisi.xyz/img/shademe.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2019-08-04T00:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2019-08-04T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-08-04T00:00:00&#43;00:00">
   
 
   
@@ -140,7 +147,7 @@
 
 
 
-  <title>Posts | Matteo Lisi</title>
+  <title>Installing RStan on HPC cluster | Matteo Lisi</title>
 
 </head>
 
@@ -368,82 +375,33 @@
 </nav>
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
+  <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
 
+
+
+
+
+
+
+
+
+
+
+
+  
+
   
   
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Installing RStan on HPC cluster</h1>
+
+  
+
   
     
-  
-<div class="universal-wrapper pt-3">
-  <h1 itemprop="name">Posts</h1>
-
-  
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-
-  
-
-  
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/rstan-cluster/"  itemprop="url">Installing RStan on HPC cluster</a>
-    </h3>
-
-    
-    <div class="article-style" itemprop="articleBody">
-      This took me some time to make it work, so I’ll write the details here for the benefit of my future self and anyone else facing similar …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
 
 
 
@@ -489,737 +447,371 @@
   
 
   
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=http://mlisi.xyz/post/rstan-cluster/&amp;text=Installing%20RStan%20on%20HPC%20cluster" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=http://mlisi.xyz/post/rstan-cluster/&amp;t=Installing%20RStan%20on%20HPC%20cluster" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Installing%20RStan%20on%20HPC%20cluster&amp;body=http://mlisi.xyz/post/rstan-cluster/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=http://mlisi.xyz/post/rstan-cluster/&amp;title=Installing%20RStan%20on%20HPC%20cluster" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Installing%20RStan%20on%20HPC%20cluster%20http://mlisi.xyz/post/rstan-cluster/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=http://mlisi.xyz/post/rstan-cluster/&amp;title=Installing%20RStan%20on%20HPC%20cluster" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
 
 </div>
 
-      
-    </div>
-
     
 
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 </div>
 
-    
-  
-    
-      
 
 
+  <div class="article-container">
 
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/eu/"  itemprop="url">Attitude shift towards Remain in European Elections obscured in press by rebranded Farage party</a>
-    </h3>
-
-    
     <div class="article-style" itemprop="articleBody">
-      The European Election results reveal a shift towards parties that support a soft or no Brexit compared to votes in 2014. Instead, major …
+      
+
+
+<p>This took me some time to make it work, so I’ll write the details here for the benefit of my future self and anyone else facing similar issues.</p>
+<p>To run R in the <a href="https://docs.hpc.qmul.ac.uk/">Apocrita</a> cluster (which runs CentOS 7) first load the modules</p>
+<pre class="bash"><code>module load R
+module load gcc</code></pre>
+<p>(gcc is required to compile the packages from source.)</p>
+<p>Before starting you should make sure that you don’t have any previous installation of RStan in your system. From an R terminal, type:</p>
+<pre class="r"><code>remove.packages(&quot;rstan&quot;)
+remove.packages(&quot;StanHeaders&quot;)
+if (file.exists(&quot;.RData&quot;)) file.remove(&quot;.RData&quot;)</code></pre>
+<p>One problem that I had initially was (I think) due to the fact that Rcpp and rstan had been installed with different compiler or compilation flags. Thanks to the IT support at Queen Mary University, the correct C++ toolchain configuration that made the trick for me is the following:</p>
+<pre class="bash"><code>CXX14 = g++ -std=c++1y
+CXX14FLAGS = -O3 -Wno-unused-variable -Wno-unused-function -fPIC</code></pre>
+<p>To write the correct configuration in the <code>~/.R/Makevars</code> file from an R terminal:</p>
+<pre class="r"><code>dotR &lt;- file.path(Sys.getenv(&quot;HOME&quot;), &quot;.R&quot;)
+if (!file.exists(dotR)) dir.create(dotR)
+M &lt;- file.path(dotR, &quot;Makevars&quot;)
+if (!file.exists(M)) file.create(M)
+cat(&quot;\nCXX14 = g++ -std=c++1y&quot;, &quot;CXX14FLAGS = -O3 -Wno-unused-variable -Wno-unused-function -fPIC&quot;, file = M, sep = &quot;\n&quot;, append = TRUE)</code></pre>
+<p>Finally, install RStan:</p>
+<pre class="r"><code>Sys.setenv(MAKEFLAGS = &quot;-j4&quot;) # four cores used for building install
+install.packages(&quot;rstan&quot;, type = &quot;source&quot;)</code></pre>
+<p>Note that in my case it worked correctly without requiring to run the instructions specific for CentOS 7.0 indicated at <a href="https://github.com/stan-dev/rstan/wiki/Installing-RStan-on-Linux#special-note-centos-70">rstan installation page</a>.</p>
+<p>Another thing that I did, although I am not sure it is strictly necessary, was to install RStan on a new R library, that is in a directory that contained only packages necessary to run RStan.</p>
+
     </div>
+
     
 
-    <div class="stream-meta article-metadata">
 
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/r/">R</a>
+  
+  <a class="badge badge-light" href="/tags/stan/">Stan</a>
+  
+  <a class="badge badge-light" href="/tags/centos/">CentOS</a>
+  
+  <a class="badge badge-light" href="/tags/cluster/">cluster</a>
+  
+</div>
+
+
+
+    
       
 
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
       
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu132b73c7c53d8c33e2dc1920b7b984d0_146246_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="http://mlisi.xyz/">Matteo Lisi</a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
         
-
-
-
-<meta content="2019-05-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-05-27 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    <time>May 27, 2019</time>
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    2 min read
-  </span>
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <a href="/post/eu/#disqus_thread"></a>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/politics/">politics</a></span>
-  
-
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/ephemeral/"  itemprop="url">Ephemeral patterns of complexity</a>
-    </h3>
-
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/#contact" >
+              <i class="fas fa-paper-plane"></i>
+            </a>
+          </li>
         
-
-
-
-<meta content="2019-04-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-04-05 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    <time>Apr 5, 2019</time>
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <a href="/post/ephemeral/#disqus_thread"></a>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/books/">books</a></span>
-  
-
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/bms/"  itemprop="url">Bayesian model selection at the group level</a>
-    </h3>
-
-    
-    <div class="article-style" itemprop="articleBody">
-      In experimental psychology and neuroscience the classical approach when comparing different models that make quantitative predictions …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.com/citations?user=IabbkbEAAAAJ&amp;hl" target="_blank" rel="noopener">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+          </li>
         
-
-
-
-<meta content="2019-01-25 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-01-25 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    <time>Jan 25, 2019</time>
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    8 min read
-  </span>
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <a href="/post/bms/#disqus_thread"></a>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a>, <a href="/categories/tutorial/">tutorial</a></span>
-  
-
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/bayesian-multilevel-models-r-stan/"  itemprop="url">Bayesian multilevel models using R and Stan (part 1)</a>
-    </h3>
-
-    
-    <div class="article-style" itemprop="articleBody">
-      Photo ©Roxie and Lee Carroll, www.akidsphoto.com.
- In my previous lab I was known for promoting the use of multilevel, or mixed-effects …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="http://orcid.org/0000-0003-3554-385X" target="_blank" rel="noopener">
+              <i class="ai ai-orcid"></i>
+            </a>
+          </li>
         
-
-
-
-<meta content="2018-03-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2018-03-01 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    <time>Mar 1, 2018</time>
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    13 min read
-  </span>
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <a href="/post/bayesian-multilevel-models-r-stan/#disqus_thread"></a>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a>, <a href="/categories/stan/">Stan</a>, <a href="/categories/tutorial/">tutorial</a></span>
-  
-
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/simulating-correlated-variables-with-the-cholesky-factorization/"  itemprop="url">Simulating correlated variables with the Cholesky factorization</a>
-    </h3>
-
-    
-    <div class="article-style" itemprop="articleBody">
-      Generating random variables with given variance-covariance matrix can be useful for many purposes. For example it is useful for …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="http://www.researchgate.net/profile/Matteo_Lisi" target="_blank" rel="noopener">
+              <i class="ai ai-researchgate"></i>
+            </a>
+          </li>
         
-
-
-
-<meta content="2018-01-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2018-01-21 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    <time>Jan 21, 2018</time>
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    4 min read
-  </span>
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <a href="/post/simulating-correlated-variables-with-the-cholesky-factorization/#disqus_thread"></a>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a>, <a href="/categories/self-study/">self-study</a>, <a href="/categories/note/">note</a></span>
-  
-
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/model-averaging/"  itemprop="url">Multi-model estimation of psychophysical parameters</a>
-    </h3>
-
-    
-    <div class="article-style" itemprop="articleBody">
-      In the study of human perception we often need to measure how sensitive is an observer to a stimulus variation, and how her/his …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://publons.com/researcher/1636713/matteo-lisi/" target="_blank" rel="noopener">
+              <i class="ai ai-publons"></i>
+            </a>
+          </li>
         
-
-
-
-<meta content="2017-12-08 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2017-12-08 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    <time>Dec 8, 2017</time>
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    12 min read
-  </span>
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <a href="/post/model-averaging/#disqus_thread"></a>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/r/">R</a>, <a href="/categories/data-analysis/">data-analysis</a>, <a href="/categories/psychophysics/">psychophysics</a></span>
-  
-
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="media stream-item" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="name">
-      <a href="/post/listing-s-law-and-the-mathematics-of-the-eyes/"  itemprop="url">Listing&#39;s law, and the mathematics of the eyes</a>
-    </h3>
-
-    
-    <div class="article-style" itemprop="articleBody">
-      Brief intro to the mathematical formalism used to describe rotations of the eyes in 3D (including the torsional component). The shape …
-    </div>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://osf.io/gqy5f/" target="_blank" rel="noopener">
+              <i class="ai ai-osf"></i>
+            </a>
+          </li>
         
-
-
-
-<meta content="2017-09-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2017-09-27 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    <time>Sep 27, 2017</time>
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    10 min read
-  </span>
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <a href="/post/listing-s-law-and-the-mathematics-of-the-eyes/#disqus_thread"></a>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/eye-movements/">eye movements</a>, <a href="/categories/tutorial/">tutorial</a></span>
-  
-
-  
-
-</div>
-
-      
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/mattelisi" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
     </div>
+  </div>
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/post/bms/">Bayesian model selection at the group level</a></li>
+          
+          <li><a href="/post/bayesian-multilevel-models-r-stan/">Bayesian multilevel models using R and Stan (part 1)</a></li>
+          
+          <li><a href="/post/simulating-correlated-variables-with-the-cholesky-factorization/">Simulating correlated variables with the Cholesky factorization</a></li>
+          
+          <li><a href="/post/model-averaging/">Multi-model estimation of psychophysical parameters</a></li>
+          
+        </ul>
+      </div>
+      
+    
 
     
+
+    
+<section id="comments">
+  
+    
+<div id="disqus_thread"></div>
+<script>
+  let disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "mattelisi" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+</section>
+
+
 
   </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-
-  
-
-
-</div>
+</article>
 
       
 

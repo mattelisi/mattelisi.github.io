@@ -5,12 +5,44 @@
     <link>http://mlisi.xyz/tags/</link>
       <atom:link href="http://mlisi.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Mon, 27 May 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Sun, 04 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Tags</title>
       <link>http://mlisi.xyz/tags/</link>
     </image>
+    
+    <item>
+      <title>CentOS</title>
+      <link>http://mlisi.xyz/tags/centos/</link>
+      <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/tags/centos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cluster</title>
+      <link>http://mlisi.xyz/tags/cluster/</link>
+      <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/tags/cluster/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>http://mlisi.xyz/tags/r/</link>
+      <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stan</title>
+      <link>http://mlisi.xyz/tags/stan/</link>
+      <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/tags/stan/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>brexit</title>
@@ -57,14 +89,6 @@
       <link>http://mlisi.xyz/tags/model-selection/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/tags/model-selection/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>http://mlisi.xyz/tags/r/</link>
-      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/r/</guid>
       <description></description>
     </item>
     
