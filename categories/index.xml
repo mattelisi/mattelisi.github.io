@@ -5,7 +5,7 @@
     <link>http://mlisi.xyz/categories/</link>
       <atom:link href="http://mlisi.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Sun, 04 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Mon, 09 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Categories</title>
@@ -15,8 +15,16 @@
     <item>
       <title>R</title>
       <link>http://mlisi.xyz/categories/r/</link>
-      <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>statistic</title>
+      <link>http://mlisi.xyz/categories/statistic/</link>
+      <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/categories/statistic/</guid>
       <description></description>
     </item>
     

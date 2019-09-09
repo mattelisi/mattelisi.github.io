@@ -5,12 +5,36 @@
     <link>http://mlisi.xyz/tags/</link>
       <atom:link href="http://mlisi.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Sun, 04 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Mon, 09 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Tags</title>
       <link>http://mlisi.xyz/tags/</link>
     </image>
+    
+    <item>
+      <title>bayes factor</title>
+      <link>http://mlisi.xyz/tags/bayes-factor/</link>
+      <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/tags/bayes-factor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>null-hypothesis</title>
+      <link>http://mlisi.xyz/tags/null-hypothesis/</link>
+      <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/tags/null-hypothesis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>http://mlisi.xyz/tags/r/</link>
+      <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/tags/r/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>CentOS</title>
@@ -25,14 +49,6 @@
       <link>http://mlisi.xyz/tags/cluster/</link>
       <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/tags/cluster/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>http://mlisi.xyz/tags/r/</link>
-      <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/r/</guid>
       <description></description>
     </item>
     

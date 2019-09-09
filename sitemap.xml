@@ -3,6 +3,56 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://mlisi.xyz/tags/bayes-factor/</loc>
+    <lastmod>2019-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/categories/</loc>
+    <lastmod>2019-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/post/defending-the-null/</loc>
+    <lastmod>2019-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/</loc>
+    <lastmod>2019-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/tags/null-hypothesis/</loc>
+    <lastmod>2019-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/post/</loc>
+    <lastmod>2019-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/categories/r/</loc>
+    <lastmod>2019-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/tags/r/</loc>
+    <lastmod>2019-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/categories/statistic/</loc>
+    <lastmod>2019-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/tags/</loc>
+    <lastmod>2019-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://mlisi.xyz/publication_types/2/</loc>
     <lastmod>2019-08-23T00:00:00+00:00</lastmod>
   </url>
@@ -19,11 +69,6 @@
   
   <url>
     <loc>http://mlisi.xyz/authors/joshua-a.-solomon/</loc>
-    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mlisi.xyz/</loc>
     <lastmod>2019-08-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -48,11 +93,6 @@
   </url>
   
   <url>
-    <loc>http://mlisi.xyz/categories/</loc>
-    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://mlisi.xyz/tags/centos/</loc>
     <lastmod>2019-08-04T00:00:00+00:00</lastmod>
   </url>
@@ -68,32 +108,12 @@
   </url>
   
   <url>
-    <loc>http://mlisi.xyz/post/</loc>
-    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mlisi.xyz/tags/r/</loc>
-    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mlisi.xyz/categories/r/</loc>
-    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mlisi.xyz/categories/stan/</loc>
-    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://mlisi.xyz/tags/stan/</loc>
     <lastmod>2019-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://mlisi.xyz/tags/</loc>
+    <loc>http://mlisi.xyz/categories/stan/</loc>
     <lastmod>2019-08-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -108,12 +128,12 @@
   </url>
   
   <url>
-    <loc>http://mlisi.xyz/categories/politics/</loc>
+    <loc>http://mlisi.xyz/tags/politics/</loc>
     <lastmod>2019-05-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://mlisi.xyz/tags/politics/</loc>
+    <loc>http://mlisi.xyz/categories/politics/</loc>
     <lastmod>2019-05-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -263,12 +283,12 @@
   </url>
   
   <url>
-    <loc>http://mlisi.xyz/tags/psychophysics/</loc>
+    <loc>http://mlisi.xyz/categories/psychophysics/</loc>
     <lastmod>2017-12-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://mlisi.xyz/categories/psychophysics/</loc>
+    <loc>http://mlisi.xyz/tags/psychophysics/</loc>
     <lastmod>2017-12-08T00:00:00+00:00</lastmod>
   </url>
   
@@ -278,12 +298,12 @@
   </url>
   
   <url>
-    <loc>http://mlisi.xyz/categories/eye-movements/</loc>
+    <loc>http://mlisi.xyz/tags/eye-movements/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://mlisi.xyz/tags/eye-movements/</loc>
+    <loc>http://mlisi.xyz/categories/eye-movements/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
   </url>
   

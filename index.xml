@@ -5,12 +5,43 @@
     <link>http://mlisi.xyz/</link>
       <atom:link href="http://mlisi.xyz/index.xml" rel="self" type="application/rss+xml" />
     <description>Matteo Lisi</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Mon, 09 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Matteo Lisi</title>
       <link>http://mlisi.xyz/</link>
     </image>
+    
+    <item>
+      <title>Defending the null hypothesis</title>
+      <link>http://mlisi.xyz/post/defending-the-null/</link>
+      <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/post/defending-the-null/</guid>
+      <description>
+
+
+&lt;p&gt;A friend of mine is working on a paper and found himself in the situation of having to defend the null hypothesis that a particular effect is absent (or not measurable) when tested under more controlled conditions than those used in previous studies. He asked for some practical advice: &lt;em&gt;“what would convince you as as a reviewer of a null result?”&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;My reply:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;No statistical test can “prove” a null results (intended as the point-null hypothesis that an effect of interest is zero). You can however: (&lt;strong&gt;i&lt;/strong&gt;) present evidence that the data are more likely under the null hypothesis than under the alternative; or (&lt;strong&gt;ii&lt;/strong&gt;) put a cap on the size of the effect, which could enable you to argue that any effect, if present, is so small that can be considered theoretically or pragmatically irrelevant.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(&lt;strong&gt;i&lt;/strong&gt;) is the Bayesian approach and requires calculating a Bayes factor - that is the ratio between the average (or marginal) likelihood of the data under the null and alternative hypothesis. Note that Bayes factor calculation is highly influenced by the priors (e.g. the prior expectations about the effect size). Luckily, in the case of a single comparison (e.g. a t-test), there is popular way of computing Bayes factors which requires minimal assumptions about the effect of interest, as it is developed using uninformative or minimally informative priors, called the JZW prior (technically correspond to assuming a Cauchy prior on the standardized effect size and a uninformative Jeffrey’s prior on the variances of your measurements). It’s been derived in a paper by Rouder et al. &lt;span class=&#34;citation&#34;&gt;(Rouder et al. 2009)&lt;/span&gt; and there is a easy-to-use R implementation of it in the package &lt;a href=&#34;https://cran.r-project.org/web/packages/BayesFactor/index.html&#34;&gt;BayesFactor&lt;/a&gt;, (see function &lt;code&gt;ttestBF()&lt;/code&gt;).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(&lt;strong&gt;ii&lt;/strong&gt;) is the frequentist alternative. In a frequentist approach you don’t express belief in an hypothesis in terms of probability; uncertainty is characterized in relation to the data-generating process (e.g. how many times you would reject the null if you repeated the experiment a zillion time? - probability is interpreted as the long-run frequency in an imaginary very, very large sample). Under this approach you can estimate what is the maximum size of the effect since you did not detected it in your current experiment. Daniel Lakens has written an easy-to-use package for that, called TOSTER; see &lt;a href=&#34;https://cran.rstudio.com/web/packages/TOSTER/vignettes/IntroductionToTOSTER.html&#34;&gt;this vignette&lt;/a&gt; for an introduction.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://imgs.xkcd.com/comics/null_hypothesis.png&#34; /&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-Rouder2009c&#34;&gt;
+&lt;p&gt;Rouder, Jeffrey N, Paul L Speckman, Dongchu Sun, Richard D Morey, and Geoffrey Iverson. 2009. “Bayesian t tests for accepting and rejecting the null hypothesis.” &lt;em&gt;Psychonomic Bulletin &amp;amp; Review&lt;/em&gt; 16 (2): 225–37. doi:&lt;a href=&#34;https://doi.org/10.3758/PBR.16.2.225&#34;&gt;10.3758/PBR.16.2.225&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Gain control of saccadic eye movements is probabilistic</title>
