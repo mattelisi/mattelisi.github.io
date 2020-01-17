@@ -5,7 +5,7 @@
     <link>http://mlisi.xyz/authors/</link>
       <atom:link href="http://mlisi.xyz/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019 Matteo Lisi</copyright><lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Authors</title>
@@ -285,7 +285,7 @@
 
 &lt;p&gt;Hi, this is my attempt at blogging. I will use this space to post ideas and my random thoughts about science, statistics, politics, and share notes about what I am learning (see &lt;a href=&#34;https://mattelisi.github.io/#posts&#34; target=&#34;_blank&#34;&gt;blog&lt;/a&gt; and &lt;a href=&#34;https://mattelisi.github.io/#misc&#34; target=&#34;_blank&#34;&gt;misc&lt;/a&gt;). All views my own, except those I have nicked from cleverer people.&lt;/p&gt;
 
-&lt;p&gt;Currently I am a reserch associate at the Department of Biological and Experimental Psychology of &lt;a href=&#34;https://www.qmul.ac.uk/sbcs/about-us/our-departments/psychology/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Queen Mary University&lt;/em&gt;&lt;/a&gt;, in London. I mainly use psychophysics, eye-tracking, and computational modelling to investigate visual perception, broadly defined as the ability to assimilate information contained in visible light. I am also interested in decision-making and cognitive processes, both in adults and during development.&lt;/p&gt;
+&lt;p&gt;I am a Lecturer at the &lt;a href=&#34;https://www.essex.ac.uk/departments/psychology&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Department of Psychology of the University of Essex&lt;/em&gt;&lt;/a&gt;. I use psychophysics, eye-tracking, and computational modelling to investigate visual perception, broadly defined as the ability to assimilate information contained in visible light. I am also interested in decision-making and cognitive processes, both in adults and during development.&lt;/p&gt;
 
 &lt;p&gt;Find my publications on &lt;a href=&#34;https://scholar.google.com/citations?user=IabbkbEAAAAJ&amp;amp;hl=en&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Scholar&lt;/em&gt;&lt;/a&gt; or &lt;a href=&#34;https://www.researchgate.net/profile/Matteo_Lisi&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;RG&lt;/em&gt;&lt;/a&gt;. I started sharing all my data and code on &lt;a href=&#34;https://github.com/mattelisi&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;https://osf.io/gqy5f/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;OSF&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 </description>
