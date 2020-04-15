@@ -2,143 +2,151 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2 | Matteo Lisi</title>
-    <link>http://mlisi.xyz/publication_types/2/</link>
-      <atom:link href="http://mlisi.xyz/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
+    <link>/publication_types/2/</link>
+      <atom:link href="/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Fri, 21 Feb 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>2</title>
-      <link>http://mlisi.xyz/publication_types/2/</link>
+      <link>/publication_types/2/</link>
     </image>
     
     <item>
+      <title>Uncertainty and spatial updating in posterior parietal cortex</title>
+      <link>/publication/uncertaintyppc/</link>
+      <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/uncertaintyppc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Gain control of saccadic eye movements is probabilistic</title>
-      <link>http://mlisi.xyz/publication/gainpnas/</link>
+      <link>/publication/gainpnas/</link>
       <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/gainpnas/</guid>
+      <guid>/publication/gainpnas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cue-target contingencies modulate voluntary orienting of spatial attention: dissociable effects for speed and accuracy</title>
-      <link>http://mlisi.xyz/publication/validity_psyres/</link>
+      <link>/publication/validity_psyres/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/validity_psyres/</guid>
+      <guid>/publication/validity_psyres/</guid>
       <description>&lt;p&gt;Mario Bonato and Matteo Lisi contributed equally to the article and are listed in alphabetical order.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Motion and position shifts induced by the double-drift stimulus are unaffected by attentional load</title>
-      <link>http://mlisi.xyz/publication/dd_load/</link>
+      <link>/publication/dd_load/</link>
       <pubDate>Sun, 04 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/dd_load/</guid>
+      <guid>/publication/dd_load/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Memory-guided saccades show effect of perceptual illusion whereas visually-guided saccades do not</title>
-      <link>http://mlisi.xyz/publication/memory-delphine/</link>
+      <link>/publication/memory-delphine/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/memory-delphine/</guid>
+      <guid>/publication/memory-delphine/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Different spatial representations guide eye and hand movements</title>
-      <link>http://mlisi.xyz/publication/double-drift-pointing/</link>
+      <link>/publication/double-drift-pointing/</link>
       <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/double-drift-pointing/</guid>
+      <guid>/publication/double-drift-pointing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Target Displacements during Eye Blinks Trigger Automatic Recalibration of Gaze Direction</title>
-      <link>http://mlisi.xyz/publication/blink-adapt/</link>
+      <link>/publication/blink-adapt/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/blink-adapt/</guid>
+      <guid>/publication/blink-adapt/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Time Costancy in human perception</title>
-      <link>http://mlisi.xyz/publication/time-constancy/</link>
+      <link>/publication/time-constancy/</link>
       <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/time-constancy/</guid>
+      <guid>/publication/time-constancy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Voluntary eye movements direct attention on the mental number space</title>
-      <link>http://mlisi.xyz/publication/voluntary-eye/</link>
+      <link>/publication/voluntary-eye/</link>
       <pubDate>Tue, 02 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/voluntary-eye/</guid>
+      <guid>/publication/voluntary-eye/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dissociation between the Perceptual and Saccadic Localization of Moving Objects</title>
-      <link>http://mlisi.xyz/publication/double-drift-1/</link>
+      <link>/publication/double-drift-1/</link>
       <pubDate>Thu, 24 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/double-drift-1/</guid>
+      <guid>/publication/double-drift-1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Effects of Multimodal Load on Spatial Monitoring as Revealed by ERPs</title>
-      <link>http://mlisi.xyz/publication/load-erp/</link>
+      <link>/publication/load-erp/</link>
       <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/load-erp/</guid>
+      <guid>/publication/load-erp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pupil dilation reveals top-down attentional load during spatial monitoring</title>
-      <link>http://mlisi.xyz/publication/load-pupil/</link>
+      <link>/publication/load-pupil/</link>
       <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/load-pupil/</guid>
+      <guid>/publication/load-pupil/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spatial constancy of attention across eye movements is mediated by the presence of visual objects</title>
-      <link>http://mlisi.xyz/publication/spatial-constancy-attention/</link>
+      <link>/publication/spatial-constancy-attention/</link>
       <pubDate>Fri, 01 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/spatial-constancy-attention/</guid>
+      <guid>/publication/spatial-constancy-attention/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Larger, smaller, odd or even? Task-specific effects of optokinetic stimulation on the mental number space</title>
-      <link>http://mlisi.xyz/publication/optokinetic/</link>
+      <link>/publication/optokinetic/</link>
       <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/optokinetic/</guid>
+      <guid>/publication/optokinetic/</guid>
       <description>&lt;p&gt;Mariagrazia Ranzini and Matteo Lisi contributed equally to the work&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>The prediction of visual stimuli influences auditory loudness discrimination</title>
-      <link>http://mlisi.xyz/publication/desantis/</link>
+      <link>/publication/desantis/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/desantis/</guid>
+      <guid>/publication/desantis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Space coding for sensorimotor transformations can emerge through unsupervised learning</title>
-      <link>http://mlisi.xyz/publication/unsupervised-space-coding/</link>
+      <link>/publication/unsupervised-space-coding/</link>
       <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/unsupervised-space-coding/</guid>
+      <guid>/publication/unsupervised-space-coding/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Paying Attention through Eye Movements: A Computational Investigation of the Premotor Theory of Spatial Attention</title>
-      <link>http://mlisi.xyz/publication/premotor-model/</link>
+      <link>/publication/premotor-model/</link>
       <pubDate>Tue, 29 May 2012 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/premotor-model/</guid>
+      <guid>/publication/premotor-model/</guid>
       <description>&lt;p&gt;Marco Casarotti and Matteo Lisi contributed equally to the article and are listed in alphabetical order.&lt;/p&gt;
 </description>
     </item>

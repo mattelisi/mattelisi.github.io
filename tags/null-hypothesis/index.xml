@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>null-hypothesis | Matteo Lisi</title>
-    <link>http://mlisi.xyz/tags/null-hypothesis/</link>
-      <atom:link href="http://mlisi.xyz/tags/null-hypothesis/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/null-hypothesis/</link>
+      <atom:link href="/tags/null-hypothesis/index.xml" rel="self" type="application/rss+xml" />
     <description>null-hypothesis</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Mon, 09 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>null-hypothesis</title>
-      <link>http://mlisi.xyz/tags/null-hypothesis/</link>
+      <link>/tags/null-hypothesis/</link>
     </image>
     
     <item>
       <title>Defending the null hypothesis</title>
-      <link>http://mlisi.xyz/post/defending-the-null/</link>
+      <link>/post/defending-the-null/</link>
       <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/defending-the-null/</guid>
+      <guid>/post/defending-the-null/</guid>
       <description>
 
 
@@ -31,13 +31,10 @@
 &lt;blockquote&gt;
 &lt;p&gt;(&lt;strong&gt;ii&lt;/strong&gt;) is the frequentist alternative. In a frequentist approach you don’t express belief in an hypothesis in terms of probability; uncertainty is characterized in relation to the data-generating process (e.g. how many times you would reject the null if you repeated the experiment a zillion time? - probability is interpreted as the long-run frequency in an imaginary very, very large sample). Under this approach you can estimate what is the maximum size of the effect since you did not detected it in your current experiment. Daniel Lakens has written an easy-to-use package for that, called TOSTER; see &lt;a href=&#34;https://cran.rstudio.com/web/packages/TOSTER/vignettes/IntroductionToTOSTER.html&#34;&gt;this vignette&lt;/a&gt; for an introduction.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://imgs.xkcd.com/comics/null_hypothesis.png&#34; /&gt;
-
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgs.xkcd.com/comics/null_hypothesis.png&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-Rouder2009c&#34;&gt;
-&lt;p&gt;Rouder, Jeffrey N, Paul L Speckman, Dongchu Sun, Richard D Morey, and Geoffrey Iverson. 2009. “Bayesian t tests for accepting and rejecting the null hypothesis.” &lt;em&gt;Psychonomic Bulletin &amp;amp; Review&lt;/em&gt; 16 (2): 225–37. doi:&lt;a href=&#34;https://doi.org/10.3758/PBR.16.2.225&#34;&gt;10.3758/PBR.16.2.225&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Rouder, Jeffrey N, Paul L Speckman, Dongchu Sun, Richard D Morey, and Geoffrey Iverson. 2009. “Bayesian t tests for accepting and rejecting the null hypothesis.” &lt;em&gt;Psychonomic Bulletin &amp;amp; Review&lt;/em&gt; 16 (2): 225–37. &lt;a href=&#34;https://doi.org/10.3758/PBR.16.2.225&#34;&gt;https://doi.org/10.3758/PBR.16.2.225&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

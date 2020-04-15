@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R | Matteo Lisi</title>
-    <link>http://mlisi.xyz/categories/r/</link>
-      <atom:link href="http://mlisi.xyz/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <link>/categories/r/</link>
+      <atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     <description>R</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Mon, 09 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>R</title>
-      <link>http://mlisi.xyz/categories/r/</link>
+      <link>/categories/r/</link>
     </image>
     
     <item>
       <title>Defending the null hypothesis</title>
-      <link>http://mlisi.xyz/post/defending-the-null/</link>
+      <link>/post/defending-the-null/</link>
       <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/defending-the-null/</guid>
+      <guid>/post/defending-the-null/</guid>
       <description>
 
 
@@ -31,13 +31,10 @@
 &lt;blockquote&gt;
 &lt;p&gt;(&lt;strong&gt;ii&lt;/strong&gt;) is the frequentist alternative. In a frequentist approach you don’t express belief in an hypothesis in terms of probability; uncertainty is characterized in relation to the data-generating process (e.g. how many times you would reject the null if you repeated the experiment a zillion time? - probability is interpreted as the long-run frequency in an imaginary very, very large sample). Under this approach you can estimate what is the maximum size of the effect since you did not detected it in your current experiment. Daniel Lakens has written an easy-to-use package for that, called TOSTER; see &lt;a href=&#34;https://cran.rstudio.com/web/packages/TOSTER/vignettes/IntroductionToTOSTER.html&#34;&gt;this vignette&lt;/a&gt; for an introduction.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://imgs.xkcd.com/comics/null_hypothesis.png&#34; /&gt;
-
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgs.xkcd.com/comics/null_hypothesis.png&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-Rouder2009c&#34;&gt;
-&lt;p&gt;Rouder, Jeffrey N, Paul L Speckman, Dongchu Sun, Richard D Morey, and Geoffrey Iverson. 2009. “Bayesian t tests for accepting and rejecting the null hypothesis.” &lt;em&gt;Psychonomic Bulletin &amp;amp; Review&lt;/em&gt; 16 (2): 225–37. doi:&lt;a href=&#34;https://doi.org/10.3758/PBR.16.2.225&#34;&gt;10.3758/PBR.16.2.225&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Rouder, Jeffrey N, Paul L Speckman, Dongchu Sun, Richard D Morey, and Geoffrey Iverson. 2009. “Bayesian t tests for accepting and rejecting the null hypothesis.” &lt;em&gt;Psychonomic Bulletin &amp;amp; Review&lt;/em&gt; 16 (2): 225–37. &lt;a href=&#34;https://doi.org/10.3758/PBR.16.2.225&#34;&gt;https://doi.org/10.3758/PBR.16.2.225&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -45,9 +42,9 @@
     
     <item>
       <title>Installing RStan on HPC cluster</title>
-      <link>http://mlisi.xyz/post/rstan-cluster/</link>
+      <link>/post/rstan-cluster/</link>
       <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/rstan-cluster/</guid>
+      <guid>/post/rstan-cluster/</guid>
       <description>
 
 
@@ -60,7 +57,8 @@ module load gcc&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;remove.packages(&amp;quot;rstan&amp;quot;)
 remove.packages(&amp;quot;StanHeaders&amp;quot;)
 if (file.exists(&amp;quot;.RData&amp;quot;)) file.remove(&amp;quot;.RData&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;One problem that I had initially was (I think) due to the fact that Rcpp and rstan had been installed with different compiler or compilation flags. Thanks to the IT support at Queen Mary University, the correct C++ toolchain configuration that made the trick for me is the following:&lt;/p&gt;
+&lt;p&gt;One problem that I had initially was (I think) due to the fact that Rcpp and rstan had been installed with different compiler or compilation flags.
+Thanks to the IT support at Queen Mary University, the correct C++ toolchain configuration that made the trick for me is the following:&lt;/p&gt;
 &lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;CXX14 = g++ -std=c++1y
 CXX14FLAGS = -O3 -Wno-unused-variable -Wno-unused-function -fPIC&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To write the correct configuration in the &lt;code&gt;~/.R/Makevars&lt;/code&gt; file from an R terminal:&lt;/p&gt;
@@ -79,9 +77,9 @@ install.packages(&amp;quot;rstan&amp;quot;, type = &amp;quot;source&amp;quot;)&l
     
     <item>
       <title>Bayesian model selection at the group level</title>
-      <link>http://mlisi.xyz/post/bms/</link>
+      <link>/post/bms/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/bms/</guid>
+      <guid>/post/bms/</guid>
       <description>
 
 
@@ -90,22 +88,29 @@ install.packages(&amp;quot;rstan&amp;quot;, type = &amp;quot;source&amp;quot;)&l
 &lt;p&gt;In experimental psychology and neuroscience the classical approach when comparing different models that make quantitative predictions about the behavior of participants is to aggregate the predictive ability of the model (e.g. as quantified by Akaike Information criterion) across participants, and then see which one provide on average the best performance. Although correct, this approach neglect the possibility that different participants might use different strategies that are best described by alternative, competing models. To account for this, Stephan et al. &lt;span class=&#34;citation&#34;&gt;(Stephan et al. 2009)&lt;/span&gt; proposed a more conservative approach where models are treated as random effects that could differ between subjects and have a fixed (unknown) distribution in the population. The relevant statistical quantity is the frequency with which any model prevails in the population. Note that this is different from the definition of random-effects in classical statistic where random effects models have multiple sources of variation, e.g. within- and between- subject variance. An useful and popular way to summarize the results of this analysis is by reporting the model’s &lt;em&gt;exceedance probabilities&lt;/em&gt;, which measures how likely it is that any given model is more frequent than all other models in the set. The following exposition is largerly based on Stephan et al’s paper &lt;span class=&#34;citation&#34;&gt;(Stephan et al. 2009)&lt;/span&gt;.&lt;/p&gt;
 &lt;div id=&#34;model-evidence&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Model evidence&lt;/h1&gt;
-&lt;p&gt;Let’s say we have an experiment with &lt;span class=&#34;math inline&#34;&gt;\(\left(1,\dots,N\right)\)&lt;/span&gt; participants. Their performance is quantitatively predicted by a set &lt;span class=&#34;math inline&#34;&gt;\(\left(1,\dots,K\right)\)&lt;/span&gt; competing models. The behaviour of any subject &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; can be fit by the model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; by finding the value(s) of the parameter(s) &lt;span class=&#34;math inline&#34;&gt;\(\theta_k\)&lt;/span&gt; that maximize the likelihood of the data &lt;span class=&#34;math inline&#34;&gt;\(y_n\)&lt;/span&gt; under the model. In a fully Bayesian setting each unknown parameter would have a prior probability distribution, and the quantity of choice ofr comparing the goodness of fit of the model is the marginal likelihood, that is &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;Let’s say we have an experiment with &lt;span class=&#34;math inline&#34;&gt;\(\left(1,\dots,N\right)\)&lt;/span&gt; participants. Their performance is quantitatively predicted by a set &lt;span class=&#34;math inline&#34;&gt;\(\left(1,\dots,K\right)\)&lt;/span&gt; competing models. The behaviour of any subject &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; can be fit by the model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; by finding the value(s) of the parameter(s) &lt;span class=&#34;math inline&#34;&gt;\(\theta_k\)&lt;/span&gt; that maximize the likelihood of the data &lt;span class=&#34;math inline&#34;&gt;\(y_n\)&lt;/span&gt; under the model. In a fully Bayesian setting each unknown parameter would have a prior probability distribution, and the quantity of choice ofr comparing the goodness of fit of the model is the marginal likelihood, that is
+&lt;span class=&#34;math display&#34;&gt;\[
   p \left(y_n \mid k \right) = \int p\left(y_n \mid k, \theta_k \right) \, p\left(\theta_k \right) d\theta.
-\]&lt;/span&gt; By integrating over the prior probability of parameters the marginal likelihood provide a measure of the evidence in favour of a specific model while taking into account the complexity of the model. We might also do something simpler and approximate the model evidence using e.g. the Akaike information criterion.&lt;/p&gt;
+\]&lt;/span&gt;
+By integrating over the prior probability of parameters the marginal likelihood provide a measure of the evidence in favour of a specific model while taking into account the complexity of the model. We might also do something simpler and approximate the model evidence using e.g. the Akaike information criterion.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;models-as-random-effects&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Models as random effects&lt;/h1&gt;
-&lt;p&gt;We are interested in finding which model does better at predicting behavior, however we allow for different participants to use different strategies which can be represented by different models. To achieve that we treat the model as random effects and we assume that the frequency or probability of models in the population, &lt;span class=&#34;math inline&#34;&gt;\((r_1, \dots, r_K)\)&lt;/span&gt;, is described by a Dirichlet distribution with parameters &lt;span class=&#34;math inline&#34;&gt;\(\boldsymbol{\alpha } = \alpha_1, \dots, \alpha_k\)&lt;/span&gt;, &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;We are interested in finding which model does better at predicting behavior, however we allow for different participants to use different strategies which can be represented by different models. To achieve that we treat the model as random effects and we assume that the frequency or probability of models in the population, &lt;span class=&#34;math inline&#34;&gt;\((r_1, \dots, r_K)\)&lt;/span&gt;, is described by a Dirichlet distribution with parameters &lt;span class=&#34;math inline&#34;&gt;\(\boldsymbol{\alpha } = \alpha_1, \dots, \alpha_k\)&lt;/span&gt;,
+&lt;span class=&#34;math display&#34;&gt;\[
 \begin{align}
 p\left(r \mid  \boldsymbol{\alpha } \right) &amp;amp; = \text{Dir} \left(r, \boldsymbol{ \alpha } \right) \\
 &amp;amp; = \frac{1}{\mathbf{B} \left(\boldsymbol{ \alpha }  \right)} \prod_{i=1}^K r_i^{\alpha_i -1} \nonumber
 \end{align}.
-\]&lt;/span&gt; Where the normalizing constant &lt;span class=&#34;math inline&#34;&gt;\(\mathbf{B} \left(\boldsymbol{ \alpha } \right)\)&lt;/span&gt; is the multivariate Beta function. The probabilities &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt; generates ‘switches’ or indicator variables &lt;span class=&#34;math inline&#34;&gt;\(m_n = m_1, \dots, m_N\)&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(m \in \left \{ 0, 1\right \}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\sum_1^K m_{nk}=1\)&lt;/span&gt;. These indicator variables prescribe the model for the subjects &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;, $ p(m_{nk}=1)=r_k$. Given the probabilities &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt;, the indicator variables have thus a multinomial distribution, that is &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+Where the normalizing constant &lt;span class=&#34;math inline&#34;&gt;\(\mathbf{B} \left(\boldsymbol{ \alpha } \right)\)&lt;/span&gt; is the multivariate Beta function. The probabilities &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt; generates ‘switches’ or indicator variables &lt;span class=&#34;math inline&#34;&gt;\(m_n = m_1, \dots, m_N\)&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(m \in \left \{ 0, 1\right \}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\sum_1^K m_{nk}=1\)&lt;/span&gt;. These indicator variables prescribe the model for the subjects &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;, $ p(m_{nk}=1)=r_k$.
+Given the probabilities &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt;, the indicator variables have thus a multinomial distribution, that is
+&lt;span class=&#34;math display&#34;&gt;\[
 p\left(m_n \mid  \mathbf{r} \right) =  \prod_{k=1}^K r_k^{m_{nk}}.
-\]&lt;/span&gt; The graphical model that summarizes these dependencies is shown the following graph:&lt;/p&gt;
+\]&lt;/span&gt;
+The graphical model that summarizes these dependencies is shown the following graph:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://mlisi.xyz/img/bms.png&#34; alt=&#34;&#34; style=&#34;width:50.0%&#34; /&gt;
+&lt;img src=&#34;/img/bms.png&#34; alt=&#34;&#34; style=&#34;width:50.0%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -114,14 +119,17 @@ p\left(m_n \mid  \mathbf{r} \right) =  \prod_{k=1}^K r_k^{m_{nk}}.
 &lt;p&gt;The goal is to estimate the parameters &lt;span class=&#34;math inline&#34;&gt;\(\boldsymbol{\alpha}\)&lt;/span&gt; that define the posterior distribution of model frequencies given the data, $ p ( r | y)$. To do so we need an estimate of the model evidence &lt;span class=&#34;math inline&#34;&gt;\(p \left(m_{nk}=1 \mid y_n \right)\)&lt;/span&gt;, that is the belief that the model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; generated data from subject &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt;. There are many possible approach that can be used to estimate the model evidence, either exactly or approximately. Importantly, these would need to be normalized so that they sum to one across models, so that is one were using the Akaike Information criterion, this should be transformed into Akaike weights &lt;span class=&#34;citation&#34;&gt;(Burnham and Anderson 2002)&lt;/span&gt;.&lt;/p&gt;
 &lt;div id=&#34;generative-model&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Generative model&lt;/h2&gt;
-&lt;p&gt;Given the graphical model illustrated above, the joint probability of parameters and data can be expressed as &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;Given the graphical model illustrated above, the joint probability of parameters and data can be expressed as
+&lt;span class=&#34;math display&#34;&gt;\[
 \begin{align}
 p \left( y, r, m \right) &amp;amp; = p \left( y \mid m \right) \, p \left( m \mid r \right) \, p \left( r \mid \boldsymbol{\alpha} \right) \\
 &amp;amp; = p \left( r \mid \boldsymbol{\alpha} \right) \left[ \prod_{n=1}^N p \left( y_n \mid m_n \right) \, p\left(m_n \mid r \right) \right] \nonumber \\
 &amp;amp; = \frac{1}{\mathbf{B} \left(\boldsymbol{ \alpha }  \right)} \left[ \prod_{k=1}^K r_k^{\alpha_k -1} \right] \left[ \prod_{n=1}^N p \left( y_n \mid m_n\right) \, \prod_{k=1}^K r_k^{m_{nk}} \right] \nonumber \\
 &amp;amp; = \frac{1}{\mathbf{B} \left(\boldsymbol{ \alpha }  \right)} \prod_{n=1}^N \left[ \prod_{k=1}^K \left[ p \left( y_n \mid m_{nk} \right) \, r_k \right]^{m_{nk}} \, r_k^{\alpha_k -1} \right]. \nonumber
 \end{align}
-\]&lt;/span&gt; And the log probability is &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+And the log probability is
+&lt;span class=&#34;math display&#34;&gt;\[
 \log p \left( y, r, m \right)  = - \log \mathbf{B} \left(\boldsymbol{ \alpha }  \right)
 + \sum_{n=1}^N \sum_{k=1}^K \left[ \left(\alpha_k -1 \right) \log r_k
 + m_{nk} \left( p \left( \log y_n \mid m_{nk} \right) + \log r_k\right)\right].
@@ -129,32 +137,43 @@ p \left( y, r, m \right) &amp;amp; = p \left( y \mid m \right) \, p \left( m \mi
 &lt;/div&gt;
 &lt;div id=&#34;variational-approximation&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Variational approximation&lt;/h2&gt;
-&lt;p&gt;In order to fit this hierarchical model following the variational approach one needs to define an approximate posterior distribution over model frequencies and assignments, &lt;span class=&#34;math inline&#34;&gt;\(q\left(r,m\right)\)&lt;/span&gt;, which is assumed to be adequately described by a mean-field factorisation, that is &lt;span class=&#34;math inline&#34;&gt;\(q\left(r,m\right) = q\left(r\right) \, q\left(m\right)\)&lt;/span&gt;. The two densities are proportional to the exponentiated &lt;em&gt;variational energies&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(I(m), I(r)\)&lt;/span&gt;, which are essentially the un-normalized approximated log-posterior densities, that is &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;In order to fit this hierarchical model following the variational approach one needs to define an approximate posterior distribution over model frequencies and assignments, &lt;span class=&#34;math inline&#34;&gt;\(q\left(r,m\right)\)&lt;/span&gt;, which is assumed to be adequately described by a mean-field factorisation, that is &lt;span class=&#34;math inline&#34;&gt;\(q\left(r,m\right) = q\left(r\right) \, q\left(m\right)\)&lt;/span&gt;. The two densities are proportional to the exponentiated &lt;em&gt;variational energies&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(I(m), I(r)\)&lt;/span&gt;, which are essentially the un-normalized approximated log-posterior densities, that is
+&lt;span class=&#34;math display&#34;&gt;\[
 \begin{align}
 q\left(r\right) &amp;amp; \propto e^{I(r)}, \, q\left(m\right)\propto e^{I(m)} \\
 I(r) &amp;amp; = \left&amp;lt; \log p \left( y, r, m \right) \right&amp;gt;_{q(r)} \\
 I(m) &amp;amp; = \left&amp;lt; \log p \left( y, r, m \right) \right&amp;gt;_{q(m)}
 \end{align}
-\]&lt;/span&gt; For the approximate posterior over model assignment &lt;span class=&#34;math inline&#34;&gt;\(q(m)\)&lt;/span&gt; we first compute &lt;span class=&#34;math inline&#34;&gt;\(I(m)\)&lt;/span&gt; and then an appropriate normalization constant. From the expression above of the joint log-probability, and removing all the terms that do not depend on &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; we have that the un-normalized approximate log-posterior (the variational energy) can be expressed as &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+For the approximate posterior over model assignment &lt;span class=&#34;math inline&#34;&gt;\(q(m)\)&lt;/span&gt; we first compute &lt;span class=&#34;math inline&#34;&gt;\(I(m)\)&lt;/span&gt; and then an appropriate normalization constant. From the expression above of the joint log-probability, and removing all the terms that do not depend on &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; we have that the un-normalized approximate log-posterior (the variational energy) can be expressed as
+&lt;span class=&#34;math display&#34;&gt;\[
 \begin{align}
 I(m) &amp;amp; = \int p \left( y, r, m \right) \, q(r) \, dr \\
 &amp;amp; = \sum_{n=1}^N \sum_{k=1}^K m_{nk} \left[ p \left( \log y_n \mid m_{nk} \right) + \int q(r_k) \log r_k \, d r_k \right] \nonumber \\
 &amp;amp; = \sum_{n=1}^N \sum_{k=1}^K m_{nk} \left[ p \left( \log y_n \mid m_{nk} \right) + \psi (\alpha_k) -\psi \left(  \alpha_S \right) \right] \nonumber
 \end{align}
-\]&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(\alpha_S = \sum_{k=1}^K \alpha_k\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\psi\)&lt;/span&gt; is the digamma function. If you wonder (as I did when reading this the first time) where the hell does the digamma function comes from here: well it is here due to a property of the Dirichlet distribution, which says that the expected value of &lt;span class=&#34;math inline&#34;&gt;\(\log r_k\)&lt;/span&gt; can be computed as &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+where &lt;span class=&#34;math inline&#34;&gt;\(\alpha_S = \sum_{k=1}^K \alpha_k\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\psi\)&lt;/span&gt; is the digamma function. If you wonder (as I did when reading this the first time) where the hell does the digamma function comes from here: well it is here due to a property of the Dirichlet distribution, which says that the expected value of &lt;span class=&#34;math inline&#34;&gt;\(\log r_k\)&lt;/span&gt; can be computed as
+&lt;span class=&#34;math display&#34;&gt;\[
 \mathbb{E} \left[\log r_k \right] = \int p(r_k) \log r_k \, d r_k = \psi (\alpha_k) -\psi \left( \sum_{k=1}^K \alpha_k \right)
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;From this, we have that the un-normalized posterior belief that model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; generated data from subject &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; is &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;From this, we have that the un-normalized posterior belief that model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; generated data from subject &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; is
+&lt;span class=&#34;math display&#34;&gt;\[
 u_{nk} =  \exp {\left[ p \left( \log y_n \mid m_{nk} \right) + \psi (\alpha_k) -\psi \left(  \alpha_S \right) \right]}
-\]&lt;/span&gt; and the normalized belief is &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+and the normalized belief is
+&lt;span class=&#34;math display&#34;&gt;\[
 g_{nk} = \frac{u_{nk}}{\sum_{k=1}^K u_{nk}}
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;We need also to compute the approximate posterior density &lt;span class=&#34;math inline&#34;&gt;\(q(r)\)&lt;/span&gt;, and we begin as above by computing the un-normalized, approximate log-posterior or variational energy &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;We need also to compute the approximate posterior density &lt;span class=&#34;math inline&#34;&gt;\(q(r)\)&lt;/span&gt;, and we begin as above by computing the un-normalized, approximate log-posterior or variational energy
+&lt;span class=&#34;math display&#34;&gt;\[
 \begin{align}
 I(r) &amp;amp; = \int p \left( y, r, m \right) \, q(m) \, dm \\
 &amp;amp; = \sum_{k=1}^K \left[\log r_k \left(\alpha_{0k} -1 \right) +  \sum_{n=1}^N g_{nk} \log r_k \right]
 \end{align}
-\]&lt;/span&gt; The logarithm of a Dirichlet density is &lt;span class=&#34;math inline&#34;&gt;\(\log \text{Dir} (r , \boldsymbol{\alpha}) = \sum_{k=1}^K \log r_k \left(\alpha_{0k} -1 \right) + \dots\)&lt;/span&gt;, therefore the parameters of the approximate posterior are &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+The logarithm of a Dirichlet density is &lt;span class=&#34;math inline&#34;&gt;\(\log \text{Dir} (r , \boldsymbol{\alpha}) = \sum_{k=1}^K \log r_k \left(\alpha_{0k} -1 \right) + \dots\)&lt;/span&gt;, therefore the parameters of the approximate posterior are
+&lt;span class=&#34;math display&#34;&gt;\[
   \boldsymbol{\alpha} = \boldsymbol{\alpha}_0 + \sum_{n=1}^N g_{nk}
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -164,11 +183,15 @@ I(r) &amp;amp; = \int p \left( y, r, m \right) \, q(m) \, dm \\
 &lt;/div&gt;
 &lt;div id=&#34;exceedance-probabilities&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Exceedance probabilities&lt;/h2&gt;
-&lt;p&gt;After having found the optimised values of &lt;span class=&#34;math inline&#34;&gt;\(\boldsymbol{\alpha}\)&lt;/span&gt;, one popular way to report the results and rank the models is by their exceedance probability, which is defined as the (second order) probability that participants were more likely to choose a certain model to generate behavior rather than any other alternative model, that is &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;After having found the optimised values of &lt;span class=&#34;math inline&#34;&gt;\(\boldsymbol{\alpha}\)&lt;/span&gt;, one popular way to report the results and rank the models is by their exceedance probability, which is defined as the (second order) probability that participants were more likely to choose a certain model to generate behavior rather than any other alternative model, that is
+&lt;span class=&#34;math display&#34;&gt;\[
 \forall j \in \left\{1, \dots, K, j \ne k \right\}, \,\,\, \varphi_k = p \left(r_k &amp;gt; r_j \mid y, \boldsymbol{\alpha} \right).
-\]&lt;/span&gt; In the case of &lt;span class=&#34;math inline&#34;&gt;\(K&amp;gt;2\)&lt;/span&gt; models, the exceedance probabilities &lt;span class=&#34;math inline&#34;&gt;\(\varphi_k\)&lt;/span&gt; are computed by generating random samples from univariate Gamma densities and then normalizing. Specifically, each multivariate Dirichlet sample is composed of &lt;span class=&#34;math inline&#34;&gt;\(K\)&lt;/span&gt; independent random samples &lt;span class=&#34;math inline&#34;&gt;\((x_1, \dots, x_K)\)&lt;/span&gt; distributed according to the density &lt;span class=&#34;math inline&#34;&gt;\(\text{Gamma}\left(\alpha_i, 1\right) = \frac{x_i^{\alpha_i-1} e^{-x_i}}{\Gamma(\alpha_i)}\)&lt;/span&gt;, and then set normalize them by taking &lt;span class=&#34;math inline&#34;&gt;\(z_i = \frac{x_i}{ \sum_{i=1}^K x_i}\)&lt;/span&gt;. The exceedance probability &lt;span class=&#34;math inline&#34;&gt;\(\varphi_k\)&lt;/span&gt; for each model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; is then computed as &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+In the case of &lt;span class=&#34;math inline&#34;&gt;\(K&amp;gt;2\)&lt;/span&gt; models, the exceedance probabilities &lt;span class=&#34;math inline&#34;&gt;\(\varphi_k\)&lt;/span&gt; are computed by generating random samples from univariate Gamma densities and then normalizing. Specifically, each multivariate Dirichlet sample is composed of &lt;span class=&#34;math inline&#34;&gt;\(K\)&lt;/span&gt; independent random samples &lt;span class=&#34;math inline&#34;&gt;\((x_1, \dots, x_K)\)&lt;/span&gt; distributed according to the density &lt;span class=&#34;math inline&#34;&gt;\(\text{Gamma}\left(\alpha_i, 1\right) = \frac{x_i^{\alpha_i-1} e^{-x_i}}{\Gamma(\alpha_i)}\)&lt;/span&gt;, and then set normalize them by taking &lt;span class=&#34;math inline&#34;&gt;\(z_i = \frac{x_i}{ \sum_{i=1}^K x_i}\)&lt;/span&gt;. The exceedance probability &lt;span class=&#34;math inline&#34;&gt;\(\varphi_k\)&lt;/span&gt; for each model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; is then computed as
+&lt;span class=&#34;math display&#34;&gt;\[
 \varphi_k = \frac{\sum \mathop{\bf{1}}_{z_k&amp;gt;z_j, \forall j \in \left\{1, \dots, K, j \ne k \right\} }}{ \text{n. of samples}}
-\]&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(\mathop{\bf{1}}_{\dots}\)&lt;/span&gt; is the indicator function (&lt;span class=&#34;math inline&#34;&gt;\(\mathop{\bf{1}}_{x&amp;gt;0} = 1\)&lt;/span&gt; if &lt;span class=&#34;math inline&#34;&gt;\(x&amp;gt;0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; otherwise), summed over the total number of multivariate samples drawn.&lt;/p&gt;
+\]&lt;/span&gt;
+where &lt;span class=&#34;math inline&#34;&gt;\(\mathop{\bf{1}}_{\dots}\)&lt;/span&gt; is the indicator function (&lt;span class=&#34;math inline&#34;&gt;\(\mathop{\bf{1}}_{x&amp;gt;0} = 1\)&lt;/span&gt; if &lt;span class=&#34;math inline&#34;&gt;\(x&amp;gt;0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; otherwise), summed over the total number of multivariate samples drawn.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;code&#34; class=&#34;section level1&#34;&gt;
@@ -179,10 +202,10 @@ I(r) &amp;amp; = \int p \left( y, r, m \right) \, q(m) \, dm \\
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-Burnham2002&#34;&gt;
-&lt;p&gt;Burnham, Kenneth P., and David R. Anderson. 2002. &lt;em&gt;Model Selection and Multimodel Inference: A Practical Information-Theoretic Approach&lt;/em&gt;. 2nd editio. New York, US: Springer New York. doi:&lt;a href=&#34;https://doi.org/10.1007/b97636&#34;&gt;10.1007/b97636&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Burnham, Kenneth P., and David R. Anderson. 2002. &lt;em&gt;Model Selection and Multimodel Inference: A Practical Information-Theoretic Approach&lt;/em&gt;. 2nd editio. New York, US: Springer New York. &lt;a href=&#34;https://doi.org/10.1007/b97636&#34;&gt;https://doi.org/10.1007/b97636&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-Stephan2009&#34;&gt;
-&lt;p&gt;Stephan, Klaas Enno, Will D. Penny, Jean Daunizeau, Rosalyn J. Moran, and Karl J. Friston. 2009. “Bayesian model selection for group studies.” &lt;em&gt;NeuroImage&lt;/em&gt; 46 (4). Elsevier Inc.: 1004–17. doi:&lt;a href=&#34;https://doi.org/10.1016/j.neuroimage.2009.03.025&#34;&gt;10.1016/j.neuroimage.2009.03.025&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Stephan, Klaas Enno, Will D. Penny, Jean Daunizeau, Rosalyn J. Moran, and Karl J. Friston. 2009. “Bayesian model selection for group studies.” &lt;em&gt;NeuroImage&lt;/em&gt; 46 (4). Elsevier Inc.: 1004–17. &lt;a href=&#34;https://doi.org/10.1016/j.neuroimage.2009.03.025&#34;&gt;https://doi.org/10.1016/j.neuroimage.2009.03.025&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -191,14 +214,14 @@ I(r) &amp;amp; = \int p \left( y, r, m \right) \, q(m) \, dm \\
     
     <item>
       <title>Bayesian multilevel models using R and Stan (part 1)</title>
-      <link>http://mlisi.xyz/post/bayesian-multilevel-models-r-stan/</link>
+      <link>/post/bayesian-multilevel-models-r-stan/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/bayesian-multilevel-models-r-stan/</guid>
+      <guid>/post/bayesian-multilevel-models-r-stan/</guid>
       <description>
 
 
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://mlisi.xyz/img/turtlepile.jpg&#34; alt=&#34;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&#34; /&gt;
+&lt;img src=&#34;/img/turtlepile.jpg&#34; alt=&#34;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;In my previous lab I was known for promoting the use of multilevel, or mixed-effects model among my colleagues. (The slides on the &lt;a href=&#34;https://mattelisi.github.io/#notes&#34;&gt;/misc&lt;/a&gt; section of this website are part of this effort.) Multilevel models should be the standard approach in fields like experimental psychology and neuroscience, where the data is naturally grouped according to “observational units”, i.e. individual participants. I agree with Richard McElreath when he writes that &lt;em&gt;“multilevel regression deserves to be the default form of regression”&lt;/em&gt; (see &lt;a href=&#34;http://xcelab.net/rmpubs/rethinking/Statistical_Rethinking_sample.pdf&#34;&gt;here&lt;/a&gt;, section 1.3.2) and that, at least in our fields, studies not using a multilevel approach should justify the choice of not using it.&lt;/p&gt;
@@ -216,9 +239,12 @@ str(sleepstudy)
  $ Subject : Factor w/ 18 levels &amp;quot;308&amp;quot;,&amp;quot;309&amp;quot;,&amp;quot;310&amp;quot;,..: 1 1 1 1 1 1 1 1 1 1 ...&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The model I want to fit to the data will contain both random intercepts and slopes; in addition the correlation between the random effects should also be estimated. Using &lt;code&gt;lme4&lt;/code&gt;, this model could be estimated by using&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;lmer(Reaction ~ Days + (Days | Subject), sleepstudy)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The model could be formally notated as &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;The model could be formally notated as
+&lt;span class=&#34;math display&#34;&gt;\[
 y_{ij} = \beta_0 + u_{0j} + \left( \beta_1 + u_{1j} \right) \cdot {\rm{Days}} + e_i
-\]&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(\beta_0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta_1\)&lt;/span&gt; are the fixed effects parameters (intercept and slope), &lt;span class=&#34;math inline&#34;&gt;\(u_{0j}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(u_{1j}\)&lt;/span&gt; are the subject specific random intercept and slope (the index &lt;span class=&#34;math inline&#34;&gt;\(j\)&lt;/span&gt; denotes the subject), and &lt;span class=&#34;math inline&#34;&gt;\(e \sim\cal N \left( 0,\sigma_e^2 \right)\)&lt;/span&gt; is the (normally distributed) residual error. The random effects &lt;span class=&#34;math inline&#34;&gt;\(u_0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(u_1\)&lt;/span&gt; have a multivariate normal distribution, with mean 0 and covariance matrix &lt;span class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt; &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+where &lt;span class=&#34;math inline&#34;&gt;\(\beta_0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta_1\)&lt;/span&gt; are the fixed effects parameters (intercept and slope), &lt;span class=&#34;math inline&#34;&gt;\(u_{0j}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(u_{1j}\)&lt;/span&gt; are the subject specific random intercept and slope (the index &lt;span class=&#34;math inline&#34;&gt;\(j\)&lt;/span&gt; denotes the subject), and &lt;span class=&#34;math inline&#34;&gt;\(e \sim\cal N \left( 0,\sigma_e^2 \right)\)&lt;/span&gt; is the (normally distributed) residual error. The random effects &lt;span class=&#34;math inline&#34;&gt;\(u_0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(u_1\)&lt;/span&gt; have a multivariate normal distribution, with mean 0 and covariance matrix &lt;span class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt;
+&lt;span class=&#34;math display&#34;&gt;\[
 \left[ {\begin{array}{*{20}{c}}
 {{u_0}}\\
 {{u_1}}
@@ -258,7 +284,8 @@ y_{ij} = \beta_0 + u_{0j} + \left( \beta_1 + u_{1j} \right) \cdot {\rm{Days}} + 
 &lt;/div&gt;
 &lt;div id=&#34;parameters&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Parameters&lt;/h2&gt;
-&lt;p&gt;Here is the parameter block. Stan will draw samples from the posterior distribution of all the parameters listed here. Note that for parameters representing standard deviations is necessary to set the lower bound to 0 (variances and standard deviations cannot be negative). This is equivalent to estimating the logarithm of the standard deviation (which can be both positive or negative) and exponentiating before computing the likelihood (because &lt;span class=&#34;math inline&#34;&gt;\(e^x&amp;gt;0\)&lt;/span&gt; for any &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;). Note that we have also one parameter for the standard deviation of the residual errors (which was implicit in &lt;code&gt;lme4&lt;/code&gt;). The random effects are parametrixed by a 2 x &lt;code&gt;J&lt;/code&gt; random effect matrix &lt;code&gt;z_u&lt;/code&gt;, and by the Cholesky factor of the correlation matrix &lt;code&gt;L_u&lt;/code&gt;. I have added also the transformed parameters block, where the Cholesky factor is first multipled by the diagonal matrix formed by the vector of the random effect variances &lt;code&gt;sigma_u&lt;/code&gt;, and then is multiplied with the random effect matrix, to obtain a random effects matrix with the intended correlations, which will be used in the model block below to compute the likelihood of the data.&lt;/p&gt;
+&lt;p&gt;Here is the parameter block. Stan will draw samples from the posterior distribution of all the parameters listed here. Note that for parameters representing standard deviations is necessary to set the lower bound to 0 (variances and standard deviations cannot be negative). This is equivalent to estimating the logarithm of the standard deviation (which can be both positive or negative) and exponentiating before computing the likelihood (because &lt;span class=&#34;math inline&#34;&gt;\(e^x&amp;gt;0\)&lt;/span&gt; for any &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;). Note that we have also one parameter for the standard deviation of the residual errors (which was implicit in &lt;code&gt;lme4&lt;/code&gt;).
+The random effects are parametrixed by a 2 x &lt;code&gt;J&lt;/code&gt; random effect matrix &lt;code&gt;z_u&lt;/code&gt;, and by the Cholesky factor of the correlation matrix &lt;code&gt;L_u&lt;/code&gt;. I have added also the transformed parameters block, where the Cholesky factor is first multipled by the diagonal matrix formed by the vector of the random effect variances &lt;code&gt;sigma_u&lt;/code&gt;, and then is multiplied with the random effect matrix, to obtain a random effects matrix with the intended correlations, which will be used in the model block below to compute the likelihood of the data.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;parameters {
   vector[2] beta;                   // fixed-effects parameters
   real&amp;lt;lower=0&amp;gt; sigma_e;            // residual std
@@ -297,8 +324,9 @@ transformed parameters {
     RT[i] ~ normal(mu, sigma_e);
   }
 }&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;For the correlation matrix, Stan manual suggest to use a LKJ prior&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. This prior has one single shape parameters, &lt;span class=&#34;math inline&#34;&gt;\(\eta\)&lt;/span&gt;: if you set &lt;span class=&#34;math inline&#34;&gt;\(\eta=1\)&lt;/span&gt; then you have effectively a uniform prior distribution over any (Cholesky factor of) 2x2 correlation matrices. For values &lt;span class=&#34;math inline&#34;&gt;\(\eta&amp;gt;1\)&lt;/span&gt; instead you get a more conservative prior, with a mode in the identity matrix (where the correlations are 0). For more information about the LKJ prior see page 556 of Stan reference manual, version 2.17.0, and also &lt;a href=&#34;http://www.psychstatistics.com/2014/12/27/d-lkj-priors/&#34;&gt;this page&lt;/a&gt; for an intuitive demonstration.&lt;/p&gt;
-&lt;p&gt;Importantly, I have used (weakly) informative priors for the fixed effect estimates. We know from the literature that simple reaction times are around 300ms, hence the prior for the intercept, which represents the avearage reaction times at Day 0, i.e. before the sleep deprivation. We expect the reaction times to increase with sleep deprivation, so I have used for the slope a Gaussian prior centered at a small positive value (0.2 seconds), which would represents the increase in reaction times with each day of sleep deprivation, however using a very broad standard deviation (2 seconds), which could accomodate also negative or very different slope values if needed. It may be useful to visualize with a plot the priors. &lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig1-1.png&#34; width=&#34;624&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;For the correlation matrix, Stan manual suggest to use a LKJ prior&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. This prior has one single shape parameters, &lt;span class=&#34;math inline&#34;&gt;\(\eta\)&lt;/span&gt;: if you set &lt;span class=&#34;math inline&#34;&gt;\(\eta=1\)&lt;/span&gt; then you have effectively a uniform prior distribution over any (Cholesky factor of) 2x2 correlation matrices. For values &lt;span class=&#34;math inline&#34;&gt;\(\eta&amp;gt;1\)&lt;/span&gt; instead you get a more conservative prior, with a mode in the identity matrix (where the correlations are 0). For more information about the LKJ prior see page 556 of Stan reference manual, version 2.17.0, and also &lt;a href=&#34;http://www.psychstatistics.com/2014/12/27/d-lkj-priors/&#34;&gt;this page&lt;/a&gt; for an intuitive demonstration.&lt;/p&gt;
+&lt;p&gt;Importantly, I have used (weakly) informative priors for the fixed effect estimates. We know from the literature that simple reaction times are around 300ms, hence the prior for the intercept, which represents the avearage reaction times at Day 0, i.e. before the sleep deprivation. We expect the reaction times to increase with sleep deprivation, so I have used for the slope a Gaussian prior centered at a small positive value (0.2 seconds), which would represents the increase in reaction times with each day of sleep deprivation, however using a very broad standard deviation (2 seconds), which could accomodate also negative or very different slope values if needed. It may be useful to visualize with a plot the priors.
+&lt;img src=&#34;/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig1-1.png&#34; width=&#34;624&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;generated-quantities&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Generated quantities&lt;/h2&gt;
@@ -311,14 +339,16 @@ transformed parameters {
 &lt;/div&gt;
 &lt;div id=&#34;estimating-the-model&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Estimating the model&lt;/h1&gt;
-&lt;p&gt;Having written all the above blocks in a separate text file (I called it “sleep_model.stan”), we can call Stan from R with following commands. I run 4 independent chains (each chain is a stochastic process which sequentially generate random values; they are called &lt;em&gt;chain&lt;/em&gt; because each sample depends on the previous one), each for 2000 samples. The first 1000 samples are the &lt;em&gt;warmup&lt;/em&gt; (or sometimes called &lt;em&gt;burn-in&lt;/em&gt;), which are intended to allow the sampling process to settle into the posterior distribution; these samples will not be used for inference. Each chain is independent from the others, therefore having multiple chains is also useful to check the convergence (i.e. by looking if all chains converged to the same regions of the parameter space). Additionally, having multiple chain allows to compute a statistic which is also used to check convergence: this is called &lt;span class=&#34;math inline&#34;&gt;\(\hat R\)&lt;/span&gt; and it corresponds to the ratio of the between-chain variance and the within-chain variance. If the sampling has converged then &lt;span class=&#34;math inline&#34;&gt;\({\hat R} \approx 1 \pm 0.01\)&lt;/span&gt;. When we call function &lt;code&gt;stan&lt;/code&gt;, it will compile a C++ program which produces samples from the joint posterior of the parameter using a powerful variant of MCMC sampling, called &lt;em&gt;Hamiltomian Monte Carlo&lt;/em&gt; (see &lt;a href=&#34;http://elevanth.org/blog/2017/11/28/build-a-better-markov-chain/&#34;&gt;here&lt;/a&gt; for an intuitive explanation of the sampling algorithm).&lt;/p&gt;
+&lt;p&gt;Having written all the above blocks in a separate text file (I called it “sleep_model.stan”), we can call Stan from R with following commands. I run 4 independent chains (each chain is a stochastic process which sequentially generate random values; they are called &lt;em&gt;chain&lt;/em&gt; because each sample depends on the previous one), each for 2000 samples. The first 1000 samples are the &lt;em&gt;warmup&lt;/em&gt; (or sometimes called &lt;em&gt;burn-in&lt;/em&gt;), which are intended to allow the sampling process to settle into the posterior distribution; these samples will not be used for inference. Each chain is independent from the others, therefore having multiple chains is also useful to check the convergence (i.e. by looking if all chains converged to the same regions of the parameter space). Additionally, having multiple chain allows to compute a statistic which is also used to check convergence: this is called &lt;span class=&#34;math inline&#34;&gt;\(\hat R\)&lt;/span&gt; and it corresponds to the ratio of the between-chain variance and the within-chain variance. If the sampling has converged then &lt;span class=&#34;math inline&#34;&gt;\({\hat R} \approx 1 \pm 0.01\)&lt;/span&gt;.
+When we call function &lt;code&gt;stan&lt;/code&gt;, it will compile a C++ program which produces samples from the joint posterior of the parameter using a powerful variant of MCMC sampling, called &lt;em&gt;Hamiltomian Monte Carlo&lt;/em&gt; (see &lt;a href=&#34;http://elevanth.org/blog/2017/11/28/build-a-better-markov-chain/&#34;&gt;here&lt;/a&gt; for an intuitive explanation of the sampling algorithm).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rstan)
 options(mc.cores = parallel::detectCores())  # indicate stan to use multiple cores if available
 sleep_model &amp;lt;- stan(file = &amp;quot;sleep_model.stan&amp;quot;, data = d_stan, 
     iter = 2000, chains = 4)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;One way to check the convergence of the model is to plot the chain of samples. They should look like a &lt;em&gt;“fat, hairy caterpillar which does not bend”&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;(Sorensen, Hohenstein, and Vasishth 2016)&lt;/span&gt;, suggesting that the sampling was stable at the posterior.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;traceplot(sleep_model, pars = c(&amp;quot;beta&amp;quot;), inc_warmup = FALSE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig2-1.png&#34; width=&#34;480&#34; /&gt; There is a &lt;code&gt;print()&lt;/code&gt; method for visualising the estimates of the parameters. The values of the &lt;span class=&#34;math inline&#34;&gt;\({\hat R}\)&lt;/span&gt; (&lt;code&gt;Rhat&lt;/code&gt;) statistics also confirm that the chains converged. The method automatically report credible intervals for the parameters (computed with the percentile method from the samples of the posterior distribution).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig2-1.png&#34; width=&#34;480&#34; /&gt;
+There is a &lt;code&gt;print()&lt;/code&gt; method for visualising the estimates of the parameters. The values of the &lt;span class=&#34;math inline&#34;&gt;\({\hat R}\)&lt;/span&gt; (&lt;code&gt;Rhat&lt;/code&gt;) statistics also confirm that the chains converged. The method automatically report credible intervals for the parameters (computed with the percentile method from the samples of the posterior distribution).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(sleep_model, pars = c(&amp;quot;beta&amp;quot;), probs = c(0.025, 0.975), 
     digits = 3)
 Inference for Stan model: sleep_model_v1.
@@ -336,7 +366,8 @@ convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And we can visualze the posterior distribution as histograms (here for the fixed effects parameters and the standard deviations of the corresponding random effects).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(sleep_model, plotfun = &amp;quot;hist&amp;quot;, pars = c(&amp;quot;beta&amp;quot;, &amp;quot;sigma_u&amp;quot;))
 `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig3-1.png&#34; width=&#34;384&#34; /&gt; Finally, we can also examine the correlation matrix of random-effects.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig3-1.png&#34; width=&#34;384&#34; /&gt;
+Finally, we can also examine the correlation matrix of random-effects.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(sleep_model, pars = c(&amp;quot;Omega&amp;quot;), digits = 3)
 Inference for Stan model: sleep_model_v1.
 5 chains, each with iter=6000; warmup=3000; thin=1; 
@@ -361,20 +392,20 @@ convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-Bates2014&#34;&gt;
-&lt;p&gt;Bates, D, M Maechler, B Bolker, and S Walker. 2014. “lme4: Linear mixed-effects models using Eigen and S4.” R package version 1.1-7. &lt;a href=&#34;http://cran.r-project.org/package=lme4&#34; class=&#34;uri&#34;&gt;http://cran.r-project.org/package=lme4&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Bates, D, M Maechler, B Bolker, and S Walker. 2014. “lme4: Linear mixed-effects models using Eigen and S4.” R package version 1.1-7. &lt;a href=&#34;http://cran.r-project.org/package=lme4&#34;&gt;http://cran.r-project.org/package=lme4&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-Belenky2003&#34;&gt;
-&lt;p&gt;Belenky, Gregory, Nancy J Wesensten, David R Thorne, Maria L Thomas, Helen C Sing, Daniel P Redmond, Michael B Russo, and J Balkin, Thomas. 2003. “Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study.” &lt;em&gt;Journal of Sleep Research&lt;/em&gt; 12 (1): 1–12. doi:&lt;a href=&#34;https://doi.org/10.1046/j.1365-2869.2003.00337.x&#34;&gt;10.1046/j.1365-2869.2003.00337.x&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Belenky, Gregory, Nancy J Wesensten, David R Thorne, Maria L Thomas, Helen C Sing, Daniel P Redmond, Michael B Russo, and J Balkin, Thomas. 2003. “Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study.” &lt;em&gt;Journal of Sleep Research&lt;/em&gt; 12 (1): 1–12. &lt;a href=&#34;https://doi.org/10.1046/j.1365-2869.2003.00337.x&#34;&gt;https://doi.org/10.1046/j.1365-2869.2003.00337.x&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-Sorensen2016&#34;&gt;
-&lt;p&gt;Sorensen, Tanner, Sven Hohenstein, and Shravan Vasishth. 2016. “Bayesian linear mixed models using Stan: A tutorial for psychologists, linguists, and cognitive scientists.” &lt;em&gt;The Quantitative Methods for Psychology&lt;/em&gt; 12 (3): 175–200. doi:&lt;a href=&#34;https://doi.org/10.20982/tqmp.12.3.p175&#34;&gt;10.20982/tqmp.12.3.p175&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Sorensen, Tanner, Sven Hohenstein, and Shravan Vasishth. 2016. “Bayesian linear mixed models using Stan: A tutorial for psychologists, linguists, and cognitive scientists.” &lt;em&gt;The Quantitative Methods for Psychology&lt;/em&gt; 12 (3): 175–200. &lt;a href=&#34;https://doi.org/10.20982/tqmp.12.3.p175&#34;&gt;https://doi.org/10.20982/tqmp.12.3.p175&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;The LKJ prior is named after the authors, see: Lewandowski, D., Kurowicka, D., and Joe, H. (2009). Generating random correlation matrices based on vines and extended onion method. &lt;em&gt;Journal of Multivariate Analysis&lt;/em&gt;, 100:1989–2001&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;The LKJ prior is named after the authors, see: Lewandowski, D., Kurowicka, D., and Joe, H. (2009). Generating random correlation matrices based on vines and extended onion method. &lt;em&gt;Journal of Multivariate Analysis&lt;/em&gt;, 100:1989–2001&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -382,17 +413,19 @@ convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Simulating correlated variables with the Cholesky factorization</title>
-      <link>http://mlisi.xyz/post/simulating-correlated-variables-with-the-cholesky-factorization/</link>
+      <link>/post/simulating-correlated-variables-with-the-cholesky-factorization/</link>
       <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/simulating-correlated-variables-with-the-cholesky-factorization/</guid>
+      <guid>/post/simulating-correlated-variables-with-the-cholesky-factorization/</guid>
       <description>
 
 
-&lt;p&gt;Generating random variables with given variance-covariance matrix can be useful for many purposes. For example it is useful for generating random intercepts and slopes with given correlations when simulating a multilevel, or mixed-effects, model (e.g. see &lt;a href=&#34;https://rpubs.com/adrbart/random_slope_simulation&#34;&gt;here&lt;/a&gt;). This can be achieved efficiently with the &lt;a href=&#34;https://en.wikipedia.org/wiki/Cholesky_decomposition&#34;&gt;Choleski factorization&lt;/a&gt;. In linear algebra the factorization or decomposition of a matrix is the factorization of a matrix into a product of matrices. More specifically, the Choleski factorization is a decomposition of a positive-defined, symmetric&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; matrix into a product of a triangular matrix and its conjugate transpose; in other words is a method to find the &lt;em&gt;square root&lt;/em&gt; of a matrix. The square root of a matrix &lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt; is another matrix &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt; such that &lt;span class=&#34;math inline&#34;&gt;\({L^T}L = C\)&lt;/span&gt;.&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Suppose you want to create 2 variables, having a Gaussian distribution, and a positive correlation, say &lt;span class=&#34;math inline&#34;&gt;\(0.7\)&lt;/span&gt;. The first step is to define the correlation matrix &lt;span class=&#34;math display&#34;&gt;\[C = \left( {\begin{array}{*{20}{c}}
+&lt;p&gt;Generating random variables with given variance-covariance matrix can be useful for many purposes. For example it is useful for generating random intercepts and slopes with given correlations when simulating a multilevel, or mixed-effects, model (e.g. see &lt;a href=&#34;https://rpubs.com/adrbart/random_slope_simulation&#34;&gt;here&lt;/a&gt;). This can be achieved efficiently with the &lt;a href=&#34;https://en.wikipedia.org/wiki/Cholesky_decomposition&#34;&gt;Choleski factorization&lt;/a&gt;. In linear algebra the factorization or decomposition of a matrix is the factorization of a matrix into a product of matrices. More specifically, the Choleski factorization is a decomposition of a positive-defined, symmetric&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; matrix into a product of a triangular matrix and its conjugate transpose; in other words is a method to find the &lt;em&gt;square root&lt;/em&gt; of a matrix. The square root of a matrix &lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt; is another matrix &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt; such that &lt;span class=&#34;math inline&#34;&gt;\({L^T}L = C\)&lt;/span&gt;.&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Suppose you want to create 2 variables, having a Gaussian distribution, and a positive correlation, say &lt;span class=&#34;math inline&#34;&gt;\(0.7\)&lt;/span&gt;. The first step is to define the correlation matrix
+&lt;span class=&#34;math display&#34;&gt;\[C = \left( {\begin{array}{*{20}{c}}
 1&amp;amp;{0.7}\\
 {0.7}&amp;amp;1
-\end{array}} \right)\]&lt;/span&gt; Elements in the diagonal can be understood as the correlation of each variable with itself, and therefore are 1, while elements outside the diagonal indicate the desired correlation. In &lt;span class=&#34;math inline&#34;&gt;\(\textsf{R}\)&lt;/span&gt;&lt;/p&gt;
+\end{array}} \right)\]&lt;/span&gt;
+Elements in the diagonal can be understood as the correlation of each variable with itself, and therefore are 1, while elements outside the diagonal indicate the desired correlation. In &lt;span class=&#34;math inline&#34;&gt;\(\textsf{R}\)&lt;/span&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;C &amp;lt;- matrix(c(1,0.7,0.7,1),2,2)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Next one can use the &lt;code&gt;chol()&lt;/code&gt; function to compute the Cholesky factor. (The function provides the upper triangular square root of &lt;span class=&#34;math inline&#34;&gt;\(C\)&lt;/span&gt;).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;L &amp;lt;- chol(C)&lt;/code&gt;&lt;/pre&gt;
@@ -409,30 +442,34 @@ convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Z &amp;lt;- rbind(rnorm(1e4),rnorm(1e4))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Finally, to introduce the correlations , multiply them with the &lt;code&gt;Lambda&lt;/code&gt; obtained above&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;X &amp;lt;- Lambda %*% Z&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now plot the results &lt;img src=&#34;http://mlisi.xyz/post/2018-01-21-generating-correlated-random-variables-with-the-cholesky-factorization_files/figure-html/fig1-1.png&#34; width=&#34;729.6&#34; /&gt; We can verify that the correlation as estimated from the sample corresponds (or is close enough) to the generative value.&lt;/p&gt;
+&lt;p&gt;Now plot the results
+&lt;img src=&#34;/post/2018-01-21-generating-correlated-random-variables-with-the-cholesky-factorization_files/figure-html/fig1-1.png&#34; width=&#34;729.6&#34; /&gt;
+We can verify that the correlation as estimated from the sample corresponds (or is close enough) to the generative value.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# correlation in the generated sample
 cor(X[1,],X[2,])
 [1] 0.7093591&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;why-does-it-work&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Why does it work?&lt;/h1&gt;
-&lt;p&gt;The covariance matrix of the initial, uncorrelated sample is &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{E} \left( Z Z^T \right) = I\)&lt;/span&gt;, that is the identity matrix, since they have zero mean and unit variance &lt;span class=&#34;math inline&#34;&gt;\(z\sim\cal N\left( {0,1} \right)\)&lt;/span&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnoteRef&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The covariance matrix of the initial, uncorrelated sample is &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{E} \left( Z Z^T \right) = I\)&lt;/span&gt;, that is the identity matrix, since they have zero mean and unit variance &lt;span class=&#34;math inline&#34;&gt;\(z\sim\cal N\left( {0,1} \right)\)&lt;/span&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Let’s suppose that the desired covariance matrix is &lt;span class=&#34;math inline&#34;&gt;\(\Sigma\)&lt;/span&gt;; since it is symmetric and positive defined it is possible to obtain the Cholesky factorization &lt;span class=&#34;math inline&#34;&gt;\(L{L^T} = \Sigma\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;If we then compute a new random vector as &lt;span class=&#34;math inline&#34;&gt;\(X=LZ\)&lt;/span&gt;, we have that its covariance matrix is &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;If we then compute a new random vector as &lt;span class=&#34;math inline&#34;&gt;\(X=LZ\)&lt;/span&gt;, we have that its covariance matrix is
+&lt;span class=&#34;math display&#34;&gt;\[
 \begin{align}
 \mathbb{E} \left(XX^T\right) &amp;amp;= \mathbb{E} \left((LZ)(LZ)^T \right) \\
 &amp;amp;= \mathbb{E} \left(LZ Z^T L^T\right) \\
 &amp;amp;= L \mathbb{E} \left(ZZ^T \right) L^T \\
 &amp;amp;= LIL^T = LL^T = \Sigma \\
 \end{align}
-\]&lt;/span&gt; Therefore the new random vector &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; has the covariance matrix &lt;span class=&#34;math inline&#34;&gt;\(\Sigma\)&lt;/span&gt;.&lt;/p&gt;
+\]&lt;/span&gt;
+Therefore the new random vector &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt;/span&gt; has the covariance matrix &lt;span class=&#34;math inline&#34;&gt;\(\Sigma\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;The third step is justified because the expected value is a linear operator, therefore &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{E}(cX) = c\mathbb{E}(X)\)&lt;/span&gt;. Also &lt;span class=&#34;math inline&#34;&gt;\((AB)^T = B^T A^T\)&lt;/span&gt;, note that the order of the factor reverses.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Actually Choleski factorization can be obtained from all &lt;a href=&#34;https://en.wikipedia.org/wiki/Hermitian_matrix&#34;&gt;&lt;em&gt;Hermitian&lt;/em&gt;&lt;/a&gt; matrices. Hermitian matrices are a complex extension of real symmetric matrices. A symmetric matrices is one that it is equal to its transpose, which implies that its entries are symmetric with respect to the diagonal. In a Hermitian matrix, symmetric entries with respect to the diagonal are complex conjugates, i.e. they have the same real part, and an imaginary part with equal magnitude but opposite in sign. For example, the complex conjugate of &lt;span class=&#34;math inline&#34;&gt;\(x+iy\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(x-iy\)&lt;/span&gt; (or, equivalently, &lt;span class=&#34;math inline&#34;&gt;\(re^{i\theta}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(re^{-i\theta}\)&lt;/span&gt;). Real symmetric matrices can be considered a special case of Hermitian matrices where the imaginary component &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; (or &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;) is &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Note that I am using the convention of &lt;span class=&#34;math inline&#34;&gt;\(\textsf{R}\)&lt;/span&gt; software, where the function &lt;code&gt;chol()&lt;/code&gt;, which compute the factorization, returns the &lt;em&gt;upper triangular&lt;/em&gt; factor of the Choleski decomposition. I think that is more commonly assumed that the Choleski decomposition returns the &lt;em&gt;lower triangular&lt;/em&gt; factor &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt;, in which case &lt;span class=&#34;math inline&#34;&gt;\(L{L^T} = C\)&lt;/span&gt;.&lt;a href=&#34;#fnref2&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;More generally the variance-covariance matrix is &lt;span class=&#34;math inline&#34;&gt;\(\Sigma = \mathbb{E}\left( {X{X^T}} \right) - \mathbb{E}\left( X \right) \mathbb{E}\left(X \right)^T\)&lt;/span&gt;. &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{E}\)&lt;/span&gt; indicates the expected value.&lt;a href=&#34;#fnref3&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Actually Choleski factorization can be obtained from all &lt;a href=&#34;https://en.wikipedia.org/wiki/Hermitian_matrix&#34;&gt;&lt;em&gt;Hermitian&lt;/em&gt;&lt;/a&gt; matrices. Hermitian matrices are a complex extension of real symmetric matrices. A symmetric matrices is one that it is equal to its transpose, which implies that its entries are symmetric with respect to the diagonal. In a Hermitian matrix, symmetric entries with respect to the diagonal are complex conjugates, i.e. they have the same real part, and an imaginary part with equal magnitude but opposite in sign. For example, the complex conjugate of &lt;span class=&#34;math inline&#34;&gt;\(x+iy\)&lt;/span&gt; is &lt;span class=&#34;math inline&#34;&gt;\(x-iy\)&lt;/span&gt; (or, equivalently, &lt;span class=&#34;math inline&#34;&gt;\(re^{i\theta}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(re^{-i\theta}\)&lt;/span&gt;). Real symmetric matrices can be considered a special case of Hermitian matrices where the imaginary component &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; (or &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt;) is &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Note that I am using the convention of &lt;span class=&#34;math inline&#34;&gt;\(\textsf{R}\)&lt;/span&gt; software, where the function &lt;code&gt;chol()&lt;/code&gt;, which compute the factorization, returns the &lt;em&gt;upper triangular&lt;/em&gt; factor of the Choleski decomposition. I think that is more commonly assumed that the Choleski decomposition returns the &lt;em&gt;lower triangular&lt;/em&gt; factor &lt;span class=&#34;math inline&#34;&gt;\(L\)&lt;/span&gt;, in which case &lt;span class=&#34;math inline&#34;&gt;\(L{L^T} = C\)&lt;/span&gt;.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;More generally the variance-covariance matrix is &lt;span class=&#34;math inline&#34;&gt;\(\Sigma = \mathbb{E}\left( {X{X^T}} \right) - \mathbb{E}\left( X \right) \mathbb{E}\left(X \right)^T\)&lt;/span&gt;. &lt;span class=&#34;math inline&#34;&gt;\(\mathbb{E}\)&lt;/span&gt; indicates the expected value.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -440,55 +477,80 @@ cor(X[1,],X[2,])
     
     <item>
       <title>Multi-model estimation of psychophysical parameters</title>
-      <link>http://mlisi.xyz/post/model-averaging/</link>
+      <link>/post/model-averaging/</link>
       <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/model-averaging/</guid>
+      <guid>/post/model-averaging/</guid>
       <description>
 
 
-&lt;p&gt;In the study of human perception we often need to measure how sensitive is an observer to a stimulus variation, and how her/his sensitivity changes due to changes in the context or experimental manipulations. In many applications this can be done by estimating the slope of the psychometric function&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;, a parameter that relates to the precision with which the observer can make judgements about the stimulus. A psychometric function is generally characterized by 2-3 parameters: the slope, the threshold (or criterion), and an optional lapse parameter, which indicate the rate at which attention lapses (i.e. &lt;em&gt;stimulus-independent&lt;/em&gt; errors) occur.&lt;/p&gt;
-&lt;p&gt;As an example, consider the situation where an observer is asked to judge whether a signal (can be anything, from the orientation angle of a line on a screen, or the pitch of a tone, to the speed of a car or the approximate number of people in a crowd, etc.) is above or below a given reference value, call it zero. The experimenter presents the observers with many signals of different intensities, and the observer is asked to respond by making a binary choice (larger/smaller than the reference), under two different contextual conditions (before/after having a pint, with different headphones, etc.). These two conditions are expected to results in different sensitivity, and the experimenter is interested in estimating as precisely as possible the difference in sensitivity&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;. The psychometric function for one observer in the two conditions might look like this (figure below).&lt;/p&gt;
+&lt;p&gt;In the study of human perception we often need to measure how sensitive is an observer to a stimulus variation, and how her/his sensitivity changes due to changes in the context or experimental manipulations. In many applications this can be done by estimating the slope of the psychometric function&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;, a parameter that relates to the precision with which the observer can make judgements about the stimulus. A psychometric function is generally characterized by 2-3 parameters: the slope, the threshold (or criterion), and an optional lapse parameter, which indicate the rate at which attention lapses (i.e. &lt;em&gt;stimulus-independent&lt;/em&gt; errors) occur.&lt;/p&gt;
+&lt;p&gt;As an example, consider the situation where an observer is asked to judge whether a signal (can be anything, from the orientation angle of a line on a screen, or the pitch of a tone, to the speed of a car or the approximate number of people in a crowd, etc.) is above or below a given reference value, call it zero. The experimenter presents the observers with many signals of different intensities, and the observer is asked to respond by making a binary choice (larger/smaller than the reference), under two different contextual conditions (before/after having a pint, with different headphones, etc.). These two conditions are expected to results in different sensitivity, and the experimenter is interested in estimating as precisely as possible the difference in sensitivity&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;. The psychometric function for one observer in the two conditions might look like this (figure below).&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://mlisi.xyz/img/psyfun.png&#34; alt=&#34;Psychometric functions. Each points is a response (0 or 1 ; some vertical jitter is added for clarity), and the lines represent the fitted psychometric model (here a cumulative Gaussian psychometric function). The two facets of the plots represent the two different conditions. It can be seen that the precision seems to be different across conditions: judgements made under condition 2 are more variable, indicating reduced sensitivity. &#34; style=&#34;width:70.0%&#34; /&gt;
+&lt;img src=&#34;/img/psyfun.png&#34; alt=&#34;Psychometric functions. Each points is a response (0 or 1 ; some vertical jitter is added for clarity), and the lines represent the fitted psychometric model (here a cumulative Gaussian psychometric function). The two facets of the plots represent the two different conditions. It can be seen that the precision seems to be different across conditions: judgements made under condition ‘2’ are more variable, indicating reduced sensitivity. &#34; style=&#34;width:70.0%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Psychometric functions. Each points is a response (0 or 1 ; some vertical jitter is added for clarity), and the lines represent the fitted psychometric model (here a cumulative Gaussian psychometric function). The two facets of the plots represent the two different conditions. It can be seen that the precision seems to be different across conditions: judgements made under condition ‘2’ are more variable, indicating reduced sensitivity. &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Our focus is on the psychometric slope, and we are not really interested in measuring the lapse rate; however it is still important to take lapses into account: it has been shown that not accounting for lapses can have a large influence on the estimates of the slope &lt;span class=&#34;citation&#34;&gt;(Wichmann and Hill 2001)&lt;/span&gt;.&lt;/p&gt;
 &lt;div id=&#34;the-problem-with-lapses&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;The problem with lapses&lt;/h3&gt;
-&lt;p&gt;Different observer may lapse at quite different rates, and for some of them the lapse rate is probably so small that can be considered negligible. Also, we usually don’t have hypothesis about lapses, and about whether they should or should not vary across conditions. We can base our analysis on different assumptions about when the observers may have attention lapses:&lt;/p&gt;
+&lt;p&gt;Different observer may lapse at quite different rates, and for some of them the lapse rate is probably so small that can be considered negligible. Also, we usually don’t have hypothesis about lapses, and about whether they should or should not vary across conditions.
+We can base our analysis on different assumptions about when the observers may have attention lapses:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;they may never lapse (or they do so with a small, negligible frequency);&lt;/li&gt;
 &lt;li&gt;they may lapse at a fairly large rate, but the rate is assumed constant across conditions (reasonable, especially if conditions are randomly interleaved);&lt;/li&gt;
 &lt;li&gt;they may lapse with variable rate across conditions.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;These assumptions will lead to three different psychometric models. The number can increase if we consider also different functional forms of the relationship between stimulus and choice; here for simplicity I will consider only psychometric models based on the cumulative Gaussian function (equivalent to a &lt;em&gt;probit&lt;/em&gt; analysis), &lt;span class=&#34;math inline&#34;&gt;\(\Phi (\frac{x-\mu}{\sigma}) = \frac{1}{2}\left[ {1 + {\rm{erf}}\left( {\frac{{x - \mu }}{{\sigma \sqrt 2 }}} \right)} \right]\)&lt;/span&gt;, where the mean &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; woud correspond to the threshold parameter, &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; to the slope, and &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; is the stimulus intensity. In our case the first assumption (&lt;em&gt;zero lapses&lt;/em&gt;) would lead to the simplest psychometric model &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;These assumptions will lead to three different psychometric models. The number can increase if we consider also different functional forms of the relationship between stimulus and choice; here for simplicity I will consider only psychometric models based on the cumulative Gaussian function (equivalent to a &lt;em&gt;probit&lt;/em&gt; analysis),
+&lt;span class=&#34;math inline&#34;&gt;\(\Phi (\frac{x-\mu}{\sigma}) = \frac{1}{2}\left[ {1 + {\rm{erf}}\left( {\frac{{x - \mu }}{{\sigma \sqrt 2 }}} \right)} \right]\)&lt;/span&gt;,
+where the mean &lt;span class=&#34;math inline&#34;&gt;\(\mu\)&lt;/span&gt; woud correspond to the threshold parameter, &lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; to the slope, and &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; is the stimulus intensity.
+In our case the first assumption (&lt;em&gt;zero lapses&lt;/em&gt;) would lead to the simplest psychometric model
+&lt;span class=&#34;math display&#34;&gt;\[
 \Psi (x, \mu_i, \sigma_i)= \Phi (\frac{x-\mu_i}{\sigma_i})
-\]&lt;/span&gt; where the subscript &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; indicates that the values of both mean &lt;span class=&#34;math inline&#34;&gt;\(\mu_i\)&lt;/span&gt; and slope &lt;span class=&#34;math inline&#34;&gt;\(\sigma_i\)&lt;/span&gt; are specific to the condition &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;. The second assumption (&lt;em&gt;fixed lapse rate&lt;/em&gt;) could correspond to the model &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+where the subscript &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt; indicates that the values of both mean &lt;span class=&#34;math inline&#34;&gt;\(\mu_i\)&lt;/span&gt; and slope &lt;span class=&#34;math inline&#34;&gt;\(\sigma_i\)&lt;/span&gt; are specific to the condition &lt;span class=&#34;math inline&#34;&gt;\(i\)&lt;/span&gt;.
+The second assumption (&lt;em&gt;fixed lapse rate&lt;/em&gt;) could correspond to the model
+&lt;span class=&#34;math display&#34;&gt;\[
 \Psi (x, \mu_i, \sigma_i, \lambda)= \lambda + (1-2\lambda) \Phi (\frac{x-\mu_i}{\sigma_i})
-\]&lt;/span&gt; where the parameter &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; correspond to the probability of the observer making a random error. Note that this is assumed to be fixed with respect to the condition (no subscript). Finally the last assumption (&lt;em&gt;variable lapse rate&lt;/em&gt;) would suggests the model &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+where the parameter &lt;span class=&#34;math inline&#34;&gt;\(\lambda\)&lt;/span&gt; correspond to the probability of the observer making a random error. Note that this is assumed to be fixed with respect to the condition (no subscript).
+Finally the last assumption (&lt;em&gt;variable lapse rate&lt;/em&gt;) would suggests the model
+&lt;span class=&#34;math display&#34;&gt;\[
 \Psi (x, \mu_i, \sigma_i, \lambda_i)= \lambda_i + (1-2\lambda_i) \Phi (\frac{x-\mu_i}{\sigma_i})
-\]&lt;/span&gt; where all the parameters are allowed to vary between conditions.&lt;/p&gt;
+\]&lt;/span&gt;
+where all the parameters are allowed to vary between conditions.&lt;/p&gt;
 &lt;p&gt;We have thus three different models, but we haven’t any prior information to decide which model is more likely to be correct in our case. Also, we acknowledge the fact that there are individual differences and each observer in our sample may conform to one of the three assumptions with equal probability. Hence, ideally, we would like to find a way to deal with lapses - and find the best estimates of the slope values &lt;span class=&#34;math inline&#34;&gt;\(\sigma_i\)&lt;/span&gt; without committing to one of the three models.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;multi-model-inference&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Multi-model inference&lt;/h1&gt;
-&lt;p&gt;One possible solution to this problem is provided by a &lt;em&gt;multi-model&lt;/em&gt;, or model averaging, approach &lt;span class=&#34;citation&#34;&gt;(Burnham and Anderson 2002)&lt;/span&gt;. This requires calculating the &lt;a href=&#34;https://en.wikipedia.org/wiki/Akaike_information_criterion&#34;&gt;AIC (Akaike Information Criterion)&lt;/a&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnoteRef&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; for each model and subjects, and then combine the estimates according to the Akaike weights of each model. To compute the Akaike weights one typically proceed by first transforming them into differences with respect to the AIC of the best candidate model (i.e. the one with lower AIC) &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;One possible solution to this problem is provided by a &lt;em&gt;multi-model&lt;/em&gt;, or model averaging, approach &lt;span class=&#34;citation&#34;&gt;(Burnham and Anderson 2002)&lt;/span&gt;. This requires calculating the &lt;a href=&#34;https://en.wikipedia.org/wiki/Akaike_information_criterion&#34;&gt;AIC (Akaike Information Criterion)&lt;/a&gt;&lt;a href=&#34;#fn3&#34; class=&#34;footnote-ref&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; for each model and subjects, and then combine the estimates according to the Akaike weights of each model. To compute the Akaike weights one typically proceed by first transforming them into differences with respect to the AIC of the best candidate model (i.e. the one with lower AIC)
+&lt;span class=&#34;math display&#34;&gt;\[
 {\Delta _m} = {\rm{AI}}{{\rm{C}}_m} - \min {\rm{AIC}}
-\]&lt;/span&gt; From the differences in AIC, we can obtain an estimate of the relative likelihood of the model &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; given the data &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+From the differences in AIC, we can obtain an estimate of the relative likelihood of the model &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; given the data
+&lt;span class=&#34;math display&#34;&gt;\[
 \mathcal{L} \left( {m|{\rm{data}}} \right) \propto \exp \left( { - \frac{1}{2}{\Delta _m}} \right)
-\]&lt;/span&gt; Then, to obtain the Akaike weight &lt;span class=&#34;math inline&#34;&gt;\(w_m\)&lt;/span&gt; of the model &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt;, the relative likelihoods are normalized (divided by their sum) &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+Then, to obtain the Akaike weight &lt;span class=&#34;math inline&#34;&gt;\(w_m\)&lt;/span&gt; of the model &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt;, the relative likelihoods are normalized (divided by their sum)
+&lt;span class=&#34;math display&#34;&gt;\[
 {w_m} = \frac{{\exp \left( { - \frac{1}{2}{\Delta _m}} \right)}}{{\mathop \sum \limits_{k = 1}^K \exp \left( { - \frac{1}{2}{\Delta _k}} \right)}}
-\]&lt;/span&gt; Finally, one can compute the model-averaged estimate of the parameter&lt;a href=&#34;#fn4&#34; class=&#34;footnoteRef&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\hat {\bar \sigma}\)&lt;/span&gt;, by combining the estimate of each model according to their Akaike weight &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+Finally, one can compute the model-averaged estimate of the parameter&lt;a href=&#34;#fn4&#34; class=&#34;footnote-ref&#34; id=&#34;fnref4&#34;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;, &lt;span class=&#34;math inline&#34;&gt;\(\hat {\bar \sigma}\)&lt;/span&gt;, by combining the estimate of each model according to their Akaike weight
+&lt;span class=&#34;math display&#34;&gt;\[
 \hat {\bar \sigma} = \sum\limits_{k = 1}^K {{w_k}\hat \sigma_k } 
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;simulation-results&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Simulation results&lt;/h1&gt;
 &lt;p&gt;Model averaging seems a sensitive approach to deal with the uncertainty about which form of the model is best suited to our data. To see whether it is worth doing the extra work of fitting 3 models instead of just one, I run a simulation, where I repeatedly fit and compare the estimates of the three models, with the model-averaged estimate, for different values of sample sizes. In all the simulations, each observer is generated by randomly drawing parameters from a Gaussian distribution which summarize the distribution of the parameters in the population. Hence, I know the &lt;em&gt;true&lt;/em&gt; difference in sensitivity in the population, and by simulating and fitting the models I can test which estimating procedure is more &lt;em&gt;efficient&lt;/em&gt;. In statistics a procedure or an estimator is said to be more efficient than another one when it provides a better estimate with the same number or fewer observations. The notion of “better” clearly relies on the choice of a cost function, which for example can be the mean squared error (it is here).&lt;/p&gt;
-&lt;p&gt;Additionally, in my simulations each simulated observer could, &lt;em&gt;with equal probability&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(\frac{1}{3}\)&lt;/span&gt;, either never lapse, lapse with a constant rate across conditions, or lapse at a higher rate in the more difficult condition (condition ‘2’ where the judgements are less precise). The lapse rates were draw uniformly from the interval [0.01, 0.1], and could get as high as 0.15 in condition ‘2’. Each simulated observer ran 250 trials per condition (similar to the figure at the top of this page). I simulated dataset from &lt;span class=&#34;math inline&#34;&gt;\(n=5\)&lt;/span&gt; to &lt;span class=&#34;math inline&#34;&gt;\(n=50\)&lt;/span&gt;, using 100 iterations for each sample size (only 85 in the case of &lt;span class=&#34;math inline&#34;&gt;\(n=50\)&lt;/span&gt; because the simulation was taking too long and I needed my laptop for other stuff). For simplicity I assumed that the different parameters were not correlated across observers&lt;a href=&#34;#fn5&#34; class=&#34;footnoteRef&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;. I also had my simulated observer using the same criterion across the two conditions, although this may not necessarily be true. The quantity of interest here is the difference in slope between the two condition, that is &lt;span class=&#34;math inline&#34;&gt;\(\sigma_2 - \sigma_1\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;First, I examined the mean squared error of each of the models’ estimates, and of the model-averaged estimate. This is the average squared difference between the estimate and the true value. &lt;img src=&#34;http://mlisi.xyz/img/mse.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt; The results shows (unless my color blindness fooled me) that the model-averaged estimate attains always the smaller error. Note also that the error tend to decrease exponentially with the sample size. Interestingly, the worst model seems to be the one that allow for the lapses to vary across conditions. This may be because the change in the lapse rate across condition was - when present - relatively small, but also because this model has a larger number of parameters, and thus produces more variable estimates (that is with higher standard errors) than smaller model. Indeed, given that I know the ‘true’ value of the parameres in this simulation settings, I can divide the error into the two subcomponents of variance and bias (see &lt;a href=&#34;http://scott.fortmann-roe.com/docs/BiasVariance.html&#34;&gt;this page&lt;/a&gt; for a nice introduction to the bias-variance tradeoff). The bias is the difference between the expected estimate (averaged over many repetitions/iterations) of the same model and the true quantity that we want to estimate. The variance is simply the variability of the model estimates, i.e. how much they oscillate around the expected estimate.&lt;/p&gt;
-&lt;p&gt;Here is a plot of the variance. Indeed it can be seen that the variable-lapse model, which has more parameters, is the one that produces more variable estimates. There is however little difference between the other two models’ and the multi-model estimates &lt;img src=&#34;http://mlisi.xyz/img/variance.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;And here is the bias. This is very satisfactory, as it shows that while all individual models produced biased estimates, the bias of the model-averaged estimates is zero, or very close to zero. &lt;img src=&#34;http://mlisi.xyz/img/bias.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt; In sum, by averaging models of different levels of complexity according to their relative likelihood, I was able to simultaneously minimize the variance and decrease the bias of my estimates, and achieve a greater efficiency. Model averaging seems to be the ideal procedure in this specific settings where the observer would belong to one of the three categories (i.e., she/he would conform to one of the three assumptions) with equal probability. However I think (although I haven’t checked) that it would perform well even in cases where a single “type” of observers is largely predominant over the other.&lt;/p&gt;
+&lt;p&gt;Additionally, in my simulations each simulated observer could, &lt;em&gt;with equal probability&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(\frac{1}{3}\)&lt;/span&gt;, either never lapse, lapse with a constant rate across conditions, or lapse at a higher rate in the more difficult condition (condition ‘2’ where the judgements are less precise). The lapse rates were draw uniformly from the interval [0.01, 0.1], and could get as high as 0.15 in condition ‘2’. Each simulated observer ran 250 trials per condition (similar to the figure at the top of this page). I simulated dataset from &lt;span class=&#34;math inline&#34;&gt;\(n=5\)&lt;/span&gt; to &lt;span class=&#34;math inline&#34;&gt;\(n=50\)&lt;/span&gt;, using 100 iterations for each sample size (only 85 in the case of &lt;span class=&#34;math inline&#34;&gt;\(n=50\)&lt;/span&gt; because the simulation was taking too long and I needed my laptop for other stuff). For simplicity I assumed that the different parameters were not correlated across observers&lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;. I also had my simulated observer using the same criterion across the two conditions, although this may not necessarily be true.
+The quantity of interest here is the difference in slope between the two condition, that is &lt;span class=&#34;math inline&#34;&gt;\(\sigma_2 - \sigma_1\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;First, I examined the mean squared error of each of the models’ estimates, and of the model-averaged estimate. This is the average squared difference between the estimate and the true value.
+&lt;img src=&#34;/img/mse.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt;
+The results shows (unless my color blindness fooled me) that the model-averaged estimate attains always the smaller error. Note also that the error tend to decrease exponentially with the sample size. Interestingly, the worst model seems to be the one that allow for the lapses to vary across conditions. This may be because the change in the lapse rate across condition was - when present - relatively small, but also because this model has a larger number of parameters, and thus produces more variable estimates (that is with higher standard errors) than smaller model. Indeed, given that I know the ‘true’ value of the parameres in this simulation settings, I can divide the error into the two subcomponents of variance and bias (see &lt;a href=&#34;http://scott.fortmann-roe.com/docs/BiasVariance.html&#34;&gt;this page&lt;/a&gt; for a nice introduction to the bias-variance tradeoff). The bias is the difference between the expected estimate (averaged over many repetitions/iterations) of the same model and the true quantity that we want to estimate. The variance is simply the variability of the model estimates, i.e. how much they oscillate around the expected estimate.&lt;/p&gt;
+&lt;p&gt;Here is a plot of the variance. Indeed it can be seen that the variable-lapse model, which has more parameters, is the one that produces more variable estimates. There is however little difference between the other two models’ and the multi-model estimates
+&lt;img src=&#34;/img/variance.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;And here is the bias. This is very satisfactory, as it shows that while all individual models produced biased estimates, the bias of the model-averaged estimates is zero, or very close to zero.
+&lt;img src=&#34;/img/bias.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt;
+In sum, by averaging models of different levels of complexity according to their relative likelihood, I was able to simultaneously minimize the variance and decrease the bias of my estimates, and achieve a greater efficiency. Model averaging seems to be the ideal procedure in this specific settings where the observer would belong to one of the three categories (i.e., she/he would conform to one of the three assumptions) with equal probability. However I think (although I haven’t checked) that it would perform well even in cases where a single “type” of observers is largely predominant over the other.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;code&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Code&lt;/h1&gt;
@@ -681,21 +743,21 @@ ggplot(ares,aes(x=n_subjects, y=value, color=variable))+geom_hline(yintercept=0,
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-Burnham2002&#34;&gt;
-&lt;p&gt;Burnham, Kenneth P., and David R. Anderson. 2002. &lt;em&gt;Model Selection and Multimodel Inference: A Practical Information-Theoretic Approach&lt;/em&gt;. 2nd editio. New York, US: Springer New York. doi:&lt;a href=&#34;https://doi.org/10.1007/b97636&#34;&gt;10.1007/b97636&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Burnham, Kenneth P., and David R. Anderson. 2002. &lt;em&gt;Model Selection and Multimodel Inference: A Practical Information-Theoretic Approach&lt;/em&gt;. 2nd editio. New York, US: Springer New York. &lt;a href=&#34;https://doi.org/10.1007/b97636&#34;&gt;https://doi.org/10.1007/b97636&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-Wichmann2001&#34;&gt;
-&lt;p&gt;Wichmann, F a, and N J Hill. 2001. “The psychometric function: I. Fitting, sampling, and goodness of fit.” &lt;em&gt;Perception &amp;amp; Psychophysics&lt;/em&gt; 63 (8): 1293–1313. &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/11800458&#34; class=&#34;uri&#34;&gt;http://www.ncbi.nlm.nih.gov/pubmed/11800458&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Wichmann, F a, and N J Hill. 2001. “The psychometric function: I. Fitting, sampling, and goodness of fit.” &lt;em&gt;Perception &amp;amp; Psychophysics&lt;/em&gt; 63 (8): 1293–1313. &lt;a href=&#34;http://www.ncbi.nlm.nih.gov/pubmed/11800458&#34;&gt;http://www.ncbi.nlm.nih.gov/pubmed/11800458&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;The psychometric function is a statistical model that predicts the probabilities of the observer response (e.g. “stimulus A has a larger/smaller instensity than stimulus B”), conditional to the stimulus and the experimental condition.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;A good experimenter should do that (estimate the size of the difference). A “bad” experimenter might just be interested in obtaining &lt;span class=&#34;math inline&#34;&gt;\(p&amp;lt;.05\)&lt;/span&gt;. See &lt;a href=&#34;http://cerco.ups-tlse.fr/-Charte-statistique-?lang=fr&#34;&gt;this page&lt;/a&gt;, compiled by Jean-Michel Hupé, for some references and guidelines against &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;-hacking and the misuse of statistical tools in neuroscience.&lt;a href=&#34;#fnref2&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;The AIC of a model is computed as &lt;span class=&#34;math inline&#34;&gt;\({\rm{AIC}} = 2k - 2\log \left( \mathcal{L} \right)\)&lt;/span&gt;, where &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; is the number of free parameters, and &lt;span class=&#34;math inline&#34;&gt;\(\mathcal{L}\)&lt;/span&gt; is the maximum value of the likelihood function of that model.&lt;a href=&#34;#fnref3&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Here it is a parameter common to all models. See the book of Burnham &amp;amp; Andersen for methods to methods to deal with different situations &lt;span class=&#34;citation&#34;&gt;(Burnham and Anderson 2002)&lt;/span&gt;.&lt;a href=&#34;#fnref4&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;Such correlation when present can be modelled using a mixed-effect approach. See my tutorial on mized-effects model in the&lt;a href=&#34;http://mattelisi.github.io/#notes&#34;&gt;‘misc’&lt;/a&gt; section of this website.&lt;a href=&#34;#fnref5&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;The psychometric function is a statistical model that predicts the probabilities of the observer response (e.g. “stimulus A has a larger/smaller instensity than stimulus B”), conditional to the stimulus and the experimental condition.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;A good experimenter should do that (estimate the size of the difference). A “bad” experimenter might just be interested in obtaining &lt;span class=&#34;math inline&#34;&gt;\(p&amp;lt;.05\)&lt;/span&gt;. See &lt;a href=&#34;http://cerco.ups-tlse.fr/-Charte-statistique-?lang=fr&#34;&gt;this page&lt;/a&gt;, compiled by Jean-Michel Hupé, for some references and guidelines against &lt;span class=&#34;math inline&#34;&gt;\(p\)&lt;/span&gt;-hacking and the misuse of statistical tools in neuroscience.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;The AIC of a model is computed as &lt;span class=&#34;math inline&#34;&gt;\({\rm{AIC}} = 2k - 2\log \left( \mathcal{L} \right)\)&lt;/span&gt;, where &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; is the number of free parameters, and &lt;span class=&#34;math inline&#34;&gt;\(\mathcal{L}\)&lt;/span&gt; is the maximum value of the likelihood function of that model.&lt;a href=&#34;#fnref3&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn4&#34;&gt;&lt;p&gt;Here it is a parameter common to all models. See the book of Burnham &amp;amp; Andersen for methods to methods to deal with different situations &lt;span class=&#34;citation&#34;&gt;(Burnham and Anderson 2002)&lt;/span&gt;.&lt;a href=&#34;#fnref4&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn5&#34;&gt;&lt;p&gt;Such correlation when present can be modelled using a mixed-effect approach. See my tutorial on mized-effects model in the&lt;a href=&#34;http://mattelisi.github.io/#notes&#34;&gt;‘misc’&lt;/a&gt; section of this website.&lt;a href=&#34;#fnref5&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

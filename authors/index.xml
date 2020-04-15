@@ -2,292 +2,289 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors | Matteo Lisi</title>
-    <link>http://mlisi.xyz/authors/</link>
-      <atom:link href="http://mlisi.xyz/authors/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/</link>
+      <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>Authors</title>
-      <link>http://mlisi.xyz/authors/</link>
+      <link>/authors/</link>
     </image>
     
     <item>
-      <title>Joshua A. Solomon</title>
-      <link>http://mlisi.xyz/authors/joshua-a.-solomon/</link>
-      <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/joshua-a.-solomon/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Matteo Lisi</title>
-      <link>http://mlisi.xyz/authors/matteo-lisi/</link>
-      <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/matteo-lisi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Michael J. Morgan</title>
-      <link>http://mlisi.xyz/authors/michael-j.-morgan/</link>
-      <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/michael-j.-morgan/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Gerrit Maus</title>
-      <link>http://mlisi.xyz/authors/gerrit-maus/</link>
-      <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/gerrit-maus/</guid>
+      <link>/authors/gerrit-maus/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/authors/gerrit-maus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hannah Goh</title>
-      <link>http://mlisi.xyz/authors/hannah-goh/</link>
-      <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/hannah-goh/</guid>
+      <link>/authors/hannah-goh/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/authors/hannah-goh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Joshua A. Solomon</title>
+      <link>/authors/joshua-a.-solomon/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/authors/joshua-a.-solomon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matteo Lisi</title>
+      <link>/authors/matteo-lisi/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/authors/matteo-lisi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Michael J. Morgan</title>
+      <link>/authors/michael-j.-morgan/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/authors/michael-j.-morgan/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gilles Pourtois</title>
-      <link>http://mlisi.xyz/authors/gilles-pourtois/</link>
+      <link>/authors/gilles-pourtois/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/gilles-pourtois/</guid>
+      <guid>/authors/gilles-pourtois/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mario Bonato</title>
-      <link>http://mlisi.xyz/authors/mario-bonato/</link>
+      <link>/authors/mario-bonato/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/mario-bonato/</guid>
+      <guid>/authors/mario-bonato/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sara Pegoraro</title>
-      <link>http://mlisi.xyz/authors/sara-pegoraro/</link>
+      <link>/authors/sara-pegoraro/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/sara-pegoraro/</guid>
+      <guid>/authors/sara-pegoraro/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Harry Haladjian</title>
-      <link>http://mlisi.xyz/authors/harry-haladjian/</link>
+      <link>/authors/harry-haladjian/</link>
       <pubDate>Sun, 04 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/harry-haladjian/</guid>
+      <guid>/authors/harry-haladjian/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Patrick Cavanagh</title>
-      <link>http://mlisi.xyz/authors/patrick-cavanagh/</link>
+      <link>/authors/patrick-cavanagh/</link>
       <pubDate>Sun, 04 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/patrick-cavanagh/</guid>
+      <guid>/authors/patrick-cavanagh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Delphine Massendari</title>
-      <link>http://mlisi.xyz/authors/delphine-massendari/</link>
+      <link>/authors/delphine-massendari/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/delphine-massendari/</guid>
+      <guid>/authors/delphine-massendari/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Thérèse Collins</title>
-      <link>http://mlisi.xyz/authors/therese-collins/</link>
+      <link>/authors/therese-collins/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/therese-collins/</guid>
+      <guid>/authors/therese-collins/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Andrei Gorea</title>
-      <link>http://mlisi.xyz/authors/andrei-gorea/</link>
+      <link>/authors/andrei-gorea/</link>
       <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/andrei-gorea/</guid>
+      <guid>/authors/andrei-gorea/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gianluigi Mongillo</title>
-      <link>http://mlisi.xyz/authors/gianluigi-mongillo/</link>
+      <link>/authors/gianluigi-mongillo/</link>
       <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/gianluigi-mongillo/</guid>
+      <guid>/authors/gianluigi-mongillo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>David Whitney</title>
-      <link>http://mlisi.xyz/authors/david-whitney/</link>
+      <link>/authors/david-whitney/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/david-whitney/</guid>
+      <guid>/authors/david-whitney/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Marianne Dyuck</title>
-      <link>http://mlisi.xyz/authors/marianne-dyuck/</link>
+      <link>/authors/marianne-dyuck/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/marianne-dyuck/</guid>
+      <guid>/authors/marianne-dyuck/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Marco Zorzi</title>
-      <link>http://mlisi.xyz/authors/marco-zorzi/</link>
+      <link>/authors/marco-zorzi/</link>
       <pubDate>Tue, 02 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/marco-zorzi/</guid>
+      <guid>/authors/marco-zorzi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mariagrazia Ranzini</title>
-      <link>http://mlisi.xyz/authors/mariagrazia-ranzini/</link>
+      <link>/authors/mariagrazia-ranzini/</link>
       <pubDate>Tue, 02 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/mariagrazia-ranzini/</guid>
+      <guid>/authors/mariagrazia-ranzini/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Chiara Spironelli</title>
-      <link>http://mlisi.xyz/authors/chiara-spironelli/</link>
+      <link>/authors/chiara-spironelli/</link>
       <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/chiara-spironelli/</guid>
+      <guid>/authors/chiara-spironelli/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kostantinos Priftis</title>
-      <link>http://mlisi.xyz/authors/kostantinos-priftis/</link>
+      <link>/authors/kostantinos-priftis/</link>
       <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/kostantinos-priftis/</guid>
+      <guid>/authors/kostantinos-priftis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Barbara Treccani</title>
-      <link>http://mlisi.xyz/authors/barbara-treccani/</link>
+      <link>/authors/barbara-treccani/</link>
       <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/barbara-treccani/</guid>
+      <guid>/authors/barbara-treccani/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Elvio Blini</title>
-      <link>http://mlisi.xyz/authors/elvio-blini/</link>
+      <link>/authors/elvio-blini/</link>
       <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/elvio-blini/</guid>
+      <guid>/authors/elvio-blini/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Konstantinos Priftis</title>
-      <link>http://mlisi.xyz/authors/konstantinos-priftis/</link>
+      <link>/authors/konstantinos-priftis/</link>
       <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/konstantinos-priftis/</guid>
+      <guid>/authors/konstantinos-priftis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Marco Pitteri</title>
-      <link>http://mlisi.xyz/authors/marco-pitteri/</link>
+      <link>/authors/marco-pitteri/</link>
       <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/marco-pitteri/</guid>
+      <guid>/authors/marco-pitteri/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Andrea Desantis</title>
-      <link>http://mlisi.xyz/authors/andrea-desantis/</link>
+      <link>/authors/andrea-desantis/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/andrea-desantis/</guid>
+      <guid>/authors/andrea-desantis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Florian Waszak</title>
-      <link>http://mlisi.xyz/authors/florian-waszak/</link>
+      <link>/authors/florian-waszak/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/florian-waszak/</guid>
+      <guid>/authors/florian-waszak/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pascal Mamassian</title>
-      <link>http://mlisi.xyz/authors/pascal-mamassian/</link>
+      <link>/authors/pascal-mamassian/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/pascal-mamassian/</guid>
+      <guid>/authors/pascal-mamassian/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Michele De Filippo De Grazia</title>
-      <link>http://mlisi.xyz/authors/michele-de-filippo-de-grazia/</link>
+      <link>/authors/michele-de-filippo-de-grazia/</link>
       <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/michele-de-filippo-de-grazia/</guid>
+      <guid>/authors/michele-de-filippo-de-grazia/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Simone Cutini</title>
-      <link>http://mlisi.xyz/authors/simone-cutini/</link>
+      <link>/authors/simone-cutini/</link>
       <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/simone-cutini/</guid>
+      <guid>/authors/simone-cutini/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Casarotti Marco</title>
-      <link>http://mlisi.xyz/authors/casarotti-marco/</link>
+      <link>/authors/casarotti-marco/</link>
       <pubDate>Tue, 29 May 2012 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/casarotti-marco/</guid>
+      <guid>/authors/casarotti-marco/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lisi Matteo</title>
-      <link>http://mlisi.xyz/authors/lisi-matteo/</link>
+      <link>/authors/lisi-matteo/</link>
       <pubDate>Tue, 29 May 2012 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/lisi-matteo/</guid>
+      <guid>/authors/lisi-matteo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Umiltà Carlo</title>
-      <link>http://mlisi.xyz/authors/umilta-carlo/</link>
+      <link>/authors/umilta-carlo/</link>
       <pubDate>Tue, 29 May 2012 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/umilta-carlo/</guid>
+      <guid>/authors/umilta-carlo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Zorzi Marco</title>
-      <link>http://mlisi.xyz/authors/zorzi-marco/</link>
+      <link>/authors/zorzi-marco/</link>
       <pubDate>Tue, 29 May 2012 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/zorzi-marco/</guid>
+      <guid>/authors/zorzi-marco/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>http://mlisi.xyz/authors/admin/</link>
+      <link>/authors/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/admin/</guid>
-      <description>&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;Hi, this is my attempt at blogging. I will use this space to post ideas and my random thoughts about science, statistics, politics, and share notes about what I am learning (see &lt;a href=&#34;https://mattelisi.github.io/#posts&#34; target=&#34;_blank&#34;&gt;blog&lt;/a&gt; and &lt;a href=&#34;https://mattelisi.github.io/#misc&#34; target=&#34;_blank&#34;&gt;misc&lt;/a&gt;). All views my own, except those I have nicked from cleverer people.&lt;/p&gt;
-
-&lt;p&gt;I am a Lecturer at the &lt;a href=&#34;https://www.essex.ac.uk/departments/psychology&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Department of Psychology of the University of Essex&lt;/em&gt;&lt;/a&gt;. I use psychophysics, eye-tracking, and computational modelling to investigate visual perception, broadly defined as the ability to assimilate information contained in visible light. I am also interested in decision-making and cognitive processes, both in adults and during development.&lt;/p&gt;
-
-&lt;p&gt;Find my publications on &lt;a href=&#34;https://scholar.google.com/citations?user=IabbkbEAAAAJ&amp;amp;hl=en&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Scholar&lt;/em&gt;&lt;/a&gt; or &lt;a href=&#34;https://www.researchgate.net/profile/Matteo_Lisi&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;RG&lt;/em&gt;&lt;/a&gt;. I started sharing all my data and code on &lt;a href=&#34;https://github.com/mattelisi&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;https://osf.io/gqy5f/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;OSF&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+      <guid>/authors/admin/</guid>
+      <description>&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Hi, this is my attempt at blogging. I will use this space to post ideas and my random thoughts about science, statistics, politics, and share notes about what I am learning (see &lt;a href=&#34;https://mattelisi.github.io/#posts&#34;&gt;blog&lt;/a&gt; and &lt;a href=&#34;https://mattelisi.github.io/#misc&#34;&gt;misc&lt;/a&gt;). All views my own, except those I have nicked from cleverer people.&lt;/p&gt;
+&lt;p&gt;I am a Lecturer at the &lt;a href=&#34;https://www.essex.ac.uk/departments/psychology&#34;&gt;&lt;em&gt;Department of Psychology of the University of Essex&lt;/em&gt;&lt;/a&gt;. I use psychophysics, eye-tracking, and computational modelling to investigate visual perception, broadly defined as the ability to assimilate information contained in visible light. I am also interested in decision-making and cognitive processes, both in adults and during development.&lt;/p&gt;
+&lt;p&gt;Find my publications on &lt;a href=&#34;https://scholar.google.com/citations?user=IabbkbEAAAAJ&amp;amp;hl=en&#34;&gt;&lt;em&gt;Scholar&lt;/em&gt;&lt;/a&gt; or &lt;a href=&#34;https://www.researchgate.net/profile/Matteo_Lisi&#34;&gt;&lt;em&gt;RG&lt;/em&gt;&lt;/a&gt;. I started sharing all my data and code on &lt;a href=&#34;https://github.com/mattelisi&#34;&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;https://osf.io/gqy5f/&#34;&gt;&lt;strong&gt;OSF&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

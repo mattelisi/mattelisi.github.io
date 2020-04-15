@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bayesian data analysis | Matteo Lisi</title>
-    <link>http://mlisi.xyz/tags/bayesian-data-analysis/</link>
-      <atom:link href="http://mlisi.xyz/tags/bayesian-data-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/bayesian-data-analysis/</link>
+      <atom:link href="/tags/bayesian-data-analysis/index.xml" rel="self" type="application/rss+xml" />
     <description>Bayesian data analysis</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Fri, 25 Jan 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>Bayesian data analysis</title>
-      <link>http://mlisi.xyz/tags/bayesian-data-analysis/</link>
+      <link>/tags/bayesian-data-analysis/</link>
     </image>
     
     <item>
       <title>Bayesian model selection at the group level</title>
-      <link>http://mlisi.xyz/post/bms/</link>
+      <link>/post/bms/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/bms/</guid>
+      <guid>/post/bms/</guid>
       <description>
 
 
@@ -25,22 +25,29 @@
 &lt;p&gt;In experimental psychology and neuroscience the classical approach when comparing different models that make quantitative predictions about the behavior of participants is to aggregate the predictive ability of the model (e.g. as quantified by Akaike Information criterion) across participants, and then see which one provide on average the best performance. Although correct, this approach neglect the possibility that different participants might use different strategies that are best described by alternative, competing models. To account for this, Stephan et al. &lt;span class=&#34;citation&#34;&gt;(Stephan et al. 2009)&lt;/span&gt; proposed a more conservative approach where models are treated as random effects that could differ between subjects and have a fixed (unknown) distribution in the population. The relevant statistical quantity is the frequency with which any model prevails in the population. Note that this is different from the definition of random-effects in classical statistic where random effects models have multiple sources of variation, e.g. within- and between- subject variance. An useful and popular way to summarize the results of this analysis is by reporting the model’s &lt;em&gt;exceedance probabilities&lt;/em&gt;, which measures how likely it is that any given model is more frequent than all other models in the set. The following exposition is largerly based on Stephan et al’s paper &lt;span class=&#34;citation&#34;&gt;(Stephan et al. 2009)&lt;/span&gt;.&lt;/p&gt;
 &lt;div id=&#34;model-evidence&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Model evidence&lt;/h1&gt;
-&lt;p&gt;Let’s say we have an experiment with &lt;span class=&#34;math inline&#34;&gt;\(\left(1,\dots,N\right)\)&lt;/span&gt; participants. Their performance is quantitatively predicted by a set &lt;span class=&#34;math inline&#34;&gt;\(\left(1,\dots,K\right)\)&lt;/span&gt; competing models. The behaviour of any subject &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; can be fit by the model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; by finding the value(s) of the parameter(s) &lt;span class=&#34;math inline&#34;&gt;\(\theta_k\)&lt;/span&gt; that maximize the likelihood of the data &lt;span class=&#34;math inline&#34;&gt;\(y_n\)&lt;/span&gt; under the model. In a fully Bayesian setting each unknown parameter would have a prior probability distribution, and the quantity of choice ofr comparing the goodness of fit of the model is the marginal likelihood, that is &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;Let’s say we have an experiment with &lt;span class=&#34;math inline&#34;&gt;\(\left(1,\dots,N\right)\)&lt;/span&gt; participants. Their performance is quantitatively predicted by a set &lt;span class=&#34;math inline&#34;&gt;\(\left(1,\dots,K\right)\)&lt;/span&gt; competing models. The behaviour of any subject &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; can be fit by the model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; by finding the value(s) of the parameter(s) &lt;span class=&#34;math inline&#34;&gt;\(\theta_k\)&lt;/span&gt; that maximize the likelihood of the data &lt;span class=&#34;math inline&#34;&gt;\(y_n\)&lt;/span&gt; under the model. In a fully Bayesian setting each unknown parameter would have a prior probability distribution, and the quantity of choice ofr comparing the goodness of fit of the model is the marginal likelihood, that is
+&lt;span class=&#34;math display&#34;&gt;\[
   p \left(y_n \mid k \right) = \int p\left(y_n \mid k, \theta_k \right) \, p\left(\theta_k \right) d\theta.
-\]&lt;/span&gt; By integrating over the prior probability of parameters the marginal likelihood provide a measure of the evidence in favour of a specific model while taking into account the complexity of the model. We might also do something simpler and approximate the model evidence using e.g. the Akaike information criterion.&lt;/p&gt;
+\]&lt;/span&gt;
+By integrating over the prior probability of parameters the marginal likelihood provide a measure of the evidence in favour of a specific model while taking into account the complexity of the model. We might also do something simpler and approximate the model evidence using e.g. the Akaike information criterion.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;models-as-random-effects&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Models as random effects&lt;/h1&gt;
-&lt;p&gt;We are interested in finding which model does better at predicting behavior, however we allow for different participants to use different strategies which can be represented by different models. To achieve that we treat the model as random effects and we assume that the frequency or probability of models in the population, &lt;span class=&#34;math inline&#34;&gt;\((r_1, \dots, r_K)\)&lt;/span&gt;, is described by a Dirichlet distribution with parameters &lt;span class=&#34;math inline&#34;&gt;\(\boldsymbol{\alpha } = \alpha_1, \dots, \alpha_k\)&lt;/span&gt;, &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;We are interested in finding which model does better at predicting behavior, however we allow for different participants to use different strategies which can be represented by different models. To achieve that we treat the model as random effects and we assume that the frequency or probability of models in the population, &lt;span class=&#34;math inline&#34;&gt;\((r_1, \dots, r_K)\)&lt;/span&gt;, is described by a Dirichlet distribution with parameters &lt;span class=&#34;math inline&#34;&gt;\(\boldsymbol{\alpha } = \alpha_1, \dots, \alpha_k\)&lt;/span&gt;,
+&lt;span class=&#34;math display&#34;&gt;\[
 \begin{align}
 p\left(r \mid  \boldsymbol{\alpha } \right) &amp;amp; = \text{Dir} \left(r, \boldsymbol{ \alpha } \right) \\
 &amp;amp; = \frac{1}{\mathbf{B} \left(\boldsymbol{ \alpha }  \right)} \prod_{i=1}^K r_i^{\alpha_i -1} \nonumber
 \end{align}.
-\]&lt;/span&gt; Where the normalizing constant &lt;span class=&#34;math inline&#34;&gt;\(\mathbf{B} \left(\boldsymbol{ \alpha } \right)\)&lt;/span&gt; is the multivariate Beta function. The probabilities &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt; generates ‘switches’ or indicator variables &lt;span class=&#34;math inline&#34;&gt;\(m_n = m_1, \dots, m_N\)&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(m \in \left \{ 0, 1\right \}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\sum_1^K m_{nk}=1\)&lt;/span&gt;. These indicator variables prescribe the model for the subjects &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;, $ p(m_{nk}=1)=r_k$. Given the probabilities &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt;, the indicator variables have thus a multinomial distribution, that is &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+Where the normalizing constant &lt;span class=&#34;math inline&#34;&gt;\(\mathbf{B} \left(\boldsymbol{ \alpha } \right)\)&lt;/span&gt; is the multivariate Beta function. The probabilities &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt; generates ‘switches’ or indicator variables &lt;span class=&#34;math inline&#34;&gt;\(m_n = m_1, \dots, m_N\)&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(m \in \left \{ 0, 1\right \}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\sum_1^K m_{nk}=1\)&lt;/span&gt;. These indicator variables prescribe the model for the subjects &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt;, $ p(m_{nk}=1)=r_k$.
+Given the probabilities &lt;span class=&#34;math inline&#34;&gt;\(r\)&lt;/span&gt;, the indicator variables have thus a multinomial distribution, that is
+&lt;span class=&#34;math display&#34;&gt;\[
 p\left(m_n \mid  \mathbf{r} \right) =  \prod_{k=1}^K r_k^{m_{nk}}.
-\]&lt;/span&gt; The graphical model that summarizes these dependencies is shown the following graph:&lt;/p&gt;
+\]&lt;/span&gt;
+The graphical model that summarizes these dependencies is shown the following graph:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://mlisi.xyz/img/bms.png&#34; alt=&#34;&#34; style=&#34;width:50.0%&#34; /&gt;
+&lt;img src=&#34;/img/bms.png&#34; alt=&#34;&#34; style=&#34;width:50.0%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -49,14 +56,17 @@ p\left(m_n \mid  \mathbf{r} \right) =  \prod_{k=1}^K r_k^{m_{nk}}.
 &lt;p&gt;The goal is to estimate the parameters &lt;span class=&#34;math inline&#34;&gt;\(\boldsymbol{\alpha}\)&lt;/span&gt; that define the posterior distribution of model frequencies given the data, $ p ( r | y)$. To do so we need an estimate of the model evidence &lt;span class=&#34;math inline&#34;&gt;\(p \left(m_{nk}=1 \mid y_n \right)\)&lt;/span&gt;, that is the belief that the model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; generated data from subject &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt;. There are many possible approach that can be used to estimate the model evidence, either exactly or approximately. Importantly, these would need to be normalized so that they sum to one across models, so that is one were using the Akaike Information criterion, this should be transformed into Akaike weights &lt;span class=&#34;citation&#34;&gt;(Burnham and Anderson 2002)&lt;/span&gt;.&lt;/p&gt;
 &lt;div id=&#34;generative-model&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Generative model&lt;/h2&gt;
-&lt;p&gt;Given the graphical model illustrated above, the joint probability of parameters and data can be expressed as &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;Given the graphical model illustrated above, the joint probability of parameters and data can be expressed as
+&lt;span class=&#34;math display&#34;&gt;\[
 \begin{align}
 p \left( y, r, m \right) &amp;amp; = p \left( y \mid m \right) \, p \left( m \mid r \right) \, p \left( r \mid \boldsymbol{\alpha} \right) \\
 &amp;amp; = p \left( r \mid \boldsymbol{\alpha} \right) \left[ \prod_{n=1}^N p \left( y_n \mid m_n \right) \, p\left(m_n \mid r \right) \right] \nonumber \\
 &amp;amp; = \frac{1}{\mathbf{B} \left(\boldsymbol{ \alpha }  \right)} \left[ \prod_{k=1}^K r_k^{\alpha_k -1} \right] \left[ \prod_{n=1}^N p \left( y_n \mid m_n\right) \, \prod_{k=1}^K r_k^{m_{nk}} \right] \nonumber \\
 &amp;amp; = \frac{1}{\mathbf{B} \left(\boldsymbol{ \alpha }  \right)} \prod_{n=1}^N \left[ \prod_{k=1}^K \left[ p \left( y_n \mid m_{nk} \right) \, r_k \right]^{m_{nk}} \, r_k^{\alpha_k -1} \right]. \nonumber
 \end{align}
-\]&lt;/span&gt; And the log probability is &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+And the log probability is
+&lt;span class=&#34;math display&#34;&gt;\[
 \log p \left( y, r, m \right)  = - \log \mathbf{B} \left(\boldsymbol{ \alpha }  \right)
 + \sum_{n=1}^N \sum_{k=1}^K \left[ \left(\alpha_k -1 \right) \log r_k
 + m_{nk} \left( p \left( \log y_n \mid m_{nk} \right) + \log r_k\right)\right].
@@ -64,32 +74,43 @@ p \left( y, r, m \right) &amp;amp; = p \left( y \mid m \right) \, p \left( m \mi
 &lt;/div&gt;
 &lt;div id=&#34;variational-approximation&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Variational approximation&lt;/h2&gt;
-&lt;p&gt;In order to fit this hierarchical model following the variational approach one needs to define an approximate posterior distribution over model frequencies and assignments, &lt;span class=&#34;math inline&#34;&gt;\(q\left(r,m\right)\)&lt;/span&gt;, which is assumed to be adequately described by a mean-field factorisation, that is &lt;span class=&#34;math inline&#34;&gt;\(q\left(r,m\right) = q\left(r\right) \, q\left(m\right)\)&lt;/span&gt;. The two densities are proportional to the exponentiated &lt;em&gt;variational energies&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(I(m), I(r)\)&lt;/span&gt;, which are essentially the un-normalized approximated log-posterior densities, that is &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;In order to fit this hierarchical model following the variational approach one needs to define an approximate posterior distribution over model frequencies and assignments, &lt;span class=&#34;math inline&#34;&gt;\(q\left(r,m\right)\)&lt;/span&gt;, which is assumed to be adequately described by a mean-field factorisation, that is &lt;span class=&#34;math inline&#34;&gt;\(q\left(r,m\right) = q\left(r\right) \, q\left(m\right)\)&lt;/span&gt;. The two densities are proportional to the exponentiated &lt;em&gt;variational energies&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(I(m), I(r)\)&lt;/span&gt;, which are essentially the un-normalized approximated log-posterior densities, that is
+&lt;span class=&#34;math display&#34;&gt;\[
 \begin{align}
 q\left(r\right) &amp;amp; \propto e^{I(r)}, \, q\left(m\right)\propto e^{I(m)} \\
 I(r) &amp;amp; = \left&amp;lt; \log p \left( y, r, m \right) \right&amp;gt;_{q(r)} \\
 I(m) &amp;amp; = \left&amp;lt; \log p \left( y, r, m \right) \right&amp;gt;_{q(m)}
 \end{align}
-\]&lt;/span&gt; For the approximate posterior over model assignment &lt;span class=&#34;math inline&#34;&gt;\(q(m)\)&lt;/span&gt; we first compute &lt;span class=&#34;math inline&#34;&gt;\(I(m)\)&lt;/span&gt; and then an appropriate normalization constant. From the expression above of the joint log-probability, and removing all the terms that do not depend on &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; we have that the un-normalized approximate log-posterior (the variational energy) can be expressed as &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+For the approximate posterior over model assignment &lt;span class=&#34;math inline&#34;&gt;\(q(m)\)&lt;/span&gt; we first compute &lt;span class=&#34;math inline&#34;&gt;\(I(m)\)&lt;/span&gt; and then an appropriate normalization constant. From the expression above of the joint log-probability, and removing all the terms that do not depend on &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt; we have that the un-normalized approximate log-posterior (the variational energy) can be expressed as
+&lt;span class=&#34;math display&#34;&gt;\[
 \begin{align}
 I(m) &amp;amp; = \int p \left( y, r, m \right) \, q(r) \, dr \\
 &amp;amp; = \sum_{n=1}^N \sum_{k=1}^K m_{nk} \left[ p \left( \log y_n \mid m_{nk} \right) + \int q(r_k) \log r_k \, d r_k \right] \nonumber \\
 &amp;amp; = \sum_{n=1}^N \sum_{k=1}^K m_{nk} \left[ p \left( \log y_n \mid m_{nk} \right) + \psi (\alpha_k) -\psi \left(  \alpha_S \right) \right] \nonumber
 \end{align}
-\]&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(\alpha_S = \sum_{k=1}^K \alpha_k\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\psi\)&lt;/span&gt; is the digamma function. If you wonder (as I did when reading this the first time) where the hell does the digamma function comes from here: well it is here due to a property of the Dirichlet distribution, which says that the expected value of &lt;span class=&#34;math inline&#34;&gt;\(\log r_k\)&lt;/span&gt; can be computed as &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+where &lt;span class=&#34;math inline&#34;&gt;\(\alpha_S = \sum_{k=1}^K \alpha_k\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\psi\)&lt;/span&gt; is the digamma function. If you wonder (as I did when reading this the first time) where the hell does the digamma function comes from here: well it is here due to a property of the Dirichlet distribution, which says that the expected value of &lt;span class=&#34;math inline&#34;&gt;\(\log r_k\)&lt;/span&gt; can be computed as
+&lt;span class=&#34;math display&#34;&gt;\[
 \mathbb{E} \left[\log r_k \right] = \int p(r_k) \log r_k \, d r_k = \psi (\alpha_k) -\psi \left( \sum_{k=1}^K \alpha_k \right)
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;From this, we have that the un-normalized posterior belief that model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; generated data from subject &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; is &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;From this, we have that the un-normalized posterior belief that model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; generated data from subject &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; is
+&lt;span class=&#34;math display&#34;&gt;\[
 u_{nk} =  \exp {\left[ p \left( \log y_n \mid m_{nk} \right) + \psi (\alpha_k) -\psi \left(  \alpha_S \right) \right]}
-\]&lt;/span&gt; and the normalized belief is &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+and the normalized belief is
+&lt;span class=&#34;math display&#34;&gt;\[
 g_{nk} = \frac{u_{nk}}{\sum_{k=1}^K u_{nk}}
 \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;We need also to compute the approximate posterior density &lt;span class=&#34;math inline&#34;&gt;\(q(r)\)&lt;/span&gt;, and we begin as above by computing the un-normalized, approximate log-posterior or variational energy &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;We need also to compute the approximate posterior density &lt;span class=&#34;math inline&#34;&gt;\(q(r)\)&lt;/span&gt;, and we begin as above by computing the un-normalized, approximate log-posterior or variational energy
+&lt;span class=&#34;math display&#34;&gt;\[
 \begin{align}
 I(r) &amp;amp; = \int p \left( y, r, m \right) \, q(m) \, dm \\
 &amp;amp; = \sum_{k=1}^K \left[\log r_k \left(\alpha_{0k} -1 \right) +  \sum_{n=1}^N g_{nk} \log r_k \right]
 \end{align}
-\]&lt;/span&gt; The logarithm of a Dirichlet density is &lt;span class=&#34;math inline&#34;&gt;\(\log \text{Dir} (r , \boldsymbol{\alpha}) = \sum_{k=1}^K \log r_k \left(\alpha_{0k} -1 \right) + \dots\)&lt;/span&gt;, therefore the parameters of the approximate posterior are &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+The logarithm of a Dirichlet density is &lt;span class=&#34;math inline&#34;&gt;\(\log \text{Dir} (r , \boldsymbol{\alpha}) = \sum_{k=1}^K \log r_k \left(\alpha_{0k} -1 \right) + \dots\)&lt;/span&gt;, therefore the parameters of the approximate posterior are
+&lt;span class=&#34;math display&#34;&gt;\[
   \boldsymbol{\alpha} = \boldsymbol{\alpha}_0 + \sum_{n=1}^N g_{nk}
 \]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -99,11 +120,15 @@ I(r) &amp;amp; = \int p \left( y, r, m \right) \, q(m) \, dm \\
 &lt;/div&gt;
 &lt;div id=&#34;exceedance-probabilities&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Exceedance probabilities&lt;/h2&gt;
-&lt;p&gt;After having found the optimised values of &lt;span class=&#34;math inline&#34;&gt;\(\boldsymbol{\alpha}\)&lt;/span&gt;, one popular way to report the results and rank the models is by their exceedance probability, which is defined as the (second order) probability that participants were more likely to choose a certain model to generate behavior rather than any other alternative model, that is &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;After having found the optimised values of &lt;span class=&#34;math inline&#34;&gt;\(\boldsymbol{\alpha}\)&lt;/span&gt;, one popular way to report the results and rank the models is by their exceedance probability, which is defined as the (second order) probability that participants were more likely to choose a certain model to generate behavior rather than any other alternative model, that is
+&lt;span class=&#34;math display&#34;&gt;\[
 \forall j \in \left\{1, \dots, K, j \ne k \right\}, \,\,\, \varphi_k = p \left(r_k &amp;gt; r_j \mid y, \boldsymbol{\alpha} \right).
-\]&lt;/span&gt; In the case of &lt;span class=&#34;math inline&#34;&gt;\(K&amp;gt;2\)&lt;/span&gt; models, the exceedance probabilities &lt;span class=&#34;math inline&#34;&gt;\(\varphi_k\)&lt;/span&gt; are computed by generating random samples from univariate Gamma densities and then normalizing. Specifically, each multivariate Dirichlet sample is composed of &lt;span class=&#34;math inline&#34;&gt;\(K\)&lt;/span&gt; independent random samples &lt;span class=&#34;math inline&#34;&gt;\((x_1, \dots, x_K)\)&lt;/span&gt; distributed according to the density &lt;span class=&#34;math inline&#34;&gt;\(\text{Gamma}\left(\alpha_i, 1\right) = \frac{x_i^{\alpha_i-1} e^{-x_i}}{\Gamma(\alpha_i)}\)&lt;/span&gt;, and then set normalize them by taking &lt;span class=&#34;math inline&#34;&gt;\(z_i = \frac{x_i}{ \sum_{i=1}^K x_i}\)&lt;/span&gt;. The exceedance probability &lt;span class=&#34;math inline&#34;&gt;\(\varphi_k\)&lt;/span&gt; for each model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; is then computed as &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+In the case of &lt;span class=&#34;math inline&#34;&gt;\(K&amp;gt;2\)&lt;/span&gt; models, the exceedance probabilities &lt;span class=&#34;math inline&#34;&gt;\(\varphi_k\)&lt;/span&gt; are computed by generating random samples from univariate Gamma densities and then normalizing. Specifically, each multivariate Dirichlet sample is composed of &lt;span class=&#34;math inline&#34;&gt;\(K\)&lt;/span&gt; independent random samples &lt;span class=&#34;math inline&#34;&gt;\((x_1, \dots, x_K)\)&lt;/span&gt; distributed according to the density &lt;span class=&#34;math inline&#34;&gt;\(\text{Gamma}\left(\alpha_i, 1\right) = \frac{x_i^{\alpha_i-1} e^{-x_i}}{\Gamma(\alpha_i)}\)&lt;/span&gt;, and then set normalize them by taking &lt;span class=&#34;math inline&#34;&gt;\(z_i = \frac{x_i}{ \sum_{i=1}^K x_i}\)&lt;/span&gt;. The exceedance probability &lt;span class=&#34;math inline&#34;&gt;\(\varphi_k\)&lt;/span&gt; for each model &lt;span class=&#34;math inline&#34;&gt;\(k\)&lt;/span&gt; is then computed as
+&lt;span class=&#34;math display&#34;&gt;\[
 \varphi_k = \frac{\sum \mathop{\bf{1}}_{z_k&amp;gt;z_j, \forall j \in \left\{1, \dots, K, j \ne k \right\} }}{ \text{n. of samples}}
-\]&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(\mathop{\bf{1}}_{\dots}\)&lt;/span&gt; is the indicator function (&lt;span class=&#34;math inline&#34;&gt;\(\mathop{\bf{1}}_{x&amp;gt;0} = 1\)&lt;/span&gt; if &lt;span class=&#34;math inline&#34;&gt;\(x&amp;gt;0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; otherwise), summed over the total number of multivariate samples drawn.&lt;/p&gt;
+\]&lt;/span&gt;
+where &lt;span class=&#34;math inline&#34;&gt;\(\mathop{\bf{1}}_{\dots}\)&lt;/span&gt; is the indicator function (&lt;span class=&#34;math inline&#34;&gt;\(\mathop{\bf{1}}_{x&amp;gt;0} = 1\)&lt;/span&gt; if &lt;span class=&#34;math inline&#34;&gt;\(x&amp;gt;0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(0\)&lt;/span&gt; otherwise), summed over the total number of multivariate samples drawn.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;code&#34; class=&#34;section level1&#34;&gt;
@@ -114,10 +139,10 @@ I(r) &amp;amp; = \int p \left( y, r, m \right) \, q(m) \, dm \\
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-Burnham2002&#34;&gt;
-&lt;p&gt;Burnham, Kenneth P., and David R. Anderson. 2002. &lt;em&gt;Model Selection and Multimodel Inference: A Practical Information-Theoretic Approach&lt;/em&gt;. 2nd editio. New York, US: Springer New York. doi:&lt;a href=&#34;https://doi.org/10.1007/b97636&#34;&gt;10.1007/b97636&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Burnham, Kenneth P., and David R. Anderson. 2002. &lt;em&gt;Model Selection and Multimodel Inference: A Practical Information-Theoretic Approach&lt;/em&gt;. 2nd editio. New York, US: Springer New York. &lt;a href=&#34;https://doi.org/10.1007/b97636&#34;&gt;https://doi.org/10.1007/b97636&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-Stephan2009&#34;&gt;
-&lt;p&gt;Stephan, Klaas Enno, Will D. Penny, Jean Daunizeau, Rosalyn J. Moran, and Karl J. Friston. 2009. “Bayesian model selection for group studies.” &lt;em&gt;NeuroImage&lt;/em&gt; 46 (4). Elsevier Inc.: 1004–17. doi:&lt;a href=&#34;https://doi.org/10.1016/j.neuroimage.2009.03.025&#34;&gt;10.1016/j.neuroimage.2009.03.025&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Stephan, Klaas Enno, Will D. Penny, Jean Daunizeau, Rosalyn J. Moran, and Karl J. Friston. 2009. “Bayesian model selection for group studies.” &lt;em&gt;NeuroImage&lt;/em&gt; 46 (4). Elsevier Inc.: 1004–17. &lt;a href=&#34;https://doi.org/10.1016/j.neuroimage.2009.03.025&#34;&gt;https://doi.org/10.1016/j.neuroimage.2009.03.025&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -126,14 +151,14 @@ I(r) &amp;amp; = \int p \left( y, r, m \right) \, q(m) \, dm \\
     
     <item>
       <title>Bayesian multilevel models using R and Stan (part 1)</title>
-      <link>http://mlisi.xyz/post/bayesian-multilevel-models-r-stan/</link>
+      <link>/post/bayesian-multilevel-models-r-stan/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/bayesian-multilevel-models-r-stan/</guid>
+      <guid>/post/bayesian-multilevel-models-r-stan/</guid>
       <description>
 
 
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://mlisi.xyz/img/turtlepile.jpg&#34; alt=&#34;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&#34; /&gt;
+&lt;img src=&#34;/img/turtlepile.jpg&#34; alt=&#34;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;In my previous lab I was known for promoting the use of multilevel, or mixed-effects model among my colleagues. (The slides on the &lt;a href=&#34;https://mattelisi.github.io/#notes&#34;&gt;/misc&lt;/a&gt; section of this website are part of this effort.) Multilevel models should be the standard approach in fields like experimental psychology and neuroscience, where the data is naturally grouped according to “observational units”, i.e. individual participants. I agree with Richard McElreath when he writes that &lt;em&gt;“multilevel regression deserves to be the default form of regression”&lt;/em&gt; (see &lt;a href=&#34;http://xcelab.net/rmpubs/rethinking/Statistical_Rethinking_sample.pdf&#34;&gt;here&lt;/a&gt;, section 1.3.2) and that, at least in our fields, studies not using a multilevel approach should justify the choice of not using it.&lt;/p&gt;
@@ -151,9 +176,12 @@ str(sleepstudy)
  $ Subject : Factor w/ 18 levels &amp;quot;308&amp;quot;,&amp;quot;309&amp;quot;,&amp;quot;310&amp;quot;,..: 1 1 1 1 1 1 1 1 1 1 ...&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The model I want to fit to the data will contain both random intercepts and slopes; in addition the correlation between the random effects should also be estimated. Using &lt;code&gt;lme4&lt;/code&gt;, this model could be estimated by using&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;lmer(Reaction ~ Days + (Days | Subject), sleepstudy)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The model could be formally notated as &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;The model could be formally notated as
+&lt;span class=&#34;math display&#34;&gt;\[
 y_{ij} = \beta_0 + u_{0j} + \left( \beta_1 + u_{1j} \right) \cdot {\rm{Days}} + e_i
-\]&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(\beta_0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta_1\)&lt;/span&gt; are the fixed effects parameters (intercept and slope), &lt;span class=&#34;math inline&#34;&gt;\(u_{0j}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(u_{1j}\)&lt;/span&gt; are the subject specific random intercept and slope (the index &lt;span class=&#34;math inline&#34;&gt;\(j\)&lt;/span&gt; denotes the subject), and &lt;span class=&#34;math inline&#34;&gt;\(e \sim\cal N \left( 0,\sigma_e^2 \right)\)&lt;/span&gt; is the (normally distributed) residual error. The random effects &lt;span class=&#34;math inline&#34;&gt;\(u_0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(u_1\)&lt;/span&gt; have a multivariate normal distribution, with mean 0 and covariance matrix &lt;span class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt; &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+where &lt;span class=&#34;math inline&#34;&gt;\(\beta_0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta_1\)&lt;/span&gt; are the fixed effects parameters (intercept and slope), &lt;span class=&#34;math inline&#34;&gt;\(u_{0j}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(u_{1j}\)&lt;/span&gt; are the subject specific random intercept and slope (the index &lt;span class=&#34;math inline&#34;&gt;\(j\)&lt;/span&gt; denotes the subject), and &lt;span class=&#34;math inline&#34;&gt;\(e \sim\cal N \left( 0,\sigma_e^2 \right)\)&lt;/span&gt; is the (normally distributed) residual error. The random effects &lt;span class=&#34;math inline&#34;&gt;\(u_0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(u_1\)&lt;/span&gt; have a multivariate normal distribution, with mean 0 and covariance matrix &lt;span class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt;
+&lt;span class=&#34;math display&#34;&gt;\[
 \left[ {\begin{array}{*{20}{c}}
 {{u_0}}\\
 {{u_1}}
@@ -193,7 +221,8 @@ y_{ij} = \beta_0 + u_{0j} + \left( \beta_1 + u_{1j} \right) \cdot {\rm{Days}} + 
 &lt;/div&gt;
 &lt;div id=&#34;parameters&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Parameters&lt;/h2&gt;
-&lt;p&gt;Here is the parameter block. Stan will draw samples from the posterior distribution of all the parameters listed here. Note that for parameters representing standard deviations is necessary to set the lower bound to 0 (variances and standard deviations cannot be negative). This is equivalent to estimating the logarithm of the standard deviation (which can be both positive or negative) and exponentiating before computing the likelihood (because &lt;span class=&#34;math inline&#34;&gt;\(e^x&amp;gt;0\)&lt;/span&gt; for any &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;). Note that we have also one parameter for the standard deviation of the residual errors (which was implicit in &lt;code&gt;lme4&lt;/code&gt;). The random effects are parametrixed by a 2 x &lt;code&gt;J&lt;/code&gt; random effect matrix &lt;code&gt;z_u&lt;/code&gt;, and by the Cholesky factor of the correlation matrix &lt;code&gt;L_u&lt;/code&gt;. I have added also the transformed parameters block, where the Cholesky factor is first multipled by the diagonal matrix formed by the vector of the random effect variances &lt;code&gt;sigma_u&lt;/code&gt;, and then is multiplied with the random effect matrix, to obtain a random effects matrix with the intended correlations, which will be used in the model block below to compute the likelihood of the data.&lt;/p&gt;
+&lt;p&gt;Here is the parameter block. Stan will draw samples from the posterior distribution of all the parameters listed here. Note that for parameters representing standard deviations is necessary to set the lower bound to 0 (variances and standard deviations cannot be negative). This is equivalent to estimating the logarithm of the standard deviation (which can be both positive or negative) and exponentiating before computing the likelihood (because &lt;span class=&#34;math inline&#34;&gt;\(e^x&amp;gt;0\)&lt;/span&gt; for any &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;). Note that we have also one parameter for the standard deviation of the residual errors (which was implicit in &lt;code&gt;lme4&lt;/code&gt;).
+The random effects are parametrixed by a 2 x &lt;code&gt;J&lt;/code&gt; random effect matrix &lt;code&gt;z_u&lt;/code&gt;, and by the Cholesky factor of the correlation matrix &lt;code&gt;L_u&lt;/code&gt;. I have added also the transformed parameters block, where the Cholesky factor is first multipled by the diagonal matrix formed by the vector of the random effect variances &lt;code&gt;sigma_u&lt;/code&gt;, and then is multiplied with the random effect matrix, to obtain a random effects matrix with the intended correlations, which will be used in the model block below to compute the likelihood of the data.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;parameters {
   vector[2] beta;                   // fixed-effects parameters
   real&amp;lt;lower=0&amp;gt; sigma_e;            // residual std
@@ -232,8 +261,9 @@ transformed parameters {
     RT[i] ~ normal(mu, sigma_e);
   }
 }&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;For the correlation matrix, Stan manual suggest to use a LKJ prior&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. This prior has one single shape parameters, &lt;span class=&#34;math inline&#34;&gt;\(\eta\)&lt;/span&gt;: if you set &lt;span class=&#34;math inline&#34;&gt;\(\eta=1\)&lt;/span&gt; then you have effectively a uniform prior distribution over any (Cholesky factor of) 2x2 correlation matrices. For values &lt;span class=&#34;math inline&#34;&gt;\(\eta&amp;gt;1\)&lt;/span&gt; instead you get a more conservative prior, with a mode in the identity matrix (where the correlations are 0). For more information about the LKJ prior see page 556 of Stan reference manual, version 2.17.0, and also &lt;a href=&#34;http://www.psychstatistics.com/2014/12/27/d-lkj-priors/&#34;&gt;this page&lt;/a&gt; for an intuitive demonstration.&lt;/p&gt;
-&lt;p&gt;Importantly, I have used (weakly) informative priors for the fixed effect estimates. We know from the literature that simple reaction times are around 300ms, hence the prior for the intercept, which represents the avearage reaction times at Day 0, i.e. before the sleep deprivation. We expect the reaction times to increase with sleep deprivation, so I have used for the slope a Gaussian prior centered at a small positive value (0.2 seconds), which would represents the increase in reaction times with each day of sleep deprivation, however using a very broad standard deviation (2 seconds), which could accomodate also negative or very different slope values if needed. It may be useful to visualize with a plot the priors. &lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig1-1.png&#34; width=&#34;624&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;For the correlation matrix, Stan manual suggest to use a LKJ prior&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. This prior has one single shape parameters, &lt;span class=&#34;math inline&#34;&gt;\(\eta\)&lt;/span&gt;: if you set &lt;span class=&#34;math inline&#34;&gt;\(\eta=1\)&lt;/span&gt; then you have effectively a uniform prior distribution over any (Cholesky factor of) 2x2 correlation matrices. For values &lt;span class=&#34;math inline&#34;&gt;\(\eta&amp;gt;1\)&lt;/span&gt; instead you get a more conservative prior, with a mode in the identity matrix (where the correlations are 0). For more information about the LKJ prior see page 556 of Stan reference manual, version 2.17.0, and also &lt;a href=&#34;http://www.psychstatistics.com/2014/12/27/d-lkj-priors/&#34;&gt;this page&lt;/a&gt; for an intuitive demonstration.&lt;/p&gt;
+&lt;p&gt;Importantly, I have used (weakly) informative priors for the fixed effect estimates. We know from the literature that simple reaction times are around 300ms, hence the prior for the intercept, which represents the avearage reaction times at Day 0, i.e. before the sleep deprivation. We expect the reaction times to increase with sleep deprivation, so I have used for the slope a Gaussian prior centered at a small positive value (0.2 seconds), which would represents the increase in reaction times with each day of sleep deprivation, however using a very broad standard deviation (2 seconds), which could accomodate also negative or very different slope values if needed. It may be useful to visualize with a plot the priors.
+&lt;img src=&#34;/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig1-1.png&#34; width=&#34;624&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;generated-quantities&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Generated quantities&lt;/h2&gt;
@@ -246,14 +276,16 @@ transformed parameters {
 &lt;/div&gt;
 &lt;div id=&#34;estimating-the-model&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Estimating the model&lt;/h1&gt;
-&lt;p&gt;Having written all the above blocks in a separate text file (I called it “sleep_model.stan”), we can call Stan from R with following commands. I run 4 independent chains (each chain is a stochastic process which sequentially generate random values; they are called &lt;em&gt;chain&lt;/em&gt; because each sample depends on the previous one), each for 2000 samples. The first 1000 samples are the &lt;em&gt;warmup&lt;/em&gt; (or sometimes called &lt;em&gt;burn-in&lt;/em&gt;), which are intended to allow the sampling process to settle into the posterior distribution; these samples will not be used for inference. Each chain is independent from the others, therefore having multiple chains is also useful to check the convergence (i.e. by looking if all chains converged to the same regions of the parameter space). Additionally, having multiple chain allows to compute a statistic which is also used to check convergence: this is called &lt;span class=&#34;math inline&#34;&gt;\(\hat R\)&lt;/span&gt; and it corresponds to the ratio of the between-chain variance and the within-chain variance. If the sampling has converged then &lt;span class=&#34;math inline&#34;&gt;\({\hat R} \approx 1 \pm 0.01\)&lt;/span&gt;. When we call function &lt;code&gt;stan&lt;/code&gt;, it will compile a C++ program which produces samples from the joint posterior of the parameter using a powerful variant of MCMC sampling, called &lt;em&gt;Hamiltomian Monte Carlo&lt;/em&gt; (see &lt;a href=&#34;http://elevanth.org/blog/2017/11/28/build-a-better-markov-chain/&#34;&gt;here&lt;/a&gt; for an intuitive explanation of the sampling algorithm).&lt;/p&gt;
+&lt;p&gt;Having written all the above blocks in a separate text file (I called it “sleep_model.stan”), we can call Stan from R with following commands. I run 4 independent chains (each chain is a stochastic process which sequentially generate random values; they are called &lt;em&gt;chain&lt;/em&gt; because each sample depends on the previous one), each for 2000 samples. The first 1000 samples are the &lt;em&gt;warmup&lt;/em&gt; (or sometimes called &lt;em&gt;burn-in&lt;/em&gt;), which are intended to allow the sampling process to settle into the posterior distribution; these samples will not be used for inference. Each chain is independent from the others, therefore having multiple chains is also useful to check the convergence (i.e. by looking if all chains converged to the same regions of the parameter space). Additionally, having multiple chain allows to compute a statistic which is also used to check convergence: this is called &lt;span class=&#34;math inline&#34;&gt;\(\hat R\)&lt;/span&gt; and it corresponds to the ratio of the between-chain variance and the within-chain variance. If the sampling has converged then &lt;span class=&#34;math inline&#34;&gt;\({\hat R} \approx 1 \pm 0.01\)&lt;/span&gt;.
+When we call function &lt;code&gt;stan&lt;/code&gt;, it will compile a C++ program which produces samples from the joint posterior of the parameter using a powerful variant of MCMC sampling, called &lt;em&gt;Hamiltomian Monte Carlo&lt;/em&gt; (see &lt;a href=&#34;http://elevanth.org/blog/2017/11/28/build-a-better-markov-chain/&#34;&gt;here&lt;/a&gt; for an intuitive explanation of the sampling algorithm).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rstan)
 options(mc.cores = parallel::detectCores())  # indicate stan to use multiple cores if available
 sleep_model &amp;lt;- stan(file = &amp;quot;sleep_model.stan&amp;quot;, data = d_stan, 
     iter = 2000, chains = 4)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;One way to check the convergence of the model is to plot the chain of samples. They should look like a &lt;em&gt;“fat, hairy caterpillar which does not bend”&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;(Sorensen, Hohenstein, and Vasishth 2016)&lt;/span&gt;, suggesting that the sampling was stable at the posterior.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;traceplot(sleep_model, pars = c(&amp;quot;beta&amp;quot;), inc_warmup = FALSE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig2-1.png&#34; width=&#34;480&#34; /&gt; There is a &lt;code&gt;print()&lt;/code&gt; method for visualising the estimates of the parameters. The values of the &lt;span class=&#34;math inline&#34;&gt;\({\hat R}\)&lt;/span&gt; (&lt;code&gt;Rhat&lt;/code&gt;) statistics also confirm that the chains converged. The method automatically report credible intervals for the parameters (computed with the percentile method from the samples of the posterior distribution).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig2-1.png&#34; width=&#34;480&#34; /&gt;
+There is a &lt;code&gt;print()&lt;/code&gt; method for visualising the estimates of the parameters. The values of the &lt;span class=&#34;math inline&#34;&gt;\({\hat R}\)&lt;/span&gt; (&lt;code&gt;Rhat&lt;/code&gt;) statistics also confirm that the chains converged. The method automatically report credible intervals for the parameters (computed with the percentile method from the samples of the posterior distribution).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(sleep_model, pars = c(&amp;quot;beta&amp;quot;), probs = c(0.025, 0.975), 
     digits = 3)
 Inference for Stan model: sleep_model_v1.
@@ -271,7 +303,8 @@ convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And we can visualze the posterior distribution as histograms (here for the fixed effects parameters and the standard deviations of the corresponding random effects).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(sleep_model, plotfun = &amp;quot;hist&amp;quot;, pars = c(&amp;quot;beta&amp;quot;, &amp;quot;sigma_u&amp;quot;))
 `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig3-1.png&#34; width=&#34;384&#34; /&gt; Finally, we can also examine the correlation matrix of random-effects.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig3-1.png&#34; width=&#34;384&#34; /&gt;
+Finally, we can also examine the correlation matrix of random-effects.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(sleep_model, pars = c(&amp;quot;Omega&amp;quot;), digits = 3)
 Inference for Stan model: sleep_model_v1.
 5 chains, each with iter=6000; warmup=3000; thin=1; 
@@ -296,20 +329,20 @@ convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-Bates2014&#34;&gt;
-&lt;p&gt;Bates, D, M Maechler, B Bolker, and S Walker. 2014. “lme4: Linear mixed-effects models using Eigen and S4.” R package version 1.1-7. &lt;a href=&#34;http://cran.r-project.org/package=lme4&#34; class=&#34;uri&#34;&gt;http://cran.r-project.org/package=lme4&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Bates, D, M Maechler, B Bolker, and S Walker. 2014. “lme4: Linear mixed-effects models using Eigen and S4.” R package version 1.1-7. &lt;a href=&#34;http://cran.r-project.org/package=lme4&#34;&gt;http://cran.r-project.org/package=lme4&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-Belenky2003&#34;&gt;
-&lt;p&gt;Belenky, Gregory, Nancy J Wesensten, David R Thorne, Maria L Thomas, Helen C Sing, Daniel P Redmond, Michael B Russo, and J Balkin, Thomas. 2003. “Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study.” &lt;em&gt;Journal of Sleep Research&lt;/em&gt; 12 (1): 1–12. doi:&lt;a href=&#34;https://doi.org/10.1046/j.1365-2869.2003.00337.x&#34;&gt;10.1046/j.1365-2869.2003.00337.x&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Belenky, Gregory, Nancy J Wesensten, David R Thorne, Maria L Thomas, Helen C Sing, Daniel P Redmond, Michael B Russo, and J Balkin, Thomas. 2003. “Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study.” &lt;em&gt;Journal of Sleep Research&lt;/em&gt; 12 (1): 1–12. &lt;a href=&#34;https://doi.org/10.1046/j.1365-2869.2003.00337.x&#34;&gt;https://doi.org/10.1046/j.1365-2869.2003.00337.x&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-Sorensen2016&#34;&gt;
-&lt;p&gt;Sorensen, Tanner, Sven Hohenstein, and Shravan Vasishth. 2016. “Bayesian linear mixed models using Stan: A tutorial for psychologists, linguists, and cognitive scientists.” &lt;em&gt;The Quantitative Methods for Psychology&lt;/em&gt; 12 (3): 175–200. doi:&lt;a href=&#34;https://doi.org/10.20982/tqmp.12.3.p175&#34;&gt;10.20982/tqmp.12.3.p175&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Sorensen, Tanner, Sven Hohenstein, and Shravan Vasishth. 2016. “Bayesian linear mixed models using Stan: A tutorial for psychologists, linguists, and cognitive scientists.” &lt;em&gt;The Quantitative Methods for Psychology&lt;/em&gt; 12 (3): 175–200. &lt;a href=&#34;https://doi.org/10.20982/tqmp.12.3.p175&#34;&gt;https://doi.org/10.20982/tqmp.12.3.p175&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;The LKJ prior is named after the authors, see: Lewandowski, D., Kurowicka, D., and Joe, H. (2009). Generating random correlation matrices based on vines and extended onion method. &lt;em&gt;Journal of Multivariate Analysis&lt;/em&gt;, 100:1989–2001&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;The LKJ prior is named after the authors, see: Lewandowski, D., Kurowicka, D., and Joe, H. (2009). Generating random correlation matrices based on vines and extended onion method. &lt;em&gt;Journal of Multivariate Analysis&lt;/em&gt;, 100:1989–2001&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

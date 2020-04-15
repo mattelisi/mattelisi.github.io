@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kostantinos Priftis | Matteo Lisi</title>
-    <link>http://mlisi.xyz/authors/kostantinos-priftis/</link>
-      <atom:link href="http://mlisi.xyz/authors/kostantinos-priftis/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/kostantinos-priftis/</link>
+      <atom:link href="/authors/kostantinos-priftis/index.xml" rel="self" type="application/rss+xml" />
     <description>Kostantinos Priftis</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Thu, 03 Sep 2015 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>Kostantinos Priftis</title>
-      <link>http://mlisi.xyz/authors/kostantinos-priftis/</link>
+      <link>/authors/kostantinos-priftis/</link>
     </image>
     
     <item>
       <title>Effects of Multimodal Load on Spatial Monitoring as Revealed by ERPs</title>
-      <link>http://mlisi.xyz/publication/load-erp/</link>
+      <link>/publication/load-erp/</link>
       <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/load-erp/</guid>
+      <guid>/publication/load-erp/</guid>
       <description></description>
     </item>
     

@@ -2,21 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Joshua A. Solomon | Matteo Lisi</title>
-    <link>http://mlisi.xyz/authors/joshua-a.-solomon/</link>
-      <atom:link href="http://mlisi.xyz/authors/joshua-a.-solomon/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/joshua-a.-solomon/</link>
+      <atom:link href="/authors/joshua-a.-solomon/index.xml" rel="self" type="application/rss+xml" />
     <description>Joshua A. Solomon</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>Joshua A. Solomon</title>
-      <link>http://mlisi.xyz/authors/joshua-a.-solomon/</link>
+      <link>/authors/joshua-a.-solomon/</link>
     </image>
     
     <item>
+      <title>Serial integration of sensory evidence for perceptual decisions and oculomotor responses</title>
+      <link>/publication/serial_int/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/serial_int/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Gain control of saccadic eye movements is probabilistic</title>
-      <link>http://mlisi.xyz/publication/gainpnas/</link>
+      <link>/publication/gainpnas/</link>
       <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/gainpnas/</guid>
+      <guid>/publication/gainpnas/</guid>
       <description></description>
     </item>
     

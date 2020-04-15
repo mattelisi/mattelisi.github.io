@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stan | Matteo Lisi</title>
-    <link>http://mlisi.xyz/tags/stan/</link>
-      <atom:link href="http://mlisi.xyz/tags/stan/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/stan/</link>
+      <atom:link href="/tags/stan/index.xml" rel="self" type="application/rss+xml" />
     <description>Stan</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Sun, 04 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>Stan</title>
-      <link>http://mlisi.xyz/tags/stan/</link>
+      <link>/tags/stan/</link>
     </image>
     
     <item>
       <title>Installing RStan on HPC cluster</title>
-      <link>http://mlisi.xyz/post/rstan-cluster/</link>
+      <link>/post/rstan-cluster/</link>
       <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/rstan-cluster/</guid>
+      <guid>/post/rstan-cluster/</guid>
       <description>
 
 
@@ -29,7 +29,8 @@ module load gcc&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;remove.packages(&amp;quot;rstan&amp;quot;)
 remove.packages(&amp;quot;StanHeaders&amp;quot;)
 if (file.exists(&amp;quot;.RData&amp;quot;)) file.remove(&amp;quot;.RData&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;One problem that I had initially was (I think) due to the fact that Rcpp and rstan had been installed with different compiler or compilation flags. Thanks to the IT support at Queen Mary University, the correct C++ toolchain configuration that made the trick for me is the following:&lt;/p&gt;
+&lt;p&gt;One problem that I had initially was (I think) due to the fact that Rcpp and rstan had been installed with different compiler or compilation flags.
+Thanks to the IT support at Queen Mary University, the correct C++ toolchain configuration that made the trick for me is the following:&lt;/p&gt;
 &lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;CXX14 = g++ -std=c++1y
 CXX14FLAGS = -O3 -Wno-unused-variable -Wno-unused-function -fPIC&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To write the correct configuration in the &lt;code&gt;~/.R/Makevars&lt;/code&gt; file from an R terminal:&lt;/p&gt;

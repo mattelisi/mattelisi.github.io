@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mixed-effects | Matteo Lisi</title>
-    <link>http://mlisi.xyz/tags/mixed-effects/</link>
-      <atom:link href="http://mlisi.xyz/tags/mixed-effects/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/mixed-effects/</link>
+      <atom:link href="/tags/mixed-effects/index.xml" rel="self" type="application/rss+xml" />
     <description>mixed-effects</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Thu, 01 Mar 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>mixed-effects</title>
-      <link>http://mlisi.xyz/tags/mixed-effects/</link>
+      <link>/tags/mixed-effects/</link>
     </image>
     
     <item>
       <title>Bayesian multilevel models using R and Stan (part 1)</title>
-      <link>http://mlisi.xyz/post/bayesian-multilevel-models-r-stan/</link>
+      <link>/post/bayesian-multilevel-models-r-stan/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/bayesian-multilevel-models-r-stan/</guid>
+      <guid>/post/bayesian-multilevel-models-r-stan/</guid>
       <description>
 
 
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://mlisi.xyz/img/turtlepile.jpg&#34; alt=&#34;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&#34; /&gt;
+&lt;img src=&#34;/img/turtlepile.jpg&#34; alt=&#34;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;In my previous lab I was known for promoting the use of multilevel, or mixed-effects model among my colleagues. (The slides on the &lt;a href=&#34;https://mattelisi.github.io/#notes&#34;&gt;/misc&lt;/a&gt; section of this website are part of this effort.) Multilevel models should be the standard approach in fields like experimental psychology and neuroscience, where the data is naturally grouped according to “observational units”, i.e. individual participants. I agree with Richard McElreath when he writes that &lt;em&gt;“multilevel regression deserves to be the default form of regression”&lt;/em&gt; (see &lt;a href=&#34;http://xcelab.net/rmpubs/rethinking/Statistical_Rethinking_sample.pdf&#34;&gt;here&lt;/a&gt;, section 1.3.2) and that, at least in our fields, studies not using a multilevel approach should justify the choice of not using it.&lt;/p&gt;
@@ -39,9 +39,12 @@ str(sleepstudy)
  $ Subject : Factor w/ 18 levels &amp;quot;308&amp;quot;,&amp;quot;309&amp;quot;,&amp;quot;310&amp;quot;,..: 1 1 1 1 1 1 1 1 1 1 ...&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The model I want to fit to the data will contain both random intercepts and slopes; in addition the correlation between the random effects should also be estimated. Using &lt;code&gt;lme4&lt;/code&gt;, this model could be estimated by using&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;lmer(Reaction ~ Days + (Days | Subject), sleepstudy)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The model could be formally notated as &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;The model could be formally notated as
+&lt;span class=&#34;math display&#34;&gt;\[
 y_{ij} = \beta_0 + u_{0j} + \left( \beta_1 + u_{1j} \right) \cdot {\rm{Days}} + e_i
-\]&lt;/span&gt; where &lt;span class=&#34;math inline&#34;&gt;\(\beta_0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta_1\)&lt;/span&gt; are the fixed effects parameters (intercept and slope), &lt;span class=&#34;math inline&#34;&gt;\(u_{0j}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(u_{1j}\)&lt;/span&gt; are the subject specific random intercept and slope (the index &lt;span class=&#34;math inline&#34;&gt;\(j\)&lt;/span&gt; denotes the subject), and &lt;span class=&#34;math inline&#34;&gt;\(e \sim\cal N \left( 0,\sigma_e^2 \right)\)&lt;/span&gt; is the (normally distributed) residual error. The random effects &lt;span class=&#34;math inline&#34;&gt;\(u_0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(u_1\)&lt;/span&gt; have a multivariate normal distribution, with mean 0 and covariance matrix &lt;span class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt; &lt;span class=&#34;math display&#34;&gt;\[
+\]&lt;/span&gt;
+where &lt;span class=&#34;math inline&#34;&gt;\(\beta_0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(\beta_1\)&lt;/span&gt; are the fixed effects parameters (intercept and slope), &lt;span class=&#34;math inline&#34;&gt;\(u_{0j}\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(u_{1j}\)&lt;/span&gt; are the subject specific random intercept and slope (the index &lt;span class=&#34;math inline&#34;&gt;\(j\)&lt;/span&gt; denotes the subject), and &lt;span class=&#34;math inline&#34;&gt;\(e \sim\cal N \left( 0,\sigma_e^2 \right)\)&lt;/span&gt; is the (normally distributed) residual error. The random effects &lt;span class=&#34;math inline&#34;&gt;\(u_0\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(u_1\)&lt;/span&gt; have a multivariate normal distribution, with mean 0 and covariance matrix &lt;span class=&#34;math inline&#34;&gt;\(\Omega\)&lt;/span&gt;
+&lt;span class=&#34;math display&#34;&gt;\[
 \left[ {\begin{array}{*{20}{c}}
 {{u_0}}\\
 {{u_1}}
@@ -81,7 +84,8 @@ y_{ij} = \beta_0 + u_{0j} + \left( \beta_1 + u_{1j} \right) \cdot {\rm{Days}} + 
 &lt;/div&gt;
 &lt;div id=&#34;parameters&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Parameters&lt;/h2&gt;
-&lt;p&gt;Here is the parameter block. Stan will draw samples from the posterior distribution of all the parameters listed here. Note that for parameters representing standard deviations is necessary to set the lower bound to 0 (variances and standard deviations cannot be negative). This is equivalent to estimating the logarithm of the standard deviation (which can be both positive or negative) and exponentiating before computing the likelihood (because &lt;span class=&#34;math inline&#34;&gt;\(e^x&amp;gt;0\)&lt;/span&gt; for any &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;). Note that we have also one parameter for the standard deviation of the residual errors (which was implicit in &lt;code&gt;lme4&lt;/code&gt;). The random effects are parametrixed by a 2 x &lt;code&gt;J&lt;/code&gt; random effect matrix &lt;code&gt;z_u&lt;/code&gt;, and by the Cholesky factor of the correlation matrix &lt;code&gt;L_u&lt;/code&gt;. I have added also the transformed parameters block, where the Cholesky factor is first multipled by the diagonal matrix formed by the vector of the random effect variances &lt;code&gt;sigma_u&lt;/code&gt;, and then is multiplied with the random effect matrix, to obtain a random effects matrix with the intended correlations, which will be used in the model block below to compute the likelihood of the data.&lt;/p&gt;
+&lt;p&gt;Here is the parameter block. Stan will draw samples from the posterior distribution of all the parameters listed here. Note that for parameters representing standard deviations is necessary to set the lower bound to 0 (variances and standard deviations cannot be negative). This is equivalent to estimating the logarithm of the standard deviation (which can be both positive or negative) and exponentiating before computing the likelihood (because &lt;span class=&#34;math inline&#34;&gt;\(e^x&amp;gt;0\)&lt;/span&gt; for any &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;). Note that we have also one parameter for the standard deviation of the residual errors (which was implicit in &lt;code&gt;lme4&lt;/code&gt;).
+The random effects are parametrixed by a 2 x &lt;code&gt;J&lt;/code&gt; random effect matrix &lt;code&gt;z_u&lt;/code&gt;, and by the Cholesky factor of the correlation matrix &lt;code&gt;L_u&lt;/code&gt;. I have added also the transformed parameters block, where the Cholesky factor is first multipled by the diagonal matrix formed by the vector of the random effect variances &lt;code&gt;sigma_u&lt;/code&gt;, and then is multiplied with the random effect matrix, to obtain a random effects matrix with the intended correlations, which will be used in the model block below to compute the likelihood of the data.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;parameters {
   vector[2] beta;                   // fixed-effects parameters
   real&amp;lt;lower=0&amp;gt; sigma_e;            // residual std
@@ -120,8 +124,9 @@ transformed parameters {
     RT[i] ~ normal(mu, sigma_e);
   }
 }&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;For the correlation matrix, Stan manual suggest to use a LKJ prior&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. This prior has one single shape parameters, &lt;span class=&#34;math inline&#34;&gt;\(\eta\)&lt;/span&gt;: if you set &lt;span class=&#34;math inline&#34;&gt;\(\eta=1\)&lt;/span&gt; then you have effectively a uniform prior distribution over any (Cholesky factor of) 2x2 correlation matrices. For values &lt;span class=&#34;math inline&#34;&gt;\(\eta&amp;gt;1\)&lt;/span&gt; instead you get a more conservative prior, with a mode in the identity matrix (where the correlations are 0). For more information about the LKJ prior see page 556 of Stan reference manual, version 2.17.0, and also &lt;a href=&#34;http://www.psychstatistics.com/2014/12/27/d-lkj-priors/&#34;&gt;this page&lt;/a&gt; for an intuitive demonstration.&lt;/p&gt;
-&lt;p&gt;Importantly, I have used (weakly) informative priors for the fixed effect estimates. We know from the literature that simple reaction times are around 300ms, hence the prior for the intercept, which represents the avearage reaction times at Day 0, i.e. before the sleep deprivation. We expect the reaction times to increase with sleep deprivation, so I have used for the slope a Gaussian prior centered at a small positive value (0.2 seconds), which would represents the increase in reaction times with each day of sleep deprivation, however using a very broad standard deviation (2 seconds), which could accomodate also negative or very different slope values if needed. It may be useful to visualize with a plot the priors. &lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig1-1.png&#34; width=&#34;624&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;For the correlation matrix, Stan manual suggest to use a LKJ prior&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. This prior has one single shape parameters, &lt;span class=&#34;math inline&#34;&gt;\(\eta\)&lt;/span&gt;: if you set &lt;span class=&#34;math inline&#34;&gt;\(\eta=1\)&lt;/span&gt; then you have effectively a uniform prior distribution over any (Cholesky factor of) 2x2 correlation matrices. For values &lt;span class=&#34;math inline&#34;&gt;\(\eta&amp;gt;1\)&lt;/span&gt; instead you get a more conservative prior, with a mode in the identity matrix (where the correlations are 0). For more information about the LKJ prior see page 556 of Stan reference manual, version 2.17.0, and also &lt;a href=&#34;http://www.psychstatistics.com/2014/12/27/d-lkj-priors/&#34;&gt;this page&lt;/a&gt; for an intuitive demonstration.&lt;/p&gt;
+&lt;p&gt;Importantly, I have used (weakly) informative priors for the fixed effect estimates. We know from the literature that simple reaction times are around 300ms, hence the prior for the intercept, which represents the avearage reaction times at Day 0, i.e. before the sleep deprivation. We expect the reaction times to increase with sleep deprivation, so I have used for the slope a Gaussian prior centered at a small positive value (0.2 seconds), which would represents the increase in reaction times with each day of sleep deprivation, however using a very broad standard deviation (2 seconds), which could accomodate also negative or very different slope values if needed. It may be useful to visualize with a plot the priors.
+&lt;img src=&#34;/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig1-1.png&#34; width=&#34;624&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;generated-quantities&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Generated quantities&lt;/h2&gt;
@@ -134,14 +139,16 @@ transformed parameters {
 &lt;/div&gt;
 &lt;div id=&#34;estimating-the-model&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Estimating the model&lt;/h1&gt;
-&lt;p&gt;Having written all the above blocks in a separate text file (I called it “sleep_model.stan”), we can call Stan from R with following commands. I run 4 independent chains (each chain is a stochastic process which sequentially generate random values; they are called &lt;em&gt;chain&lt;/em&gt; because each sample depends on the previous one), each for 2000 samples. The first 1000 samples are the &lt;em&gt;warmup&lt;/em&gt; (or sometimes called &lt;em&gt;burn-in&lt;/em&gt;), which are intended to allow the sampling process to settle into the posterior distribution; these samples will not be used for inference. Each chain is independent from the others, therefore having multiple chains is also useful to check the convergence (i.e. by looking if all chains converged to the same regions of the parameter space). Additionally, having multiple chain allows to compute a statistic which is also used to check convergence: this is called &lt;span class=&#34;math inline&#34;&gt;\(\hat R\)&lt;/span&gt; and it corresponds to the ratio of the between-chain variance and the within-chain variance. If the sampling has converged then &lt;span class=&#34;math inline&#34;&gt;\({\hat R} \approx 1 \pm 0.01\)&lt;/span&gt;. When we call function &lt;code&gt;stan&lt;/code&gt;, it will compile a C++ program which produces samples from the joint posterior of the parameter using a powerful variant of MCMC sampling, called &lt;em&gt;Hamiltomian Monte Carlo&lt;/em&gt; (see &lt;a href=&#34;http://elevanth.org/blog/2017/11/28/build-a-better-markov-chain/&#34;&gt;here&lt;/a&gt; for an intuitive explanation of the sampling algorithm).&lt;/p&gt;
+&lt;p&gt;Having written all the above blocks in a separate text file (I called it “sleep_model.stan”), we can call Stan from R with following commands. I run 4 independent chains (each chain is a stochastic process which sequentially generate random values; they are called &lt;em&gt;chain&lt;/em&gt; because each sample depends on the previous one), each for 2000 samples. The first 1000 samples are the &lt;em&gt;warmup&lt;/em&gt; (or sometimes called &lt;em&gt;burn-in&lt;/em&gt;), which are intended to allow the sampling process to settle into the posterior distribution; these samples will not be used for inference. Each chain is independent from the others, therefore having multiple chains is also useful to check the convergence (i.e. by looking if all chains converged to the same regions of the parameter space). Additionally, having multiple chain allows to compute a statistic which is also used to check convergence: this is called &lt;span class=&#34;math inline&#34;&gt;\(\hat R\)&lt;/span&gt; and it corresponds to the ratio of the between-chain variance and the within-chain variance. If the sampling has converged then &lt;span class=&#34;math inline&#34;&gt;\({\hat R} \approx 1 \pm 0.01\)&lt;/span&gt;.
+When we call function &lt;code&gt;stan&lt;/code&gt;, it will compile a C++ program which produces samples from the joint posterior of the parameter using a powerful variant of MCMC sampling, called &lt;em&gt;Hamiltomian Monte Carlo&lt;/em&gt; (see &lt;a href=&#34;http://elevanth.org/blog/2017/11/28/build-a-better-markov-chain/&#34;&gt;here&lt;/a&gt; for an intuitive explanation of the sampling algorithm).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rstan)
 options(mc.cores = parallel::detectCores())  # indicate stan to use multiple cores if available
 sleep_model &amp;lt;- stan(file = &amp;quot;sleep_model.stan&amp;quot;, data = d_stan, 
     iter = 2000, chains = 4)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;One way to check the convergence of the model is to plot the chain of samples. They should look like a &lt;em&gt;“fat, hairy caterpillar which does not bend”&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;(Sorensen, Hohenstein, and Vasishth 2016)&lt;/span&gt;, suggesting that the sampling was stable at the posterior.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;traceplot(sleep_model, pars = c(&amp;quot;beta&amp;quot;), inc_warmup = FALSE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig2-1.png&#34; width=&#34;480&#34; /&gt; There is a &lt;code&gt;print()&lt;/code&gt; method for visualising the estimates of the parameters. The values of the &lt;span class=&#34;math inline&#34;&gt;\({\hat R}\)&lt;/span&gt; (&lt;code&gt;Rhat&lt;/code&gt;) statistics also confirm that the chains converged. The method automatically report credible intervals for the parameters (computed with the percentile method from the samples of the posterior distribution).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig2-1.png&#34; width=&#34;480&#34; /&gt;
+There is a &lt;code&gt;print()&lt;/code&gt; method for visualising the estimates of the parameters. The values of the &lt;span class=&#34;math inline&#34;&gt;\({\hat R}\)&lt;/span&gt; (&lt;code&gt;Rhat&lt;/code&gt;) statistics also confirm that the chains converged. The method automatically report credible intervals for the parameters (computed with the percentile method from the samples of the posterior distribution).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(sleep_model, pars = c(&amp;quot;beta&amp;quot;), probs = c(0.025, 0.975), 
     digits = 3)
 Inference for Stan model: sleep_model_v1.
@@ -159,7 +166,8 @@ convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And we can visualze the posterior distribution as histograms (here for the fixed effects parameters and the standard deviations of the corresponding random effects).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(sleep_model, plotfun = &amp;quot;hist&amp;quot;, pars = c(&amp;quot;beta&amp;quot;, &amp;quot;sigma_u&amp;quot;))
 `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig3-1.png&#34; width=&#34;384&#34; /&gt; Finally, we can also examine the correlation matrix of random-effects.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig3-1.png&#34; width=&#34;384&#34; /&gt;
+Finally, we can also examine the correlation matrix of random-effects.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(sleep_model, pars = c(&amp;quot;Omega&amp;quot;), digits = 3)
 Inference for Stan model: sleep_model_v1.
 5 chains, each with iter=6000; warmup=3000; thin=1; 
@@ -184,20 +192,20 @@ convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
 &lt;h1&gt;References&lt;/h1&gt;
 &lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
 &lt;div id=&#34;ref-Bates2014&#34;&gt;
-&lt;p&gt;Bates, D, M Maechler, B Bolker, and S Walker. 2014. “lme4: Linear mixed-effects models using Eigen and S4.” R package version 1.1-7. &lt;a href=&#34;http://cran.r-project.org/package=lme4&#34; class=&#34;uri&#34;&gt;http://cran.r-project.org/package=lme4&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Bates, D, M Maechler, B Bolker, and S Walker. 2014. “lme4: Linear mixed-effects models using Eigen and S4.” R package version 1.1-7. &lt;a href=&#34;http://cran.r-project.org/package=lme4&#34;&gt;http://cran.r-project.org/package=lme4&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-Belenky2003&#34;&gt;
-&lt;p&gt;Belenky, Gregory, Nancy J Wesensten, David R Thorne, Maria L Thomas, Helen C Sing, Daniel P Redmond, Michael B Russo, and J Balkin, Thomas. 2003. “Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study.” &lt;em&gt;Journal of Sleep Research&lt;/em&gt; 12 (1): 1–12. doi:&lt;a href=&#34;https://doi.org/10.1046/j.1365-2869.2003.00337.x&#34;&gt;10.1046/j.1365-2869.2003.00337.x&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Belenky, Gregory, Nancy J Wesensten, David R Thorne, Maria L Thomas, Helen C Sing, Daniel P Redmond, Michael B Russo, and J Balkin, Thomas. 2003. “Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study.” &lt;em&gt;Journal of Sleep Research&lt;/em&gt; 12 (1): 1–12. &lt;a href=&#34;https://doi.org/10.1046/j.1365-2869.2003.00337.x&#34;&gt;https://doi.org/10.1046/j.1365-2869.2003.00337.x&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-Sorensen2016&#34;&gt;
-&lt;p&gt;Sorensen, Tanner, Sven Hohenstein, and Shravan Vasishth. 2016. “Bayesian linear mixed models using Stan: A tutorial for psychologists, linguists, and cognitive scientists.” &lt;em&gt;The Quantitative Methods for Psychology&lt;/em&gt; 12 (3): 175–200. doi:&lt;a href=&#34;https://doi.org/10.20982/tqmp.12.3.p175&#34;&gt;10.20982/tqmp.12.3.p175&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Sorensen, Tanner, Sven Hohenstein, and Shravan Vasishth. 2016. “Bayesian linear mixed models using Stan: A tutorial for psychologists, linguists, and cognitive scientists.” &lt;em&gt;The Quantitative Methods for Psychology&lt;/em&gt; 12 (3): 175–200. &lt;a href=&#34;https://doi.org/10.20982/tqmp.12.3.p175&#34;&gt;https://doi.org/10.20982/tqmp.12.3.p175&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;The LKJ prior is named after the authors, see: Lewandowski, D., Kurowicka, D., and Joe, H. (2009). Generating random correlation matrices based on vines and extended onion method. &lt;em&gt;Journal of Multivariate Analysis&lt;/em&gt;, 100:1989–2001&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;The LKJ prior is named after the authors, see: Lewandowski, D., Kurowicka, D., and Joe, H. (2009). Generating random correlation matrices based on vines and extended onion method. &lt;em&gt;Journal of Multivariate Analysis&lt;/em&gt;, 100:1989–2001&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

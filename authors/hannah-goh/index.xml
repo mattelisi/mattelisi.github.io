@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hannah Goh | Matteo Lisi</title>
-    <link>http://mlisi.xyz/authors/hannah-goh/</link>
-      <atom:link href="http://mlisi.xyz/authors/hannah-goh/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/hannah-goh/</link>
+      <atom:link href="/authors/hannah-goh/index.xml" rel="self" type="application/rss+xml" />
     <description>Hannah Goh</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Mon, 04 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>Hannah Goh</title>
-      <link>http://mlisi.xyz/authors/hannah-goh/</link>
+      <link>/authors/hannah-goh/</link>
     </image>
     
     <item>
-      <title>Perceived compression of time during blinks revealed by moving objects</title>
-      <link>http://mlisi.xyz/publication/motion-blink-preprint/</link>
-      <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/motion-blink-preprint/</guid>
+      <title>Perceiving location of moving objects across eye blinks</title>
+      <link>/publication/motion-blink-preprint/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/motion-blink-preprint/</guid>
       <description></description>
     </item>
     

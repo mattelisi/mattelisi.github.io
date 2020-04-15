@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Marco Zorzi | Matteo Lisi</title>
-    <link>http://mlisi.xyz/authors/marco-zorzi/</link>
-      <atom:link href="http://mlisi.xyz/authors/marco-zorzi/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/marco-zorzi/</link>
+      <atom:link href="/authors/marco-zorzi/index.xml" rel="self" type="application/rss+xml" />
     <description>Marco Zorzi</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Tue, 02 Feb 2016 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>Marco Zorzi</title>
-      <link>http://mlisi.xyz/authors/marco-zorzi/</link>
+      <link>/authors/marco-zorzi/</link>
     </image>
     
     <item>
       <title>Voluntary eye movements direct attention on the mental number space</title>
-      <link>http://mlisi.xyz/publication/voluntary-eye/</link>
+      <link>/publication/voluntary-eye/</link>
       <pubDate>Tue, 02 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/voluntary-eye/</guid>
+      <guid>/publication/voluntary-eye/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Effects of Multimodal Load on Spatial Monitoring as Revealed by ERPs</title>
-      <link>http://mlisi.xyz/publication/load-erp/</link>
+      <link>/publication/load-erp/</link>
       <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/load-erp/</guid>
+      <guid>/publication/load-erp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pupil dilation reveals top-down attentional load during spatial monitoring</title>
-      <link>http://mlisi.xyz/publication/load-pupil/</link>
+      <link>/publication/load-pupil/</link>
       <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/load-pupil/</guid>
+      <guid>/publication/load-pupil/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Spatial constancy of attention across eye movements is mediated by the presence of visual objects</title>
-      <link>http://mlisi.xyz/publication/spatial-constancy-attention/</link>
+      <link>/publication/spatial-constancy-attention/</link>
       <pubDate>Fri, 01 May 2015 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/spatial-constancy-attention/</guid>
+      <guid>/publication/spatial-constancy-attention/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Larger, smaller, odd or even? Task-specific effects of optokinetic stimulation on the mental number space</title>
-      <link>http://mlisi.xyz/publication/optokinetic/</link>
+      <link>/publication/optokinetic/</link>
       <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/optokinetic/</guid>
+      <guid>/publication/optokinetic/</guid>
       <description>&lt;p&gt;Mariagrazia Ranzini and Matteo Lisi contributed equally to the work&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Space coding for sensorimotor transformations can emerge through unsupervised learning</title>
-      <link>http://mlisi.xyz/publication/unsupervised-space-coding/</link>
+      <link>/publication/unsupervised-space-coding/</link>
       <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/unsupervised-space-coding/</guid>
+      <guid>/publication/unsupervised-space-coding/</guid>
       <description></description>
     </item>
     
