@@ -3,507 +3,517 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/publication_types/0/</loc>
+    <loc>http://mlisi.xyz/publication_types/2/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/matteo-lisi/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication_types/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication/baby_integration/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/tessa-dekker/</loc>
+    <lastmod>2020-05-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication_types/0/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/</loc>
+    <loc>http://mlisi.xyz/authors/gerrit-maus/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/gerrit-maus/</loc>
+    <loc>http://mlisi.xyz/authors/hannah-goh/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/hannah-goh/</loc>
+    <loc>http://mlisi.xyz/authors/joshua-a.-solomon/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/joshua-a.-solomon/</loc>
+    <loc>http://mlisi.xyz/authors/michael-j.-morgan/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/matteo-lisi/</loc>
+    <loc>http://mlisi.xyz/publication/motion-blink-preprint/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>http://mlisi.xyz/publication/serial_int/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/michael-j.-morgan/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/motion-blink-preprint/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/serial_int/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/2/</loc>
+    <loc>http://mlisi.xyz/publication/uncertaintyppc/</loc>
     <lastmod>2020-02-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/uncertaintyppc/</loc>
-    <lastmod>2020-02-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/bayes-factor/</loc>
+    <loc>http://mlisi.xyz/tags/bayes-factor/</loc>
     <lastmod>2019-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>http://mlisi.xyz/categories/</loc>
     <lastmod>2019-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/defending-the-null/</loc>
+    <loc>http://mlisi.xyz/post/defending-the-null/</loc>
     <lastmod>2019-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/null-hypothesis/</loc>
+    <loc>http://mlisi.xyz/tags/null-hypothesis/</loc>
     <lastmod>2019-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>http://mlisi.xyz/post/</loc>
     <lastmod>2019-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
+    <loc>http://mlisi.xyz/tags/r/</loc>
     <lastmod>2019-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/r/</loc>
+    <loc>http://mlisi.xyz/categories/r/</loc>
     <lastmod>2019-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/statistic/</loc>
+    <loc>http://mlisi.xyz/categories/statistic/</loc>
     <lastmod>2019-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>http://mlisi.xyz/tags/</loc>
     <lastmod>2019-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/gainpnas/</loc>
+    <loc>http://mlisi.xyz/publication/gainpnas/</loc>
     <lastmod>2019-08-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/centos/</loc>
+    <loc>http://mlisi.xyz/tags/centos/</loc>
     <lastmod>2019-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/cluster/</loc>
+    <loc>http://mlisi.xyz/tags/cluster/</loc>
     <lastmod>2019-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/rstan-cluster/</loc>
+    <loc>http://mlisi.xyz/post/rstan-cluster/</loc>
     <lastmod>2019-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/stan/</loc>
+    <loc>http://mlisi.xyz/tags/stan/</loc>
     <lastmod>2019-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/stan/</loc>
+    <loc>http://mlisi.xyz/categories/stan/</loc>
     <lastmod>2019-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/eu/</loc>
+    <loc>http://mlisi.xyz/post/eu/</loc>
     <lastmod>2019-05-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/brexit/</loc>
+    <loc>http://mlisi.xyz/tags/brexit/</loc>
     <lastmod>2019-05-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/politics/</loc>
+    <loc>http://mlisi.xyz/tags/politics/</loc>
     <lastmod>2019-05-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/politics/</loc>
+    <loc>http://mlisi.xyz/categories/politics/</loc>
     <lastmod>2019-05-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/books/</loc>
+    <loc>http://mlisi.xyz/tags/books/</loc>
     <lastmod>2019-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/books/</loc>
+    <loc>http://mlisi.xyz/categories/books/</loc>
     <lastmod>2019-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/ephemeral/</loc>
+    <loc>http://mlisi.xyz/post/ephemeral/</loc>
     <lastmod>2019-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/philosophy/</loc>
+    <loc>http://mlisi.xyz/tags/philosophy/</loc>
     <lastmod>2019-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/bayesian-data-analysis/</loc>
+    <loc>http://mlisi.xyz/tags/bayesian-data-analysis/</loc>
     <lastmod>2019-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/bms/</loc>
+    <loc>http://mlisi.xyz/post/bms/</loc>
     <lastmod>2019-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/model-selection/</loc>
+    <loc>http://mlisi.xyz/tags/model-selection/</loc>
     <lastmod>2019-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/tutorial/</loc>
+    <loc>http://mlisi.xyz/categories/tutorial/</loc>
     <lastmod>2019-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/bayesian-multilevel-models-r-stan/</loc>
+    <loc>http://mlisi.xyz/post/bayesian-multilevel-models-r-stan/</loc>
     <lastmod>2018-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/validity_psyres/</loc>
+    <loc>http://mlisi.xyz/publication/validity_psyres/</loc>
     <lastmod>2018-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/gilles-pourtois/</loc>
+    <loc>http://mlisi.xyz/authors/gilles-pourtois/</loc>
     <lastmod>2018-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/mario-bonato/</loc>
+    <loc>http://mlisi.xyz/authors/mario-bonato/</loc>
     <lastmod>2018-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/mixed-effects/</loc>
+    <loc>http://mlisi.xyz/tags/mixed-effects/</loc>
     <lastmod>2018-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/multilevel-models/</loc>
+    <loc>http://mlisi.xyz/tags/multilevel-models/</loc>
     <lastmod>2018-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/sara-pegoraro/</loc>
+    <loc>http://mlisi.xyz/authors/sara-pegoraro/</loc>
     <lastmod>2018-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/harry-haladjian/</loc>
+    <loc>http://mlisi.xyz/authors/harry-haladjian/</loc>
     <lastmod>2018-02-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/dd_load/</loc>
+    <loc>http://mlisi.xyz/publication/dd_load/</loc>
     <lastmod>2018-02-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/patrick-cavanagh/</loc>
+    <loc>http://mlisi.xyz/authors/patrick-cavanagh/</loc>
     <lastmod>2018-02-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/cholesky/</loc>
+    <loc>http://mlisi.xyz/tags/cholesky/</loc>
     <lastmod>2018-01-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/note/</loc>
+    <loc>http://mlisi.xyz/categories/note/</loc>
     <lastmod>2018-01-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/self-study/</loc>
+    <loc>http://mlisi.xyz/categories/self-study/</loc>
     <lastmod>2018-01-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/simulating-correlated-variables-with-the-cholesky-factorization/</loc>
+    <loc>http://mlisi.xyz/post/simulating-correlated-variables-with-the-cholesky-factorization/</loc>
     <lastmod>2018-01-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/simulation/</loc>
+    <loc>http://mlisi.xyz/tags/simulation/</loc>
     <lastmod>2018-01-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/data-analysis/</loc>
+    <loc>http://mlisi.xyz/categories/data-analysis/</loc>
     <lastmod>2017-12-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/model-averaging/</loc>
+    <loc>http://mlisi.xyz/post/model-averaging/</loc>
     <lastmod>2017-12-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/psychophysics/</loc>
+    <loc>http://mlisi.xyz/tags/psychophysics/</loc>
     <lastmod>2017-12-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/psychophysics/</loc>
+    <loc>http://mlisi.xyz/categories/psychophysics/</loc>
     <lastmod>2017-12-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/delphine-massendari/</loc>
+    <loc>http://mlisi.xyz/authors/delphine-massendari/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/eye-movements/</loc>
+    <loc>http://mlisi.xyz/tags/eye-movements/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/eye-movements/</loc>
+    <loc>http://mlisi.xyz/categories/eye-movements/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/listing-s-law-and-the-mathematics-of-the-eyes/</loc>
+    <loc>http://mlisi.xyz/post/listing-s-law-and-the-mathematics-of-the-eyes/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/memory-delphine/</loc>
+    <loc>http://mlisi.xyz/publication/memory-delphine/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/therese-collins/</loc>
+    <loc>http://mlisi.xyz/authors/therese-collins/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/double-drift-pointing/</loc>
+    <loc>http://mlisi.xyz/publication/double-drift-pointing/</loc>
     <lastmod>2017-09-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/andrei-gorea/</loc>
+    <loc>http://mlisi.xyz/authors/andrei-gorea/</loc>
     <lastmod>2017-07-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/discrete-confidence/</loc>
+    <loc>http://mlisi.xyz/publication/discrete-confidence/</loc>
     <lastmod>2017-07-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/gianluigi-mongillo/</loc>
+    <loc>http://mlisi.xyz/authors/gianluigi-mongillo/</loc>
     <lastmod>2017-07-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/david-whitney/</loc>
+    <loc>http://mlisi.xyz/authors/david-whitney/</loc>
     <lastmod>2017-02-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/marianne-dyuck/</loc>
+    <loc>http://mlisi.xyz/authors/marianne-dyuck/</loc>
     <lastmod>2017-02-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/blink-adapt/</loc>
+    <loc>http://mlisi.xyz/publication/blink-adapt/</loc>
     <lastmod>2017-02-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/time-constancy/</loc>
+    <loc>http://mlisi.xyz/publication/time-constancy/</loc>
     <lastmod>2016-11-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/marco-zorzi/</loc>
+    <loc>http://mlisi.xyz/authors/marco-zorzi/</loc>
     <lastmod>2016-02-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/mariagrazia-ranzini/</loc>
+    <loc>http://mlisi.xyz/authors/mariagrazia-ranzini/</loc>
     <lastmod>2016-02-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/voluntary-eye/</loc>
+    <loc>http://mlisi.xyz/publication/voluntary-eye/</loc>
     <lastmod>2016-02-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/double-drift-1/</loc>
+    <loc>http://mlisi.xyz/publication/double-drift-1/</loc>
     <lastmod>2015-09-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/chiara-spironelli/</loc>
+    <loc>http://mlisi.xyz/authors/chiara-spironelli/</loc>
     <lastmod>2015-09-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/load-erp/</loc>
+    <loc>http://mlisi.xyz/publication/load-erp/</loc>
     <lastmod>2015-09-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/kostantinos-priftis/</loc>
+    <loc>http://mlisi.xyz/authors/kostantinos-priftis/</loc>
     <lastmod>2015-09-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/load-pupil/</loc>
+    <loc>http://mlisi.xyz/publication/load-pupil/</loc>
     <lastmod>2015-09-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/spatial-constancy-attention/</loc>
+    <loc>http://mlisi.xyz/publication/spatial-constancy-attention/</loc>
     <lastmod>2015-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/barbara-treccani/</loc>
+    <loc>http://mlisi.xyz/authors/barbara-treccani/</loc>
     <lastmod>2014-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/elvio-blini/</loc>
+    <loc>http://mlisi.xyz/authors/elvio-blini/</loc>
     <lastmod>2014-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/konstantinos-priftis/</loc>
+    <loc>http://mlisi.xyz/authors/konstantinos-priftis/</loc>
     <lastmod>2014-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/optokinetic/</loc>
+    <loc>http://mlisi.xyz/publication/optokinetic/</loc>
     <lastmod>2014-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/marco-pitteri/</loc>
+    <loc>http://mlisi.xyz/authors/marco-pitteri/</loc>
     <lastmod>2014-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/andrea-desantis/</loc>
+    <loc>http://mlisi.xyz/authors/andrea-desantis/</loc>
     <lastmod>2014-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/florian-waszak/</loc>
+    <loc>http://mlisi.xyz/authors/florian-waszak/</loc>
     <lastmod>2014-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/pascal-mamassian/</loc>
+    <loc>http://mlisi.xyz/authors/pascal-mamassian/</loc>
     <lastmod>2014-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/desantis/</loc>
+    <loc>http://mlisi.xyz/publication/desantis/</loc>
     <lastmod>2014-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/michele-de-filippo-de-grazia/</loc>
+    <loc>http://mlisi.xyz/authors/michele-de-filippo-de-grazia/</loc>
     <lastmod>2012-08-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/simone-cutini/</loc>
+    <loc>http://mlisi.xyz/authors/simone-cutini/</loc>
     <lastmod>2012-08-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/unsupervised-space-coding/</loc>
+    <loc>http://mlisi.xyz/publication/unsupervised-space-coding/</loc>
     <lastmod>2012-08-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/casarotti-marco/</loc>
+    <loc>http://mlisi.xyz/authors/casarotti-marco/</loc>
     <lastmod>2012-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/lisi-matteo/</loc>
+    <loc>http://mlisi.xyz/authors/lisi-matteo/</loc>
     <lastmod>2012-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/premotor-model/</loc>
+    <loc>http://mlisi.xyz/publication/premotor-model/</loc>
     <lastmod>2012-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/umilta-carlo/</loc>
+    <loc>http://mlisi.xyz/authors/umilta-carlo/</loc>
     <lastmod>2012-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/zorzi-marco/</loc>
+    <loc>http://mlisi.xyz/authors/zorzi-marco/</loc>
     <lastmod>2012-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/admin/</loc>
+    <loc>http://mlisi.xyz/authors/admin/</loc>
   </url>
   
 </urlset>

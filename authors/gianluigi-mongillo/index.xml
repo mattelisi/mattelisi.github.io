@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gianluigi Mongillo | Matteo Lisi</title>
-    <link>/authors/gianluigi-mongillo/</link>
-      <atom:link href="/authors/gianluigi-mongillo/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://mlisi.xyz/authors/gianluigi-mongillo/</link>
+      <atom:link href="http://mlisi.xyz/authors/gianluigi-mongillo/index.xml" rel="self" type="application/rss+xml" />
     <description>Gianluigi Mongillo</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Fri, 28 Jul 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/shademe.png</url>
+      <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Gianluigi Mongillo</title>
-      <link>/authors/gianluigi-mongillo/</link>
+      <link>http://mlisi.xyz/authors/gianluigi-mongillo/</link>
     </image>
     
     <item>
       <title>Discrete confidence levels revealed by sequential decisions</title>
-      <link>/publication/discrete-confidence/</link>
+      <link>http://mlisi.xyz/publication/discrete-confidence/</link>
       <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>/publication/discrete-confidence/</guid>
+      <guid>http://mlisi.xyz/publication/discrete-confidence/</guid>
       <description></description>
     </item>
     

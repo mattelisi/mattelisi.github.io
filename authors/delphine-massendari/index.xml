@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Delphine Massendari | Matteo Lisi</title>
-    <link>/authors/delphine-massendari/</link>
-      <atom:link href="/authors/delphine-massendari/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://mlisi.xyz/authors/delphine-massendari/</link>
+      <atom:link href="http://mlisi.xyz/authors/delphine-massendari/index.xml" rel="self" type="application/rss+xml" />
     <description>Delphine Massendari</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Wed, 27 Sep 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/shademe.png</url>
+      <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Delphine Massendari</title>
-      <link>/authors/delphine-massendari/</link>
+      <link>http://mlisi.xyz/authors/delphine-massendari/</link>
     </image>
     
     <item>
       <title>Memory-guided saccades show effect of perceptual illusion whereas visually-guided saccades do not</title>
-      <link>/publication/memory-delphine/</link>
+      <link>http://mlisi.xyz/publication/memory-delphine/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      <guid>/publication/memory-delphine/</guid>
+      <guid>http://mlisi.xyz/publication/memory-delphine/</guid>
       <description></description>
     </item>
     
