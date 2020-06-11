@@ -2,21 +2,77 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts | Matteo Lisi</title>
-    <link>http://mlisi.xyz/post/</link>
-      <atom:link href="http://mlisi.xyz/post/index.xml" rel="self" type="application/rss+xml" />
+    <link>/post/</link>
+      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Mon, 09 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Thu, 11 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>Posts</title>
-      <link>http://mlisi.xyz/post/</link>
+      <link>/post/</link>
     </image>
     
     <item>
+      <title>Setting Kazam to correctly record full-screen on HiDPI displays in Ubuntu</title>
+      <link>/post/kazam/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>/post/kazam/</guid>
+      <description>
+
+
+&lt;p&gt;In this new covid-19 world it happens more and more often that I need to record full-screen videos, for example for lectures. This is something that one can do live with Zoom, but that is not the most practical option for non-live recordings.&lt;/p&gt;
+&lt;p&gt;In Ubuntu there is a nice software, Kazam screencaster, that is perfect for the job, except that it does not get correctly the screen size if you have a high pixel density display (HiDPI): you end up with a video with only the top-left corner of the screen cropped.&lt;/p&gt;
+&lt;p&gt;There is a simple patch to fix that issue, which I describe here in case it’s useful to someone else and for the benefit of my future self.&lt;/p&gt;
+&lt;p&gt;First, you need to find the files &lt;code&gt;gstreamer.py&lt;/code&gt; and &lt;code&gt;prefs.py&lt;/code&gt; in the Kazam installation. For me they were in &lt;code&gt;/usr/lib/python3/dist-packages/kazam/backend/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Next, you have to fix these such that they take into account the screen scaling factor, which is obtained from the &lt;code&gt;get_monitor_scale_factor&lt;/code&gt; function in the Gtk library&lt;/p&gt;
+&lt;p&gt;This cane be done by adding these lines to the file &lt;code&gt;gstreamer.py&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt; scale = self.video_source[&amp;#39;scale&amp;#39;]
+ startx = startx * scale 
+ starty = starty * scale 
+ endx = endx * scale 
+ endy = endy * scale &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;They should be added around lines 120 or so, right after the properties &lt;code&gt;endx&lt;/code&gt; and &lt;code&gt;endy&lt;/code&gt; are set up (&lt;code&gt;endy = starty + height - 1&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Next, open the file &lt;code&gt;prefs.py&lt;/code&gt; and, around line 324, change this bit&lt;/p&gt;
+&lt;pre class=&#34;pythin&#34;&gt;&lt;code&gt;for i in range(self.default_screen.get_n_monitors()):
+   rect = self.default_screen.get_monitor_geometry(i)
+   self.logger.debug(&amp;quot;  Monitor {0} - X: {1}, Y: {2}, W: {3}, H: {4}&amp;quot;.format(i,
+                                      rect.x,
+                                      rect.y,
+                                      rect.width,
+                                      rect.height))
+                                      rect.height))
+
+                 self.screens.append({&amp;quot;x&amp;quot;: rect.x,
+                                      &amp;quot;y&amp;quot;: rect.y,
+                                      &amp;quot;width&amp;quot;: rect.width,
+                                      &amp;quot;height&amp;quot;: rect.height})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;into this&lt;/p&gt;
+&lt;pre class=&#34;pythin&#34;&gt;&lt;code&gt;for i in range(self.default_screen.get_n_monitors()):
+     rect = self.default_screen.get_monitor_geometry(i)
+     scale = self.default_screen.get_monitor_scale_factor(i)
+
+     self.logger.debug(&amp;quot;  Monitor {0} - X: {1}, Y: {2}, W: {3}, H: {4}, scale: {5}&amp;quot;.format(i,
+                                                                            rect.x,
+                                                                                rect.y,
+                                                                                    rect.width,
+                                                                                    rect.height,
+                                                                                    scale))
+    self.screens.append({&amp;quot;x&amp;quot;: rect.x,
+                         &amp;quot;y&amp;quot;: rect.y,
+                         &amp;quot;width&amp;quot;: rect.width,
+                         &amp;quot;height&amp;quot;: rect.height,
+                         &amp;quot;scale&amp;quot;: scale}) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That’s it! Restart Kazam and the next fullscreen recording should work OK.&lt;/p&gt;
+&lt;p&gt;A big thanks to user sllorente for describing this patch &lt;a href=&#34;https://bugs.launchpad.net/ubuntu/+bug/1283424&#34;&gt;here&lt;/a&gt;!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Defending the null hypothesis</title>
-      <link>http://mlisi.xyz/post/defending-the-null/</link>
+      <link>/post/defending-the-null/</link>
       <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/defending-the-null/</guid>
+      <guid>/post/defending-the-null/</guid>
       <description>
 
 
@@ -42,9 +98,9 @@
     
     <item>
       <title>Installing RStan on HPC cluster</title>
-      <link>http://mlisi.xyz/post/rstan-cluster/</link>
+      <link>/post/rstan-cluster/</link>
       <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/rstan-cluster/</guid>
+      <guid>/post/rstan-cluster/</guid>
       <description>
 
 
@@ -77,15 +133,15 @@ install.packages(&amp;quot;rstan&amp;quot;, type = &amp;quot;source&amp;quot;)&l
     
     <item>
       <title>Attitude shift towards Remain in European Elections obscured in press by rebranded Farage party</title>
-      <link>http://mlisi.xyz/post/eu/</link>
+      <link>/post/eu/</link>
       <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/eu/</guid>
+      <guid>/post/eu/</guid>
       <description>
 
 
 &lt;p&gt;The European Election results reveal a shift towards parties that support a soft or no Brexit compared to votes in 2014. Instead, major news outlets in the UK and Europe claim that Hard Brexit has gained support. To see why this is a misguided conclusion, just look at the numbers:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://mlisi.xyz/img/EU_election.png&#34; alt=&#34;Almost complete vote share results of UK’s EU elections 2019, put in perspective.&#34; /&gt;
+&lt;img src=&#34;/img/EU_election.png&#34; alt=&#34;Almost complete vote share results of UK’s EU elections 2019, put in perspective.&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Almost complete vote share results of UK’s EU elections 2019, put in perspective.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Parties supporting strong UK independence have lost overwhelming numbers of voters, with UKIP losing 24.2% of the votes, and conservative losing 14.8%. This loss is only partially recovered by Farage’s Brexit Party, which gained 31.6%, suggesting that a substantial proportion of voters switched to parties favoring a soft or no Brexit.&lt;/p&gt;
@@ -99,14 +155,14 @@ install.packages(&amp;quot;rstan&amp;quot;, type = &amp;quot;source&amp;quot;)&l
     
     <item>
       <title>Ephemeral patterns of complexity</title>
-      <link>http://mlisi.xyz/post/ephemeral/</link>
+      <link>/post/ephemeral/</link>
       <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/ephemeral/</guid>
+      <guid>/post/ephemeral/</guid>
       <description>
 
 
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://mlisi.xyz/img/complexity.png&#34; alt=&#34;From ‘The Big Picture: On the Origins of Life, Meaning, and the Universe Itself’ by Sean Carrol, www.preposterousuniverse.com/bigpicture&#34; /&gt;
+&lt;img src=&#34;/img/complexity.png&#34; alt=&#34;From ‘The Big Picture: On the Origins of Life, Meaning, and the Universe Itself’ by Sean Carrol, www.preposterousuniverse.com/bigpicture&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;From ‘&lt;em&gt;The Big Picture: On the Origins of Life, Meaning, and the Universe Itself&lt;/em&gt;’ by Sean Carrol, &lt;a href=&#34;https://www.preposterousuniverse.com/bigpicture/&#34;&gt;www.preposterousuniverse.com/bigpicture&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -114,9 +170,9 @@ install.packages(&amp;quot;rstan&amp;quot;, type = &amp;quot;source&amp;quot;)&l
     
     <item>
       <title>Bayesian model selection at the group level</title>
-      <link>http://mlisi.xyz/post/bms/</link>
+      <link>/post/bms/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/bms/</guid>
+      <guid>/post/bms/</guid>
       <description>
 
 
@@ -147,7 +203,7 @@ p\left(m_n \mid  \mathbf{r} \right) =  \prod_{k=1}^K r_k^{m_{nk}}.
 \]&lt;/span&gt;
 The graphical model that summarizes these dependencies is shown the following graph:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://mlisi.xyz/img/bms.png&#34; alt=&#34;&#34; style=&#34;width:50.0%&#34; /&gt;
+&lt;img src=&#34;/img/bms.png&#34; alt=&#34;&#34; style=&#34;width:50.0%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -251,14 +307,14 @@ where &lt;span class=&#34;math inline&#34;&gt;\(\mathop{\bf{1}}_{\dots}\)&lt;/sp
     
     <item>
       <title>Bayesian multilevel models using R and Stan (part 1)</title>
-      <link>http://mlisi.xyz/post/bayesian-multilevel-models-r-stan/</link>
+      <link>/post/bayesian-multilevel-models-r-stan/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/bayesian-multilevel-models-r-stan/</guid>
+      <guid>/post/bayesian-multilevel-models-r-stan/</guid>
       <description>
 
 
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://mlisi.xyz/img/turtlepile.jpg&#34; alt=&#34;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&#34; /&gt;
+&lt;img src=&#34;/img/turtlepile.jpg&#34; alt=&#34;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Photo ©Roxie and Lee Carroll, www.akidsphoto.com.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;In my previous lab I was known for promoting the use of multilevel, or mixed-effects model among my colleagues. (The slides on the &lt;a href=&#34;https://mattelisi.github.io/#notes&#34;&gt;/misc&lt;/a&gt; section of this website are part of this effort.) Multilevel models should be the standard approach in fields like experimental psychology and neuroscience, where the data is naturally grouped according to “observational units”, i.e. individual participants. I agree with Richard McElreath when he writes that &lt;em&gt;“multilevel regression deserves to be the default form of regression”&lt;/em&gt; (see &lt;a href=&#34;http://xcelab.net/rmpubs/rethinking/Statistical_Rethinking_sample.pdf&#34;&gt;here&lt;/a&gt;, section 1.3.2) and that, at least in our fields, studies not using a multilevel approach should justify the choice of not using it.&lt;/p&gt;
@@ -363,7 +419,7 @@ transformed parameters {
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;For the correlation matrix, Stan manual suggest to use a LKJ prior&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;. This prior has one single shape parameters, &lt;span class=&#34;math inline&#34;&gt;\(\eta\)&lt;/span&gt;: if you set &lt;span class=&#34;math inline&#34;&gt;\(\eta=1\)&lt;/span&gt; then you have effectively a uniform prior distribution over any (Cholesky factor of) 2x2 correlation matrices. For values &lt;span class=&#34;math inline&#34;&gt;\(\eta&amp;gt;1\)&lt;/span&gt; instead you get a more conservative prior, with a mode in the identity matrix (where the correlations are 0). For more information about the LKJ prior see page 556 of Stan reference manual, version 2.17.0, and also &lt;a href=&#34;http://www.psychstatistics.com/2014/12/27/d-lkj-priors/&#34;&gt;this page&lt;/a&gt; for an intuitive demonstration.&lt;/p&gt;
 &lt;p&gt;Importantly, I have used (weakly) informative priors for the fixed effect estimates. We know from the literature that simple reaction times are around 300ms, hence the prior for the intercept, which represents the avearage reaction times at Day 0, i.e. before the sleep deprivation. We expect the reaction times to increase with sleep deprivation, so I have used for the slope a Gaussian prior centered at a small positive value (0.2 seconds), which would represents the increase in reaction times with each day of sleep deprivation, however using a very broad standard deviation (2 seconds), which could accomodate also negative or very different slope values if needed. It may be useful to visualize with a plot the priors.
-&lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig1-1.png&#34; width=&#34;624&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig1-1.png&#34; width=&#34;624&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;generated-quantities&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Generated quantities&lt;/h2&gt;
@@ -384,7 +440,7 @@ sleep_model &amp;lt;- stan(file = &amp;quot;sleep_model.stan&amp;quot;, data = d
     iter = 2000, chains = 4)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;One way to check the convergence of the model is to plot the chain of samples. They should look like a &lt;em&gt;“fat, hairy caterpillar which does not bend”&lt;/em&gt; &lt;span class=&#34;citation&#34;&gt;(Sorensen, Hohenstein, and Vasishth 2016)&lt;/span&gt;, suggesting that the sampling was stable at the posterior.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;traceplot(sleep_model, pars = c(&amp;quot;beta&amp;quot;), inc_warmup = FALSE)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig2-1.png&#34; width=&#34;480&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig2-1.png&#34; width=&#34;480&#34; /&gt;
 There is a &lt;code&gt;print()&lt;/code&gt; method for visualising the estimates of the parameters. The values of the &lt;span class=&#34;math inline&#34;&gt;\({\hat R}\)&lt;/span&gt; (&lt;code&gt;Rhat&lt;/code&gt;) statistics also confirm that the chains converged. The method automatically report credible intervals for the parameters (computed with the percentile method from the samples of the posterior distribution).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(sleep_model, pars = c(&amp;quot;beta&amp;quot;), probs = c(0.025, 0.975), 
     digits = 3)
@@ -403,7 +459,7 @@ convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And we can visualze the posterior distribution as histograms (here for the fixed effects parameters and the standard deviations of the corresponding random effects).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(sleep_model, plotfun = &amp;quot;hist&amp;quot;, pars = c(&amp;quot;beta&amp;quot;, &amp;quot;sigma_u&amp;quot;))
 `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://mlisi.xyz/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig3-1.png&#34; width=&#34;384&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-03-4-Bayesian-multilevel-models-R-Stan_files/figure-html/fig3-1.png&#34; width=&#34;384&#34; /&gt;
 Finally, we can also examine the correlation matrix of random-effects.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;print(sleep_model, pars = c(&amp;quot;Omega&amp;quot;), digits = 3)
 Inference for Stan model: sleep_model_v1.
@@ -450,9 +506,9 @@ convergence, Rhat=1).&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Simulating correlated variables with the Cholesky factorization</title>
-      <link>http://mlisi.xyz/post/simulating-correlated-variables-with-the-cholesky-factorization/</link>
+      <link>/post/simulating-correlated-variables-with-the-cholesky-factorization/</link>
       <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/simulating-correlated-variables-with-the-cholesky-factorization/</guid>
+      <guid>/post/simulating-correlated-variables-with-the-cholesky-factorization/</guid>
       <description>
 
 
@@ -480,7 +536,7 @@ Elements in the diagonal can be understood as the correlation of each variable w
 &lt;p&gt;Finally, to introduce the correlations , multiply them with the &lt;code&gt;Lambda&lt;/code&gt; obtained above&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;X &amp;lt;- Lambda %*% Z&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now plot the results
-&lt;img src=&#34;http://mlisi.xyz/post/2018-01-21-generating-correlated-random-variables-with-the-cholesky-factorization_files/figure-html/fig1-1.png&#34; width=&#34;729.6&#34; /&gt;
+&lt;img src=&#34;/post/2018-01-21-generating-correlated-random-variables-with-the-cholesky-factorization_files/figure-html/fig1-1.png&#34; width=&#34;729.6&#34; /&gt;
 We can verify that the correlation as estimated from the sample corresponds (or is close enough) to the generative value.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# correlation in the generated sample
 cor(X[1,],X[2,])
@@ -514,16 +570,16 @@ Therefore the new random vector &lt;span class=&#34;math inline&#34;&gt;\(X\)&lt
     
     <item>
       <title>Multi-model estimation of psychophysical parameters</title>
-      <link>http://mlisi.xyz/post/model-averaging/</link>
+      <link>/post/model-averaging/</link>
       <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/model-averaging/</guid>
+      <guid>/post/model-averaging/</guid>
       <description>
 
 
 &lt;p&gt;In the study of human perception we often need to measure how sensitive is an observer to a stimulus variation, and how her/his sensitivity changes due to changes in the context or experimental manipulations. In many applications this can be done by estimating the slope of the psychometric function&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;, a parameter that relates to the precision with which the observer can make judgements about the stimulus. A psychometric function is generally characterized by 2-3 parameters: the slope, the threshold (or criterion), and an optional lapse parameter, which indicate the rate at which attention lapses (i.e. &lt;em&gt;stimulus-independent&lt;/em&gt; errors) occur.&lt;/p&gt;
 &lt;p&gt;As an example, consider the situation where an observer is asked to judge whether a signal (can be anything, from the orientation angle of a line on a screen, or the pitch of a tone, to the speed of a car or the approximate number of people in a crowd, etc.) is above or below a given reference value, call it zero. The experimenter presents the observers with many signals of different intensities, and the observer is asked to respond by making a binary choice (larger/smaller than the reference), under two different contextual conditions (before/after having a pint, with different headphones, etc.). These two conditions are expected to results in different sensitivity, and the experimenter is interested in estimating as precisely as possible the difference in sensitivity&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;. The psychometric function for one observer in the two conditions might look like this (figure below).&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://mlisi.xyz/img/psyfun.png&#34; alt=&#34;Psychometric functions. Each points is a response (0 or 1 ; some vertical jitter is added for clarity), and the lines represent the fitted psychometric model (here a cumulative Gaussian psychometric function). The two facets of the plots represent the two different conditions. It can be seen that the precision seems to be different across conditions: judgements made under condition ‘2’ are more variable, indicating reduced sensitivity. &#34; style=&#34;width:70.0%&#34; /&gt;
+&lt;img src=&#34;/img/psyfun.png&#34; alt=&#34;Psychometric functions. Each points is a response (0 or 1 ; some vertical jitter is added for clarity), and the lines represent the fitted psychometric model (here a cumulative Gaussian psychometric function). The two facets of the plots represent the two different conditions. It can be seen that the precision seems to be different across conditions: judgements made under condition ‘2’ are more variable, indicating reduced sensitivity. &#34; style=&#34;width:70.0%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Psychometric functions. Each points is a response (0 or 1 ; some vertical jitter is added for clarity), and the lines represent the fitted psychometric model (here a cumulative Gaussian psychometric function). The two facets of the plots represent the two different conditions. It can be seen that the precision seems to be different across conditions: judgements made under condition ‘2’ are more variable, indicating reduced sensitivity. &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Our focus is on the psychometric slope, and we are not really interested in measuring the lapse rate; however it is still important to take lapses into account: it has been shown that not accounting for lapses can have a large influence on the estimates of the slope &lt;span class=&#34;citation&#34;&gt;(Wichmann and Hill 2001)&lt;/span&gt;.&lt;/p&gt;
@@ -581,12 +637,12 @@ Finally, one can compute the model-averaged estimate of the parameter&lt;a href=
 &lt;p&gt;Additionally, in my simulations each simulated observer could, &lt;em&gt;with equal probability&lt;/em&gt; &lt;span class=&#34;math inline&#34;&gt;\(\frac{1}{3}\)&lt;/span&gt;, either never lapse, lapse with a constant rate across conditions, or lapse at a higher rate in the more difficult condition (condition ‘2’ where the judgements are less precise). The lapse rates were draw uniformly from the interval [0.01, 0.1], and could get as high as 0.15 in condition ‘2’. Each simulated observer ran 250 trials per condition (similar to the figure at the top of this page). I simulated dataset from &lt;span class=&#34;math inline&#34;&gt;\(n=5\)&lt;/span&gt; to &lt;span class=&#34;math inline&#34;&gt;\(n=50\)&lt;/span&gt;, using 100 iterations for each sample size (only 85 in the case of &lt;span class=&#34;math inline&#34;&gt;\(n=50\)&lt;/span&gt; because the simulation was taking too long and I needed my laptop for other stuff). For simplicity I assumed that the different parameters were not correlated across observers&lt;a href=&#34;#fn5&#34; class=&#34;footnote-ref&#34; id=&#34;fnref5&#34;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;. I also had my simulated observer using the same criterion across the two conditions, although this may not necessarily be true.
 The quantity of interest here is the difference in slope between the two condition, that is &lt;span class=&#34;math inline&#34;&gt;\(\sigma_2 - \sigma_1\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;First, I examined the mean squared error of each of the models’ estimates, and of the model-averaged estimate. This is the average squared difference between the estimate and the true value.
-&lt;img src=&#34;http://mlisi.xyz/img/mse.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt;
+&lt;img src=&#34;/img/mse.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt;
 The results shows (unless my color blindness fooled me) that the model-averaged estimate attains always the smaller error. Note also that the error tend to decrease exponentially with the sample size. Interestingly, the worst model seems to be the one that allow for the lapses to vary across conditions. This may be because the change in the lapse rate across condition was - when present - relatively small, but also because this model has a larger number of parameters, and thus produces more variable estimates (that is with higher standard errors) than smaller model. Indeed, given that I know the ‘true’ value of the parameres in this simulation settings, I can divide the error into the two subcomponents of variance and bias (see &lt;a href=&#34;http://scott.fortmann-roe.com/docs/BiasVariance.html&#34;&gt;this page&lt;/a&gt; for a nice introduction to the bias-variance tradeoff). The bias is the difference between the expected estimate (averaged over many repetitions/iterations) of the same model and the true quantity that we want to estimate. The variance is simply the variability of the model estimates, i.e. how much they oscillate around the expected estimate.&lt;/p&gt;
 &lt;p&gt;Here is a plot of the variance. Indeed it can be seen that the variable-lapse model, which has more parameters, is the one that produces more variable estimates. There is however little difference between the other two models’ and the multi-model estimates
-&lt;img src=&#34;http://mlisi.xyz/img/variance.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;/img/variance.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;And here is the bias. This is very satisfactory, as it shows that while all individual models produced biased estimates, the bias of the model-averaged estimates is zero, or very close to zero.
-&lt;img src=&#34;http://mlisi.xyz/img/bias.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt;
+&lt;img src=&#34;/img/bias.png&#34; alt=&#34;&#34; style=&#34;width:60.0%&#34; /&gt;
 In sum, by averaging models of different levels of complexity according to their relative likelihood, I was able to simultaneously minimize the variance and decrease the bias of my estimates, and achieve a greater efficiency. Model averaging seems to be the ideal procedure in this specific settings where the observer would belong to one of the three categories (i.e., she/he would conform to one of the three assumptions) with equal probability. However I think (although I haven’t checked) that it would perform well even in cases where a single “type” of observers is largely predominant over the other.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;code&#34; class=&#34;section level1&#34;&gt;
@@ -802,14 +858,14 @@ ggplot(ares,aes(x=n_subjects, y=value, color=variable))+geom_hline(yintercept=0,
     
     <item>
       <title>Listing&#39;s law, and the mathematics of the eyes</title>
-      <link>http://mlisi.xyz/post/listing-s-law-and-the-mathematics-of-the-eyes/</link>
+      <link>/post/listing-s-law-and-the-mathematics-of-the-eyes/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/listing-s-law-and-the-mathematics-of-the-eyes/</guid>
+      <guid>/post/listing-s-law-and-the-mathematics-of-the-eyes/</guid>
       <description>
 
 
 &lt;p&gt;&lt;em&gt;Brief intro to the mathematical formalism used to describe rotations of the eyes in 3D (including the torsional component).&lt;/em&gt;
-&lt;img src=&#34;http://mlisi.xyz/img/3Deyecoord_Haslwanter1995.png&#34; alt=&#34;3D eye coordinate systems in the primary reference position, left panel, and after a leftward rotation, right panel (Haslwanter 1995). &#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;/img/3Deyecoord_Haslwanter1995.png&#34; alt=&#34;3D eye coordinate systems in the primary reference position, left panel, and after a leftward rotation, right panel (Haslwanter 1995). &#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The shape of the human eye is approximately a sphere with a diameter of 23 mm, and mechanically it behaves like a ball in a ball and socket joint. Because there is a functional distinguished axis - the visual axis, that is the line of gaze or more precisely the imaginary straight line passing through both the center of the pupil and the center of the fovea - the movements of the eyes are usually divided in &lt;em&gt;gaze direction&lt;/em&gt; and &lt;em&gt;cyclotorsion&lt;/em&gt; (or simply &lt;em&gt;torsion&lt;/em&gt;): while gaze direction refers to the direction of the visual axis, the torsion indicates the rotation of the eyeball about the visual axis. While modern video-based eyetrackers allow to record movements of the visual axis, they do not provide data about torsion. It turns out that there is a nice mathematical relationship that constrains the torsion of the eye in every direction of the gaze.
 This relationship is known as Listing’s law, and was named after the german mathematician &lt;a href=&#34;https://en.wikipedia.org/wiki/Johann_Benedict_Listing&#34;&gt;Johann Benedict Listing (1808-1882)&lt;/a&gt;. Listing’s law can be better understood by looking at how the 3D orientation of the eye can be formally described.&lt;/p&gt;
 &lt;div id=&#34;mathematics-of-3d-eye-movements&#34; class=&#34;section level1&#34;&gt;
@@ -855,7 +911,7 @@ i^2 = j^2 = k^2 = ijk =  - 1
 \]&lt;/span&gt;
 This formula may seems strange but it determines all the possible products of &lt;span class=&#34;math inline&#34;&gt;\(i,j,k\)&lt;/span&gt;, such as &lt;span class=&#34;math inline&#34;&gt;\(ij=k\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(ji=-k\)&lt;/span&gt;. Note that the product of the basis are not commutative. There is a visual trick to remember the multiplication rules, based on the following diagram:&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://mlisi.xyz/img/quatrule.png&#34; alt=&#34;Multiplying quaternions. Multiplying two elements in the clockwise direction gives the next element along the same direction (e.g. jk=i). The same is for counter-clockwise directions, except that the result is negative (e.g. kj=-i). &#34; /&gt;
+&lt;img src=&#34;/img/quatrule.png&#34; alt=&#34;Multiplying quaternions. Multiplying two elements in the clockwise direction gives the next element along the same direction (e.g. jk=i). The same is for counter-clockwise directions, except that the result is negative (e.g. kj=-i). &#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Multiplying quaternions. Multiplying two elements in the clockwise direction gives the next element along the same direction (e.g. &lt;span class=&#34;math inline&#34;&gt;\(jk=i\)&lt;/span&gt;). The same is for counter-clockwise directions, except that the result is negative (e.g. &lt;span class=&#34;math inline&#34;&gt;\(kj=-i\)&lt;/span&gt;). &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Quaternions can be used to represent rotations. For example, a rotation of an angle &lt;span class=&#34;math inline&#34;&gt;\(\theta\)&lt;/span&gt; around the axis define by the unit vector &lt;span class=&#34;math inline&#34;&gt;\(\vec{u} = (u_1, u_2,u_3) = u_1i + u_2j + u_3k\)&lt;/span&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; can be described by the following quaternion

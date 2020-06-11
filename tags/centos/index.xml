@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CentOS | Matteo Lisi</title>
-    <link>http://mlisi.xyz/tags/centos/</link>
-      <atom:link href="http://mlisi.xyz/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/centos/</link>
+      <atom:link href="/tags/centos/index.xml" rel="self" type="application/rss+xml" />
     <description>CentOS</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Sun, 04 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>CentOS</title>
-      <link>http://mlisi.xyz/tags/centos/</link>
+      <link>/tags/centos/</link>
     </image>
     
     <item>
       <title>Installing RStan on HPC cluster</title>
-      <link>http://mlisi.xyz/post/rstan-cluster/</link>
+      <link>/post/rstan-cluster/</link>
       <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/rstan-cluster/</guid>
+      <guid>/post/rstan-cluster/</guid>
       <description>
 
 

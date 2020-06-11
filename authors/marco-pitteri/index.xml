@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Marco Pitteri | Matteo Lisi</title>
-    <link>http://mlisi.xyz/authors/marco-pitteri/</link>
-      <atom:link href="http://mlisi.xyz/authors/marco-pitteri/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/marco-pitteri/</link>
+      <atom:link href="/authors/marco-pitteri/index.xml" rel="self" type="application/rss+xml" />
     <description>Marco Pitteri</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Mon, 04 Aug 2014 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>Marco Pitteri</title>
-      <link>http://mlisi.xyz/authors/marco-pitteri/</link>
+      <link>/authors/marco-pitteri/</link>
     </image>
     
     <item>
       <title>Larger, smaller, odd or even? Task-specific effects of optokinetic stimulation on the mental number space</title>
-      <link>http://mlisi.xyz/publication/optokinetic/</link>
+      <link>/publication/optokinetic/</link>
       <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/optokinetic/</guid>
+      <guid>/publication/optokinetic/</guid>
       <description>&lt;p&gt;Mariagrazia Ranzini and Matteo Lisi contributed equally to the work&lt;/p&gt;
 </description>
     </item>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu | Matteo Lisi</title>
+    <link>/tags/ubuntu/</link>
+      <atom:link href="/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <description>Ubuntu</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Thu, 11 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/shademe.png</url>
+      <title>Ubuntu</title>
+      <link>/tags/ubuntu/</link>
+    </image>
+    
+    <item>
+      <title>Setting Kazam to correctly record full-screen on HiDPI displays in Ubuntu</title>
+      <link>/post/kazam/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>/post/kazam/</guid>
+      <description>
+
+
+&lt;p&gt;In this new covid-19 world it happens more and more often that I need to record full-screen videos, for example for lectures. This is something that one can do live with Zoom, but that is not the most practical option for non-live recordings.&lt;/p&gt;
+&lt;p&gt;In Ubuntu there is a nice software, Kazam screencaster, that is perfect for the job, except that it does not get correctly the screen size if you have a high pixel density display (HiDPI): you end up with a video with only the top-left corner of the screen cropped.&lt;/p&gt;
+&lt;p&gt;There is a simple patch to fix that issue, which I describe here in case it’s useful to someone else and for the benefit of my future self.&lt;/p&gt;
+&lt;p&gt;First, you need to find the files &lt;code&gt;gstreamer.py&lt;/code&gt; and &lt;code&gt;prefs.py&lt;/code&gt; in the Kazam installation. For me they were in &lt;code&gt;/usr/lib/python3/dist-packages/kazam/backend/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Next, you have to fix these such that they take into account the screen scaling factor, which is obtained from the &lt;code&gt;get_monitor_scale_factor&lt;/code&gt; function in the Gtk library&lt;/p&gt;
+&lt;p&gt;This cane be done by adding these lines to the file &lt;code&gt;gstreamer.py&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt; scale = self.video_source[&amp;#39;scale&amp;#39;]
+ startx = startx * scale 
+ starty = starty * scale 
+ endx = endx * scale 
+ endy = endy * scale &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;They should be added around lines 120 or so, right after the properties &lt;code&gt;endx&lt;/code&gt; and &lt;code&gt;endy&lt;/code&gt; are set up (&lt;code&gt;endy = starty + height - 1&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Next, open the file &lt;code&gt;prefs.py&lt;/code&gt; and, around line 324, change this bit&lt;/p&gt;
+&lt;pre class=&#34;pythin&#34;&gt;&lt;code&gt;for i in range(self.default_screen.get_n_monitors()):
+   rect = self.default_screen.get_monitor_geometry(i)
+   self.logger.debug(&amp;quot;  Monitor {0} - X: {1}, Y: {2}, W: {3}, H: {4}&amp;quot;.format(i,
+                                      rect.x,
+                                      rect.y,
+                                      rect.width,
+                                      rect.height))
+                                      rect.height))
+
+                 self.screens.append({&amp;quot;x&amp;quot;: rect.x,
+                                      &amp;quot;y&amp;quot;: rect.y,
+                                      &amp;quot;width&amp;quot;: rect.width,
+                                      &amp;quot;height&amp;quot;: rect.height})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;into this&lt;/p&gt;
+&lt;pre class=&#34;pythin&#34;&gt;&lt;code&gt;for i in range(self.default_screen.get_n_monitors()):
+     rect = self.default_screen.get_monitor_geometry(i)
+     scale = self.default_screen.get_monitor_scale_factor(i)
+
+     self.logger.debug(&amp;quot;  Monitor {0} - X: {1}, Y: {2}, W: {3}, H: {4}, scale: {5}&amp;quot;.format(i,
+                                                                            rect.x,
+                                                                                rect.y,
+                                                                                    rect.width,
+                                                                                    rect.height,
+                                                                                    scale))
+    self.screens.append({&amp;quot;x&amp;quot;: rect.x,
+                         &amp;quot;y&amp;quot;: rect.y,
+                         &amp;quot;width&amp;quot;: rect.width,
+                         &amp;quot;height&amp;quot;: rect.height,
+                         &amp;quot;scale&amp;quot;: scale}) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That’s it! Restart Kazam and the next fullscreen recording should work OK.&lt;/p&gt;
+&lt;p&gt;A big thanks to user sllorente for describing this patch &lt;a href=&#34;https://bugs.launchpad.net/ubuntu/+bug/1283424&#34;&gt;here&lt;/a&gt;!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

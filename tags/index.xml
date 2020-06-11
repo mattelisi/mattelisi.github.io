@@ -2,157 +2,165 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags | Matteo Lisi</title>
-    <link>http://mlisi.xyz/tags/</link>
-      <atom:link href="http://mlisi.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/</link>
+      <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Mon, 09 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Thu, 11 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>Tags</title>
-      <link>http://mlisi.xyz/tags/</link>
+      <link>/tags/</link>
     </image>
     
     <item>
+      <title>Ubuntu</title>
+      <link>/tags/ubuntu/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>bayes factor</title>
-      <link>http://mlisi.xyz/tags/bayes-factor/</link>
+      <link>/tags/bayes-factor/</link>
       <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/bayes-factor/</guid>
+      <guid>/tags/bayes-factor/</guid>
       <description></description>
     </item>
     
     <item>
       <title>null-hypothesis</title>
-      <link>http://mlisi.xyz/tags/null-hypothesis/</link>
+      <link>/tags/null-hypothesis/</link>
       <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/null-hypothesis/</guid>
+      <guid>/tags/null-hypothesis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>http://mlisi.xyz/tags/r/</link>
+      <link>/tags/r/</link>
       <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/r/</guid>
+      <guid>/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CentOS</title>
-      <link>http://mlisi.xyz/tags/centos/</link>
+      <link>/tags/centos/</link>
       <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/centos/</guid>
+      <guid>/tags/centos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cluster</title>
-      <link>http://mlisi.xyz/tags/cluster/</link>
+      <link>/tags/cluster/</link>
       <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/cluster/</guid>
+      <guid>/tags/cluster/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Stan</title>
-      <link>http://mlisi.xyz/tags/stan/</link>
+      <link>/tags/stan/</link>
       <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/stan/</guid>
+      <guid>/tags/stan/</guid>
       <description></description>
     </item>
     
     <item>
       <title>brexit</title>
-      <link>http://mlisi.xyz/tags/brexit/</link>
+      <link>/tags/brexit/</link>
       <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/brexit/</guid>
+      <guid>/tags/brexit/</guid>
       <description></description>
     </item>
     
     <item>
       <title>politics</title>
-      <link>http://mlisi.xyz/tags/politics/</link>
+      <link>/tags/politics/</link>
       <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/politics/</guid>
+      <guid>/tags/politics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>books</title>
-      <link>http://mlisi.xyz/tags/books/</link>
+      <link>/tags/books/</link>
       <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/books/</guid>
+      <guid>/tags/books/</guid>
       <description></description>
     </item>
     
     <item>
       <title>philosophy</title>
-      <link>http://mlisi.xyz/tags/philosophy/</link>
+      <link>/tags/philosophy/</link>
       <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/philosophy/</guid>
+      <guid>/tags/philosophy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bayesian data analysis</title>
-      <link>http://mlisi.xyz/tags/bayesian-data-analysis/</link>
+      <link>/tags/bayesian-data-analysis/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/bayesian-data-analysis/</guid>
+      <guid>/tags/bayesian-data-analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>model-selection</title>
-      <link>http://mlisi.xyz/tags/model-selection/</link>
+      <link>/tags/model-selection/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/model-selection/</guid>
+      <guid>/tags/model-selection/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mixed-effects</title>
-      <link>http://mlisi.xyz/tags/mixed-effects/</link>
+      <link>/tags/mixed-effects/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/mixed-effects/</guid>
+      <guid>/tags/mixed-effects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>multilevel models</title>
-      <link>http://mlisi.xyz/tags/multilevel-models/</link>
+      <link>/tags/multilevel-models/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/multilevel-models/</guid>
+      <guid>/tags/multilevel-models/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cholesky</title>
-      <link>http://mlisi.xyz/tags/cholesky/</link>
+      <link>/tags/cholesky/</link>
       <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/cholesky/</guid>
+      <guid>/tags/cholesky/</guid>
       <description></description>
     </item>
     
     <item>
       <title>simulation</title>
-      <link>http://mlisi.xyz/tags/simulation/</link>
+      <link>/tags/simulation/</link>
       <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/simulation/</guid>
+      <guid>/tags/simulation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>psychophysics</title>
-      <link>http://mlisi.xyz/tags/psychophysics/</link>
+      <link>/tags/psychophysics/</link>
       <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/psychophysics/</guid>
+      <guid>/tags/psychophysics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>eye movements</title>
-      <link>http://mlisi.xyz/tags/eye-movements/</link>
+      <link>/tags/eye-movements/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/tags/eye-movements/</guid>
+      <guid>/tags/eye-movements/</guid>
       <description></description>
     </item>
     

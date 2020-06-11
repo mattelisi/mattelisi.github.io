@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>bayes factor | Matteo Lisi</title>
-    <link>http://mlisi.xyz/tags/bayes-factor/</link>
-      <atom:link href="http://mlisi.xyz/tags/bayes-factor/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/bayes-factor/</link>
+      <atom:link href="/tags/bayes-factor/index.xml" rel="self" type="application/rss+xml" />
     <description>bayes factor</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Mon, 09 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>bayes factor</title>
-      <link>http://mlisi.xyz/tags/bayes-factor/</link>
+      <link>/tags/bayes-factor/</link>
     </image>
     
     <item>
       <title>Defending the null hypothesis</title>
-      <link>http://mlisi.xyz/post/defending-the-null/</link>
+      <link>/post/defending-the-null/</link>
       <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/post/defending-the-null/</guid>
+      <guid>/post/defending-the-null/</guid>
       <description>
 
 

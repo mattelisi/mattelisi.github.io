@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>0 | Matteo Lisi</title>
-    <link>http://mlisi.xyz/publication_types/0/</link>
-      <atom:link href="http://mlisi.xyz/publication_types/0/index.xml" rel="self" type="application/rss+xml" />
+    <link>/publication_types/0/</link>
+      <atom:link href="/publication_types/0/index.xml" rel="self" type="application/rss+xml" />
     <description>0</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/shademe.png</url>
+      <url>/img/shademe.png</url>
       <title>0</title>
-      <link>http://mlisi.xyz/publication_types/0/</link>
+      <link>/publication_types/0/</link>
     </image>
     
     <item>
       <title>Perceiving location of moving objects across eye blinks</title>
-      <link>http://mlisi.xyz/publication/motion-blink-preprint/</link>
+      <link>/publication/motion-blink-preprint/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/motion-blink-preprint/</guid>
+      <guid>/publication/motion-blink-preprint/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Serial integration of sensory evidence for perceptual decisions and oculomotor responses</title>
-      <link>http://mlisi.xyz/publication/serial_int/</link>
+      <link>/publication/serial_int/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/serial_int/</guid>
+      <guid>/publication/serial_int/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Discrete confidence levels revealed by sequential decisions</title>
-      <link>http://mlisi.xyz/publication/discrete-confidence/</link>
+      <link>/publication/discrete-confidence/</link>
       <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/discrete-confidence/</guid>
+      <guid>/publication/discrete-confidence/</guid>
       <description></description>
     </item>
     
