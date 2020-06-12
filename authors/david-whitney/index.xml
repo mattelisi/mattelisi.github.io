@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>David Whitney | Matteo Lisi</title>
-    <link>/authors/david-whitney/</link>
-      <atom:link href="/authors/david-whitney/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://mlisi.xyz/authors/david-whitney/</link>
+      <atom:link href="http://mlisi.xyz/authors/david-whitney/index.xml" rel="self" type="application/rss+xml" />
     <description>David Whitney</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Thu, 02 Feb 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/shademe.png</url>
+      <url>http://mlisi.xyz/img/shademe.png</url>
       <title>David Whitney</title>
-      <link>/authors/david-whitney/</link>
+      <link>http://mlisi.xyz/authors/david-whitney/</link>
     </image>
     
     <item>
       <title>Target Displacements during Eye Blinks Trigger Automatic Recalibration of Gaze Direction</title>
-      <link>/publication/blink-adapt/</link>
+      <link>http://mlisi.xyz/publication/blink-adapt/</link>
       <pubDate>Thu, 02 Feb 2017 00:00:00 +0000</pubDate>
-      <guid>/publication/blink-adapt/</guid>
+      <guid>http://mlisi.xyz/publication/blink-adapt/</guid>
       <description></description>
     </item>
     

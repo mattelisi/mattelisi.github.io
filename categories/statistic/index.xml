@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>statistic | Matteo Lisi</title>
-    <link>/categories/statistic/</link>
-      <atom:link href="/categories/statistic/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://mlisi.xyz/categories/statistic/</link>
+      <atom:link href="http://mlisi.xyz/categories/statistic/index.xml" rel="self" type="application/rss+xml" />
     <description>statistic</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Mon, 09 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/shademe.png</url>
+      <url>http://mlisi.xyz/img/shademe.png</url>
       <title>statistic</title>
-      <link>/categories/statistic/</link>
+      <link>http://mlisi.xyz/categories/statistic/</link>
     </image>
     
     <item>
       <title>Defending the null hypothesis</title>
-      <link>/post/defending-the-null/</link>
+      <link>http://mlisi.xyz/post/defending-the-null/</link>
       <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>/post/defending-the-null/</guid>
+      <guid>http://mlisi.xyz/post/defending-the-null/</guid>
       <description>
 
 

@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Matteo Lisi</title>
-    <link>/</link>
-      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://mlisi.xyz/</link>
+      <atom:link href="http://mlisi.xyz/index.xml" rel="self" type="application/rss+xml" />
     <description>Matteo Lisi</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Thu, 11 Jun 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/shademe.png</url>
+      <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Matteo Lisi</title>
-      <link>/</link>
+      <link>http://mlisi.xyz/</link>
     </image>
     
     <item>
       <title>Posts</title>
-      <link>/post/</link>
+      <link>http://mlisi.xyz/post/</link>
       <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>/post/</guid>
+      <guid>http://mlisi.xyz/post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Publications</title>
-      <link>/publication/</link>
+      <link>http://mlisi.xyz/publication/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/</guid>
+      <guid>http://mlisi.xyz/publication/</guid>
       <description></description>
     </item>
     

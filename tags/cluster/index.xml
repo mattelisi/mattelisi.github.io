@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cluster | Matteo Lisi</title>
-    <link>/tags/cluster/</link>
-      <atom:link href="/tags/cluster/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://mlisi.xyz/tags/cluster/</link>
+      <atom:link href="http://mlisi.xyz/tags/cluster/index.xml" rel="self" type="application/rss+xml" />
     <description>cluster</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Sun, 04 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/shademe.png</url>
+      <url>http://mlisi.xyz/img/shademe.png</url>
       <title>cluster</title>
-      <link>/tags/cluster/</link>
+      <link>http://mlisi.xyz/tags/cluster/</link>
     </image>
     
     <item>
       <title>Installing RStan on HPC cluster</title>
-      <link>/post/rstan-cluster/</link>
+      <link>http://mlisi.xyz/post/rstan-cluster/</link>
       <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>/post/rstan-cluster/</guid>
+      <guid>http://mlisi.xyz/post/rstan-cluster/</guid>
       <description>
 
 

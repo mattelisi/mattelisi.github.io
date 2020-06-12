@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mario Bonato | Matteo Lisi</title>
-    <link>/authors/mario-bonato/</link>
-      <atom:link href="/authors/mario-bonato/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://mlisi.xyz/authors/mario-bonato/</link>
+      <atom:link href="http://mlisi.xyz/authors/mario-bonato/index.xml" rel="self" type="application/rss+xml" />
     <description>Mario Bonato</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Thu, 01 Mar 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/shademe.png</url>
+      <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Mario Bonato</title>
-      <link>/authors/mario-bonato/</link>
+      <link>http://mlisi.xyz/authors/mario-bonato/</link>
     </image>
     
     <item>
       <title>Cue-target contingencies modulate voluntary orienting of spatial attention: dissociable effects for speed and accuracy</title>
-      <link>/publication/validity_psyres/</link>
+      <link>http://mlisi.xyz/publication/validity_psyres/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
-      <guid>/publication/validity_psyres/</guid>
+      <guid>http://mlisi.xyz/publication/validity_psyres/</guid>
       <description>&lt;p&gt;Mario Bonato and Matteo Lisi contributed equally to the article and are listed in alphabetical order.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Effects of Multimodal Load on Spatial Monitoring as Revealed by ERPs</title>
-      <link>/publication/load-erp/</link>
+      <link>http://mlisi.xyz/publication/load-erp/</link>
       <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>/publication/load-erp/</guid>
+      <guid>http://mlisi.xyz/publication/load-erp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pupil dilation reveals top-down attentional load during spatial monitoring</title>
-      <link>/publication/load-pupil/</link>
+      <link>http://mlisi.xyz/publication/load-pupil/</link>
       <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>/publication/load-pupil/</guid>
+      <guid>http://mlisi.xyz/publication/load-pupil/</guid>
       <description></description>
     </item>
     
