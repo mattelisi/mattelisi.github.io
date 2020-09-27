@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="A probability question that arised in an interview for a major financial firm.">
+  <meta name="description" content="A probability question that was posed in an interview for a major financial firm.">
 
   
   <link rel="alternate" hreflang="en-us" href="http://mlisi.xyz/post/question-interview/">
@@ -125,7 +125,7 @@
   <meta property="og:site_name" content="Matteo Lisi">
   <meta property="og:url" content="http://mlisi.xyz/post/question-interview/">
   <meta property="og:title" content="How much is this game worth? | Matteo Lisi">
-  <meta property="og:description" content="A probability question that arised in an interview for a major financial firm."><meta property="og:image" content="http://mlisi.xyz/img/me_off.JPG">
+  <meta property="og:description" content="A probability question that was posed in an interview for a major financial firm."><meta property="og:image" content="http://mlisi.xyz/img/me_off.JPG">
   <meta property="twitter:image" content="http://mlisi.xyz/img/me_off.JPG"><meta property="og:locale" content="en-us">
   
     
@@ -395,7 +395,7 @@
   <h1 itemprop="name">How much is this game worth?</h1>
 
   
-  <p class="page-subtitle">A probability question that arised in an interview for a job at a major financial firm.</p>
+  <p class="page-subtitle">A probability question that was posed in an interview for a job at a major financial firm.</p>
   
 
   
@@ -575,7 +575,7 @@
       
 
 
-<p>This question arised in an interview for a AI / data science position for a global financial firm:</p>
+<p>This question was posed during an interview for a AI / data science position for a global financial firm:</p>
 <blockquote>
 <p><strong><em>Consider a game of chance in which a player can roll up to 3 times a dice. They win an amount of money proportional to the outcome of the last dice roll (1, 2, 3, 4, 5, or 6 £). They don’t need to do all the 3 throws and can stop before and collect their win if they want. You are the house in this game, what is the minimum amount of £ that you can charge for playing this game such that you won’t take losses in the long term.</em></strong></p>
 </blockquote>
@@ -596,7 +596,7 @@
 <hr />
 <div id="if-mathcalc5.5" class="section level3">
 <h3>If <span class="math inline">\(\mathcal{C}=5.5\)</span></h3>
-<p>In this case the rational player should continue until they get a 6 (keeping aside that it may not be rational at all to play if <span class="math inline">\(\mathcal{C}=5.5\)</span>). Let’s define <span class="math inline">\(D_1, D_2, D_3\)</span> indicate the outcomes of throws 1, 2, and 3, respectively. The probability <span class="math inline">\(p\left(\mathcal{W} \ge \mathcal{C} \right)\)</span> is equal to the probability of obtaining at least a <span class="math inline">\(6\)</span> in the independent throws, that is</p>
+<p>In this case the rational player should continue until they get a 6 (keeping aside that it may not be rational at all to play if <span class="math inline">\(\mathcal{C}=5.5\)</span>). Let’s define <span class="math inline">\(D_1, D_2, D_3\)</span> indicate the outcomes of throws 1, 2, and 3, respectively. The probability <span class="math inline">\(p\left(\mathcal{W} \ge \mathcal{C} \right)\)</span> is equal to the probability of obtaining at least a <span class="math inline">\(6\)</span> in three independent throws, that is</p>
 <p><span class="math display">\[
 p\left(\mathcal{W} \ge \mathcal{C} \mid \mathcal{C}=5.5\right) = \frac{1}{6} + \underbrace{\left( 1 - \frac{1}{6} \right) \times  \frac{1}{6}}_{p \left(D_2=6 \mid D_1&lt;6\right)} +  \underbrace{\left( 1 - \frac{1}{6} \right)^2 \times  \frac{1}{6}}_{p \left(D_3=6 \mid D_1&lt;6 \cup D_2&lt;6\right)} = \frac{91}{216} \approx 0.42
 \]</span></p>

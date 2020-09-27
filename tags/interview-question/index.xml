@@ -20,7 +20,7 @@
       <description>
 
 
-&lt;p&gt;This question arised in an interview for a AI / data science position for a global financial firm:&lt;/p&gt;
+&lt;p&gt;This question was posed during an interview for a AI / data science position for a global financial firm:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;Consider a game of chance in which a player can roll up to 3 times a dice. They win an amount of money proportional to the outcome of the last dice roll (1, 2, 3, 4, 5, or 6 £). They don’t need to do all the 3 throws and can stop before and collect their win if they want. You are the house in this game, what is the minimum amount of £ that you can charge for playing this game such that you won’t take losses in the long term.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -41,7 +41,7 @@
 &lt;hr /&gt;
 &lt;div id=&#34;if-mathcalc5.5&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;If &lt;span class=&#34;math inline&#34;&gt;\(\mathcal{C}=5.5\)&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;In this case the rational player should continue until they get a 6 (keeping aside that it may not be rational at all to play if &lt;span class=&#34;math inline&#34;&gt;\(\mathcal{C}=5.5\)&lt;/span&gt;). Let’s define &lt;span class=&#34;math inline&#34;&gt;\(D_1, D_2, D_3\)&lt;/span&gt; indicate the outcomes of throws 1, 2, and 3, respectively. The probability &lt;span class=&#34;math inline&#34;&gt;\(p\left(\mathcal{W} \ge \mathcal{C} \right)\)&lt;/span&gt; is equal to the probability of obtaining at least a &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; in the independent throws, that is&lt;/p&gt;
+&lt;p&gt;In this case the rational player should continue until they get a 6 (keeping aside that it may not be rational at all to play if &lt;span class=&#34;math inline&#34;&gt;\(\mathcal{C}=5.5\)&lt;/span&gt;). Let’s define &lt;span class=&#34;math inline&#34;&gt;\(D_1, D_2, D_3\)&lt;/span&gt; indicate the outcomes of throws 1, 2, and 3, respectively. The probability &lt;span class=&#34;math inline&#34;&gt;\(p\left(\mathcal{W} \ge \mathcal{C} \right)\)&lt;/span&gt; is equal to the probability of obtaining at least a &lt;span class=&#34;math inline&#34;&gt;\(6\)&lt;/span&gt; in three independent throws, that is&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[
 p\left(\mathcal{W} \ge \mathcal{C} \mid \mathcal{C}=5.5\right) = \frac{1}{6} + \underbrace{\left( 1 - \frac{1}{6} \right) \times  \frac{1}{6}}_{p \left(D_2=6 \mid D_1&amp;lt;6\right)} +  \underbrace{\left( 1 - \frac{1}{6} \right)^2 \times  \frac{1}{6}}_{p \left(D_3=6 \mid D_1&amp;lt;6 \cup D_2&amp;lt;6\right)} = \frac{91}{216} \approx 0.42
 \]&lt;/span&gt;&lt;/p&gt;
