@@ -5,12 +5,28 @@
     <link>http://mlisi.xyz/categories/</link>
       <atom:link href="http://mlisi.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Thu, 11 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Sat, 26 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/me_off.JPG</url>
       <title>Categories</title>
       <link>http://mlisi.xyz/categories/</link>
     </image>
+    
+    <item>
+      <title>interview question</title>
+      <link>http://mlisi.xyz/categories/interview-question/</link>
+      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/categories/interview-question/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>probability theory</title>
+      <link>http://mlisi.xyz/categories/probability-theory/</link>
+      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/categories/probability-theory/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>practical</title>

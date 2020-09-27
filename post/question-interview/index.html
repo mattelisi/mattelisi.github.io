@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.4.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Matteo Lisi">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="A probability question that arised in an interview for a major financial firm.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://mlisi.xyz/post/question-interview/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="rgb(0, 136, 204)">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/obsidian.min.css" crossorigin="anonymous" title="hl-light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/obsidian.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arapey:400,400i|Karla:400,700|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.85e2a2353dfde0b9e81180aafa75ddd7.css">
+
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-107105934-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="http://mlisi.xyz/post/question-interview/">
+
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@@mlisi6">
+  <meta property="twitter:creator" content="@@mlisi6">
+  
+  <meta property="og:site_name" content="Matteo Lisi">
+  <meta property="og:url" content="http://mlisi.xyz/post/question-interview/">
+  <meta property="og:title" content="How much is this game worth? | Matteo Lisi">
+  <meta property="og:description" content="A probability question that arised in an interview for a major financial firm."><meta property="og:image" content="http://mlisi.xyz/img/me_off.JPG">
+  <meta property="twitter:image" content="http://mlisi.xyz/img/me_off.JPG"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-09-26T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-09-26T19:37:59&#43;01:00">
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>How much is this game worth? | Matteo Lisi</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/"><img src="/img/shademe.png" alt="Matteo Lisi"></a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>/home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>/blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#misc"><span>/misc</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>/publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>/contact</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">How much is this game worth?</h1>
+
+  
+  <p class="page-subtitle">A probability question that arised in an interview for a job at a major financial firm.</p>
+  
+
+  
+    
+
+
+
+<meta content="2020-09-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2020-09-26 19:37:59 &#43;0100 BST" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemprop="author name" itemtype="http://schema.org/Person"><a href="/authors/matteo-lisi/">Matteo Lisi</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    <time>Sep 26, 2020</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/post/question-interview/#disqus_thread"></a>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/probability-theory/">probability theory</a>, <a href="/categories/interview-question/">interview question</a></span>
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=http://mlisi.xyz/post/question-interview/&amp;text=How%20much%20is%20this%20game%20worth?" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=http://mlisi.xyz/post/question-interview/&amp;t=How%20much%20is%20this%20game%20worth?" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=How%20much%20is%20this%20game%20worth?&amp;body=http://mlisi.xyz/post/question-interview/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=http://mlisi.xyz/post/question-interview/&amp;title=How%20much%20is%20this%20game%20worth?" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=How%20much%20is%20this%20game%20worth?%20http://mlisi.xyz/post/question-interview/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=http://mlisi.xyz/post/question-interview/&amp;title=How%20much%20is%20this%20game%20worth?" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+
+<p>
+<p><a href="https://commons.wikimedia.org/wiki/File:6sided_dice.jpg#/media/File:6sided_dice.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/6sided_dice.jpg/1200px-6sided_dice.jpg" alt="6sided dice.jpg"></a><br></p>
+<p>This question arised in an interview for a AI / data science position for a global financial firm:</p>
+<blockquote>
+<p><strong><em>Consider a game of chance in which a player can roll up to 3 times a dice. He wins an amount of money proportional to the outcome of the last dice roll (1, 2, 3, 4, 5, or 6 £). They don’t need to do all the 3 throws and can stop before anc collect the win if they want. Say you are the house in this game, what is the minimum amount of £ that you can charge for playing this game such that you won’t incurr losses in the long term.</em></strong></p>
+</blockquote>
+<p>It is a subtle question and it was fun working through it. I post here my solution.</p>
+<p>
+ 
+</p>
+<details>
+<p><summary><mark> <strong>Click to see solution.</strong> </mark></summary></p>
+<p>
+ 
+</p>
+<p>The solution depends also on the strategy of the player. However, as the house you need to worry only about the rational players, not the irrational ones, for example those that keep playing after they scored a <span class="math inline">\(6\)</span> (given that <span class="math inline">\(6\)</span> is the maximum, if they continue they can only either do worse or keep the current score).</p>
+<p>Let’s define with <span class="math inline">\(\mathcal{C}\)</span> the price that the player pay to play the game, and with <span class="math inline">\(\mathcal{W}\)</span> the amount they win. A rational player would keep playing until their winning are <em>at least</em> equal to the price, i.e. until <span class="math inline">\(\mathcal{W} \ge \mathcal{C}\)</span> (and may also continue after that if continuing increases their expected win). The question is then to find the expected value of <span class="math inline">\(\mathcal{W}\)</span> assuming a rational player.</p>
+<p>
+ 
+</p>
+<hr />
+<div id="if-mathcalc5.5" class="section level3">
+<h3>If <span class="math inline">\(\mathcal{C}=5.5\)</span></h3>
+<p>In this case the rational player should continue until they get a 6 (keeping aside that it may not be rational at all to play if <span class="math inline">\(\mathcal{C}=5.5\)</span>). Let’s define <span class="math inline">\(D_1, D_2, D_3\)</span> indicate the outcomes of throws 1, 2, and 3, respectively. The probability <span class="math inline">\(p\left(\mathcal{W} \ge \mathcal{C} \right)\)</span> is equal to the probability of obtaining at least a <span class="math inline">\(6\)</span> in the independent throws, that is</p>
+<p><span class="math display">\[
+p\left(\mathcal{W} \ge \mathcal{C} \mid \mathcal{C}=5.5\right) = \frac{1}{6} + \underbrace{\left( 1 - \frac{1}{6} \right) \times  \frac{1}{6}}_{p \left(D_2=6 \mid D_1&lt;6\right)} +  \underbrace{\left( 1 - \frac{1}{6} \right)^2 \times  \frac{1}{6}}_{p \left(D_3=6 \mid D_1&lt;6 \cup D_2&lt;6\right)} = \frac{91}{216} \approx 0.42
+\]</span></p>
+<p>Thus if <span class="math inline">\(\mathcal{C}=5.5\)</span> the house will alway win the long term, since the player will win more than they put in to play only about <span class="math inline">\(42\)</span>% of the times</p>
+<p>
+ 
+</p>
+<hr />
+</div>
+<div id="if-mathcalc4.5" class="section level3">
+<h3>If <span class="math inline">\(\mathcal{C}=4.5\)</span></h3>
+<p>Note that I am using non-integer values of <span class="math inline">\(\mathcal{C}\)</span> to avoid considering (for the moment) the case in which house and player end up even (<span class="math inline">\(\mathcal{C} = \mathcal{W}\)</span>). Let’s assume for the moment that the player stops if they get at least <span class="math inline">\(5\)</span>, we have</p>
+<p><span class="math display">\[
+p\left(\mathcal{W} \ge \mathcal{C} \mid \mathcal{C}= 4.5 \right) = \frac{2}{6} + \underbrace{\left( 1 - \frac{2}{6} \right) \times  \frac{2}{6}}_{p \left(D_2 \ge5 \mid D_1&lt;5\right)} +  \underbrace{\left( 1 - \frac{2}{6} \right)^2 \times  \frac{2}{6}}_{p \left(D_3 \ge 5 \mid D_1&lt;5 \cup D_2&lt;5\right)} = \frac{19}{27} \approx 0.70
+\]</span></p>
+<p>In this case thus the player will win more than they paid <span class="math inline">\(70\)</span>% of the times - not a good deal for the house.</p>
+<p>
+ 
+</p>
+<p><strong>Assume the player obtain 5 at the first throw. Is it worth to continue?</strong></p>
+<p>The probability of getting at least <span class="math inline">\(5\)</span> in the next two throws is <span class="math inline">\(\frac{2}{6} + \left(1 - \frac{2}{6} \right)\times \frac{2}{6} = \frac{20}{36} \approx 0.55\)</span></p>
+<p>The probability of getting a <span class="math inline">\(6\)</span> in the next two throws is <span class="math inline">\(\frac{1}{6} + \left(1 - \frac{1}{6} \right)\times \frac{1}{6} = \frac{11}{36} \approx 0.30\)</span></p>
+<p>If the player reach the last throw without obtaining at least <span class="math inline">\(5\)</span> the remaining outcomes, <span class="math inline">\(1\)</span> to <span class="math inline">\(4\)</span>, are equally likely with probability <span class="math inline">\(\frac{1}{4}\)</span>. Thus continuing after obtaining <span class="math inline">\(5\)</span> at the first throw has an expected value of <span class="math display">\[\frac{11}{36}\times6 + \left(\frac{20}{36} - \frac{11}{36}\right)\times 5 + \left(1 - \frac{20}{36}\right)\times \sum_{i=1}^4 \frac{1}{4}i \approx 4.19\]</span></p>
+<p>The value of stopping after having obtained <span class="math inline">\(5\)</span> is <span class="math inline">\(5\)</span>, thus the rational player should stop and not continue.</p>
+<p>
+ 
+</p>
+<hr />
+</div>
+<div id="solution" class="section level2">
+<h2>Solution</h2>
+<p>What if <span class="math inline">\(\mathcal{C}=5\)</span>? In this case we have that <span class="math inline">\(p\left(\mathcal{W} &gt; 5 \right) = \frac{91}{216} \approx 0.42\)</span>, and also that <span class="math inline">\(p\left(\mathcal{W} &gt; 4 \right) = \frac{19}{27} \approx 0.70\)</span>. Thus in the long run the player will win more than they paid about <span class="math inline">\(42\)</span>% of the times, they will be even with the bank <span class="math inline">\(28\)</span>% of the times, and they will loose money (obtaining any number from <span class="math inline">\(1\)</span> to <span class="math inline">\(4\)</span>, with equal probability) about <span class="math inline">\(30\)</span>% of the times.</p>
+<p>To see if this is a good deal we calculate the expected value assuming the player continue until they either obtain a <span class="math inline">\(5\)</span> or complete 3 throws. The probability of getting at least 5 in three throws is <span class="math inline">\(\frac{19}{27}\)</span>, and conditional of getting at least 5 the two outcomes of 6 and 5 have both the same probability <span class="math inline">\(\frac{1}{2}\)</span>. Thus we have</p>
+<p><span class="math display">\[\frac{19}{27}\times\frac{1}{2}\times6 + \frac{19}{27}\times\frac{1}{2}\times5 + \left(1 - \frac{19}{27}\right)\times \sum_{i=1}^4 \frac{1}{4}i = \frac{83}{18} \approx 4.61\]</span></p>
+<p>This indicate that for a price of <span class="math inline">\(5\)</span> the player is expected to incur a loss in the long run (since <span class="math inline">\(4.61 &lt; 5\)</span>).</p>
+<p>Note that thus far we have constrained the value of the game to be somewhere between <span class="math inline">\(4.5\)</span> and <span class="math inline">\(5\)</span>: if <span class="math inline">\(\mathcal{C}=4.5\)</span> the player will in the long run win more than they spend; and if <span class="math inline">\(\mathcal{C}=5\)</span> they will always lose. For any value of <span class="math inline">\(\mathcal{C}\)</span> within <span class="math inline">\(4.5\)</span> and <span class="math inline">\(5\)</span>, the optimal strategy for the player is to continue until they either obtain a <span class="math inline">\(5\)</span> or complete the 3 throws. And the calculation above gave the expected value for this strategy, that is <span class="math inline">\(\frac{83}{18} \approx 4.61\)</span>.</p>
+<p><span style="background-color: #FFFF00"> Thus, the house needs to set a price <span class="math inline">\(\mathcal{C}\)</span> that is at least <span class="math inline">\(\frac{83}{18}\approx 4.61\)</span> otherwise they risk incurring losses. </span></p>
+<p>This can be easily verified in R</p>
+<pre class="r"><code>set.seed(1)
+Nsim &lt;- 10^6
+D_1 &lt;- sample(1:6, size = Nsim, replace = TRUE)
+D_2 &lt;- sample(1:6, size = Nsim, replace = TRUE)
+D_3 &lt;- sample(1:6, size = Nsim, replace = TRUE)
+W &lt;- ifelse(D_1&gt;=5, D_1, ifelse(D_2&gt;=5, D_2, D_3))
+mean(W)</code></pre>
+<pre><code>## [1] 4.610975</code></pre>
+</details>
+</div>
+
+    </div>
+
+    
+
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/probability-theory/">probability theory</a>
+  
+  <a class="badge badge-light" href="/tags/interview-question/">interview question</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/authors/matteo-lisi/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+<section id="comments">
+  
+    
+<div id="disqus_thread"></div>
+<script>
+  let disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "mattelisi" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+</section>
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD12zE83xCTsL_ohYvAPoW43ZdpsvD_rGU"></script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    <script id="dsq-count-scr" src="https://mattelisi.disqus.com/count.js" async></script>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.16bbb3750feb7244c9bc409a5a4fe678.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2020 Matteo Lisi &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

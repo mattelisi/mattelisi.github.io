@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>probability | Matteo Lisi</title>
+    <link>/tags/probability/</link>
+      <atom:link href="/tags/probability/index.xml" rel="self" type="application/rss+xml" />
+    <description>probability</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Sat, 26 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/me_off.JPG</url>
+      <title>probability</title>
+      <link>/tags/probability/</link>
+    </image>
+    
+    <item>
+      <title>How much is this game worth? probability question</title>
+      <link>/post/question-interview/</link>
+      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/post/question-interview/</guid>
+      <description>
+
+
+&lt;p&gt;This question arised in an interview for a AI / data science position for a global financial firm:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Consider a game of chance in which a player can roll up to 3 times a dice. He wins an amount of money proportional at the outcome of the dice roll (1, 2, 3, 4, 5, or 6 £) of his &lt;em&gt;last&lt;/em&gt; throw (only the last). They don’t need to do all the 3 throws, they can stop before if they want (eg. if the get a 6 at the first throw). If you are the house in this game, what is the minimum amount of £ that you can charge the player to play the game without incurring loss (in he long term).&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;details&gt;
+&lt;p&gt;&lt;summary&gt; &lt;strong&gt;Click to see my solution.&lt;/strong&gt; &lt;/summary&gt;&lt;/p&gt;
+&lt;div id=&#34;premises&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Premises&lt;/h2&gt;
+&lt;p&gt;This is not an easy problem, and it depends also on the strategy of the player. However, as the house you need to worry only about the rational players, not the irrational ones, for example those that keep playing after they had a 6 (since 6 is the maximum if they keep playing they can only either do worse or keep the current score).&lt;/p&gt;
+&lt;/details&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
