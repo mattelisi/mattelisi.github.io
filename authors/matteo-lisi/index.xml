@@ -22,9 +22,9 @@
 
 &lt;p&gt;This question arised in an interview for a AI / data science position for a global financial firm:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Consider a game of chance in which a player can roll up to 3 times a dice. He wins an amount of money proportional to the outcome of the last dice roll (1, 2, 3, 4, 5, or 6 £). They don’t need to do all the 3 throws and can stop before and collect their win if they want. Say you are the house in this game, what is the minimum amount of £ that you can charge for playing this game such that you won’t incurr losses in the long term.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Consider a game of chance in which a player can roll up to 3 times a dice. They win an amount of money proportional to the outcome of the last dice roll (1, 2, 3, 4, 5, or 6 £). They don’t need to do all the 3 throws and can stop before and collect their win if they want. You are the house in this game, what is the minimum amount of £ that you can charge for playing this game such that you won’t take losses in the long term.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;It is a subtle question and it was fun working through it. I post here my solution.&lt;/p&gt;
+&lt;p&gt;It is a subtle question and it was fun working through it.&lt;/p&gt;
 &lt;p&gt;
  
 &lt;/p&gt;
