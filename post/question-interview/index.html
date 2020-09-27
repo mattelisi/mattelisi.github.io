@@ -584,7 +584,23 @@
  
 </p>
 <details>
-<p><summary><mark> <strong>Click to see solution.</strong> </mark></summary></p>
+<p><summary><mark> <strong>Edit: click to see correct solution.</strong> </mark></summary></p>
+<p>My previous solution was not correct. Oliver Perkins pointed out that this can be calculated working backwards from the last throw:</p>
+<blockquote class="twitter-tweet" data-conversation="none" data-theme="dark">
+<p lang="en" dir="ltr">
+£4.65? <br><br>As the punter on roml 3, E(£) = 3.5, so we stick on 4+ on throw 2. Knowing this our EV for the final 2 throws is is (0.5<em>3.5)+(0.5</em>5)=4.25. Therefore we stick on 5+ on the first throw so E(£) = (0.667<em>4.25)+(0.333</em>5.5) = ~4.64
+</p>
+— Oli Perkins 🔥🌍🏳️
+🌈 (<span class="citation">@OliPerkins2</span>) <a href="https://twitter.com/OliPerkins2/status/1310254755424464898?ref_src=twsrc%5Etfw">September 27, 2020</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>His solution makes perfect sense and differs from mine in that the player would accept a 4 at throw 2. This small difference in the strategy it’s rational since it increases the overall expected value of the game by <span class="math inline">\(\approx\)</span> 0.03.</p>
+</details>
+<p>
+ 
+</p>
+<details>
+<p><summary><mark> <strong>Click to see previous solution.</strong> </mark></summary></p>
 <p>
  
 </p>
@@ -634,15 +650,6 @@ p\left(\mathcal{W} \ge \mathcal{C} \mid \mathcal{C}= 4.5 \right) = \frac{2}{6} +
 <p>This indicate that for a price of <span class="math inline">\(5\)</span> the player is expected to incur a loss in the long run (since <span class="math inline">\(4.61 &lt; 5\)</span>).</p>
 <p>Note that thus far we have constrained the value of the game to be somewhere between <span class="math inline">\(4.5\)</span> and <span class="math inline">\(5\)</span>: if <span class="math inline">\(\mathcal{C}=4.5\)</span> the player will in the long run win more than they spend; and if <span class="math inline">\(\mathcal{C}=5\)</span> they will always lose. For any value of <span class="math inline">\(\mathcal{C}\)</span> within <span class="math inline">\(4.5\)</span> and <span class="math inline">\(5\)</span>, the optimal strategy for the player is to continue until they either obtain a <span class="math inline">\(5\)</span> or complete the 3 throws. And the calculation above gave the expected value for this strategy, that is <span class="math inline">\(\frac{83}{18} \approx 4.61\)</span>.</p>
 <p><span style="background-color: #FFFF00"> Thus, the house needs to set a price <span class="math inline">\(\mathcal{C}\)</span> that is at least <span class="math inline">\(\frac{83}{18}\approx 4.61\)</span> otherwise they risk incurring losses. </span></p>
-<p>This can be easily verified in R</p>
-<pre class="r"><code>set.seed(1)
-Nsim &lt;- 10^6
-D_1 &lt;- sample(1:6, size = Nsim, replace = TRUE)
-D_2 &lt;- sample(1:6, size = Nsim, replace = TRUE)
-D_3 &lt;- sample(1:6, size = Nsim, replace = TRUE)
-W &lt;- ifelse(D_1&gt;=5, D_1, ifelse(D_2&gt;=5, D_2, D_3))
-mean(W)</code></pre>
-<pre><code>## [1] 4.610975</code></pre>
 </details>
 </div>
 

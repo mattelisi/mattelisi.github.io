@@ -29,7 +29,23 @@
  
 &lt;/p&gt;
 &lt;details&gt;
-&lt;p&gt;&lt;summary&gt;&lt;mark&gt; &lt;strong&gt;Click to see solution.&lt;/strong&gt; &lt;/mark&gt;&lt;/summary&gt;&lt;/p&gt;
+&lt;p&gt;&lt;summary&gt;&lt;mark&gt; &lt;strong&gt;Edit: click to see correct solution.&lt;/strong&gt; &lt;/mark&gt;&lt;/summary&gt;&lt;/p&gt;
+&lt;p&gt;My previous solution was not correct. Oliver Perkins pointed out that this can be calculated working backwards from the last throw:&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-conversation=&#34;none&#34; data-theme=&#34;dark&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+£4.65? &lt;br&gt;&lt;br&gt;As the punter on roml 3, E(£) = 3.5, so we stick on 4+ on throw 2. Knowing this our EV for the final 2 throws is is (0.5&lt;em&gt;3.5)+(0.5&lt;/em&gt;5)=4.25. Therefore we stick on 5+ on the first throw so E(£) = (0.667&lt;em&gt;4.25)+(0.333&lt;/em&gt;5.5) = ~4.64
+&lt;/p&gt;
+— Oli Perkins 🔥🌍🏳️
+🌈 (&lt;span class=&#34;citation&#34;&gt;@OliPerkins2&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/OliPerkins2/status/1310254755424464898?ref_src=twsrc%5Etfw&#34;&gt;September 27, 2020&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;His solution makes perfect sense and differs from mine in that the player would accept a 4 at throw 2. This small difference in the strategy it’s rational since it increases the overall expected value of the game by &lt;span class=&#34;math inline&#34;&gt;\(\approx\)&lt;/span&gt; 0.03.&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;
+ 
+&lt;/p&gt;
+&lt;details&gt;
+&lt;p&gt;&lt;summary&gt;&lt;mark&gt; &lt;strong&gt;Click to see previous solution.&lt;/strong&gt; &lt;/mark&gt;&lt;/summary&gt;&lt;/p&gt;
 &lt;p&gt;
  
 &lt;/p&gt;
@@ -79,15 +95,6 @@ p\left(\mathcal{W} \ge \mathcal{C} \mid \mathcal{C}= 4.5 \right) = \frac{2}{6} +
 &lt;p&gt;This indicate that for a price of &lt;span class=&#34;math inline&#34;&gt;\(5\)&lt;/span&gt; the player is expected to incur a loss in the long run (since &lt;span class=&#34;math inline&#34;&gt;\(4.61 &amp;lt; 5\)&lt;/span&gt;).&lt;/p&gt;
 &lt;p&gt;Note that thus far we have constrained the value of the game to be somewhere between &lt;span class=&#34;math inline&#34;&gt;\(4.5\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(5\)&lt;/span&gt;: if &lt;span class=&#34;math inline&#34;&gt;\(\mathcal{C}=4.5\)&lt;/span&gt; the player will in the long run win more than they spend; and if &lt;span class=&#34;math inline&#34;&gt;\(\mathcal{C}=5\)&lt;/span&gt; they will always lose. For any value of &lt;span class=&#34;math inline&#34;&gt;\(\mathcal{C}\)&lt;/span&gt; within &lt;span class=&#34;math inline&#34;&gt;\(4.5\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(5\)&lt;/span&gt;, the optimal strategy for the player is to continue until they either obtain a &lt;span class=&#34;math inline&#34;&gt;\(5\)&lt;/span&gt; or complete the 3 throws. And the calculation above gave the expected value for this strategy, that is &lt;span class=&#34;math inline&#34;&gt;\(\frac{83}{18} \approx 4.61\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;span style=&#34;background-color: #FFFF00&#34;&gt; Thus, the house needs to set a price &lt;span class=&#34;math inline&#34;&gt;\(\mathcal{C}\)&lt;/span&gt; that is at least &lt;span class=&#34;math inline&#34;&gt;\(\frac{83}{18}\approx 4.61\)&lt;/span&gt; otherwise they risk incurring losses. &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;This can be easily verified in R&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(1)
-Nsim &amp;lt;- 10^6
-D_1 &amp;lt;- sample(1:6, size = Nsim, replace = TRUE)
-D_2 &amp;lt;- sample(1:6, size = Nsim, replace = TRUE)
-D_3 &amp;lt;- sample(1:6, size = Nsim, replace = TRUE)
-W &amp;lt;- ifelse(D_1&amp;gt;=5, D_1, ifelse(D_2&amp;gt;=5, D_2, D_3))
-mean(W)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 4.610975&lt;/code&gt;&lt;/pre&gt;
 &lt;/details&gt;
 &lt;/div&gt;
 </description>
