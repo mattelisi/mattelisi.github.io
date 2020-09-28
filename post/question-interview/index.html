@@ -579,13 +579,12 @@
 <blockquote>
 <p><strong><em>Consider a game of chance in which a player can roll up to 3 times a dice. They win an amount of money proportional to the outcome of the last dice roll (1, 2, 3, 4, 5, or 6 £). They don’t need to do all the 3 throws and can stop before and collect their win if they want. You are the house in this game, what is the minimum amount of £ that you can charge for playing this game such that you won’t take losses in the long term.</em></strong></p>
 </blockquote>
-<p>It is a subtle question and it was fun working through it.</p>
 <p>
  
 </p>
 <details>
-<p><summary><mark> <strong>Edit: click to see correct answer.</strong> </mark></summary></p>
-<p>My previous answer was not entirely correct. Oliver Perkins pointed out that this can be calculated working backwards from the last throw:</p>
+<p><summary><mark> <strong>Shorter answer by Oliver Perkins.</strong> </mark></summary></p>
+<p>Oliver Perkins pointed out that this can be calculated working backwards from the last throw:</p>
 <blockquote class="twitter-tweet" data-conversation="none" data-theme="dark">
 <p lang="en" dir="ltr">
 £4.65? <br><br>As the punter on roml 3, E(£) = 3.5, so we stick on 4+ on throw 2. Knowing this our EV for the final 2 throws is is (0.5<em>3.5)+(0.5</em>5)=4.25. Therefore we stick on 5+ on the first throw so E(£) = (0.667<em>4.25)+(0.333</em>5.5) = ~4.64
@@ -594,62 +593,47 @@
 🌈 (<span class="citation">@OliPerkins2</span>) <a href="https://twitter.com/OliPerkins2/status/1310254755424464898?ref_src=twsrc%5Etfw">September 27, 2020</a>
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p>His solution makes perfect sense and differs from my previous one in that the player would accept a 4 at throw 2. This small difference in the strategy it’s rational since it increases the overall expected value of the game by <span class="math inline">\(\approx\)</span> 0.03.</p>
+<p>His solution makes perfect sense and differs from my initial one in that the player would accept a 4 at throw 2 (although now I have updated my answer to take that into account). This small difference in the strategy it’s rational since it increases the overall expected value of the game by <span class="math inline">\(\approx\)</span> 0.05 from a strategy in which the player do not settle for anything less than 5 at any throw.</p>
 </details>
 <p>
  
 </p>
 <details>
-<p><summary><mark> <strong>Click to see previous answer.</strong> </mark></summary></p>
+<p><summary><mark> <strong>Click to see another approach.</strong> </mark></summary></p>
 <p>
  
 </p>
-<p>The solution depends also on the strategy of the player. However, as the house you need to worry only about the rational players, not the irrational ones, for example those that keep playing after they scored a <span class="math inline">\(6\)</span> (given that <span class="math inline">\(6\)</span> is the maximum, if they continue they can only either do worse or keep the current score).</p>
-<p>Let’s define with <span class="math inline">\(\mathcal{C}\)</span> the price that the player pay to play the game, and with <span class="math inline">\(\mathcal{W}\)</span> the amount they win. A rational player would keep playing until their winning are <em>at least</em> equal to the price, i.e. until <span class="math inline">\(\mathcal{W} \ge \mathcal{C}\)</span> (and may also continue after that if continuing increases their expected win). The question is then to find the expected value of <span class="math inline">\(\mathcal{W}\)</span> assuming a rational player.</p>
-<p>
- 
-</p>
+<p>Let’s define with <span class="math inline">\(\mathcal{C}\)</span> the price that the player pay to play the game, and with <span class="math inline">\(\mathcal{W}\)</span> the amount they win. A possible strategy could be to keep playing until their winning are <em>at least</em> equal to the price, i.e. until <span class="math inline">\(\mathcal{W} \ge \mathcal{C}\)</span> (and may also continue after that if continuing increases their expected win).</p>
 <hr />
-<div id="if-mathcalc5.5" class="section level3">
-<h3>If <span class="math inline">\(\mathcal{C}=5.5\)</span></h3>
-<p>In this case the rational player should continue until they get a 6 (keeping aside that it may not be rational at all to play if <span class="math inline">\(\mathcal{C}=5.5\)</span>). Let’s define <span class="math inline">\(D_1, D_2, D_3\)</span> indicate the outcomes of throws 1, 2, and 3, respectively. The probability <span class="math inline">\(p\left(\mathcal{W} \ge \mathcal{C} \right)\)</span> is equal to the probability of obtaining at least a <span class="math inline">\(6\)</span> in three independent throws, that is</p>
+<p>Assume the player continue until they get a 6 (). Let’s define <span class="math inline">\(D_1, D_2, D_3\)</span> indicate the outcomes of throws 1, 2, and 3, respectively. The probability of getting a 6 is</p>
 <p><span class="math display">\[
-p\left(\mathcal{W} \ge \mathcal{C} \mid \mathcal{C}=5.5\right) = \frac{1}{6} + \underbrace{\left( 1 - \frac{1}{6} \right) \times  \frac{1}{6}}_{p \left(D_2=6 \mid D_1&lt;6\right)} +  \underbrace{\left( 1 - \frac{1}{6} \right)^2 \times  \frac{1}{6}}_{p \left(D_3=6 \mid D_1&lt;6 \cup D_2&lt;6\right)} = \frac{91}{216} \approx 0.42
+p\left(\mathcal{W} =6\right) = \frac{1}{6} + \underbrace{\left( 1 - \frac{1}{6} \right) \times  \frac{1}{6}}_{p \left(D_2=6 \mid D_1&lt;6\right)} +  \underbrace{\left( 1 - \frac{1}{6} \right)^2 \times  \frac{1}{6}}_{p \left(D_3=6 \mid D_1&lt;6 \cup D_2&lt;6\right)} = \frac{91}{216} \approx 0.42
 \]</span></p>
-<p>Thus if <span class="math inline">\(\mathcal{C}=5.5\)</span> the house will alway win the long term, since the player will win more than they put in to play only about <span class="math inline">\(42\)</span>% of the times</p>
-<p>
- 
-</p>
-<hr />
-</div>
-<div id="if-mathcalc4.5" class="section level3">
-<h3>If <span class="math inline">\(\mathcal{C}=4.5\)</span></h3>
-<p>Note that I am using non-integer values of <span class="math inline">\(\mathcal{C}\)</span> to avoid considering (for the moment) the case in which house and player end up even (<span class="math inline">\(\mathcal{C} = \mathcal{W}\)</span>). Let’s assume for the moment that the player stops if they get at least <span class="math inline">\(5\)</span>, we have</p>
+<p>If instead the player aims for at least <span class="math inline">\(5\)</span>, the probability of getting it is</p>
 <p><span class="math display">\[
-p\left(\mathcal{W} \ge \mathcal{C} \mid \mathcal{C}= 4.5 \right) = \frac{2}{6} + \underbrace{\left( 1 - \frac{2}{6} \right) \times  \frac{2}{6}}_{p \left(D_2 \ge5 \mid D_1&lt;5\right)} +  \underbrace{\left( 1 - \frac{2}{6} \right)^2 \times  \frac{2}{6}}_{p \left(D_3 \ge 5 \mid D_1&lt;5 \cup D_2&lt;5\right)} = \frac{19}{27} \approx 0.70
+p\left(\mathcal{W} \ge 5 \right) = \frac{2}{6} + \underbrace{\left( 1 - \frac{2}{6} \right) \times  \frac{2}{6}}_{p \left(D_2 \ge5 \mid D_1&lt;5\right)} +  \underbrace{\left( 1 - \frac{2}{6} \right)^2 \times  \frac{2}{6}}_{p \left(D_3 \ge 5 \mid D_1&lt;5 \cup D_2&lt;5\right)} = \frac{19}{27} \approx 0.70
 \]</span></p>
-<p>In this case thus the player will win more than they paid <span class="math inline">\(70\)</span>% of the times - not a good deal for the house.</p>
-<p>
- 
-</p>
-<p><strong>Assume the player obtain 5 at the first throw. Is it worth to continue?</strong></p>
+<p>Say the player obtain 5 at the first throw. Is it worth to continue?</p>
 <p>The probability of getting at least <span class="math inline">\(5\)</span> in the next two throws is <span class="math inline">\(\frac{2}{6} + \left(1 - \frac{2}{6} \right)\times \frac{2}{6} = \frac{20}{36} \approx 0.55\)</span></p>
 <p>The probability of getting a <span class="math inline">\(6\)</span> in the next two throws is <span class="math inline">\(\frac{1}{6} + \left(1 - \frac{1}{6} \right)\times \frac{1}{6} = \frac{11}{36} \approx 0.30\)</span></p>
 <p>If the player reach the last throw without obtaining at least <span class="math inline">\(5\)</span> the remaining outcomes, <span class="math inline">\(1\)</span> to <span class="math inline">\(4\)</span>, are equally likely with probability <span class="math inline">\(\frac{1}{4}\)</span>. Thus continuing after obtaining <span class="math inline">\(5\)</span> at the first throw has an expected value of <span class="math display">\[\frac{11}{36}\times6 + \left(\frac{20}{36} - \frac{11}{36}\right)\times 5 + \left(1 - \frac{20}{36}\right)\times \sum_{i=1}^4 \frac{1}{4}i \approx 4.19\]</span></p>
-<p>The value of stopping after having obtained <span class="math inline">\(5\)</span> is <span class="math inline">\(5\)</span>, thus the rational player should stop and not continue.</p>
+<p>The value of stopping after having obtained <span class="math inline">\(5\)</span> is <span class="math inline">\(5\)</span>, thus the player should stop and not continue.</p>
+<hr />
 <p>
  
 </p>
-<hr />
-</div>
-<div id="expected-value-of-the-bet" class="section level2">
-<h2>Expected value of the bet</h2>
-<p>What if <span class="math inline">\(\mathcal{C}=5\)</span>? In this case we have that <span class="math inline">\(p\left(\mathcal{W} &gt; 5 \right) = \frac{91}{216} \approx 0.42\)</span>, and also that <span class="math inline">\(p\left(\mathcal{W} &gt; 4 \right) = \frac{19}{27} \approx 0.70\)</span>. Thus in the long run the player will win more than they paid about <span class="math inline">\(42\)</span>% of the times, they will be even with the bank <span class="math inline">\(28\)</span>% of the times, and they will loose money (obtaining any number from <span class="math inline">\(1\)</span> to <span class="math inline">\(4\)</span>, with equal probability) about <span class="math inline">\(30\)</span>% of the times.</p>
-<p>To see if this is a good deal we calculate the expected value assuming the player continue until they either obtain a <span class="math inline">\(5\)</span> or complete 3 throws. The probability of getting at least 5 in three throws is <span class="math inline">\(\frac{19}{27}\)</span>, and conditional of getting at least 5 the two outcomes of 6 and 5 have both the same probability <span class="math inline">\(\frac{1}{2}\)</span>. Thus we have</p>
-<p><span class="math display">\[\frac{19}{27}\times\frac{1}{2}\times6 + \frac{19}{27}\times\frac{1}{2}\times5 + \left(1 - \frac{19}{27}\right)\times \sum_{i=1}^4 \frac{1}{4}i = \frac{83}{18} \approx 4.61\]</span></p>
-<p>This indicate that for a price of <span class="math inline">\(5\)</span> the player is expected to incur a loss in the long run (since <span class="math inline">\(4.61 &lt; 5\)</span>).</p>
-<p>Note that thus far we have constrained the value of the game to be somewhere between <span class="math inline">\(4.5\)</span> and <span class="math inline">\(5\)</span>: if <span class="math inline">\(\mathcal{C}=4.5\)</span> the player will in the long run win more than they spend; and if <span class="math inline">\(\mathcal{C}=5\)</span> they will always lose. For any value of <span class="math inline">\(\mathcal{C}\)</span> within <span class="math inline">\(4.5\)</span> and <span class="math inline">\(5\)</span>, the optimal strategy for the player is to continue until they either obtain a <span class="math inline">\(5\)</span> or complete the 3 throws. And the calculation above gave the expected value for this strategy, that is <span class="math inline">\(\frac{83}{18} \approx 4.61\)</span>.</p>
-<p><mark> Thus, the house needs to set a price <span class="math inline">\(\mathcal{C}\)</span> that is at least <span class="math inline">\(\frac{83}{18}\approx 4.61\)</span> otherwise they risk incurring losses. </mark></p>
+<div id="expected-value-of-the-game" class="section level2">
+<h2>Expected value of the game</h2>
+<p>If <span class="math inline">\(\mathcal{C}=5\)</span> we have that <span class="math inline">\(p\left(\mathcal{W} &gt; 5 \right) = \frac{91}{216} \approx 0.42\)</span>, and also that <span class="math inline">\(p\left(\mathcal{W} &gt; 4 \right) = \frac{19}{27} \approx 0.70\)</span>. Thus in the long run the player will win more than they paid about <span class="math inline">\(42\)</span>% of the times, they will be even with the house <span class="math inline">\(28\)</span>% of the times, and they will loose money (obtaining any number from <span class="math inline">\(1\)</span> to <span class="math inline">\(4\)</span>, with equal probability) about <span class="math inline">\(30\)</span>% of the times.</p>
+<p>To see if this is a good deal we calculate the expected value assuming the player continue until they either obtain a <span class="math inline">\(5\)</span> or complete 3 throws. The probability of getting at least 5 in three throws is <span class="math inline">\(\frac{19}{27}\)</span>, and conditional of getting at least 5 the two outcomes of 6 and 5 have both the same probability <span class="math inline">\(\frac{1}{2}\)</span>. We have that for a price of <span class="math inline">\(5\)</span> the player that follow this strategy is expected to incur a loss in the long run since the expected value is:</p>
+<p><span class="math display">\[\underbrace{\frac{19}{27}\frac{1}{2}\times6 + \frac{19}{27}\frac{1}{2}\times5 + \left(1 - \frac{19}{27}\right) \frac{1}{4}\times \sum_{i=1}^4 i}_{\text{expected value if player keep playing until } \mathcal{W} \ge 5} = \frac{83}{18} \approx 4.61\]</span></p>
+<p>Now, say the player obtain 4 at the second throw, should they keep it? Yes, since the expected value of the last throw is <span class="math inline">\(\frac{1}{6}\sum_{i=1}^6 i=3.5\)</span>. To take this into account we need a slightly different calculation in which the outcomes are considered separately for each throw (the underbraces indicate the acceptable score in each throw):</p>
+<p><span class="math display">\[
+\underbrace{\frac{2}{6}\frac{1}{2}\times \left(5+6\right)}_{\text{5 or 6 in 1st throw}} + 
+\underbrace{\left(1-\frac{2}{6}\right)\frac{3}{6}\frac{1}{3}\times \left(4+5+6\right)}_{\text{4, 5 or 6 in 2nd throw}}
++ \underbrace{\left(1-\frac{2}{6}\right)\frac{3}{6} \frac{1}{6}\times \sum_{i=1}^6 i}_{\text{any number in last throw}} = \frac{14}{3} \approx 4.67
+\]</span></p>
+<p><mark> Thus, the house needs to set a price <span class="math inline">\(\mathcal{C}\)</span> that is at least <span class="math inline">\(\frac{14}{3}\approx 4.67\)</span> otherwise they risk incurring losses. </mark></p>
 </details>
 </div>
 
