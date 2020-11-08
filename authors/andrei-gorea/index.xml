@@ -5,9 +5,9 @@
     <link>http://mlisi.xyz/authors/andrei-gorea/</link>
       <atom:link href="http://mlisi.xyz/authors/andrei-gorea/index.xml" rel="self" type="application/rss+xml" />
     <description>Andrei Gorea</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Fri, 28 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Mon, 21 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/me_off.JPG</url>
+      <url>http://mlisi.xyz/img/head.png</url>
       <title>Andrei Gorea</title>
       <link>http://mlisi.xyz/authors/andrei-gorea/</link>
     </image>
@@ -15,7 +15,7 @@
     <item>
       <title>Discrete confidence levels revealed by sequential decisions</title>
       <link>http://mlisi.xyz/publication/discrete-confidence/</link>
-      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/publication/discrete-confidence/</guid>
       <description></description>
     </item>

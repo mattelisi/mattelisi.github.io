@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Georgia Milne | Matteo Lisi</title>
+    <link>http://mlisi.xyz/authors/georgia-milne/</link>
+      <atom:link href="http://mlisi.xyz/authors/georgia-milne/index.xml" rel="self" type="application/rss+xml" />
+    <description>Georgia Milne</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Mon, 21 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://mlisi.xyz/img/head.png</url>
+      <title>Georgia Milne</title>
+      <link>http://mlisi.xyz/authors/georgia-milne/</link>
+    </image>
+    
+    <item>
+      <title>Discrete confidence levels revealed by sequential decisions</title>
+      <link>http://mlisi.xyz/publication/discrete-confidence/</link>
+      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/discrete-confidence/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

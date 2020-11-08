@@ -5,12 +5,20 @@
     <link>http://mlisi.xyz/publication/</link>
       <atom:link href="http://mlisi.xyz/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Mon, 04 May 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Mon, 21 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://mlisi.xyz/img/me_off.JPG</url>
+      <url>http://mlisi.xyz/img/head.png</url>
       <title>Publications</title>
       <link>http://mlisi.xyz/publication/</link>
     </image>
+    
+    <item>
+      <title>Discrete confidence levels revealed by sequential decisions</title>
+      <link>http://mlisi.xyz/publication/discrete-confidence/</link>
+      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/discrete-confidence/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Sensory Development: Integration before Calibration</title>
@@ -82,14 +90,6 @@
       <link>http://mlisi.xyz/publication/double-drift-pointing/</link>
       <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/publication/double-drift-pointing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Discrete confidence levels revealed by sequential decisions</title>
-      <link>http://mlisi.xyz/publication/discrete-confidence/</link>
-      <pubDate>Fri, 28 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/discrete-confidence/</guid>
       <description></description>
     </item>
     
