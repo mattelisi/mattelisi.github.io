@@ -5,12 +5,20 @@
     <link>http://mlisi.xyz/authors/matteo-lisi/</link>
       <atom:link href="http://mlisi.xyz/authors/matteo-lisi/index.xml" rel="self" type="application/rss+xml" />
     <description>Matteo Lisi</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Sat, 26 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 Matteo Lisi</copyright><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/head.png</url>
       <title>Matteo Lisi</title>
       <link>http://mlisi.xyz/authors/matteo-lisi/</link>
     </image>
+    
+    <item>
+      <title>Evaluation of a Home-Printable Vision Screening Test for Telemedicine</title>
+      <link>http://mlisi.xyz/publication/hat-paper/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/hat-paper/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>How much is this game worth?</title>
@@ -243,6 +251,14 @@ p\left(\mathcal{W} \ge 5 \right) = \frac{2}{6} + \underbrace{\left( 1 - \frac{2}
       <link>http://mlisi.xyz/publication/unsupervised-space-coding/</link>
       <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/publication/unsupervised-space-coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Effects of a Reading-Based Intervention on Emotion Processing in Children Who Have Suffered Early Adversity and War Related Trauma</title>
+      <link>http://mlisi.xyz/publication/wlr-intervention/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/wlr-intervention/</guid>
       <description></description>
     </item>
     

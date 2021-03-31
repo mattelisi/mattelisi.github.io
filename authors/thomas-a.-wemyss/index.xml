@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thomas A. Wemyss | Matteo Lisi</title>
+    <link>http://mlisi.xyz/authors/thomas-a.-wemyss/</link>
+      <atom:link href="http://mlisi.xyz/authors/thomas-a.-wemyss/index.xml" rel="self" type="application/rss+xml" />
+    <description>Thomas A. Wemyss</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 Matteo Lisi</copyright><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://mlisi.xyz/img/head.png</url>
+      <title>Thomas A. Wemyss</title>
+      <link>http://mlisi.xyz/authors/thomas-a.-wemyss/</link>
+    </image>
+    
+    <item>
+      <title>Evaluation of a Home-Printable Vision Screening Test for Telemedicine</title>
+      <link>http://mlisi.xyz/publication/hat-paper/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/hat-paper/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

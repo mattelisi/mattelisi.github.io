@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deema Awad | Matteo Lisi</title>
+    <link>http://mlisi.xyz/authors/deema-awad/</link>
+      <atom:link href="http://mlisi.xyz/authors/deema-awad/index.xml" rel="self" type="application/rss+xml" />
+    <description>Deema Awad</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 Matteo Lisi</copyright>
+    <image>
+      <url>http://mlisi.xyz/img/head.png</url>
+      <title>Deema Awad</title>
+      <link>http://mlisi.xyz/authors/deema-awad/</link>
+    </image>
+    
+    <item>
+      <title>The Effects of a Reading-Based Intervention on Emotion Processing in Children Who Have Suffered Early Adversity and War Related Trauma</title>
+      <link>http://mlisi.xyz/publication/wlr-intervention/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/wlr-intervention/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

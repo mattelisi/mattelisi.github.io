@@ -5,7 +5,7 @@
     <link>http://mlisi.xyz/authors/</link>
       <atom:link href="http://mlisi.xyz/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Matteo Lisi</copyright><lastBuildDate>Sat, 26 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 Matteo Lisi</copyright><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/head.png</url>
       <title>Authors</title>
@@ -13,10 +13,50 @@
     </image>
     
     <item>
+      <title>Joanne Hancox</title>
+      <link>http://mlisi.xyz/authors/joanne-hancox/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/joanne-hancox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Matteo Lisi</title>
       <link>http://mlisi.xyz/authors/matteo-lisi/</link>
-      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/authors/matteo-lisi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Michael D. Crossland</title>
+      <link>http://mlisi.xyz/authors/michael-d.-crossland/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/michael-d.-crossland/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Peter B. M. Thomas</title>
+      <link>http://mlisi.xyz/authors/peter-b.-m.-thomas/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/peter-b.-m.-thomas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tessa M. Dekker</title>
+      <link>http://mlisi.xyz/authors/tessa-m.-dekker/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/tessa-m.-dekker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thomas A. Wemyss</title>
+      <link>http://mlisi.xyz/authors/thomas-a.-wemyss/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/thomas-a.-wemyss/</guid>
       <description></description>
     </item>
     
@@ -302,6 +342,46 @@
 &lt;p&gt;I am a Lecturer at the &lt;a href=&#34;https://www.essex.ac.uk/departments/psychology&#34;&gt;&lt;em&gt;Department of Psychology of the University of Essex&lt;/em&gt;&lt;/a&gt;. I use psychophysics, eye-tracking, and computational modelling to investigate visual perception, broadly defined as the ability to assimilate information contained in visible light. Beyond vision, I am interested in how brains compute and use information about uncertainty when making decisions, both in adults and during development.&lt;/p&gt;
 &lt;p&gt;Find my publications on &lt;a href=&#34;https://scholar.google.com/citations?user=IabbkbEAAAAJ&amp;amp;hl=en&#34;&gt;&lt;em&gt;Scholar&lt;/em&gt;&lt;/a&gt; or &lt;a href=&#34;https://www.researchgate.net/profile/Matteo_Lisi&#34;&gt;&lt;em&gt;RG&lt;/em&gt;&lt;/a&gt;. I started sharing all my code and data on &lt;a href=&#34;https://github.com/mattelisi&#34;&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;https://osf.io/gqy5f/&#34;&gt;&lt;strong&gt;OSF&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Deema Awad</title>
+      <link>http://mlisi.xyz/authors/deema-awad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/deema-awad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Isabelle Mareschal</title>
+      <link>http://mlisi.xyz/authors/isabelle-mareschal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/isabelle-mareschal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Julia E. Michalek</title>
+      <link>http://mlisi.xyz/authors/julia-e.-michalek/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/julia-e.-michalek/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kristin Hadfield</title>
+      <link>http://mlisi.xyz/authors/kristin-hadfield/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/kristin-hadfield/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rana Dajani</title>
+      <link>http://mlisi.xyz/authors/rana-dajani/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/rana-dajani/</guid>
+      <description></description>
     </item>
     
   </channel>
