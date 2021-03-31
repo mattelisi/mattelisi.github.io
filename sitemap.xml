@@ -4,62 +4,92 @@
   
   <url>
     <loc>http://mlisi.xyz/publication_types/2/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://mlisi.xyz/authors/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://mlisi.xyz/publication/hat-paper/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <loc>http://mlisi.xyz/authors/deema-awad/</loc>
+    <lastmod>2021-03-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://mlisi.xyz/authors/joanne-hancox/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <loc>http://mlisi.xyz/authors/isabelle-mareschal/</loc>
+    <lastmod>2021-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/julia-e.-michalek/</loc>
+    <lastmod>2021-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/kristin-hadfield/</loc>
+    <lastmod>2021-03-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://mlisi.xyz/authors/matteo-lisi/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://mlisi.xyz/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mlisi.xyz/authors/michael-d.-crossland/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mlisi.xyz/authors/peter-b.-m.-thomas/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://mlisi.xyz/publication_types/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://mlisi.xyz/publication/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/rana-dajani/</loc>
+    <lastmod>2021-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication/wlr-intervention/</loc>
+    <lastmod>2021-03-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/publication/hat-paper/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/joanne-hancox/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/michael-d.-crossland/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mlisi.xyz/authors/peter-b.-m.-thomas/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://mlisi.xyz/authors/tessa-m.-dekker/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://mlisi.xyz/authors/thomas-a.-wemyss/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -589,30 +619,6 @@
   
   <url>
     <loc>http://mlisi.xyz/authors/admin/</loc>
-  </url>
-  
-  <url>
-    <loc>http://mlisi.xyz/authors/deema-awad/</loc>
-  </url>
-  
-  <url>
-    <loc>http://mlisi.xyz/authors/isabelle-mareschal/</loc>
-  </url>
-  
-  <url>
-    <loc>http://mlisi.xyz/authors/julia-e.-michalek/</loc>
-  </url>
-  
-  <url>
-    <loc>http://mlisi.xyz/authors/kristin-hadfield/</loc>
-  </url>
-  
-  <url>
-    <loc>http://mlisi.xyz/authors/rana-dajani/</loc>
-  </url>
-  
-  <url>
-    <loc>http://mlisi.xyz/publication/wlr-intervention/</loc>
   </url>
   
 </urlset>
