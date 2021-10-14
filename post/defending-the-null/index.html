@@ -28,9 +28,9 @@
   
     
   
-  <meta name="description" content="A friend of mine is working on a paper and found himself in the situation of having to defend the null hypothesis that a particular effect is absent (or not measurable) when tested under more controlled conditions than those used in previous studies. He asked for some practical advice: &ldquo;what would convince you as as a reviewer of a null result?&quot;
+  <meta name="description" content="A friend of mine is working on a paper and found himself in the situation of having to defend the null hypothesis that a particular effect is absent (or not measurable) when tested under more controlled conditions than those used in previous studies. He asked for some practical advice: “what would convince you as as a reviewer of a null result?”
 My suggestions were:
- No statistical test can &ldquo;prove&rdquo; a null results (intended as the point-null hypothesis that an effect of interest is zero).">
+ No statistical test can “prove” a null results (intended as the point-null hypothesis that an effect of interest is zero).">
 
   
   <link rel="alternate" hreflang="en-us" href="http://mlisi.xyz/post/defending-the-null/">
@@ -127,9 +127,9 @@ My suggestions were:
   <meta property="og:site_name" content="Matteo Lisi">
   <meta property="og:url" content="http://mlisi.xyz/post/defending-the-null/">
   <meta property="og:title" content="Defending the null hypothesis | Matteo Lisi">
-  <meta property="og:description" content="A friend of mine is working on a paper and found himself in the situation of having to defend the null hypothesis that a particular effect is absent (or not measurable) when tested under more controlled conditions than those used in previous studies. He asked for some practical advice: &ldquo;what would convince you as as a reviewer of a null result?&quot;
+  <meta property="og:description" content="A friend of mine is working on a paper and found himself in the situation of having to defend the null hypothesis that a particular effect is absent (or not measurable) when tested under more controlled conditions than those used in previous studies. He asked for some practical advice: “what would convince you as as a reviewer of a null result?”
 My suggestions were:
- No statistical test can &ldquo;prove&rdquo; a null results (intended as the point-null hypothesis that an effect of interest is zero)."><meta property="og:image" content="http://mlisi.xyz/img/head.png">
+ No statistical test can “prove” a null results (intended as the point-null hypothesis that an effect of interest is zero)."><meta property="og:image" content="http://mlisi.xyz/img/head.png">
   <meta property="twitter:image" content="http://mlisi.xyz/img/head.png"><meta property="og:locale" content="en-us">
   
     
@@ -579,18 +579,26 @@ My suggestions were:
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      <p>A friend of mine is working on a paper and found himself in the situation of having to defend the null hypothesis that a particular effect is absent (or not measurable) when tested under more controlled conditions than those used in previous studies. He asked for some practical advice: <em>&ldquo;what would convince you as as a reviewer of a null result?&quot;</em></p>
+      
+
+
+<p>A friend of mine is working on a paper and found himself in the situation of having to defend the null hypothesis that a particular effect is absent (or not measurable) when tested under more controlled conditions than those used in previous studies. He asked for some practical advice: <em>“what would convince you as as a reviewer of a null result?”</em></p>
 <p>My suggestions were:</p>
 <blockquote>
-<p>No statistical test can &ldquo;prove&rdquo; a null results (intended as the point-null hypothesis that an effect of interest is zero). You can however: (<strong>i</strong>) present evidence that the data are more likely under the null hypothesis than under the alternative; or (<strong>ii</strong>) put a cap on the size of the effect, which could enable you to argue that any effect, if present, is so small that can be considered theoretically or pragmatically irrelevant.</p>
+<p>No statistical test can “prove” a null results (intended as the point-null hypothesis that an effect of interest is zero). You can however: (<strong>i</strong>) present evidence that the data are more likely under the null hypothesis than under the alternative; or (<strong>ii</strong>) put a cap on the size of the effect, which could enable you to argue that any effect, if present, is so small that can be considered theoretically or pragmatically irrelevant.</p>
 </blockquote>
 <blockquote>
-<p>(<strong>i</strong>) is the Bayesian approach and requires calculating a Bayes factor - that is the ratio between the average (or marginal) likelihood of the data under the null and alternative hypothesis. Note that Bayes factor calculation is highly influenced by the priors (e.g. the prior expectations about the effect size). Luckily, in the case of a single comparison (e.g. a t-test), there is popular way of computing Bayes factors which requires minimal assumptions about the effect of interest, as it is developed using uninformative or minimally informative priors, called the JZW prior (technically correspond to assuming a Cauchy prior on the standardized effect size and a uninformative Jeffrey&rsquo;s prior on the variances of your measurements). It&rsquo;s been derived in a paper by Rouder et al. [@Rouder2009c] and there is a easy-to-use R implementation of it in the package <a href="https://cran.r-project.org/web/packages/BayesFactor/index.html">BayesFactor</a>, (see function <code>ttestBF()</code>).</p>
+<p>(<strong>i</strong>) is the Bayesian approach and requires calculating a Bayes factor - that is the ratio between the average (or marginal) likelihood of the data under the null and alternative hypothesis. Note that Bayes factor calculation is highly influenced by the priors (e.g. the prior expectations about the effect size). Luckily, in the case of a single comparison (e.g. a t-test), there is popular way of computing Bayes factors which requires minimal assumptions about the effect of interest, as it is developed using uninformative or minimally informative priors, called the JZW prior (technically correspond to assuming a Cauchy prior on the standardized effect size and a uninformative Jeffrey’s prior on the variances of your measurements). It’s been derived in a paper by Rouder et al. <span class="citation">(Rouder et al. 2009)</span> and there is a easy-to-use R implementation of it in the package <a href="https://cran.r-project.org/web/packages/BayesFactor/index.html">BayesFactor</a>, (see function <code>ttestBF()</code>).</p>
 </blockquote>
 <blockquote>
-<p>(<strong>ii</strong>) is the frequentist alternative. In a frequentist approach you don&rsquo;t express belief in an hypothesis in terms of probability; uncertainty is characterized in relation to the data-generating process (e.g. how many times you would reject the null if you repeated the experiment a zillion time? - probability is interpreted as the long-run frequency in an imaginary very, very large sample). Under this approach you can estimate what is the maximum size of the effect since you did not detected it in your current experiment. Daniel Lakens has written an easy-to-use package for that, called TOSTER; see <a href="https://cran.rstudio.com/web/packages/TOSTER/vignettes/IntroductionToTOSTER.html">this vignette</a> for an introduction.</p>
+<p>(<strong>ii</strong>) is the frequentist alternative. In a frequentist approach you don’t express belief in an hypothesis in terms of probability; uncertainty is characterized in relation to the data-generating process (e.g. how many times you would reject the null if you repeated the experiment a zillion time? - probability is interpreted as the long-run frequency in an imaginary very, very large sample). Under this approach you can estimate what is the maximum size of the effect since you did not detected it in your current experiment. Daniel Lakens has written an easy-to-use package for that, called TOSTER; see <a href="https://cran.rstudio.com/web/packages/TOSTER/vignettes/IntroductionToTOSTER.html">this vignette</a> for an introduction.</p>
 </blockquote>
-<p><img src="https://imgs.xkcd.com/comics/null_hypothesis.png" alt=""></p>
+<p><img src="https://imgs.xkcd.com/comics/null_hypothesis.png" /></p>
+<div id="refs" class="references">
+<div id="ref-Rouder2009c">
+<p>Rouder, Jeffrey N, Paul L Speckman, Dongchu Sun, Richard D Morey, and Geoffrey Iverson. 2009. “Bayesian t tests for accepting and rejecting the null hypothesis.” <em>Psychonomic Bulletin &amp; Review</em> 16 (2): 225–37. <a href="https://doi.org/10.3758/PBR.16.2.225">https://doi.org/10.3758/PBR.16.2.225</a>.</p>
+</div>
+</div>
 
     </div>
 
