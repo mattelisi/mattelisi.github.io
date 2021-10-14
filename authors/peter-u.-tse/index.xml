@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Peter U. Tse | Matteo Lisi</title>
+    <link>http://mlisi.xyz/authors/peter-u.-tse/</link>
+      <atom:link href="http://mlisi.xyz/authors/peter-u.-tse/index.xml" rel="self" type="application/rss+xml" />
+    <description>Peter U. Tse</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 Matteo Lisi</copyright><lastBuildDate>Wed, 01 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://mlisi.xyz/img/head.png</url>
+      <title>Peter U. Tse</title>
+      <link>http://mlisi.xyz/authors/peter-u.-tse/</link>
+    </image>
+    
+    <item>
+      <title>Smooth Pursuit Stabilizes Objects in Perceptual and not Retinal Coordinates</title>
+      <link>http://mlisi.xyz/publication/pursuit-inferred-double-drift/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/pursuit-inferred-double-drift/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

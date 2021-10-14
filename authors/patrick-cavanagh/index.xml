@@ -5,12 +5,20 @@
     <link>http://mlisi.xyz/authors/patrick-cavanagh/</link>
       <atom:link href="http://mlisi.xyz/authors/patrick-cavanagh/index.xml" rel="self" type="application/rss+xml" />
     <description>Patrick Cavanagh</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 Matteo Lisi</copyright><lastBuildDate>Sun, 04 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 Matteo Lisi</copyright><lastBuildDate>Wed, 01 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/head.png</url>
       <title>Patrick Cavanagh</title>
       <link>http://mlisi.xyz/authors/patrick-cavanagh/</link>
     </image>
+    
+    <item>
+      <title>Smooth Pursuit Stabilizes Objects in Perceptual and not Retinal Coordinates</title>
+      <link>http://mlisi.xyz/publication/pursuit-inferred-double-drift/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/pursuit-inferred-double-drift/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Motion and position shifts induced by the double-drift stimulus are unaffected by attentional load</title>

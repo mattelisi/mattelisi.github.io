@@ -5,12 +5,28 @@
     <link>http://mlisi.xyz/publication_types/2/</link>
       <atom:link href="http://mlisi.xyz/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 Matteo Lisi</copyright><lastBuildDate>Wed, 24 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 Matteo Lisi</copyright><lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/head.png</url>
       <title>2</title>
       <link>http://mlisi.xyz/publication_types/2/</link>
     </image>
+    
+    <item>
+      <title>Trust and childhood maltreatment: evidence of bias in appraisal of unfamiliar faces</title>
+      <link>http://mlisi.xyz/publication/trust-maltreatment/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/trust-maltreatment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Smooth Pursuit Stabilizes Objects in Perceptual and not Retinal Coordinates</title>
+      <link>http://mlisi.xyz/publication/pursuit-inferred-double-drift/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/pursuit-inferred-double-drift/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>The Effects of a Reading-Based Intervention on Emotion Processing in Children Who Have Suffered Early Adversity and War Related Trauma</title>
@@ -45,6 +61,14 @@
     </item>
     
     <item>
+      <title>Perceiving location of moving objects across eye blinks</title>
+      <link>http://mlisi.xyz/publication/motion-blink-preprint/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/motion-blink-preprint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Uncertainty and spatial updating in posterior parietal cortex</title>
       <link>http://mlisi.xyz/publication/uncertaintyppc/</link>
       <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
@@ -70,26 +94,10 @@
     </item>
     
     <item>
-      <title>Motion and position shifts induced by the double-drift stimulus are unaffected by attentional load</title>
-      <link>http://mlisi.xyz/publication/dd_load/</link>
-      <pubDate>Sun, 04 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/dd_load/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Memory-guided saccades show effect of perceptual illusion whereas visually-guided saccades do not</title>
       <link>http://mlisi.xyz/publication/memory-delphine/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/publication/memory-delphine/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Different spatial representations guide eye and hand movements</title>
-      <link>http://mlisi.xyz/publication/double-drift-pointing/</link>
-      <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/double-drift-pointing/</guid>
       <description></description>
     </item>
     

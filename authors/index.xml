@@ -5,12 +5,132 @@
     <link>http://mlisi.xyz/authors/</link>
       <atom:link href="http://mlisi.xyz/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 Matteo Lisi</copyright><lastBuildDate>Wed, 24 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 Matteo Lisi</copyright><lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/head.png</url>
       <title>Authors</title>
       <link>http://mlisi.xyz/authors/</link>
     </image>
+    
+    <item>
+      <title>Diana Armbruster-Genc</title>
+      <link>http://mlisi.xyz/authors/diana-armbruster-genc/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/diana-armbruster-genc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eamon McCrory</title>
+      <link>http://mlisi.xyz/authors/eamon-mccrory/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/eamon-mccrory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essi Viding</title>
+      <link>http://mlisi.xyz/authors/essi-viding/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/essi-viding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Georgia Rankin</title>
+      <link>http://mlisi.xyz/authors/georgia-rankin/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/georgia-rankin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Harriet Phillips</title>
+      <link>http://mlisi.xyz/authors/harriet-phillips/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/harriet-phillips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Isabelle Mareshal</title>
+      <link>http://mlisi.xyz/authors/isabelle-mareshal/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/isabelle-mareshal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jessica Rapley</title>
+      <link>http://mlisi.xyz/authors/jessica-rapley/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/jessica-rapley/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Louise Neil</title>
+      <link>http://mlisi.xyz/authors/louise-neil/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/louise-neil/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matteo Lisi</title>
+      <link>http://mlisi.xyz/authors/matteo-lisi/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/matteo-lisi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Molly Sharp</title>
+      <link>http://mlisi.xyz/authors/molly-sharp/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/molly-sharp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Peter Martin</title>
+      <link>http://mlisi.xyz/authors/peter-martin/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/peter-martin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Marvin R. Maechler</title>
+      <link>http://mlisi.xyz/authors/marvin-r.-maechler/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/marvin-r.-maechler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nathan, H. Heller</title>
+      <link>http://mlisi.xyz/authors/nathan-h.-heller/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/nathan-h.-heller/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Patrick Cavanagh</title>
+      <link>http://mlisi.xyz/authors/patrick-cavanagh/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/patrick-cavanagh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Peter U. Tse</title>
+      <link>http://mlisi.xyz/authors/peter-u.-tse/</link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/peter-u.-tse/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Deema Awad</title>
@@ -41,14 +161,6 @@
       <link>http://mlisi.xyz/authors/kristin-hadfield/</link>
       <pubDate>Wed, 24 Mar 2021 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/authors/kristin-hadfield/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Matteo Lisi</title>
-      <link>http://mlisi.xyz/authors/matteo-lisi/</link>
-      <pubDate>Wed, 24 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/matteo-lisi/</guid>
       <description></description>
     </item>
     
@@ -193,14 +305,6 @@
       <link>http://mlisi.xyz/authors/harry-haladjian/</link>
       <pubDate>Sun, 04 Feb 2018 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/authors/harry-haladjian/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Patrick Cavanagh</title>
-      <link>http://mlisi.xyz/authors/patrick-cavanagh/</link>
-      <pubDate>Sun, 04 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/patrick-cavanagh/</guid>
       <description></description>
     </item>
     
