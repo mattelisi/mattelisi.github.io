@@ -5,7 +5,7 @@
     <link>http://mlisi.xyz/authors/</link>
       <atom:link href="http://mlisi.xyz/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2021 Matteo Lisi</copyright><lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2022 Matteo Lisi</copyright><lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/head.png</url>
       <title>Authors</title>
@@ -483,7 +483,7 @@
       <guid>http://mlisi.xyz/authors/admin/</guid>
       <description>&lt;p&gt; &lt;/p&gt;
 &lt;p&gt;Hi, this is my attempt at blogging. I will use this space to post ideas and my random thoughts about science, statistics, politics, and share notes about what I am learning (see &lt;a href=&#34;https://mattelisi.github.io/#posts&#34;&gt;blog&lt;/a&gt; and &lt;a href=&#34;https://mattelisi.github.io/#misc&#34;&gt;misc&lt;/a&gt;). All views my own, except those nicked from cleverer people.&lt;/p&gt;
-&lt;p&gt;I am a Lecturer at the &lt;a href=&#34;https://www.essex.ac.uk/departments/psychology&#34;&gt;&lt;em&gt;Department of Psychology of the University of Essex&lt;/em&gt;&lt;/a&gt;. I use psychophysics, eye-tracking, and computational modelling to investigate visual perception, broadly defined as the ability to assimilate information contained in visible light. Beyond vision, I am interested in how brains compute and use information about uncertainty when making decisions, both in adults and during development.&lt;/p&gt;
+&lt;p&gt;I am a &lt;a href=&#34;https://pure.royalholloway.ac.uk/portal/en/persons/matteo-lisi(b3a26aa9-b493-4588-89d6-3f9554737221).html&#34;&gt;Lecturer&lt;/a&gt; at the &lt;a href=&#34;https://www.royalholloway.ac.uk/research-and-teaching/departments-and-schools/psychology/&#34;&gt;&lt;em&gt;Department of Psychology of Royal Holloway, University of London&lt;/em&gt;&lt;/a&gt;. I use psychophysics, eye-tracking, and computational modelling to investigate visual perception, broadly defined as the ability to assimilate information contained in visible light. Beyond vision, I am interested in how brains compute and use information about uncertainty when making decisions, and in how these abilities changes during development.&lt;/p&gt;
 &lt;p&gt;Find my publications on &lt;a href=&#34;https://scholar.google.com/citations?user=IabbkbEAAAAJ&amp;amp;hl=en&#34;&gt;&lt;em&gt;Scholar&lt;/em&gt;&lt;/a&gt; or &lt;a href=&#34;https://www.researchgate.net/profile/Matteo_Lisi&#34;&gt;&lt;em&gt;RG&lt;/em&gt;&lt;/a&gt;. I started sharing all my code and data on &lt;a href=&#34;https://github.com/mattelisi&#34;&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;https://osf.io/gqy5f/&#34;&gt;&lt;strong&gt;OSF&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
