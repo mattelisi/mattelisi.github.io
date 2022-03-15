@@ -141,14 +141,6 @@ p\left(\mathcal{W} \ge 5 \right) = \frac{2}{6} + \underbrace{\left( 1 - \frac{2}
     </item>
     
     <item>
-      <title>Serial integration of sensory evidence for perceptual decisions and oculomotor responses</title>
-      <link>http://mlisi.xyz/publication/serial_int/</link>
-      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/serial_int/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Uncertainty and spatial updating in posterior parietal cortex</title>
       <link>http://mlisi.xyz/publication/uncertaintyppc/</link>
       <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
@@ -275,6 +267,14 @@ p\left(\mathcal{W} \ge 5 \right) = \frac{2}{6} + \underbrace{\left( 1 - \frac{2}
       <link>http://mlisi.xyz/publication/unsupervised-space-coding/</link>
       <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/publication/unsupervised-space-coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Perceptual decisions and oculomotor responses rely on temporally distinct streams of evidence</title>
+      <link>http://mlisi.xyz/publication/serial_int/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/serial_int/</guid>
       <description></description>
     </item>
     

@@ -155,25 +155,13 @@
     <loc>http://mlisi.xyz/publication/baby_integration/</loc>
     <lastmod>2020-05-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://mlisi.xyz/publication_types/3/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://mlisi.xyz/authors/gerrit-maus/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://mlisi.xyz/authors/hannah-goh/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://mlisi.xyz/authors/joshua-a.-solomon/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://mlisi.xyz/authors/michael-j.-morgan/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://mlisi.xyz/publication/motion-blink-preprint/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://mlisi.xyz/publication/serial_int/</loc>
     <lastmod>2020-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://mlisi.xyz/publication/uncertaintyppc/</loc>
@@ -198,6 +186,12 @@
     <lastmod>2019-09-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://mlisi.xyz/publication/gainpnas/</loc>
+    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://mlisi.xyz/authors/joshua-a.-solomon/</loc>
+    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://mlisi.xyz/authors/michael-j.-morgan/</loc>
     <lastmod>2019-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://mlisi.xyz/tags/centos/</loc>
@@ -417,5 +411,7 @@
     <lastmod>2012-05-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://mlisi.xyz/authors/admin/</loc>
+  </url><url>
+    <loc>http://mlisi.xyz/publication/serial_int/</loc>
   </url>
 </urlset>
