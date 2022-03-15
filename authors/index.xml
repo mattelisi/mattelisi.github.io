@@ -5,12 +5,36 @@
     <link>http://mlisi.xyz/authors/</link>
       <atom:link href="http://mlisi.xyz/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2022 Matteo Lisi</copyright><lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2022 Matteo Lisi</copyright><lastBuildDate>Tue, 01 Mar 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Authors</title>
       <link>http://mlisi.xyz/authors/</link>
     </image>
+    
+    <item>
+      <title>Joshua A. Solomon</title>
+      <link>http://mlisi.xyz/authors/joshua-a.-solomon/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/joshua-a.-solomon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matteo Lisi</title>
+      <link>http://mlisi.xyz/authors/matteo-lisi/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/matteo-lisi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Michael J. Morgan</title>
+      <link>http://mlisi.xyz/authors/michael-j.-morgan/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/michael-j.-morgan/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Diana Armbruster-Genc</title>
@@ -73,14 +97,6 @@
       <link>http://mlisi.xyz/authors/louise-neil/</link>
       <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/authors/louise-neil/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Matteo Lisi</title>
-      <link>http://mlisi.xyz/authors/matteo-lisi/</link>
-      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/matteo-lisi/</guid>
       <description></description>
     </item>
     
@@ -257,22 +273,6 @@
       <link>http://mlisi.xyz/authors/hannah-goh/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/authors/hannah-goh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Joshua A. Solomon</title>
-      <link>http://mlisi.xyz/authors/joshua-a.-solomon/</link>
-      <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/joshua-a.-solomon/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Michael J. Morgan</title>
-      <link>http://mlisi.xyz/authors/michael-j.-morgan/</link>
-      <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/michael-j.-morgan/</guid>
       <description></description>
     </item>
     

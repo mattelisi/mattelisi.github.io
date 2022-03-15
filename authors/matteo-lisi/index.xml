@@ -5,12 +5,20 @@
     <link>http://mlisi.xyz/authors/matteo-lisi/</link>
       <atom:link href="http://mlisi.xyz/authors/matteo-lisi/index.xml" rel="self" type="application/rss+xml" />
     <description>Matteo Lisi</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2022 Matteo Lisi</copyright><lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2022 Matteo Lisi</copyright><lastBuildDate>Tue, 01 Mar 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Matteo Lisi</title>
       <link>http://mlisi.xyz/authors/matteo-lisi/</link>
     </image>
+    
+    <item>
+      <title>Perceptual decisions and oculomotor responses rely on temporally distinct streams of evidence</title>
+      <link>http://mlisi.xyz/publication/serial_int/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/serial_int/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Trust and childhood maltreatment: evidence of bias in appraisal of unfamiliar faces</title>
@@ -267,14 +275,6 @@ p\left(\mathcal{W} \ge 5 \right) = \frac{2}{6} + \underbrace{\left( 1 - \frac{2}
       <link>http://mlisi.xyz/publication/unsupervised-space-coding/</link>
       <pubDate>Thu, 30 Aug 2012 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/publication/unsupervised-space-coding/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Perceptual decisions and oculomotor responses rely on temporally distinct streams of evidence</title>
-      <link>http://mlisi.xyz/publication/serial_int/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/serial_int/</guid>
       <description></description>
     </item>
     
