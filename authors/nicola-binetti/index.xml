@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kristin Hadfield | Matteo Lisi</title>
-    <link>http://mlisi.xyz/authors/kristin-hadfield/</link>
-      <atom:link href="http://mlisi.xyz/authors/kristin-hadfield/index.xml" rel="self" type="application/rss+xml" />
-    <description>Kristin Hadfield</description>
+    <title>Nicola Binetti | Matteo Lisi</title>
+    <link>http://mlisi.xyz/authors/nicola-binetti/</link>
+      <atom:link href="http://mlisi.xyz/authors/nicola-binetti/index.xml" rel="self" type="application/rss+xml" />
+    <description>Nicola Binetti</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2022 Matteo Lisi</copyright><lastBuildDate>Fri, 11 Feb 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/shademe.png</url>
-      <title>Kristin Hadfield</title>
-      <link>http://mlisi.xyz/authors/kristin-hadfield/</link>
+      <title>Nicola Binetti</title>
+      <link>http://mlisi.xyz/authors/nicola-binetti/</link>
     </image>
     
     <item>
@@ -17,14 +17,6 @@
       <link>http://mlisi.xyz/publication/jordan-eyetrack-01/</link>
       <pubDate>Fri, 11 Feb 2022 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/publication/jordan-eyetrack-01/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>The Effects of a Reading-Based Intervention on Emotion Processing in Children Who Have Suffered Early Adversity and War Related Trauma</title>
-      <link>http://mlisi.xyz/publication/wlr-intervention/</link>
-      <pubDate>Wed, 24 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/wlr-intervention/</guid>
       <description></description>
     </item>
     
