@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Elvio Blini | Matteo Lisi</title>
-    <link>http://mlisi.xyz/authors/elvio-blini/</link>
-      <atom:link href="http://mlisi.xyz/authors/elvio-blini/index.xml" rel="self" type="application/rss+xml" />
-    <description>Elvio Blini</description>
+    <title>Arianna Felisatti | Matteo Lisi</title>
+    <link>http://mlisi.xyz/authors/arianna-felisatti/</link>
+      <atom:link href="http://mlisi.xyz/authors/arianna-felisatti/index.xml" rel="self" type="application/rss+xml" />
+    <description>Arianna Felisatti</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2022 Matteo Lisi</copyright><lastBuildDate>Mon, 27 Dec 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/shademe.png</url>
-      <title>Elvio Blini</title>
-      <link>http://mlisi.xyz/authors/elvio-blini/</link>
+      <title>Arianna Felisatti</title>
+      <link>http://mlisi.xyz/authors/arianna-felisatti/</link>
     </image>
     
     <item>
@@ -18,15 +18,6 @@
       <pubDate>Mon, 27 Dec 2021 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/publication/optokinetic-vertical/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Larger, smaller, odd or even? Task-specific effects of optokinetic stimulation on the mental number space</title>
-      <link>http://mlisi.xyz/publication/optokinetic/</link>
-      <pubDate>Mon, 04 Aug 2014 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/optokinetic/</guid>
-      <description>&lt;p&gt;Mariagrazia Ranzini and Matteo Lisi contributed equally to the work&lt;/p&gt;
-</description>
     </item>
     
   </channel>
