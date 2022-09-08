@@ -399,12 +399,12 @@ head(sim_d) # fake/simulated data
 
 ```
 ##   Worker Machine rep    score
-## 1      1       A   1 50.90160
-## 2      2       A   1 55.95296
-## 3      3       A   1 56.97808
-## 4      4       A   1 56.52624
-## 5      5       A   1 54.22414
-## 6      6       A   1 55.29576
+## 1      1       A   1 54.55412
+## 2      2       A   1 57.15246
+## 3      3       A   1 54.06059
+## 4      4       A   1 51.65838
+## 5      5       A   1 54.27580
+## 6      6       A   1 58.77661
 ```
 
 ---
@@ -454,7 +454,7 @@ test_significance(sim_d)
 ```
 
 ```
-## [1] 0.8079038
+## [1] 0.2438525
 ```
 
 
@@ -509,7 +509,34 @@ Standardized effect size: `\(d = \frac{\mu_1 - \mu_2}{\sigma}\)`
 
 --
 
-For LMM: `\(d = \frac{\beta_{\text{Machine}_C}}{\sqrt{\frac{\sigma^2_{\epsilon}}{N_{\text{rep}}-1} + \sigma^2_{\beta_0} + \sigma^2_{\beta_{\text{Machine}_C}} + 2 \rho \sigma_{\beta_0} \sigma_{\beta_{\text{Machine}_C}}}}\)`
+For LMM: `\(d = \frac{\beta_{\text{Machine}_C}}{\sqrt{\frac{\sigma^2_{\epsilon}}{N_{\text{rep}}-1} + \sigma^2_{\beta_0} + \frac{1}{2}\sigma^2_{\beta_{\text{Machine}_C}} + \rho \sigma_{\beta_0} \sigma_{\beta_{\text{Machine}_C}}}}\)`
+
+
+---
+class:inverse
+
+.orange[Standardized effect size definition:]
+
+`$$\text{Cohen's }d = \frac{\text{expected mean difference}}{\text{expected variation individual observation}}$$`
+
+--
+
+.orange[The expected variation is calculated by applying rules for summing variances of random variables:]
+
+`$$\begin{align} d &amp; = \frac{\beta_{\text{Machine}_C}}{\sqrt{\underbrace{\frac{\sigma^2_{\epsilon}}{3-1}}_{\text{residual error}} + \underbrace{\frac{1}{2}\sigma^2_{\beta_0} + \frac{1}{2}\left(\sigma^2_{\beta_0}+ \sigma^2_{\beta_{\text{Machine}_C}} + 2 \rho \sigma_{\beta_0} \sigma_{\beta_{\text{Machine}_C}}\right)}_{\text{pooled variance of mean score for Machine}_B \text{ and Machine}_C} }} \\
+&amp; = \frac{\beta_{\text{Machine}_C}}{\sqrt{\frac{\sigma^2_{\epsilon}}{3-1} + \sigma^2_{\beta_0} + \frac{1}{2}\sigma^2_{\beta_{\text{Machine}_C}} + \rho \sigma_{\beta_0} \sigma_{\beta_{\text{Machine}_C}}}} 
+\end{align}$$`
+
+
+
+---
+## Testing a different effect size
+
+Standardized effect size: `\(d = \frac{\mu_1 - \mu_2}{\sigma}\)`
+
+--
+
+For LMM: `\(d = \frac{\beta_{\text{Machine}_C}}{\sqrt{\frac{\sigma^2_{\epsilon}}{N_{\text{rep}}-1} + \sigma^2_{\beta_0} + \frac{1}{2}\sigma^2_{\beta_{\text{Machine}_C}} + \rho \sigma_{\beta_0} \sigma_{\beta_{\text{Machine}_C}}}}\)`
 
 --
 
@@ -518,14 +545,14 @@ For LMM: `\(d = \frac{\beta_{\text{Machine}_C}}{\sqrt{\frac{\sigma^2_{\epsilon}}
 Omega &lt;- VarCorr(machine.mod)
 cohen_d &lt;- fixef(machine.mod)["MachineC"] / sqrt(fit_par$sigma^2/(3-1)
                                            + Omega$Worker["(Intercept)","(Intercept)"] 
-                                           + Omega$Worker["MachineC","MachineC"]
-                                           + 2*Omega$Worker["(Intercept)","MachineC"])
+                                           + 0.5*Omega$Worker["MachineC","MachineC"]
+                                           + Omega$Worker["(Intercept)","MachineC"])
 cohen_d
 ```
 
 ```
-## MachineC 
-##  1.33965
+##  MachineC 
+## 0.8651908
 ```
 
 
@@ -536,7 +563,8 @@ cohen_d
 Say you want to test a medium effect size `\(d = 0.5\)`. 
 --
 
-To achieve this we need to set the `\(\beta_{\text{Machine}_C}\)` in the simulation to `\(d \times \sqrt{\frac{\sigma^2_{\epsilon}}{N_{\text{rep}}-1} + \sigma^2_{\beta_0} + \sigma^2_{\beta_{\text{Machine}_C}} + 2 \rho \sigma_{\beta_0} \sigma_{\beta_{\text{Machine}_C}}}\)`
+
+To achieve this we need to change the values of `\(\beta_{\text{Machine}_C}\)` used in the simulations to `\(d \times \sqrt{\frac{\sigma^2_{\epsilon}}{N_{\text{rep}}-1} + \sigma^2_{\beta_0} + \frac{1}{2}\sigma^2_{\beta_{\text{Machine}_C}} + \rho \sigma_{\beta_0} \sigma_{\beta_{\text{Machine}_C}}}\)`
 
 
 --
@@ -544,10 +572,10 @@ In R:
 
 
 ```r
-cohen_sigma &lt;- sqrt(fit_par$sigma^2/(3-1) + 
-                      Omega$Worker["(Intercept)","(Intercept)"] + 
-                      Omega$Worker["MachineC","MachineC"] + 
-                      2*Omega$Worker["(Intercept)","MachineC"])
+cohen_sigma &lt;- sqrt(fit_par$sigma^2/(3-1)
+                    + Omega$Worker["(Intercept)","(Intercept)"] 
+                    + 0.5*Omega$Worker["MachineC","MachineC"]
+                    + Omega$Worker["(Intercept)","MachineC"])
 new_beta_MachineC &lt;- 0.5 * cohen_sigma
 ```
 
@@ -564,20 +592,6 @@ fit_par$beta["MachineC"] &lt;- new_beta_MachineC
 ## Testing a different effect size: results
 
 
-
-
-```r
-sim_res_all %&gt;%
-  group_by(N,cohen_d) %&gt;%
-  summarise(SE = sqrt((mean(significant) * (1 - mean(significant)))/length(significant)),
-            significant = mean(significant)) %&gt;%
-  ggplot(aes(x=N, y=significant, group=cohen_d, color=cohen_d))+
-  geom_line()+
-  geom_errorbar(aes(ymin=significant-SE, ymax=significant+SE),width=0)+
-  geom_point(size=2)+
-  geom_hline(yintercept = 0.8,lty=2)+
-  labs(y="power")
-```
 
 &lt;img src="LMM_part2_files/figure-html/unnamed-chunk-28-1.svg" style="display: block; margin: auto;" /&gt;
 
