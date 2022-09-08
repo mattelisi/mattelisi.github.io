@@ -399,12 +399,12 @@ head(sim_d) # fake/simulated data
 
 ```
 ##   Worker Machine rep    score
-## 1      1       A   1 54.55412
-## 2      2       A   1 57.15246
-## 3      3       A   1 54.06059
-## 4      4       A   1 51.65838
-## 5      5       A   1 54.27580
-## 6      6       A   1 58.77661
+## 1      1       A   1 53.95008
+## 2      2       A   1 55.94216
+## 3      3       A   1 54.13024
+## 4      4       A   1 47.96528
+## 5      5       A   1 46.09408
+## 6      6       A   1 59.36876
 ```
 
 ---
@@ -454,7 +454,7 @@ test_significance(sim_d)
 ```
 
 ```
-## [1] 0.2438525
+## [1] 0.2501305
 ```
 
 
@@ -509,7 +509,7 @@ Standardized effect size: `\(d = \frac{\mu_1 - \mu_2}{\sigma}\)`
 
 --
 
-For LMM: `\(d = \frac{\beta_{\text{Machine}_C}}{\sqrt{\frac{\sigma^2_{\epsilon}}{N_{\text{rep}}-1} + \sigma^2_{\beta_0} + \frac{1}{2}\sigma^2_{\beta_{\text{Machine}_C}} + \rho \sigma_{\beta_0} \sigma_{\beta_{\text{Machine}_C}}}}\)`
+For LMM: `\(d = \frac{\beta_{\text{Machine}_C}}{\sqrt{\frac{\sigma^2_{\epsilon}}{3-1} + \sigma^2_{\beta_0} + \frac{1}{2}\sigma^2_{\beta_{\text{Machine}_C}} + \rho \sigma_{\beta_0} \sigma_{\beta_{\text{Machine}_C}}}}\)`
 
 
 ---
@@ -536,7 +536,7 @@ Standardized effect size: `\(d = \frac{\mu_1 - \mu_2}{\sigma}\)`
 
 --
 
-For LMM: `\(d = \frac{\beta_{\text{Machine}_C}}{\sqrt{\frac{\sigma^2_{\epsilon}}{N_{\text{rep}}-1} + \sigma^2_{\beta_0} + \frac{1}{2}\sigma^2_{\beta_{\text{Machine}_C}} + \rho \sigma_{\beta_0} \sigma_{\beta_{\text{Machine}_C}}}}\)`
+For LMM: `\(d = \frac{\beta_{\text{Machine}_C}}{\sqrt{\frac{\sigma^2_{\epsilon}}{3-1} + \sigma^2_{\beta_0} + \frac{1}{2}\sigma^2_{\beta_{\text{Machine}_C}} + \rho \sigma_{\beta_0} \sigma_{\beta_{\text{Machine}_C}}}}\)`
 
 --
 

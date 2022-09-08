@@ -418,7 +418,7 @@ Standardized effect size: $d = \frac{\mu_1 - \mu_2}{\sigma}$
 
 --
 
-For LMM: $d = \frac{\beta_{\text{Machine}_C}}{\sqrt{\frac{\sigma^2_{\epsilon}}{N_{\text{rep}}-1} + \sigma^2_{\beta_0} + \frac{1}{2}\sigma^2_{\beta_{\text{Machine}_C}} + \rho \sigma_{\beta_0} \sigma_{\beta_{\text{Machine}_C}}}}$
+For LMM: $d = \frac{\beta_{\text{Machine}_C}}{\sqrt{\frac{\sigma^2_{\epsilon}}{3-1} + \sigma^2_{\beta_0} + \frac{1}{2}\sigma^2_{\beta_{\text{Machine}_C}} + \rho \sigma_{\beta_0} \sigma_{\beta_{\text{Machine}_C}}}}$
 
 
 ---
@@ -445,7 +445,7 @@ Standardized effect size: $d = \frac{\mu_1 - \mu_2}{\sigma}$
 
 --
 
-For LMM: $d = \frac{\beta_{\text{Machine}_C}}{\sqrt{\frac{\sigma^2_{\epsilon}}{N_{\text{rep}}-1} + \sigma^2_{\beta_0} + \frac{1}{2}\sigma^2_{\beta_{\text{Machine}_C}} + \rho \sigma_{\beta_0} \sigma_{\beta_{\text{Machine}_C}}}}$
+For LMM: $d = \frac{\beta_{\text{Machine}_C}}{\sqrt{\frac{\sigma^2_{\epsilon}}{3-1} + \sigma^2_{\beta_0} + \frac{1}{2}\sigma^2_{\beta_{\text{Machine}_C}} + \rho \sigma_{\beta_0} \sigma_{\beta_{\text{Machine}_C}}}}$
 
 --
 
