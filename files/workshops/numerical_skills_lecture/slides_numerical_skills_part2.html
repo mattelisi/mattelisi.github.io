@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Numerical &amp; mathematical skills for neuroscience</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Matteo Lisi" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom/style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: title-slide, center, inverse
+
+# Numerical &amp; mathematical skills for neuroscience
+
+# PS5210
+
+## Matteo Lisi
+
+### 7 December 2022
+ Part 2: introduction to linear algebra
+
+
+
+
+---
+class: inverse
+
+## Vocabulary
+
+- vector
+- matrix
+- linear combination
+- linear (in)dependence
+- basis
+- span
+- transformation
+- eigenvalues &amp; eigenvectors
+
+
+---
+### Vectors
+
+- A list of `\(n\)` numbers representing a point, or an "arrow", in `\(n\)`-dimensional space
+--
+
+- The vector `\(x = \begin{bmatrix}  x_1 \\ x_2 \end{bmatrix} \in \mathbb{R}^2\)` represents a point/arrow in a 2-dimensional space
+
+
+.center[![:scale 50%](./drawings/transp_vector_01.png)]
+
+
+---
+### Vectors
+
+- A 3-dimensional vector
+
+
+.center[![:scale 60%](./drawings/transp_vector3D.png)]
+
+
+---
+### Sum of vectors
+
+
+.center[![:scale 60%](./drawings/transp_vector_sum.png)]
+
+
+---
+#### Multiplication of a vector with a single number (_scalar_)
+
+
+.center[![:scale 60%](./drawings/transp_scalar_multi.png)]
+
+
+---
+#### Elementwise vector multiplication (Hadamard product)
+
+
+.center[![:scale 60%](./drawings/transp_hadamard.png)]
+
+--
+
+In Matlab, you can achieve this with `x .* y`
+
+
+---
+### Linear combination of vectors
+
+
+.center[![:scale 60%](./drawings/transp_linear_combi_1.png)]
+
+--
+
+.red[_How do you describe the set of **all** possible combinations of] `\(\overrightarrow{v}\)` .red[and] `\(\overrightarrow{w}\)`.red[?_]
+
+--
+
+This is referred to as the **span** of the set of vectors `\(\left\{\overrightarrow{v}, \overrightarrow{w}\right\}\)`. 
+
+In this case the combinations of `\(\overrightarrow{v}\)` and `\(\overrightarrow{w}\)` fill a whole two-dimensional plane.
+
+
+---
+### Matrix-vector multiplication
+
+Multiplying a matrix by a vector is like taking linear combinations of the matrix's columns
+
+.center[![:scale 60%](./drawings/transp_linear_combi_1.png)]
+
+--
+
+.center[![:scale 60%](./drawings/transp_linear_combi_matrix.png)]
+
+
+---
+### Linear independence
+
+.center[![:scale 60%](./drawings/transp_linear_combi_inde.png)]
+
+.red[_How does the _span_ of the columns of A differ from the span of the columns of B?_] 
+
+
+---
+### Vector dot product
+
+.center[![:scale 80%](./drawings/transp_dot01.png)]
+
+
+---
+### Vector dot product
+
+.center[![:scale 85%](./drawings/transp_dot02.png)]
+
+
+---
+class:inverse
+### Matrix multiplication
+
+* How do we multiply two matrices?
+--
+
+
+* While there is only one correct way of doing it, we can about it in 2 slightly different ways:
+--
+
+
+  1. as a series of dot products;
+--
+
+  
+  1. as a "combination of combinations" of columns.
+
+
+--
+
+* This is the default operatin for the symbol `*` in Matlab.
+
+
+---
+### Matrix multiplication
+
+.center[![:scale 81%](./drawings/transp_matrix_multi_01.png)]
+
+
+---
+### Matrix multiplication
+
+.center[![:scale 80%](./drawings/transp_matrix_multi_02.png)]
+
+
+---
+### Matrix multiplication
+
+.center[![:scale 70%](./drawings/transp_matrix_rules.png)]
+
+
+---
+class:inverse
+### What do we do with matrices?
+
+We can think of matrices as functions, which takes vectors as input and apply _transformations_ to them. 
+
+`$$\overrightarrow{y} = f(\overrightarrow{x}) = A \overrightarrow{x}$$`
+
+---
+### Example: 'stretch' transformation
+
+.left-column[
+
+`\(S = \begin{bmatrix}  1+\delta &amp;  0 \\ 0  &amp; 1\end{bmatrix}\)`
+
+`\(S \begin{bmatrix}  x_1 &amp; x_2 &amp; \ldots \\ y_1 &amp; y_2 &amp; \ldots \end{bmatrix} = ?\)`
+
+]
+
+
+.right-column[
+&lt;img src="slides_numerical_skills_part2_files/figure-html/unnamed-chunk-1-1.svg" style="display: block; margin: auto;" /&gt;
+]
+
+
+
+
+---
+### Example: 'stretch' transformation
+
+.left-column[
+
+`\(S = \begin{bmatrix}  1+\delta &amp;  0 \\ 0  &amp; 1\end{bmatrix}\)`
+
+
+.center[![:scale 100%](./drawings/transp_stretch_matrix.png)]
+]
+
+
+.right-column[
+&lt;img src="slides_numerical_skills_part2_files/figure-html/unnamed-chunk-2-1.svg" style="display: block; margin: auto;" /&gt;
+]
+
+
+---
+class:inverse
+### Special matrices
+
+Identity matrix: `\(I = \begin{bmatrix}  1 &amp;  0 \\ 0  &amp; 1\end{bmatrix}\)`
+
+For any other matrix `\(A\)` we have that `\(AI = A = IA\)`
+
+
+---
+class:inverse
+### Special matrices
+
+Inverse matrix: `\(A^{-1}A=AA^{-1}=I\)`
+
+--
+
+`\(S = \begin{bmatrix}  1+\delta &amp;  0 \\ 0  &amp; 1\end{bmatrix}\)` has inverse `\(S^{-1} = \begin{bmatrix}  \frac{1}{1+\delta} &amp;  0 \\ 0  &amp; 1\end{bmatrix}\)` 
+
+--
+
+`\(SS^{-1} = \begin{bmatrix}  1+\delta &amp;  0 \\ 0  &amp; 1\end{bmatrix} \begin{bmatrix}  \frac{1}{1+\delta} &amp;  0 \\ 0  &amp; 1\end{bmatrix} = \begin{bmatrix}  \frac{1+\delta}{1+\delta} &amp;  0 \\ 0  &amp; 1\end{bmatrix} = \begin{bmatrix}  1 &amp;  0 \\ 0  &amp; 1\end{bmatrix} = I\)`
+
+
+---
+### Eigenvalues &amp; Eigenvectors
+
+
+.center[![:scale 75%](./drawings/transp_eigen_v2_01.png)]
+
+
+---
+### Eigenvalues &amp; Eigenvectors
+
+
+.center[![:scale 75%](./drawings/transp_eigen_v2_02.png)]
+
+
+
+---
+
+`\(Sv_1 = \begin{bmatrix}  1+\delta &amp;  0 \\ 0  &amp; 1\end{bmatrix} \begin{bmatrix}  1 \\  0\end{bmatrix} = \begin{bmatrix}  1+\delta \\  0\end{bmatrix} =  (1+\delta ) \begin{bmatrix}  1\\  0\end{bmatrix}= \lambda_1 v_1\)`
+
+`\(Sv_2 = \begin{bmatrix}  1+\delta &amp;  0 \\ 0  &amp; 1\end{bmatrix} \begin{bmatrix}  0 \\  1\end{bmatrix} = \begin{bmatrix}  0 \\  1\end{bmatrix} =  1 \begin{bmatrix}  0\\  1\end{bmatrix}= \lambda_2 v_2\)`
+
+
+&lt;img src="slides_numerical_skills_part2_files/figure-html/unnamed-chunk-3-1.svg" style="display: block; margin: auto;" /&gt;
+
+
+---
+class:inverse
+### Principal component analysis (PCA)
+
+* A _dimensionality-reduction_ method
+--
+
+
+* Given `\(n\)`-dimensional vectors (e.g. recording from `\(n\)` neurons) as data, we obtain a lower-dimensional representation, by projecting the data on a set of _principal components_, while preserving as much of the data's variation as possible.
+--
+
+* Variance-covariance matrix: 
+`\(\Sigma  = \begin{bmatrix}  \text{Var}(x_1) &amp;  \text{Cov}(x_1,x_2) &amp; \cdots &amp; \text{Cov}(x_1,x_n) \\ \text{Cov}(x_2,x_1) &amp;\text{Var}(x_2) &amp; \cdots &amp; \text{Cov}(x_2,x_n)\\ \vdots &amp; \vdots &amp;  \ddots &amp; \vdots \\  \text{Cov}(x_n,x_1)  &amp; \text{Cov}(x_n,x_2)  &amp; \cdots &amp; \text{Var}(x_n) \end{bmatrix}\)`
+--
+
+
+* The eigenvectors of the variance-covariance are the principal components.
+--
+
+
+* The eigenvector with the largest eigenvalue represents the direction of maximal variation in the data.
+
+
+---
+### Principal component analysis (PCA)
+
+`\(\Sigma = \begin{bmatrix}  1 &amp;  0.99 \\ 0.99  &amp; 1.5\end{bmatrix}\)`
+
+&lt;img src="slides_numerical_skills_part2_files/figure-html/unnamed-chunk-4-1.svg" style="display: block; margin: auto;" /&gt;
+
+
+---
+### Principal component analysis (PCA)
+
+Now showing the eigenvectors scaled by their respective eigenvalues.
+
+`$$\,$$`
+
+&lt;img src="slides_numerical_skills_part2_files/figure-html/unnamed-chunk-5-1.svg" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+class:inverse
+Matlab code for PCA on [Github](https://github.com/mattelisi/NeuroMethods)
+
+.center[![:scale 50%](./img/matlab_pca.png)]
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="./custom/macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-dark",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "%current%",
+"ration": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

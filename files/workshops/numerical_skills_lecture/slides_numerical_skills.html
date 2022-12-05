@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Numerical &amp; mathematical skills for neuroscience</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Matteo Lisi" />
+    <meta name="date" content="2022-12-07" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom/style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: title-slide, center, inverse
+
+# Numerical &amp; mathematical skills for neuroscience
+
+# PS5210
+
+## Matteo Lisi
+
+### 7 December 2022
+
+
+
+
+
+---
+class: inverse
+
+# Program for today
+
+- **Part 1** Mathematical functions, some calculus and Fourier transformation
+--
+
+
+- **Part 2** Introduction to linear algebra
+
+---
+### Polynomial functions 
+
+$$ y = x$$
+
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-1-1.svg" style="display: block; margin: auto;" /&gt;
+
+---
+### Polynomial functions 
+
+$$ y = x^2$$
+
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-2-1.svg" style="display: block; margin: auto;" /&gt;
+
+---
+### Polynomial functions 
+
+`$$y = \frac{1}{5}x^3 + x^2 - 1$$`
+
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-3-1.svg" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+# Function notation
+
+To show that `\(y\)` is a function of `\(x\)` we write
+
+.center[![:scale 50%](./img/function_def.png)]
+
+--
+
+if a function depends on multiple variables we write
+
+`$$y(x,t) = x^2 + t + xt$$`
+
+
+---
+### Exponential function 
+
+`$$y = \exp(x) = e^x$$`
+where `\(e\)` is the Euler number `\(e=2.7182818284590452353\ldots\)`
+
+
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-4-1.svg" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+class: inverse
+
+# Differentiation 
+
+- How does a function `\(y\)` vary with `\(x\)`?
+--
+
+
+- that is, given a change in `\(x\)` of `\(\Delta x\)`, what is `\(\Delta y\)`, the corresponding change in `\(y\)`?
+
+
+---
+class: inverse
+
+# Differentiation 
+
+For a straight line:
+
+
+.center[![:scale 60%](./img/gradient01.png)]
+
+--
+
+The .orange[*gradient*] is: 
+
+`$$\frac{\Delta y}{\Delta x} = \frac{y(x_2)-y(x_1)}{x_2 - x_1}$$`
+
+
+---
+class: inverse
+
+# Differentiation 
+
+A curve can be approximated with a series of lines each of length `\(\Delta x\)`
+
+.center[![:scale 50%](./img/diff00.png)]
+
+--
+
+The shorter the lines, the more accurate the approximation.
+
+
+It becomes _precise_ as `\(\Delta x \rightarrow 0\)`
+
+
+---
+class: inverse
+
+# Differentiation 
+
+Differentiating the function `\(y(x) = x^2\)`
+
+.center[![:scale 70%](./img/diff01.png)]
+
+--
+
+`$$\frac{dy}{dx} = \lim_{\Delta x \rightarrow 0} \frac{y(x + \Delta x)-y(x)}{(x + \Delta x) - x}$$`
+
+---
+
+# Differentiation
+
+| `\(y(x)\)`	| `\(\frac{dy}{dx}\)` 	|
+|-----------	|---------	|
+|	`\(x\)` | `\(1\)`	|
+|	`\(x^2\)` | `\(2x\)`	|
+|	`\(x^3\)` | `\(3x^2\)`	|
+|	`\(\vdots\)` | `\(\vdots\)`	|
+|	`\(x^n\)` | `\(nx^{n-1}\)`	|
+|	`\(\sin(x)\)` | `\(cos(x)\)`	|
+|	`\(\cos(x)\)` | `\(-\sin(x)\)`	|
+|	`\(e^x\)` | `\(e^x\)`	|
+
+
+---
+class: inverse
+
+### Question: _What differentiation has to do with this picture?_
+
+
+.center[![:scale 50%](./img/saccade_plot.png)]
+
+
+
+
+---
+### Trigonometric functions
+
+`$$y = \sin(x)$$`
+
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-5-1.svg" style="display: block; margin: auto;" /&gt;
+
+
+---
+### Trigonometric functions
+
+
+.center[![:scale 50%](./img/trig00.png)]
+
+
+
+---
+count: false
+
+### Trigonometric functions
+
+
+.center[![:scale 50%](./img/trig01.png)]
+
+
+---
+count: false
+
+### Trigonometric functions
+
+
+.center[![:scale 50%](./img/trig02.png)]
+
+
+
+---
+### Trigonometric functions
+
+
+.center[![:scale 90%](./img/Circle_cos_sin.gif)]
+
+
+
+---
+### Degrees vs Radians
+
+
+`$$360 \, \text{degrees} = 2\pi \, \text{radians}$$`
+where `\(\pi = 3.14159265359 \ldots\)`
+
+
+--
+
+.center[![:scale 75%](./img/deg_rad.png)]
+
+
+---
+### Trigonometric functions
+
+
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-6-1.svg" style="display: block; margin: auto;" /&gt;
+
+--
+- Sine and cosine functions takes angles as input, and return numbers between -1 and 1 as outputs
+
+--
+- Can be used to model _oscillations_ (phenomena with repeated/period variation)
+
+--
+- Real-world oscillations are not simply periodical
+
+
+---
+class: inverse
+Oscillations in scalp EEG activity
+
+.center[![:scale 75%](./img/brain_waves.png)]
+
+
+
+---
+Monthly cycle in women's body temperature
+
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-7-1.svg" style="display: block; margin: auto;" /&gt;
+
+--
+
+| 	| minimum	| maximum	| average	| time of max.	| period	|
+|-----------	|--------	|--------	|--------	|--------	|
+|	Daily cycle | 36.5| 37.1 | 36.8 | 14:00 | 24 hours |
+|	Monthly cycle | 36.6	| 37.0 | 36.8 | day 16 | 28 days |
+
+
+
+---
+count: false
+Monthly cycle in women's body temperature
+
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-8-1.svg" style="display: block; margin: auto;" /&gt;
+
+
+.pull-left[
+`$$D(t)=36.8+0.3\cos\left(\frac{2\pi}{24}(t-14)\right)$$`
+]
+
+.pull-right[
+`$$M(t)=36.8+0.2\cos\left(\frac{2\pi}{28}(t-16)\right)$$`
+]
+
+---
+class: inverse
+
+### Modelling oscillations with cosine function
+
+`$$y(t) = A + B  \cos \left(\frac{2\pi}{T}(t-\phi) \right)$$`
+
+.left-column[
+
+- `\(A\)`, .orange[average]
+
+
+- `\(B\)`, .orange[amplitude]
+
+
+- `\(T\)`, .orange[period] 
+
+
+- `\(\phi\)`, .orange[phase] (the time of the first peak)
+]
+
+.right-column[
+.center[![:scale 80%](./img/cosine_function.png)]
+]
+
+--
+
+.left[
+Additionally, we can describe an oscillation according to it's frequency (the inverse of the period), `\(f=\frac{1}{T}\)`. Frequency is often measured in _'hertz'_ (number of cycles per second).
+]
+
+
+
+---
+
+Monthly cycle in women's body temperature
+
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-9-1.svg" style="display: block; margin: auto;" /&gt;
+
+--
+
+
+`$$f(t)=36.8+\underbrace{0.3\cos\left(\frac{2\pi}{1}\left(t-\frac{14}{24}\right)\right)}_{\text{daily oscillation}\\\text{(period } T \text{ and phase } \phi\\ \text{transformed in days)}} +\underbrace{0.2\cos\left(\frac{2\pi}{28}(t-16)\right)}_{\text{monthly oscillation}}$$`
+---
+
+### Fourier series
+
+.pull-left[
+- We can approximate almost any functions by summing many cosine functions with different amplitudes, periods and phases.
+
+
+- The approximation improves as the number of terms (sinusoidal functions added together) increases
+
+]
+
+.pull-right[
+![:scale 70%](./img/square_fourier.png)
+]
+
+
+
+---
+
+### Fourier series
+
+
+.pull-left[
+.center[![:scale 100%](./img/fourier01.svg)]
+]
+
+.pull-right[
+.center[![:scale 100%](./img/fourier02.svg)]
+]
+
+
+
+---
+
+### Fourier transform
+
+
+.center[![:scale 90%](./img/fourier_series-011.png)]
+
+Fourier transform is a powerful mathematical tool that decompose a function into different frequency components. In the case of a signal that varies over time this corresponding to moving from a representation in the time domain to a frequency domain.
+
+
+---
+
+### Fourier transform &amp; filtering
+
+.left-column[
+- Frequency-domain representation of body temperature signal.
+
+- (hourly measurement, random noise added)
+]
+
+
+.right-column[
+.center[![:scale 80%](./img/fourier_cycles_01.png)]
+]
+
+
+---
+
+### Fourier transform &amp; filtering
+
+.left-column[
+- Frequency-domain representation of body temperature signal.
+
+- (hourly measurement, random noise added)
+]
+
+
+.right-column[
+.center[![:scale 80%](./img/fourier_cycles_01.png)]
+]
+
+
+---
+
+### Fourier transform &amp; filtering
+
+- Working on the frequency-domain representation makes it easy to suppress frequencies selectively
+--
+
+
+- Low pass filter (I set to zero everything with a period shorted than 2 days)
+
+.center[![:scale 60%](./img/filtered.png)]
+
+
+&lt;!---
+Matlab code on GitHub
+.center[![:scale 60%](./img/matlab_fft_code.png)]
+--&gt;
+
+---
+
+### Continuous &amp; discrete signals
+
+* Continuous functions can be used to describe _continuous_ (analog) signals (e.g. voltage of a EEG electrode)
+--
+
+* In practice, most of the time we work with _discrete_ signals - that is sequence of values. that comes from a sampling (or discretization) of a continuous signal. For example: 
+  - recording of EEG voltage is stored as a sequence of values;
+  - in eyetracking, movements of visual axis are discretized in a sequence of gaze positions.
+--
+
+* We can apply similar operations to both types of signals (with some caveat). For example we have the _discrete Fourier transform_ for discrete signals.
+--
+
+* Information is lost in the sampling process. If the sampling interval (distance between sampling points) is too coarse, then the continuous signal is not uniquely determined by the samples causing _**aliasing**_ errors.
+
+.center[![:scale 60%](./img/aliasing.png)]
+
+&lt;!---
+The mechanisms underlying this bistable phenomenon (the “continuous wagon wheel illusion”) are heavily debated, but one interpretation suggests that motion information is perceived in discrete episodes at a rate between 10 and 15 Hz. [...] These data are compatible with the idea that motion perception occurs in snapshots &lt;100 ms in duration.
+--&gt;
+
+
+---
+class: inverse, center
+
+### Aliasing error in the wild
+
+&lt;video width="384" height="512" controls&gt;
+&lt;source src="./img/propeller.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+
+---
+
+### Application of Fourier transform in two dimensions
+
+.center[![:scale 80%](./img/m3.JPG)]
+
+
+---
+class: inverse, center
+
+Coming next: linear algebra
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="./custom/macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-dark",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "%current%",
+"ration": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
