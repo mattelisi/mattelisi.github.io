@@ -1,7 +1,7 @@
 ---
 title: "Meta-analyses in `R`"
 author: "Matteo Lisi"
-date: '2022/2/22'
+date: '2023/2/22'
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -191,7 +191,7 @@ For the meta-analytic approach taken in `metafor`, we need to ensure that effect
 The dataset `power_pose` contains 6 pre-registered replications testing whether participants reported higher "feeling-of-power" ratings after adopting expansive 'as opposed to constrictive body postures.
 
 ```{r}
-power_pose <- read.csv("./data/power_pose.csv")
+power_pose <- read.csv("https://mlisi.xyz/files/workshops/meta_analyses/data/power_pose.csv")
 str(power_pose)
 ```
 
@@ -499,7 +499,7 @@ text(-5, -1, pos=4, cex=0.9, bquote(paste("RE Model (Q = ",.(formatC(res$QE, dig
 1. `towels` contains results of a set of studies that investigated whether people reuse towels in hotels more often if they are provided with a descriptive norm (a message stating that the majority of guests actually reused their towels), as opposed to a control condition in which they were simply encouraged to reuse the towels (with a message about the protection of the environment)
 
 ```{r}
-towels <- read.csv("./data/towels.csv")
+towels <- read.csv("https://mlisi.xyz/files/workshops/meta_analyses/data/towels.csv")
 str(towels)
 ```
 
@@ -512,7 +512,7 @@ str(towels)
 
 
 ```{r}
-load('./data/thirdwave.rda')
+load(url('https://mlisi.xyz/files/workshops/meta_analyses/data/thirdwave.rda'))
 str(ThirdWave)
 ```
 
@@ -595,7 +595,7 @@ Formally $$\hat\theta_{ij} = \mu + \zeta_{(2)ij} + \zeta_{(3)j} + \epsilon_{ij}$
 ### Three-level meta analysis example
 
 ```{r}
-load('./data/Chernobyl.rda')
+load(url('https://mlisi.xyz/files/workshops/meta_analyses/data/Chernobyl.rda'))
 str(Chernobyl)
 ```
 
