@@ -1,0 +1,19 @@
+Author,TE,seTE,RiskOfBias,TypeControlGroup,InterventionDuration,InterventionType,ModeOfDelivery
+Call et al.,0.709136234756933,0.260820178547769,high,WLC,short,mindfulness,group
+Cavanagh et al.,0.354864109077645,0.196362410818884,low,WLC,short,mindfulness,online
+DanitzOrsillo,1.79117003272488,0.345569205699001,high,WLC,short,ACT,group
+de Vibe et al.,0.182455216323761,0.117787401662918,low,no intervention,short,mindfulness,group
+Frazier et al.,0.42185093084487,0.144812762024237,low,information only,short,PCI,online
+Frogeli et al.,0.63,0.196,low,no intervention,short,ACT,group
+Gallego et al.,0.724883808783712,0.224664137749212,high,no intervention,long,mindfulness,group
+Hazlett-Stevens & Oren,0.528663812357321,0.210460918848162,low,no intervention,long,mindfulness,book
+Hintz et al.,0.284,0.168,low,information only,short,PCI,online
+Kang et al.,1.27506817139631,0.337199688565405,low,no intervention,long,mindfulness,group
+Kuhlmann et al.,0.10360817637506,0.194727463484504,high,no intervention,short,mindfulness,group
+Lever Taylor et al.,0.388390560376566,0.230768893346391,low,WLC,long,mindfulness,book
+Phang et al.,0.540739823331358,0.244313267301974,low,no intervention,short,mindfulness,group
+Rasanen et al.,0.426159311552595,0.257937944593587,low,WLC,short,ACT,online
+Ratanasiripong,0.515396915332498,0.351273746997289,high,no intervention,short,mindfulness,group
+Shapiro et al.,1.47972601084922,0.315281680355345,high,WLC,long,mindfulness,group
+Song & Lindquist,0.612578239930467,0.226683364977455,high,WLC,long,mindfulness,group
+Warnecke et al.,0.6,0.249,low,information only,long,mindfulness,online
