@@ -689,15 +689,6 @@ dat %>%
 
 
 ---
-# References
-
-
-```{r refs, echo=FALSE, results="asis"}
-PrintBibliography(myBib)
-```
-
-
----
 class:inverse
 # Bias detection
 
@@ -742,6 +733,16 @@ Image taken from `r Citet(myBib, "Lakens")`, [link](https://lakens.github.io/sta
 res <- rma(yi=TE, vi=seTE^2, data = ThirdWave)
 funnel(res, level=c(90, 95, 99), shade=c("white", "gray55", "gray75"), refline=0, legend=TRUE, xlab="Effect size (standardized mean difference)")
 ```
+
+
+---
+# References
+
+
+```{r refs, echo=FALSE, results="asis"}
+PrintBibliography(myBib)
+```
+
 
 
 ---
