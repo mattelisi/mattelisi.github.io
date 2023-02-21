@@ -144,7 +144,7 @@ If we were to repeat the experiment many times (ideally infinitely many) we woul
 --
 
 
-Given a single study, we can never know $\epsilon_k$, however we can estimate it's variability (that is precisely the goal of much of statistics). The .orange[standard error (_SE_)] of the effect size is precisely the standard deviation of the sampling distribution, and therefore it is an estimate of how reliable is a study.
+Given a single study, we can never know $\epsilon_k$, however we can estimate it's variability. The .orange[standard error (_SE_)] of the effect size is the standard deviation of the sampling distribution, and therefore it is an estimate of how reliable is a study.
 --
 
 
@@ -729,10 +729,34 @@ Image taken from `r Citet(myBib, "Lakens")`, [link](https://lakens.github.io/sta
 ---
 #### Funnel plot for `ThirdWave` dataset
 
-```{r, fig.height=4,fig.width=7, dev='svg', fig.align='center'}
+```{r, fig.height=4,fig.width=7, dev='svg', fig.align='center', warning=FALSE}
 res <- rma(yi=TE, vi=seTE^2, data = ThirdWave)
-funnel(res, level=c(90, 95, 99), shade=c("white", "gray55", "gray75"), refline=0, legend=TRUE, xlab="Effect size (standardized mean difference)")
+funnel(res, level=c(90, 95, 99), shade=c("white", "gray55", "gray75"), refline=0, legend=TRUE, xlab="Effect size (standardized mean difference)", refline2=res$b)
 ```
+
+
+---
+.orange[Egger’s regression test] for funnel plot asymmetry
+
+```{r}
+regtest(res)
+```
+--
+```{r}
+with(ThirdWave, summary(lm(I(TE/seTE) ~ I(1/seTE))))
+```
+
+
+---
+Egger’s regression test `tidyverse` style
+
+```{r}
+ThirdWave %>% 
+  mutate(y = TE/seTE, x = 1/seTE) %>% 
+  lm(y ~ x, data = .) %>% 
+  summary()
+```
+
 
 
 ---
