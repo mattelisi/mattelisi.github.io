@@ -740,7 +740,7 @@ funnel(res, level=c(90, 95, 99), shade=c("white", "gray55", "gray75"), refline=0
 .orange[Egger’s regression test] for funnel plot asymmetry
 
 ```{r}
-regtest(res)
+regtest(res, model="lm")
 ```
 --
 ```{r}
