@@ -7,6 +7,7 @@ library(metafor)
 
 # -------------------------------------------------------------- #
 # example 1 meta-analysis
+power_pose <- read.csv("https://mlisi.xyz/files/workshops/meta_analyses/data/power_pose.csv")
 power_pose <- read.csv("./data/power_pose.csv")
 str(power_pose)
 
@@ -84,10 +85,12 @@ summary(rma(cohen_d, SE^2, data = power_pose, method="FE"))
 
 # 1
 towels <- read.csv("./data/towels.csv")
+towels <- read.csv("https://mlisi.xyz/files/workshops/meta_analyses/data/towels.csv")
 str(towels)
 
 # 2
 load('./data/thirdwave.rda')
+load(url('https://mlisi.xyz/files/workshops/meta_analyses/data/thirdwave.rda'))
 str(ThirdWave)
 
 
@@ -111,9 +114,13 @@ anova(res0, res2)
 funnel(res0)
 regtest(res0)
 
+#
+influence(res0)
+plot(influence(res0))
+
 # -------------------------------------------------------------- #
 # multilevel / three-level model
-
+load(url('https://mlisi.xyz/files/workshops/meta_analyses/data/Chernobyl.rda'))
 load('./data/Chernobyl.rda')
 str(Chernobyl)
 
@@ -154,4 +161,8 @@ ThirdWave %>%
   mutate(y = TE/seTE, x = 1/seTE) %>% 
   lm(y ~ x, data = .) %>% 
   summary()
+
+
+
+
 

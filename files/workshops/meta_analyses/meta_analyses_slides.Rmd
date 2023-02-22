@@ -85,9 +85,11 @@ class: inverse
 
 2. Estimating meta-analytic models in R (`metafor` package, `r Citet(myBib, "Viechtbauer2010")`)
 
-3. Meta-analytic regression
+  + Random-effects model
+  
+  + Meta-regression
 
-4. Multi-level meta analysis
+  + Multilevel meta analysis
 
 5. Bias detection
 
@@ -145,7 +147,6 @@ If we were to repeat the experiment many times (ideally infinitely many) we woul
 
 
 Given a single study, we can never know $\epsilon_k$, however we can estimate it's variability. The .orange[standard error (_SE_)] of the effect size is the standard deviation of the sampling distribution, and therefore it is an estimate of how reliable is a study.
---
 
 
 ---
@@ -812,7 +813,7 @@ class: inverse
 --
 
 
-- see [variance of the sum of random variables](https://en.wikipedia.org/wiki/Propagation_of_uncertainty#Example_formulae): $$\sigma^2_{A+B}=\sigma^2_{A} + \sigma^2_{B} + \underbrace{2\, r \, \sigma_{A} \,\sigma_{B}}_{\text{cov}(A,B)}$$
+- see [variance of the sum of random variables](https://en.wikipedia.org/wiki/Propagation_of_uncertainty#Example_formulae): $$\sigma^2_{A+B}=\sigma^2_{A} + \sigma^2_{B} + 2\,\underbrace{ r \, \sigma_{A} \,\sigma_{B}}_{\text{cov}(A,B)}$$
 
 
 ---
@@ -824,7 +825,7 @@ class: inverse
 
 
 - Here is the estimate of effect size as estimated by the LMM model
-$$\text{Cohen's }d = \frac{\beta_{\text{gender}}}{\sqrt{\sigma^2 + \sigma^2_{\text{pooled}}+ \tau_{\text{student}}+ \tau_{\text{module}} }}$$
+$$\text{Cohen's }d = \frac{\beta_{\text{gender}}}{\sqrt{\sigma^2 + \sigma^2_{\text{pooled}}+ \tau_{\text{student}}+ \tau_{\text{module}} }} \approx -0.15$$
 
 
 
