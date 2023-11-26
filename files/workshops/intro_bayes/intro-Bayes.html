@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>An introduction to Bayesian data analysis</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Matteo Lisi" />
+    <meta name="date" content="2023-11-29" />
+    <script src="intro-Bayes_files/header-attrs/header-attrs.js"></script>
+    <link href="intro-Bayes_files/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="intro-Bayes_files/tile-view/tile-view.js"></script>
+    <link href="intro-Bayes_files/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <link href="intro-Bayes_files/tachyons/tachyons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom/style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+class: title-slide, center, inverse
+
+# An introduction to Bayesian data analysis
+
+&lt;!-- #  --&gt;
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+## Matteo Lisi
+
+### 29 November 2023
+
+---
+
+### Disclaimer
+
+&lt;br&gt;
+
+.center[![:scale 45%](./img/darthbayes.png)]
+
+&lt;br&gt;
+
+--
+
+.center[There is no 'dark side' in statistics.]
+
+
+---
+class: small-font-page
+
+.center[![:scale 65%](./img/test_map.png)]
+
+.right[Image from 'Statistical rethinking', Richard McElreath.]
+
+&lt;!-- --- --&gt;
+
+&lt;!-- .center[![:scale 45%](./img/meme_leaving.png)] --&gt;
+
+
+---
+
+## Outline
+
+1. How to fit a model to data: frequentist &amp; Bayesian approaches
+2. Computations in Bayesian inference &amp; MCMC sampling
+3. Examples
+4. Bayes factors
+
+
+---
+### Fitting a model: frequentist approach
+
+- Maximum likelihood estimation (MLE)
+--
+
+- **Likelihood function**: a mathematical function that gives the probability of observing the data, given specific values for the parameters of a statistical model. 
+--
+
+
+- The higher the value of the likelihood function for a set of parameters, the more likely it is that these parameters are the correct ones that explain our data.
+
+
+---
+
+.pull-left[
+#### MLE in linear regression
+
+- The best fitting line in linear regression minimizes the sum of squared residuals (errors).
+&lt;br&gt;
+]
+
+
+&lt;img src="intro-Bayes_files/figure-html/unnamed-chunk-1-1.svg" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+---
+count: false
+
+.pull-left[
+#### MLE in linear regression
+
+- The best fitting line in linear regression minimizes the sum of squared residuals (errors).
+&lt;br&gt;
+
+]
+
+.pull-left[
+
+&lt;br&gt;
+
+- Equivalent to maximizing the probability of the data assuming residuals have a Gaussian distribution centred on predicted values.]
+
+&lt;img src="intro-Bayes_files/figure-html/unnamed-chunk-2-1.svg" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+
+
+---
+
+
+## Likelihood function
+
+- Defined as the probability of the data, given some parameter values, usually notated as `\(p(\text{data} \mid \text{parameters})\)`.
+
+--
+
+- For a simple linear regression `$$y_i= \beta_0 + \beta_1x_i+\epsilon_i$$` `$$\epsilon_i \sim \mathcal{N}(0, \sigma^2)$$`
+--
+the likelihood is 
+`$$p(\underbrace{y, x}_{\text{data}} \mid \underbrace{\beta_0, \beta_1, \sigma^2}_{\text{parameters}} ) = \underbrace{\prod_{i=1}^{n}}_{\text{product}} \,\, \underbrace{\mathcal{N}(\overbrace{\beta_0 + \beta_1 x_i}^{\text{predicted value}}\,\,,\,\,\, \sigma^2)}_{\text{Gaussian probability density}}$$`
+
+
+---
+count: false
+
+## Likelihood function
+
+- Defined as the probability of the data, given some parameter values, usually notated as `\(p(\text{data} \mid \text{parameters})\)`.
+
+
+- For a simple linear regression `$$y_i= \beta_0 + \beta_1x_i+\epsilon_i$$` `$$\epsilon_i \sim \mathcal{N}(0, \sigma^2)$$` the likelihood is 
+`$$p(\underbrace{y, x}_{\text{data}} \mid \underbrace{\beta_0, \beta_1, \sigma^2}_{\text{parameters}} ) = \underbrace{\prod_{i=1}^{n}}_{\text{product}} \,\, \underbrace{\frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(y_i - \overbrace{(\beta_0 + \beta_1 x_i)}^{\text{predicted value}})^2}{2\sigma^2}}}_{\text{Gaussian probability density}}$$`
+
+---
+
+## Likelihood function
+
+In practice, we usually work with the logarithm of the likelihood function (_log-likelihood_)
+
+&lt;br&gt;
+
+`$$\begin{align} 
+\mathcal{L}(y, x \mid \beta_0, \beta_1, \sigma^2 )  &amp; = \log \left[ L(y, x \mid \beta_0, \beta_1, \sigma^2)  \right]\\
+ &amp; = -\frac{n}{2}\log(2\pi) - \frac{n}{2}\log(\sigma^2) - \frac{1}{2\sigma^2} \underbrace{\sum_{i=1}^n \left( y_i - \beta_0 - \beta_1 x_i\right)^2}_{\text{sum of squared residual errors}}\\
+\end{align}$$`
+--
+
+- .purple[**The values of intercept] `\(\beta_0\)` .purple[and slope] `\(\beta_1\)` .purple[that minimize the sum of squared residuals also maximize the (log) likelihood function.**]
+
+
+
+---
+## The _frequentist_ approach
+
+- Maximum likelihood estimation is the backbone of statistical estimation in the frequentist inference.
+
+--
+
+- Key aspects of frequentist inference:
+
+--
+
+  - Parameters are considered unknown _fixed_ quantities.
+
+--
+
+  - The objective is to find best point-estimates for these parameters.
+
+--
+
+  - Uncertainty regarding the value of a parameter is not quantified using probabilities.
+
+--
+
+  - Uncertainty in the estimates is expressed in relation to the data-generating process (think about the un-intuitive definition of confidence interval).
+
+--
+
+  - probability is interpreted as the _long-term frequency_ of an event occurring a very large (infinite) series of repeated trials or samples.
+    
+    
+---
+## The _Bayesian_ approach
+
+--
+
+- What is different in the Bayesian approach?
+
+--
+
+  - Probability represents the _degree of belief_ or confidence in the occurrence of an event or the truth of a proposition.
+
+--
+
+  - Parameters are treated as random variables with associated uncertainty, described by a _prior_ probability distribution.
+
+--
+
+  - The objective is to refine the prior distribution using observed data, yielding an updated _posterior_ probability distribution.
+
+--
+
+  - This update is achieved through Bayes' theorem, however the Bayesian approach _is not_ defined by the use Bayes' theorem itself (which is just an implication of the axioms of probability).
+
+--
+
+  - _"The essential characteristic of Bayesian methods is their explicit use of probability for quantifying uncertainty in inferences based on statistical analysis"_ (Gelman et al., 2013).
+
+---
+
+## Elements of Bayesian models
+
+- In a typical Bayesian setting we have:
+
+--
+
+  - **likelihood** `\(p\left(\text{data} \mid \theta\right)\)`, giving probability of the data conditional on the parameter(s) `\(\theta\)`;
+
+--
+
+  - **prior** `\(p\left(\theta\right)\)`, which formalizes _a-priori_ belief about the plausibility of parameter values
+
+--
+
+  - **posterior** distribution, obtained by applying Bayes theorem: `$$p\left(\theta \mid \text{data}\right) = \frac{p\left(\text{data} \mid \theta\right)  p\left(\theta\right)}{p\left( \text{data} \right)}$$`
+
+---
+count:false
+
+## Elements of Bayesian models
+
+- In a typical Bayesian setting we have:
+
+  - **likelihood** `\(p\left(\text{data} \mid \theta\right)\)`, giving probability of the data conditional on the parameter(s) `\(\theta\)`;
+
+  - **prior** `\(p\left(\theta\right)\)`, which formalizes _a-priori_ belief about the plausibility of parameter values
+
+  - **posterior** distribution, obtained by applying Bayes theorem:$$ p\left(\theta \mid \text{data}\right) = \frac{p\left(\text{data} \mid \theta\right)p\left(\theta\right)}{\int p\left( \text{data} \mid \theta \right) p\left(\theta\right) d\theta}$$
+
+&lt;!-- &lt;div class="notes"&gt; --&gt;
+&lt;!-- This is called averaged likelihood because it is averaged over the prior (also called the evidence or the probability of the data). Also called marginal likelihood because it is marginalised over all possible values of `\(\theta\)` weighted by their probability. --&gt;
+&lt;!-- &lt;/div&gt; --&gt;
+
+
+---
+count:false
+
+## Elements of Bayesian models
+
+- In a typical Bayesian setting we have:
+
+  - **likelihood** `\(p\left(\text{data} \mid \theta\right)\)`, giving probability of the data conditional on the parameter(s) `\(\theta\)`;
+
+  - **prior** `\(p\left(\theta\right)\)`, which formalizes _a-priori_ belief about the plausibility of parameter values
+
+  - **posterior** distribution, obtained by applying Bayes theorem:  `$$\text{posterior} = \frac{\text{likelihood} \times \text{prior}}{\text{average likelihood}}$$`
+
+
+---
+count:false
+
+## Elements of Bayesian models
+
+- In a typical Bayesian setting we have:
+
+  - **likelihood** `\(p\left(\text{data} \mid \theta\right)\)`, giving probability of the data conditional on the parameter(s) `\(\theta\)`;
+
+  - **prior** `\(p\left(\theta\right)\)`, which formalizes _a-priori_ belief about the plausibility of parameter values
+
+  - **posterior** distribution, obtained by applying Bayes theorem: `$$\text{posterior} \propto \text{likelihood} \times \text{prior}$$`
+
+
+---
+
+## Bayesian parameter inference
+
+- When we're interested in a specific parameter (e.g. the slope `\(\beta_1\)`) we focus on its _marginal posterior distribution_.
+
+--
+
+- The marginal posterior distribution is found by integrating over other parameters in the posterior - think of this as averaging out the effects of all other parameters to focus only on `\(\beta_1\)` 
+
+--
+
+  formally: `\(p\left(\beta_1 \mid \text{data} \right)=\int \int p\left(\beta_1, \beta_0, \sigma \mid \text{data} \right) d\beta_0 d\sigma\)`)
+
+--
+
+- As models become complex, this calculation gets challenging because it involves averaging (or marginalizing) over many parameters.
+
+--
+
+- We often use computer simulations, like Markov Chain Monte Carlo (MCMC) sampling, to handle these calculations efficiently.
+
+--
+
+- After performing MCMC, we end up with 'samples' drawn from the posterior distribution. With these in hand, summarizing the the marginal posterior becomes simply a matter of 'counting' the samples.
+
+
+---
+class: inverse
+
+### Metropolis algorithm
+
+Say you want to sample from a probability distribution `\(p({\bf x})\)` (e.g. the posterior), but you can only evaluate a function `\(f({\bf x})\)` that is proportional to the density `\(p({\bf x})\)` (e.g. the product of prior and likelihood).
+
+
+--
+
+- **Initialization**:
+
+--
+
+  1. choose arbitrary starting point `\({\bf x}_0\)`
+
+--
+
+  2. choose a probability distribution to generate proposals `\(g({\bf x}_{n+1}|{\bf x}_n)\)` (_proposal density_)
+
+--
+
+
+- **For each iteration `\(i\)`**:
+
+--
+
+  1. generate a candidate `\({\bf x'}\)` sampling from `\(g({\bf x}_{i+1}|{\bf x}_{i})\)`
+
+--
+
+  2. calculate the .purple[acceptance ratio] `\(a = \frac{f({\bf x}')}{f({\bf x}_{i})}\)`
+
+--
+
+  3. .purple[accept/reject]: generate a uniform number `\(u\)` in `\([0,1]\)`
+
+--
+
+   - if `\(u \le a\)`, accept and set `\({\bf x}_{i+1}={\bf x'}\)` (_"move to the new value"_)
+
+--
+
+   - if `\(u &gt; a\)`, reject and set `\({\bf x}_{i+1}={\bf x}_{i}\)`  (_"stay where you are"_)
+
+
+---
+### MCMC example
+
+Implementing Metropolis algorithm to fit regression for one participant of the dataset `sleepstudy` (from the `lme4` package).
+
+
+&lt;img src="intro-Bayes_files/figure-html/unnamed-chunk-3-1.svg" width="30%" style="display: block; margin: auto;" /&gt;
+
+
+- To sample from the posterior we only need to compute the prior and the likelihood.
+
+---
+### MCMC example: likelihood
+
+Custom function to compute the (log) likelihood, keeping the data fixed.
+
+
+```r
+x &lt;- sleepstudy$Days[sleepstudy$Subject=="308"]
+y &lt;- sleepstudy$Reaction[sleepstudy$Subject=="308"]
+
+loglik &lt;- function(par){
+  # parameter vector = [intercept, slope, log(SD)]
+  pred &lt;- par[1] + par[2]*x
+* return(sum(dnorm(y, mean = pred, sd = exp(par[3]), log = TRUE)))
+}
+```
+
+---
+### MCMC example: priors
+
+Prior distribution about parameter values
+
+&lt;img src="intro-Bayes_files/figure-html/unnamed-chunk-5-1.svg" width="100%" /&gt;
+
+---
+### MCMC example: priors
+
+Prior distribution about parameter values
+
+&lt;img src="intro-Bayes_files/figure-html/unnamed-chunk-6-1.svg" width="100%" /&gt;
+
+---
+### MCMC example: priors
+
+Similar to the likelihood, we write a custom function that compute the joint log-prior probability
+
+
+```r
+logprior &lt;- function(par){
+  intercept_prior &lt;- dnorm(par[1], mean=250, sd=180, log=TRUE)
+  slope_prior &lt;- dnorm(par[2], mean=20, sd=20, log=TRUE)
+  sd_prior &lt;- dnorm(par[3],mean=4, sd=1, log=TRUE)
+* return(intercept_prior+slope_prior+sd_prior)
+}
+```
+
+--
+
+Note: logarithm transform a product into a sum: `\(\log(x \times y) = \log(x) + \log(y)\)`
+
+---
+### MCMC example
+
+Put together likelihood and prior to obtain the (log) posterior probability
+
+
+```r
+logposterior &lt;- function(par){
+  return (loglik(par) + logprior(par))
+}
+```
+
+
+---
+### MCMC example
+
+Choose the arbitrary starting point and the proposal density `\(g({\bf x}_{n+1}|{\bf x}_n)\)` 
+
+
+```r
+# initial parameters
+startvalue &lt;- c(250, 20, 5) #  [intercept, slope, log(SD)]
+
+# proposal density
+proposalfunction &lt;- function(par){
+* return(rnorm(3, mean = par, sd= c(15,5,0.2)))
+}
+```
+
+---
+### MCMC example
+
+This function execute iteratively the step we have seen before
+
+
+```r
+run_metropolis_MCMC &lt;- function(startvalue, iterations){
+  
+  # set up an empty array to store smapled values
+  chain &lt;- array(dim = c(iterations+1,3))
+  
+  # put starting values at top of arrays
+  chain[1,] &lt;- startvalue
+  
+  for (i in 1:iterations){
+    
+    # draw a random proposal
+    proposal &lt;- proposalfunction(chain[i,])
+    
+    # ratio of posterior density between new and old values
+    a &lt;- exp(logposterior(proposal) - logposterior(chain[i,]))
+    
+    # sample random number &amp; accept/reject the parameter values
+    if (runif(1) &lt; a){
+      chain[i+1,] &lt;- proposal
+    }else{
+      chain[i+1,] &lt;- chain[i,]
+    }
+  }
+  return(chain)
+}
+```
+
+
+---
+### MCMC example
+
+
+
+Run sampling for many iterations
+
+
+```r
+chain &lt;- run_metropolis_MCMC(startvalue, 20000)
+```
+
+Output:
+
+
+```r
+head(chain)
+```
+
+```
+##          [,1]     [,2]     [,3]
+## [1,] 250.0000 20.00000 5.000000
+## [2,] 240.6032 20.91822 4.832874
+## [3,] 246.8228 13.21847 4.647161
+## [4,] 257.8977 16.09737 4.586083
+## [5,] 257.8977 16.09737 4.586083
+## [6,] 274.7716 15.87271 4.582845
+```
+
+
+---
+### MCMC example
+
+
+&lt;img src="intro-Bayes_files/figure-html/unnamed-chunk-14-1.png" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+### MCMC example
+
+Having the samples from the posterior distribution, summarising uncertainty is simply a matter of counting values. 
+
+--
+
+We can calculate a 95% Bayesian credible interval for slope by taking the 2.5th and 97.5th percentiles of posterior samples
+
+
+```r
+# remove initial 'burn in' samples
+burnIn &lt;- 5000
+slope_samples &lt;- chain[-(1:burnIn),2]
+
+# mean of posterior distribution
+mean(slope_samples)
+```
+
+```
+## [1] 21.75772
+```
+
+```r
+# 95% Bayesian credible interval
+alpha &lt;- 0.05
+round(c(quantile(slope_samples, probs = alpha/2),
+        quantile(slope_samples, probs = 1-alpha/2)),
+      digits=2)
+```
+
+```
+##  2.5% 97.5% 
+## 10.82 33.27
+```
+
+
+---
+class: inverse
+
+- The Metropolis algorithm is the grandparent of modern MCMC techniques for drawing samples from unknown posterior distributions.
+
+--
+
+- Proposals are random and that can make it very inefficient, especially as the complexity of the model (and thus of the posterior) increases.
+
+--
+
+- Modern algorithm are more _efficient_, they use clever proposal methods to get a better picture of the posterior distribution with fewer samples.
+
+--
+
+- A state-of-the-art algorithm is Hamiltonian Monte Carlo (HMC), which is used by the free software Stan ([mc-stan.org](http://mc-stan.org/)).
+
+---
+class: inverse
+## Stan
+
+- Stan (named after Stanislaw Ulam, 1909-1984, co-inventor of MCMC methods) is a probabilistic programming language that makes it easy to do Bayesian inference on complex models.
+
+--
+
+- Once a model is defined, Stan compiles a C++ program that uses HMC to draw samples from the posterior density.
+
+--
+
+- Stan is free, open-source, has a comprehensive documentation and interfaces for the most popular computing environments (R, Matlab, Python, Mathematica)
+
+
+---
+
+### Stan examples
+
+1. Linear regression
+
+2. Drift-diffusion model
+
+---
+.pull-left[
+
+### 1. Linear regression in Stan
+
+
+Walking speed dataset:
+
+
+
+```r
+d &lt;- read.table ("../data/wagespeed.csv", 
+                 header=T, 
+                 sep=",")
+
+
+head(d)
+```
+
+```
+##    wage wspeed       city
+## 1 15.59  73.83    Jakarta
+## 2 20.22  70.26      Sofia
+## 3 25.62  65.46  Bucharest
+## 4 32.78  65.36        Rio
+## 5 23.96  76.84   Guanzhou
+## 6 23.19  80.66 MexicoCity
+```
+
+]
+
+--
+
+
+.pull-right[
+
+&lt;img src="intro-Bayes_files/figure-html/unnamed-chunk-17-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+---
+.pull-left[
+
+- Format data as a 'list'
+- We standardize the variables so that slope can be interpreted as a correlation coefficient
+
+
+```r
+# function to standardize variables
+standardize &lt;- function(x){ 
+  Z &lt;- (x - mean(x)) / sd(x)
+  return(Z)
+}
+
+# prepare data to fit in Stan
+data_stan &lt;- list(
+  N = nrow(d),
+  wage = standardize(d$wage),
+  wspeed = standardize(d$wspeed)
+)
+
+# 
+str(data_stan)
+```
+
+```
+## List of 3
+##  $ N     : int 27
+##  $ wage  : num [1:27] -1.461 -1.308 -1.129 -0.892 -1.184 ...
+##  $ wspeed: num [1:27] -1.06 -1.48 -2.05 -2.06 -0.71 ...
+```
+
+]
+
+
+.pull-right[
+
+&lt;br&gt;
+
+]
+
+---
+
+.pull-left[
+
+Model code in `stan` language:
+
+```stan
+data {
+  int&lt;lower=0&gt; N;
+  vector[N] wspeed;
+  vector[N] wage;
+}
+
+parameters {
+  real beta[2];
+  real&lt;lower=0&gt; sigma;
+}
+
+model {
+  // priors
+  beta[1] ~ normal(0, 1);
+  beta[2] ~ normal(0.5, 1);
+  sigma ~ normal(0,1) T[0,];
+  
+  // likelihood
+  wspeed ~ normal(beta[1] + beta[2]*wage, sigma);
+}
+```
+
+]
+
+--
+
+.pull-right[
+
+The code contain 3 blocks:
+
+]
+
+
+---
+count: false
+
+.pull-left[
+
+Model code in `stan` language:
+
+```stan
+*data {
+*  int&lt;lower=0&gt; N;
+*  vector[N] wspeed;
+*  vector[N] wage;
+*}
+
+parameters {
+  real beta[2];
+  real&lt;lower=0&gt; sigma;
+}
+
+model {
+  // priors
+  beta[1] ~ normal(0, 1);
+  beta[2] ~ normal(0.5, 1);
+  sigma ~ normal(0,1) T[0,];
+  
+  // likelihood
+  wspeed ~ normal(beta[1] + beta[2]*wage, sigma);
+}
+```
+
+]
+
+.pull-right[
+
+The code contain 3 blocks:
+
+- **data** block, in which variables are declared;
+
+]
+
+
+---
+count: false
+
+.pull-left[
+
+Model code in `stan` language:
+
+```stan
+data {
+  int&lt;lower=0&gt; N;
+  vector[N] wspeed;
+  vector[N] wage;
+}
+
+*parameters {
+*  real beta[2];
+*  real&lt;lower=0&gt; sigma;
+*}
+
+model {
+  // priors
+  beta[1] ~ normal(0, 1);
+  beta[2] ~ normal(0.5, 1);
+  sigma ~ normal(0,1) T[0,];
+  
+  // likelihood
+  wspeed ~ normal(beta[1] + beta[2]*wage, sigma);
+}
+```
+
+]
+
+.pull-right[
+
+The code contain 3 blocks:
+
+- **data** block, in which variables are declared;
+
+- **parameters** block, in which we declare the parameters that we want to sample;
+
+]
+
+---
+count: false
+
+.pull-left[
+
+Model code in `stan` language:
+
+```stan
+data {
+  int&lt;lower=0&gt; N;
+  vector[N] wspeed;
+  vector[N] wage;
+}
+
+parameters {
+  real beta[2];
+  real&lt;lower=0&gt; sigma;
+}
+
+*model {
+*  // priors
+*  beta[1] ~ normal(0, 1);
+*  beta[2] ~ normal(0.5, 1);
+*  sigma ~ normal(0,1) T[0,];
+*  
+*  // likelihood
+*  wspeed ~ normal(beta[1] + beta[2]*wage, sigma);
+*}
+```
+
+]
+
+.pull-right[
+
+The code contain 3 blocks:
+
+- **data** block, in which variables are declared;
+
+- **parameters** block, in which we declare the parameters that we want to sample;
+
+- **model** block, containing the model specification (i.e. priors and likelihood)
+
+]
+
+
+---
+
+&lt;br&gt;
+&lt;br&gt;
+
+.pull-left[
+
+The model block allows defining the model in terms of probability distribution
+
+```stan
+model {
+  // priors
+  beta[1] ~ normal(0, 1);
+  beta[2] ~ normal(0.5, 1);
+  sigma ~ normal(0,1) T[0,];
+  
+  // likelihood
+  wspeed ~ normal(beta[1] + beta[2]*wage, sigma);
+}
+
+```
+
+]
+
+--
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+`$$\begin{align}\beta_0 &amp; \sim \mathcal{N}(0,1) \\ \beta_1 &amp; \sim \mathcal{N}(0.5,1)\\ \sigma &amp; \sim \mathcal{N}_{[0, +\infty)}(0, 1) \end{align}$$`
+
+
+`$$\text{wspeed} \sim \mathcal{N}\left(\beta_0 + \beta_1 \text{wage}, \,\, \sigma^2 \right)$$`
+
+
+---
+
+#### Sampling from posterior using Stan
+
+
+
+
+
+
+```r
+library(rstan)
+options(mc.cores = parallel::detectCores()) # indicate stan to use multiple cores if available
+
+# run sampling: 4 chains in parallel on separate cores
+wspeed_fit &lt;- stan(file = "wspeed_model.stan", data = data_stan, iter = 2000, chains = 4) 
+```
+
+--
+
+Results
+
+
+```r
+print(wspeed_fit)
+```
+
+```
+## Inference for Stan model: anon_model.
+## 4 chains, each with iter=2000; warmup=1000; thin=1; 
+## post-warmup draws per chain=1000, total post-warmup draws=4000.
+## 
+##          mean se_mean   sd  2.5%   25%   50%   75% 97.5% n_eff Rhat
+## beta[1]  0.00    0.00 0.14 -0.28 -0.09  0.00  0.09  0.26  3788    1
+## beta[2]  0.73    0.00 0.14  0.45  0.63  0.73  0.82  1.02  3496    1
+## sigma    0.72    0.00 0.10  0.55  0.64  0.71  0.78  0.95  3628    1
+## lp__    -4.01    0.03 1.24 -7.14 -4.62 -3.70 -3.09 -2.56  1987    1
+## 
+## Samples were drawn using NUTS(diag_e) at Sat Nov 25 17:22:37 2023.
+## For each parameter, n_eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor on split chains (at 
+## convergence, Rhat=1).
+```
+
+--
+
+The `Rhat` ( `\(\hat{R}\)` ) is a diagnostic index; at convergence `\(\hat R \approx 1\pm0.1\)` 
+
+(essentially `\(\hat R\)` is the ratio of between-chain to within-chain variance)
+
+---
+
+Visualize chains to check for convergence
+
+
+```r
+traceplot(wspeed_fit, pars=c("beta","sigma"))
+```
+
+&lt;img src="intro-Bayes_files/figure-html/unnamed-chunk-22-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+Visualize posterior distribution
+
+
+```r
+pairs(wspeed_fit, pars=c("beta","sigma"))
+```
+
+&lt;img src="intro-Bayes_files/figure-html/unnamed-chunk-23-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+
+Visualize model fit to the data
+
+&lt;img src="intro-Bayes_files/figure-html/unnamed-chunk-24-1.svg" width="40%" style="display: block; margin: auto;" /&gt;
+
+
+
+
+
+---
+class: inverse
+
+# Priors
+
+- Priors represent our initial beliefs about the plausibility of parameter values.
+
+--
+
+- Unlike likelihoods, there are no conventional priors; choice depends on context.
+
+--
+
+- Priors are subjective but should be explicitly stated for transparency and critique (more transparent than, say, dropping outliers).
+
+--
+
+- Priors are assumptions, and should be criticized (e.g. try different assumptions to check how sensitive inference is to the choice of priors).
+
+--
+
+- Priors cannot be exact, but should be defendable.
+
+---
+class: inverse
+
+# Priors
+
+- There are no non-informative priors: _flat_ priors such as `\(\text{Uniform} \left(- \infty, \infty \right)\)` tells the model that unrealistic values (e.g. extremely large) are as plausible as realistic ones. 
+
+--
+
+- Priors should restrict parameter space to values that make sense.
+
+--
+
+- Preferably choose _weakly informative_ priors containg less information than what might be known (but still guide the model sensibly).
+
+--
+
+- Priors should provide some regularization, i.e. add some skepticism, akin to penalized likelihood methods in frequentist statistics (e.g. LASSO or ridge regression), preventing overfitting to data.
+
+--
+
+- Prior recommendations: [https://github.com/stan-dev/stan/wiki/Prior-Choice-Recommendations](https://github.com/stan-dev/stan/wiki/Prior-Choice-Recommendations)
+
+--
+
+- If using informative priors, these should be justified in the text when reporting the results (see examples in Gelman &amp; Hennig, 2016, _Beyond subjective and objective in statistics_)
+
+--
+
+- When in doubt (especially for complex models where the relationship between prior &amp; observed data is not straighforward) is always a good idea to do a **prior predictive check** (i.e. sample parameter values from the priors, use it to simulate data, and see if the overall distribution looks sensible).
+
+
+---
+## Example 2: The Drift Diffusion Model (DDM)
+
+.pull-left[
+The DDM describes the process of decision making in terms of:
+- **Drift Rate** (`v`): Speed of information accumulation.
+- **Boundary Separation** (`a`): Threshold for making a decision.
+- **Starting Point** (`z`): Bias towards one of the responses.
+- **Non-Decision Time** (`t0`): Processes outside decision making.
+
+We will estimate these parameters using Stan.
+
+]
+
+.pull-right[
+
+.center[![:scale 100%](./img/ddm.png)]
+
+]
+
+
+---
+class:inverse
+## Example 2: The Drift Diffusion Model (DDM)
+
+The distribution of 'first-passage times' is given by the Wiener distribution, which is already included in Stan math library: [https://mc-stan.org/docs/functions-reference/wiener-first-passage-time-distribution.html](https://mc-stan.org/docs/functions-reference/wiener-first-passage-time-distribution.html)
+
+For a correct response (upper boundary):
+
+`$$\text{rt} \sim \text{Wiener}(a, t0, z, v)$$`
+
+For an error (lower boundary):
+
+`$$\text{rt} \sim \text{Wiener}(a, t0, 1-z, -v)$$`
+
+
+---
+#### DDM Stan code
+
+```stan
+data {
+    int&lt;lower=0&gt; N;                // Number of observations
+    int&lt;lower=0,upper=1&gt; resp[N];  // Response: 1 or 0
+    real&lt;lower=0&gt; rt[N];           // Response time
+}
+
+parameters {
+    real v;  // Drift rate
+    real&lt;lower=0&gt; a;          // Boundary separation
+    real&lt;lower=0&gt; t0;         // Non-decision time
+    real&lt;lower=0, upper=1&gt; z; // Starting point
+}
+
+model {
+    // Priors
+    v ~ normal(1, 3);
+    a ~ normal(1, 1)T[0,2];
+    t0 ~ normal(0, 3)T[0,];
+    z ~ beta(2, 2);
+
+    // Likelihood
+    for (i in 1:N) {
+        if (resp[i] == 1) {
+            rt[i] ~ wiener(a, t0, z, v);
+        } else {
+            rt[i] ~ wiener(a, t0, 1 - z, -v);
+        }
+    }
+}
+```
+
+---
+
+Data:
+
+
+```r
+d &lt;- read_csv("../ddm_data.csv")                      # load data
+
+d %&gt;%                                                 # make a plot
+  mutate(resp = factor(resp)) %&gt;%
+  ggplot(aes(x=rt, color=resp, fill=resp))+
+  geom_histogram(binwidth=0.05, color="white") +
+  facet_grid(.~resp)
+```
+
+&lt;img src="intro-Bayes_files/figure-html/unnamed-chunk-25-1.svg" width="60%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+Format data as a list and run sampling
+
+
+
+```r
+data_stan &lt;- list(
+  N = nrow(d),
+  rt = d$rt,
+  resp = d$resp
+)
+
+ddm_fit &lt;- stan(file = "../ddm4p.stan",  # ddm4p.stan is the file containing the model code
+                data = data_stan, iter = 2000, chains = 4)
+```
+
+
+
+
+Results:
+
+
+```r
+print(ddm_fit)
+```
+
+```
+## Inference for Stan model: anon_model.
+## 4 chains, each with iter=2000; warmup=1000; thin=1; 
+## post-warmup draws per chain=1000, total post-warmup draws=4000.
+## 
+##       mean se_mean   sd  2.5%   25%   50%   75% 97.5% n_eff Rhat
+## v     1.01    0.00 0.12  0.78  0.93  1.01  1.09  1.25  2524    1
+## a     0.98    0.00 0.02  0.94  0.97  0.98  1.00  1.02  2770    1
+## t0    0.25    0.00 0.00  0.24  0.25  0.25  0.25  0.26  2152    1
+## z     0.50    0.00 0.02  0.47  0.49  0.50  0.51  0.53  2600    1
+## lp__ 17.73    0.03 1.44 14.16 17.02 18.05 18.78 19.53  1708    1
+## 
+## Samples were drawn using NUTS(diag_e) at Fri Nov 24 13:44:19 2023.
+## For each parameter, n_eff is a crude measure of effective sample size,
+## and Rhat is the potential scale reduction factor on split chains (at 
+## convergence, Rhat=1).
+```
+
+---
+
+Visualize chains to check for convergence
+
+
+```r
+traceplot(ddm_fit, pars=c("v","a","t0","z"))
+```
+
+&lt;img src="intro-Bayes_files/figure-html/unnamed-chunk-29-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+Visualize posterior distribution
+
+
+```r
+pairs(ddm_fit, pars=c("v","a","t0","z"))
+```
+
+&lt;img src="intro-Bayes_files/figure-html/unnamed-chunk-30-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+Visualize model fit to the data
+
+&lt;img src="intro-Bayes_files/figure-html/unnamed-chunk-31-1.svg" width="60%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+
+Visualize marginal distribution &amp; credible intervals
+
+
+```r
+# Extract samples and convert to long format for plotting
+parameter_samples &lt;- gather_draws(ddm_fit, v, a, t0, z)
+
+# Create violin plot with 95% HDI intervals
+ddm_fit %&gt;%
+  spread_draws(v, a, t0, z) %&gt;%
+  pivot_longer(cols = c(v, a, t0, z), names_to = "parameter", values_to = "value") %&gt;%
+  ggplot(aes(y = parameter, x = value)) +
+  stat_halfeye(.width = .95,normalize="groups") +
+  labs(x="value",y="parameter") 
+```
+
+&lt;img src="intro-Bayes_files/figure-html/unnamed-chunk-32-1.svg" width="30%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+## Bayes factors
+
+- A Bayesian approach to hypothesis testing &amp; model comparison.
+
+--
+
+- Suppose we have 2 competing models for data: model `\(M_1\)` with parameters `\(\theta_1\)` vs. model `\(M_2\)` with parameters `\(\theta_2\)`.
+
+--
+
+- The .blue[Bayes factor is the ratio of the marginal (average) likelihoods of the two models]$$\text{BF}_{1,2}=\frac{p_1(\text{data}\mid M_1)}{p_1(\text{data}\mid\ M_1)} = \frac{\int p_1(\text{data}\mid\theta_1) p_1(\theta_1) d\theta_1}{\int p_2(\text{data}\mid\theta_2) p_2(\theta_2) d\theta_2}$$
+
+--
+
+- .blue[_The Bayes factor alone does not tell which model is more likely!_] This is quantified by the _posterior odds_, which takes also the _prior odds_ into account: `$$\underbrace{\frac{p(M_1 \mid \text{data})}{p(M_2 \mid \text{data})}}_{\text{posterior odds}} = \underbrace{\frac{p(M_1)}{p(M_2)}}_{\text{prior odds}} \times \underbrace{\frac{\int p_1(\text{data}\mid\theta_1) p_1(\theta_1) d\theta_1}{\int p_2(\text{data}\mid\theta_2) p_2(\theta_2) d\theta_2}}_{\text{Bayes factor}}$$`
+
+
+--
+
+- The Bayes factors only tells us how much - given the data and the prior - we need to update our relative beliefs between two models. 
+
+--
+
+- Say we found that `\(\text{BF}_{1,2} \approx 3\)`, we can say that _'the data are `\(\approx\)` 3 times more likely under model 1 than model 2'_.
+
+
+---
+
+### Bayes factors for nested models: the Savage–Dickey density ratio
+
+- When the two models are _nested_ (e.g. the `\(M_1\)` is a special case of `\(M_2\)` in which which one specific parameter is set to zero - corresponding to the null hypothesis in classical NHST framework), the Bayes factor can be obtained by _dividing the height of the posterior by the height of the prior at the point of interest_ (Dickey &amp; Lientz, 1970)
+
+
+
+--
+
+- Left plot: `\(BF_{0,1} \approx 2\)`; and right plot `\(BF_{0,1} \approx \frac{1}{2}\)` (thus implying `\(BF_{1,0} \approx 2\)`)
+
+&lt;img src="intro-Bayes_files/figure-html/unnamed-chunk-34-1.svg" width="70%" style="display: block; margin: auto;" /&gt;
+
+(see `savage.dickey.bf()` function in [`mlisi` package](https://github.com/mattelisi/mlisi))
+
+---
+
+## Cautionary note about Bayes factors
+
+- Bayes factors represents the update in beliefs from prior to posterior, and therefore are strongly dependent on the prior used. 
+
+--
+
+-  Bayes factors are _"(...) very sensitive to features of the prior that have almost no effect on the posterior. With hundreds of data points, the difference between a normal(0, 1) and normal(0, 100) prior is negligible if the true value is in the range (-3, 3), but it can have a huge effect on Bayes factors."_ (Bob Carpenter, [post link](https://statmodeling.stat.columbia.edu/2023/10/14/bayes-factors-prior-cross-validation-posterior/))
+
+--
+
+- Bayes factors makes sense only if you have strong reasons for selecting a particular prior!
+
+--
+
+- If not, other approaches may be preferable - e.g. Bayesian cross-validation, and information criterial like WAIC.
+
+--
+
+- .purple[Never trust a paper that just throws Bayes factors there without specifying and motivating the priors!]
+
+
+---
+
+### Some important stuff we have not had time to cover:
+
+- Posterior predictive checks
+
+- Model comparison, WAIC, &amp; Bayesian leave-one-out cross-validation
+
+
+
+---
+
+## Useful resources
+
+- Stan User manual.
+
+- Stan forum: [https://discourse.mc-stan.org](https://discourse.mc-stan.org/).
+
+- _Statistical Rethinking: A Bayesian Course with Examples in R and Stan_, Richard McElreath CRC Press, 2015.
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="./custom/macros.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -17,7 +17,7 @@
       <link>http://mlisi.xyz/post/defending-the-null/</link>
       <pubDate>Mon, 09 Sep 2019 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/post/defending-the-null/</guid>
-      <description>&lt;p&gt;A friend was working on a paper and found himself in the situation of having to defend the null hypothesis that a particular effect is absent (or not measurable) when tested under more controlled conditions than those used in previous studies. He asked for some practical advice: &lt;em&gt;&amp;ldquo;what would convince you as as a reviewer of a null result?&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+      <description>&lt;p&gt;A friend was working on a paper and found himself in the situation of having to defend the null hypothesis that a particular effect is absent (or not measurable) when tested under more controlled conditions than those used in previous studies. He asked for some practical advice: &lt;em&gt;&amp;ldquo;what would convince you as as a reviewer of a null result?&amp;quot;&lt;/em&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;No statistical test can &amp;ldquo;prove&amp;rdquo; a null results (intended as the point-null hypothesis that an effect of interest is zero). You can however: (&lt;strong&gt;i&lt;/strong&gt;) present evidence that the data are more likely under the null hypothesis than under the alternative; or (&lt;strong&gt;ii&lt;/strong&gt;) put a cap on the size of the effect, which could enable you to argue that any effect, if present, is so small that can be considered theoretically or pragmatically irrelevant.&lt;/p&gt;
 &lt;/blockquote&gt;
