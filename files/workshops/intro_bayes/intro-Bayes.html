@@ -69,7 +69,7 @@ class: small-font-page
 
 1. How to fit a model to data: frequentist &amp; Bayesian approaches
 2. Computations in Bayesian inference &amp; MCMC sampling
-3. Examples
+3. Examples: linear regression &amp; drift-diffusion model
 4. Bayes factors
 
 
@@ -156,7 +156,7 @@ In practice, we usually work with the logarithm of the likelihood function (_log
 &lt;br&gt;
 
 `$$\begin{align} 
-\mathcal{L}(y, x \mid \beta_0, \beta_1, \sigma^2 )  &amp; = \log \left[ L(y, x \mid \beta_0, \beta_1, \sigma^2)  \right]\\
+\mathcal{L}(y, x \mid \beta_0, \beta_1, \sigma^2 )  &amp; = \log \left[ p(y, x \mid \beta_0, \beta_1, \sigma^2)  \right]\\
  &amp; = -\frac{n}{2}\log(2\pi) - \frac{n}{2}\log(\sigma^2) - \frac{1}{2\sigma^2} \underbrace{\sum_{i=1}^n \left( y_i - \beta_0 - \beta_1 x_i\right)^2}_{\text{sum of squared residual errors}}\\
 \end{align}$$`
 --
@@ -192,7 +192,7 @@ In practice, we usually work with the logarithm of the likelihood function (_log
 
 --
 
-  - probability is interpreted as the _long-term frequency_ of an event occurring a very large (infinite) series of repeated trials or samples.
+  - Probability is interpreted as the _long-term frequency_ of an event occurring a very large (infinite) series of repeated trials or samples.
     
     
 ---
@@ -288,17 +288,18 @@ count:false
 
 ---
 
-## Bayesian parameter inference
+## Bayesian inference
 
-- When we're interested in a specific parameter (e.g. the slope `\(\beta_1\)`) we focus on its _marginal posterior distribution_.
-
---
-
-- The marginal posterior distribution is found by integrating over other parameters in the posterior - think of this as averaging out the effects of all other parameters to focus only on `\(\beta_1\)` 
+- When we're interested in a specific parameter (e.g. the slope `\(\beta_1\)`) we focus on its _marginal posterior distribution_. This allows summarizing information about parameters in useful ways (for example: Bayesian _credible_ intervals).
 
 --
 
-  formally: `\(p\left(\beta_1 \mid \text{data} \right)=\int \int p\left(\beta_1, \beta_0, \sigma \mid \text{data} \right) d\beta_0 d\sigma\)`)
+- The marginal posterior distribution is found by integrating over other parameters in the posterior - think of this as averaging out the effects of all other parameters to focus only on `\(\beta_1\)`.
+
+--
+
+  formally: `\(p\left(\beta_1 \mid \text{data} \right)=\int \int p\left(\beta_1, \beta_0, \sigma \mid \text{data} \right) d\beta_0 d\sigma\)`).
+
 
 --
 
@@ -1097,7 +1098,7 @@ Data:
 
 
 ```r
-d &lt;- read_csv("../ddm_data.csv")                      # load data
+d &lt;- read_csv("../data/ddm_data.csv")                      # load data
 
 d %&gt;%                                                 # make a plot
   mutate(resp = factor(resp)) %&gt;%
