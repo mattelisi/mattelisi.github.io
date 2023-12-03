@@ -4,7 +4,7 @@
     <title>Numerical &amp; mathematical skills for neuroscience</title>
     <meta charset="utf-8" />
     <meta name="author" content="Matteo Lisi" />
-    <meta name="date" content="2022-12-07" />
+    <meta name="date" content="2023-12-05" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
     <script src="libs/tile-view/tile-view.js"></script>
@@ -24,7 +24,7 @@ class: title-slide, center, inverse
 
 ## Matteo Lisi
 
-### 7 December 2022
+### 5 December 2023
 
 
 
@@ -102,14 +102,16 @@ class: inverse
 
 
 ---
-class: inverse
 
 # Differentiation 
 
 For a straight line:
 
 
-.center[![:scale 60%](./img/gradient01.png)]
+&lt;!-- .center[![:scale 60%](./img/gradient01.png)] --&gt;
+
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-5-1.svg" width="40%" style="display: block; margin: auto;" /&gt;
+
 
 --
 
@@ -119,13 +121,14 @@ The .orange[*gradient*] is:
 
 
 ---
-class: inverse
-
 # Differentiation 
 
 A curve can be approximated with a series of lines each of length `\(\Delta x\)`
 
-.center[![:scale 50%](./img/diff00.png)]
+&lt;!-- .center[![:scale 50%](./img/diff00.png)] --&gt;
+
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-6-1.svg" width="60%" style="display: block; margin: auto;" /&gt;
+
 
 --
 
@@ -147,6 +150,129 @@ Differentiating the function `\(y(x) = x^2\)`
 --
 
 `$$\frac{dy}{dx} = \lim_{\Delta x \rightarrow 0} \frac{y(x + \Delta x)-y(x)}{(x + \Delta x) - x}$$`
+
+---
+class: inverse
+
+# Differentiation
+
+Differentiating the function `\(y(x) = x^2\)`
+
+&lt;!-- $$\begin{align} --&gt;
+&lt;!-- \frac{dy}{dx} &amp;= \lim_{\Delta x \rightarrow 0} \frac{y(x + \Delta x)-y(x)}{(x + \Delta x) - x}\\ --&gt;
+&lt;!-- &amp;=\lim_{\Delta x\to 0 }\frac{(x+\Delta x)^2-x^2}{\Delta x} \\ --&gt;
+&lt;!-- &amp;=\lim_{\Delta x\to 0}\frac{(x^2+2x\Delta x+(\Delta x)^2)-x^2}{\Delta x} \\ --&gt;
+&lt;!-- &amp;=\lim_{\Delta x\to 0}\frac{2x\Delta x+h^2}{\Delta x} \\ --&gt;
+&lt;!-- &amp;=\lim_{\Delta x\to 0}2x+\Delta x \\ --&gt;
+&lt;!-- &amp;= 2x --&gt;
+&lt;!-- \end{align}$$ --&gt;
+
+`$$\begin{align}
+\frac{dy}{dx} &amp;= \lim_{\Delta x \rightarrow 0} \frac{y(x + \Delta x)-y(x)}{(x + \Delta x) - x}\end{align}$$`
+
+---
+class: inverse
+count: false
+
+# Differentiation
+
+Differentiating the function `\(y(x) = x^2\)`
+
+
+`$$\begin{align}
+\frac{dy}{dx} &amp;= \lim_{\Delta x \rightarrow 0} \frac{y(x + \Delta x)-y(x)}{(x + \Delta x) - x}\\
+&amp;=\lim_{\Delta x\to 0 }\frac{(x+\Delta x)^2-x^2}{\Delta x}
+\end{align}$$`
+
+
+---
+class: inverse
+count: false
+
+# Differentiation
+
+Differentiating the function `\(y(x) = x^2\)`
+
+`$$\begin{align}
+\frac{dy}{dx} &amp;= \lim_{h \rightarrow 0} \frac{y(x + h)-y(x)}{(x + h) - x}\\
+&amp;=\lim_{h\to 0 }\frac{(x+h)^2-x^2}{h} \end{align}$$`
+
+
+---
+class: inverse
+count: false
+
+# Differentiation
+
+Differentiating the function `\(y(x) = x^2\)`
+
+`$$\begin{align}
+\frac{dy}{dx} &amp;= \lim_{h \rightarrow 0} \frac{y(x + h)-y(x)}{(x + h) - x}\\
+&amp;=\lim_{h\to 0 }\frac{(x+h)^2-x^2}{h} \\
+&amp;=\lim_{h\to 0}\frac{x^2+2xh+h^2-x^2}{h} 
+\end{align}$$`
+
+---
+class: inverse
+count: false
+
+# Differentiation
+
+Differentiating the function `\(y(x) = x^2\)`
+
+`$$\begin{align}
+\frac{dy}{dx} &amp;= \lim_{h \rightarrow 0} \frac{y(x + h)-y(x)}{(x + h) - x}\\
+&amp;=\lim_{h\to 0 }\frac{(x+h)^2-x^2}{h} \\
+&amp;=\lim_{h\to 0}\frac{x^2+2xh+h^2-x^2}{h} \\
+&amp;=\lim_{h\to 0}\frac{2xh+h^2}{h} 
+\end{align}$$`
+---
+class: inverse
+count: false
+
+# Differentiation
+
+Differentiating the function `\(y(x) = x^2\)`
+
+`$$\begin{align}
+\frac{dy}{dx} &amp;= \lim_{h \rightarrow 0} \frac{y(x + h)-y(x)}{(x + h) - x}\\
+&amp;=\lim_{h\to 0 }\frac{(x+h)^2-x^2}{h} \\
+&amp;=\lim_{h\to 0}\frac{x^2+2xh+h^2-x^2}{h} \\
+&amp;=\lim_{h\to 0}\frac{(2x+h)h}{h} 
+\end{align}$$`
+
+
+---
+class: inverse
+count: false
+
+# Differentiation
+
+Differentiating the function `\(y(x) = x^2\)`
+
+`$$\begin{align}
+\frac{dy}{dx} &amp;= \lim_{h \rightarrow 0} \frac{y(x + h)-y(x)}{(x + h) - x}\\
+&amp;=\lim_{h\to 0 }\frac{(x+h)^2-x^2}{h} \\
+&amp;=\lim_{h\to 0}\frac{(x^2+2xh+h^2)-x^2}{h} \\
+&amp;=\lim_{h\to 0}\frac{2xh+h^2}{h} \\
+&amp;=\lim_{h\to 0}2x+h 
+\end{align}$$`
+---
+class: inverse
+count: false
+
+# Differentiation
+
+Differentiating the function `\(y(x) = x^2\)`
+
+`$$\begin{align}
+\frac{dy}{dx} &amp;= \lim_{h \rightarrow 0} \frac{y(x + h)-y(x)}{(x + h) - x}\\
+&amp;=\lim_{h\to 0 }\frac{(x+h)^2-x^2}{h} \\
+&amp;=\lim_{h\to 0}\frac{(x^2+2xh+h^2)-x^2}{h} \\
+&amp;=\lim_{h\to 0}\frac{2xh+h^2}{h} \\
+&amp;=\lim_{h\to 0}2x+h \\
+&amp;= 2x
+\end{align}$$`
 
 ---
 
@@ -180,7 +306,7 @@ class: inverse
 
 `$$y = \sin(x)$$`
 
-&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-5-1.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-7-1.svg" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -235,7 +361,7 @@ where `\(\pi = 3.14159265359 \ldots\)`
 ### Trigonometric functions
 
 
-&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-6-1.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-8-1.svg" style="display: block; margin: auto;" /&gt;
 
 --
 - Sine and cosine functions takes angles as input, and return numbers between -1 and 1 as outputs
@@ -258,7 +384,7 @@ Oscillations in scalp EEG activity
 ---
 Monthly cycle in women's body temperature
 
-&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-7-1.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-9-1.svg" style="display: block; margin: auto;" /&gt;
 
 --
 
@@ -273,7 +399,7 @@ Monthly cycle in women's body temperature
 count: false
 Monthly cycle in women's body temperature
 
-&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-8-1.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-10-1.svg" style="display: block; margin: auto;" /&gt;
 
 
 .pull-left[
@@ -321,7 +447,7 @@ Additionally, we can describe an oscillation according to it's frequency (the in
 
 Monthly cycle in women's body temperature
 
-&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-9-1.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-11-1.svg" style="display: block; margin: auto;" /&gt;
 
 --
 

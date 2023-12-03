@@ -23,7 +23,7 @@ class: title-slide, center, inverse
 
 ## Matteo Lisi
 
-### 7 December 2022
+### 5 December 2023
  Part 2: introduction to linear algebra
 
 
@@ -50,10 +50,12 @@ class: inverse
 - A list of `\(n\)` numbers representing a point, or an "arrow", in `\(n\)`-dimensional space
 --
 
-- The vector `\(x = \begin{bmatrix}  x_1 \\ x_2 \end{bmatrix} \in \mathbb{R}^2\)` represents a point/arrow in a 2-dimensional space
+- The vector `\(\overrightarrow{x} = \begin{bmatrix}  x_1 \\ x_2 \end{bmatrix} \in \mathbb{R}^2\)` represents a point/arrow in a 2-dimensional space
 
 
-.center[![:scale 50%](./drawings/transp_vector_01.png)]
+&lt;!-- .center[![:scale 50%](./drawings/transp_vector_01.png)] --&gt;
+
+&lt;img src="slides_numerical_skills_part2_files/figure-html/unnamed-chunk-1-1.svg" width="40%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -83,7 +85,21 @@ class: inverse
 #### Elementwise vector multiplication (Hadamard product)
 
 
-.center[![:scale 60%](./drawings/transp_hadamard.png)]
+&lt;!-- .center[![:scale 60%](./drawings/transp_hadamard.png)] --&gt;
+`$$\vec{x} \circ \vec{y} = \begin{bmatrix}
+x_1 \\
+\vdots \\
+x_n
+\end{bmatrix} \circ \begin{bmatrix}
+y_1 \\
+\vdots \\
+y_n
+\end{bmatrix} = \begin{bmatrix}
+x_1y_1 \\
+\vdots \\
+x_ny_n
+\end{bmatrix}$$`
+
 
 --
 
@@ -94,7 +110,11 @@ In Matlab, you can achieve this with `x .* y`
 ### Linear combination of vectors
 
 
-.center[![:scale 60%](./drawings/transp_linear_combi_1.png)]
+&lt;!-- .center[![:scale 60%](./drawings/transp_linear_combi_1.png)] --&gt;
+
+`$$c\,\vec{\bf{v}} + d\, \vec{\bf{w}} = c \begin{bmatrix} 1 \\ 1 \end{bmatrix} + d \begin{bmatrix} 2 \\ 3 \end{bmatrix} 
+= \begin{bmatrix} c + 2d \\ c + 3d \end{bmatrix}$$`
+
 
 --
 
@@ -112,17 +132,54 @@ In this case the combinations of `\(\overrightarrow{v}\)` and `\(\overrightarrow
 
 Multiplying a matrix by a vector is like taking linear combinations of the matrix's columns
 
-.center[![:scale 60%](./drawings/transp_linear_combi_1.png)]
+&lt;!-- .center[![:scale 60%](./drawings/transp_linear_combi_1.png)] --&gt;
+
+`$$c\vec{v} + d\vec{w} = c \begin{bmatrix} 1 \\ 1 \end{bmatrix} + d \begin{bmatrix} 2 \\ 3 \end{bmatrix} = \begin{bmatrix} c + 2d \\ c + 3d \end{bmatrix}$$`
+
 
 --
 
-.center[![:scale 60%](./drawings/transp_linear_combi_matrix.png)]
+&lt;!-- .center[![:scale 60%](./drawings/transp_linear_combi_matrix.png)] --&gt;
+
+`$$\mathbf{A}\vec{x} = \begin{bmatrix}
+1 &amp; 2 \\
+1 &amp; 3
+\end{bmatrix} \begin{bmatrix}
+c \\
+d
+\end{bmatrix} = \begin{bmatrix}
+c + 2d \\
+c + 3d
+\end{bmatrix}$$`
 
 
 ---
 ### Linear independence
 
-.center[![:scale 60%](./drawings/transp_linear_combi_inde.png)]
+&lt;!-- .center[![:scale 60%](./drawings/transp_linear_combi_inde.png)] --&gt;
+
+`$$\mathbf{A}\vec{x} = \begin{bmatrix}
+1 &amp; 2 \\
+1 &amp; 3
+\end{bmatrix} \begin{bmatrix}
+c \\
+d
+\end{bmatrix} = \begin{bmatrix}
+c + 2d \\
+c + 3d
+\end{bmatrix}$$`
+
+`$$\mathbf{B}\vec{x} = \begin{bmatrix}
+1 &amp; 3 \\
+1 &amp; 3
+\end{bmatrix} \begin{bmatrix}
+c \\
+d
+\end{bmatrix} = \begin{bmatrix}
+c + 3d \\
+c + 3d
+\end{bmatrix}$$`
+
 
 .red[_How does the _span_ of the columns of A differ from the span of the columns of B?_] 
 
@@ -202,7 +259,7 @@ We can think of matrices as functions, which takes vectors as input and apply _t
 
 
 .right-column[
-&lt;img src="slides_numerical_skills_part2_files/figure-html/unnamed-chunk-1-1.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_numerical_skills_part2_files/figure-html/unnamed-chunk-2-1.svg" width="80%" style="display: block; margin: auto;" /&gt;
 ]
 
 
@@ -216,12 +273,14 @@ We can think of matrices as functions, which takes vectors as input and apply _t
 `\(S = \begin{bmatrix}  1+\delta &amp;  0 \\ 0  &amp; 1\end{bmatrix}\)`
 
 
-.center[![:scale 100%](./drawings/transp_stretch_matrix.png)]
+&lt;!-- .center[![:scale 100%](./drawings/transp_stretch_matrix.png)] --&gt;
+
+`\(\begin{align*} S &amp;= \begin{bmatrix} 1 + \delta &amp; 0 \\ 0 &amp; 1 \end{bmatrix} \\ S\vec{x} &amp;= \begin{bmatrix} 1 + \delta &amp; 0 \\ 0 &amp; 1 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} \\ &amp;= \begin{bmatrix} (1 + \delta)x_1 \\ x_2 \end{bmatrix} \end{align*}\)`
+
 ]
 
-
 .right-column[
-&lt;img src="slides_numerical_skills_part2_files/figure-html/unnamed-chunk-2-1.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_numerical_skills_part2_files/figure-html/unnamed-chunk-3-1.svg" width="80%" style="display: block; margin: auto;" /&gt;
 ]
 
 
@@ -271,7 +330,7 @@ Inverse matrix: `\(A^{-1}A=AA^{-1}=I\)`
 `\(Sv_2 = \begin{bmatrix}  1+\delta &amp;  0 \\ 0  &amp; 1\end{bmatrix} \begin{bmatrix}  0 \\  1\end{bmatrix} = \begin{bmatrix}  0 \\  1\end{bmatrix} =  1 \begin{bmatrix}  0\\  1\end{bmatrix}= \lambda_2 v_2\)`
 
 
-&lt;img src="slides_numerical_skills_part2_files/figure-html/unnamed-chunk-3-1.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_numerical_skills_part2_files/figure-html/unnamed-chunk-4-1.svg" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -302,7 +361,7 @@ class:inverse
 
 `\(\Sigma = \begin{bmatrix}  1 &amp;  0.99 \\ 0.99  &amp; 1.5\end{bmatrix}\)`
 
-&lt;img src="slides_numerical_skills_part2_files/figure-html/unnamed-chunk-4-1.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_numerical_skills_part2_files/figure-html/unnamed-chunk-5-1.svg" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -312,7 +371,7 @@ Now showing the eigenvectors scaled by their respective eigenvalues.
 
 `$$\,$$`
 
-&lt;img src="slides_numerical_skills_part2_files/figure-html/unnamed-chunk-5-1.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_numerical_skills_part2_files/figure-html/unnamed-chunk-6-1.svg" style="display: block; margin: auto;" /&gt;
 
 
 
