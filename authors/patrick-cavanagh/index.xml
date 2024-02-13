@@ -5,12 +5,20 @@
     <link>http://mlisi.xyz/authors/patrick-cavanagh/</link>
       <atom:link href="http://mlisi.xyz/authors/patrick-cavanagh/index.xml" rel="self" type="application/rss+xml" />
     <description>Patrick Cavanagh</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 Matteo Lisi</copyright><lastBuildDate>Wed, 01 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2024 Matteo Lisi</copyright><lastBuildDate>Tue, 01 Nov 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Patrick Cavanagh</title>
       <link>http://mlisi.xyz/authors/patrick-cavanagh/</link>
     </image>
+    
+    <item>
+      <title>Exploring the frame effect</title>
+      <link>http://mlisi.xyz/publication/frame_effect/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/frame_effect/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Smooth Pursuit Stabilizes Objects in Perceptual and not Retinal Coordinates</title>

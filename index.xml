@@ -5,7 +5,7 @@
     <link>http://mlisi.xyz/</link>
       <atom:link href="http://mlisi.xyz/index.xml" rel="self" type="application/rss+xml" />
     <description>Matteo Lisi</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 Matteo Lisi</copyright><lastBuildDate>Tue, 01 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2024 Matteo Lisi</copyright><lastBuildDate>Thu, 01 Feb 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Matteo Lisi</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Publications</title>
       <link>http://mlisi.xyz/publication/</link>
-      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/publication/</guid>
       <description></description>
     </item>

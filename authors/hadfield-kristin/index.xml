@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hadfield, Kristin | Matteo Lisi</title>
+    <link>http://mlisi.xyz/authors/hadfield-kristin/</link>
+      <atom:link href="http://mlisi.xyz/authors/hadfield-kristin/index.xml" rel="self" type="application/rss+xml" />
+    <description>Hadfield, Kristin</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2024 Matteo Lisi</copyright><lastBuildDate>Thu, 01 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://mlisi.xyz/img/shademe.png</url>
+      <title>Hadfield, Kristin</title>
+      <link>http://mlisi.xyz/authors/hadfield-kristin/</link>
+    </image>
+    
+    <item>
+      <title>Facial emotion recognition in refugee children with a history of war trauma</title>
+      <link>http://mlisi.xyz/publication/emotion_refugees/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/emotion_refugees/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

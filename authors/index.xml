@@ -5,7 +5,7 @@
     <link>http://mlisi.xyz/authors/</link>
       <atom:link href="http://mlisi.xyz/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2023 Matteo Lisi</copyright><lastBuildDate>Tue, 01 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2024 Matteo Lisi</copyright><lastBuildDate>Thu, 01 Feb 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Authors</title>
@@ -13,18 +13,146 @@
     </image>
     
     <item>
-      <title>Joshua A. Solomon</title>
-      <link>http://mlisi.xyz/authors/joshua-a.-solomon/</link>
-      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/joshua-a.-solomon/</guid>
+      <title>Dajani, Rana</title>
+      <link>http://mlisi.xyz/authors/dajani-rana/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/dajani-rana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hadfield, Kristin</title>
+      <link>http://mlisi.xyz/authors/hadfield-kristin/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/hadfield-kristin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lisi, Matteo</title>
+      <link>http://mlisi.xyz/authors/lisi-matteo/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/lisi-matteo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mareschal, Isabelle</title>
+      <link>http://mlisi.xyz/authors/mareschal-isabelle/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/mareschal-isabelle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Michalek, Julia</title>
+      <link>http://mlisi.xyz/authors/michalek-julia/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/michalek-julia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jeremy I. Skipper</title>
+      <link>http://mlisi.xyz/authors/jeremy-i.-skipper/</link>
+      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/jeremy-i.-skipper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>John A. Greenwood</title>
+      <link>http://mlisi.xyz/authors/john-a.-greenwood/</link>
+      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/john-a.-greenwood/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Matteo Lisi</title>
       <link>http://mlisi.xyz/authors/matteo-lisi/</link>
-      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/authors/matteo-lisi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oris Shenyan</title>
+      <link>http://mlisi.xyz/authors/oris-shenyan/</link>
+      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/oris-shenyan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tessa M. Dekker</title>
+      <link>http://mlisi.xyz/authors/tessa-m.-dekker/</link>
+      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/tessa-m.-dekker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bernard Marius ’t Hart</title>
+      <link>http://mlisi.xyz/authors/bernard-marius-t-hart/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/bernard-marius-t-hart/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mark Wexler</title>
+      <link>http://mlisi.xyz/authors/mark-wexler/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/mark-wexler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Marvin R. Maechler</title>
+      <link>http://mlisi.xyz/authors/marvin-r.-maechler/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/marvin-r.-maechler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mohammad Shams-Ahmar</title>
+      <link>http://mlisi.xyz/authors/mohammad-shams-ahmar/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/mohammad-shams-ahmar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Patrick Cavanagh</title>
+      <link>http://mlisi.xyz/authors/patrick-cavanagh/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/patrick-cavanagh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sharif Saleki</title>
+      <link>http://mlisi.xyz/authors/sharif-saleki/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/sharif-saleki/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stuart Anstis</title>
+      <link>http://mlisi.xyz/authors/stuart-anstis/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/stuart-anstis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Joshua A. Solomon</title>
+      <link>http://mlisi.xyz/authors/joshua-a.-solomon/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/joshua-a.-solomon/</guid>
       <description></description>
     </item>
     
@@ -197,26 +325,10 @@
     </item>
     
     <item>
-      <title>Marvin R. Maechler</title>
-      <link>http://mlisi.xyz/authors/marvin-r.-maechler/</link>
-      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/marvin-r.-maechler/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Nathan, H. Heller</title>
       <link>http://mlisi.xyz/authors/nathan-h.-heller/</link>
       <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/authors/nathan-h.-heller/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Patrick Cavanagh</title>
-      <link>http://mlisi.xyz/authors/patrick-cavanagh/</link>
-      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/patrick-cavanagh/</guid>
       <description></description>
     </item>
     
@@ -265,14 +377,6 @@
       <link>http://mlisi.xyz/authors/peter-b.-m.-thomas/</link>
       <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/authors/peter-b.-m.-thomas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tessa M. Dekker</title>
-      <link>http://mlisi.xyz/authors/tessa-m.-dekker/</link>
-      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/tessa-m.-dekker/</guid>
       <description></description>
     </item>
     
@@ -481,14 +585,6 @@
       <link>http://mlisi.xyz/authors/casarotti-marco/</link>
       <pubDate>Tue, 29 May 2012 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/authors/casarotti-marco/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lisi Matteo</title>
-      <link>http://mlisi.xyz/authors/lisi-matteo/</link>
-      <pubDate>Tue, 29 May 2012 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/lisi-matteo/</guid>
       <description></description>
     </item>
     

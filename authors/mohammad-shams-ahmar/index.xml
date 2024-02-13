@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mohammad Shams-Ahmar | Matteo Lisi</title>
+    <link>http://mlisi.xyz/authors/mohammad-shams-ahmar/</link>
+      <atom:link href="http://mlisi.xyz/authors/mohammad-shams-ahmar/index.xml" rel="self" type="application/rss+xml" />
+    <description>Mohammad Shams-Ahmar</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2024 Matteo Lisi</copyright><lastBuildDate>Tue, 01 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://mlisi.xyz/img/shademe.png</url>
+      <title>Mohammad Shams-Ahmar</title>
+      <link>http://mlisi.xyz/authors/mohammad-shams-ahmar/</link>
+    </image>
+    
+    <item>
+      <title>Exploring the frame effect</title>
+      <link>http://mlisi.xyz/publication/frame_effect/</link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/frame_effect/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
