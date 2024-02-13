@@ -93,6 +93,14 @@
     </item>
     
     <item>
+      <title>Discrete confidence levels revealed by sequential decisions</title>
+      <link>http://mlisi.xyz/publication/discrete-confidence/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/discrete-confidence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>How much is this game worth?</title>
       <link>http://mlisi.xyz/post/question-interview/</link>
       <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
@@ -162,14 +170,6 @@ p\left(\mathcal{W} \ge 5 \right) = \frac{2}{6} + \underbrace{\left( 1 - \frac{2}
 &lt;/details&gt;
 &lt;/div&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Discrete confidence levels revealed by sequential decisions</title>
-      <link>http://mlisi.xyz/publication/discrete-confidence/</link>
-      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/publication/discrete-confidence/</guid>
-      <description></description>
     </item>
     
     <item>
