@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aisha McLean | Matteo Lisi</title>
+    <link>http://mlisi.xyz/authors/aisha-mclean/</link>
+      <atom:link href="http://mlisi.xyz/authors/aisha-mclean/index.xml" rel="self" type="application/rss+xml" />
+    <description>Aisha McLean</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2024 Matteo Lisi</copyright><lastBuildDate>Fri, 16 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://mlisi.xyz/img/shademe.png</url>
+      <title>Aisha McLean</title>
+      <link>http://mlisi.xyz/authors/aisha-mclean/</link>
+    </image>
+    
+    <item>
+      <title>Perceptual reorganization from prior knowledge emerges late in childhood</title>
+      <link>http://mlisi.xyz/publication/mooney_paper/</link>
+      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/publication/mooney_paper/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

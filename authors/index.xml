@@ -5,12 +5,60 @@
     <link>http://mlisi.xyz/authors/</link>
       <atom:link href="http://mlisi.xyz/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2024 Matteo Lisi</copyright><lastBuildDate>Thu, 01 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2024 Matteo Lisi</copyright><lastBuildDate>Fri, 16 Feb 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://mlisi.xyz/img/shademe.png</url>
       <title>Authors</title>
       <link>http://mlisi.xyz/authors/</link>
     </image>
+    
+    <item>
+      <title>Aisha McLean</title>
+      <link>http://mlisi.xyz/authors/aisha-mclean/</link>
+      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/aisha-mclean/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Georgia A. Milne</title>
+      <link>http://mlisi.xyz/authors/georgia-a.-milne/</link>
+      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/georgia-a.-milne/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Iris I.A. Groen</title>
+      <link>http://mlisi.xyz/authors/iris-i.a.-groen/</link>
+      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/iris-i.a.-groen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matteo Lisi</title>
+      <link>http://mlisi.xyz/authors/matteo-lisi/</link>
+      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/matteo-lisi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rosie Zheng</title>
+      <link>http://mlisi.xyz/authors/rosie-zheng/</link>
+      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/rosie-zheng/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tessa M. Dekker</title>
+      <link>http://mlisi.xyz/authors/tessa-m.-dekker/</link>
+      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://mlisi.xyz/authors/tessa-m.-dekker/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Dajani, Rana</title>
@@ -69,26 +117,10 @@
     </item>
     
     <item>
-      <title>Matteo Lisi</title>
-      <link>http://mlisi.xyz/authors/matteo-lisi/</link>
-      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/matteo-lisi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Oris Shenyan</title>
       <link>http://mlisi.xyz/authors/oris-shenyan/</link>
       <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
       <guid>http://mlisi.xyz/authors/oris-shenyan/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tessa M. Dekker</title>
-      <link>http://mlisi.xyz/authors/tessa-m.-dekker/</link>
-      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://mlisi.xyz/authors/tessa-m.-dekker/</guid>
       <description></description>
     </item>
     
