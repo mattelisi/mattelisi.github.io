@@ -86,11 +86,42 @@ where `\(e\)` is the Euler number `\(e=2.7182818284590452353\ldots\)`
 
 &lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-4-1.svg" style="display: block; margin: auto;" /&gt;
 
+--
+
+Proper
+
+
+---
+### Logarithm function
+
+Logarithmic function with base `\(e\)`
+
+`$$y = \log_e(x) = \ln(x)$$`
+
+It's the inverse of the exponential function: if `\(y=e^x\)`, then `\(x = \log_e(y)\)`
+
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-5-1.svg" style="display: block; margin: auto;" /&gt;
 
 
 ---
 class: inverse
 
+### Logarithmic Arithmetic
+
+Multiplying two exponential leads to addition: 
+`$$b^{x_1} \times b^{x_2} = b^{x_1 + x_2}$$`
+
+--
+
+Conversely, the sum of two logarithms can be expressed as the logarithm of their product
+
+`$$\log(x_1 \times x_2) =  \log(x_1) + \log(x_2)$$`
+
+--
+
+(This property comes hand when we are fitting mathematical models to data using _maximum likelihood estimation_, which is something we'll discuss more in the next term).
+
+---
 # Differentiation 
 
 - How does a function `\(y\)` vary with `\(x\)`?
@@ -109,7 +140,7 @@ For a straight line:
 
 &lt;!-- .center[![:scale 60%](./img/gradient01.png)] --&gt;
 
-&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-5-1.svg" width="40%" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-6-1.svg" width="40%" style="display: block; margin: auto;" /&gt;
 
 
 --
@@ -126,7 +157,7 @@ A curve can be approximated with a series of lines each of length `\(\Delta x\)`
 
 &lt;!-- .center[![:scale 50%](./img/diff00.png)] --&gt;
 
-&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-6-1.svg" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-7-1.svg" width="60%" style="display: block; margin: auto;" /&gt;
 
 
 --
@@ -312,7 +343,7 @@ class: inverse
 
 `$$y = \sin(x)$$`
 
-&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-7-1.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-8-1.svg" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -367,7 +398,7 @@ where `\(\pi = 3.14159265359 \ldots\)`
 ### Trigonometric functions
 
 
-&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-8-1.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-9-1.svg" style="display: block; margin: auto;" /&gt;
 
 --
 - Sine and cosine functions takes angles as input, and return numbers between -1 and 1 as outputs
@@ -390,7 +421,7 @@ Oscillations in scalp EEG activity
 ---
 Monthly cycle in women's body temperature
 
-&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-9-1.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-10-1.svg" style="display: block; margin: auto;" /&gt;
 
 --
 
@@ -405,7 +436,7 @@ Monthly cycle in women's body temperature
 count: false
 Monthly cycle in women's body temperature
 
-&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-10-1.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-11-1.svg" style="display: block; margin: auto;" /&gt;
 
 
 .pull-left[
@@ -453,7 +484,7 @@ Additionally, we can describe an oscillation according to it's frequency (the in
 
 Monthly cycle in women's body temperature
 
-&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-11-1.svg" style="display: block; margin: auto;" /&gt;
+&lt;img src="slides_numerical_skills_files/figure-html/unnamed-chunk-12-1.svg" style="display: block; margin: auto;" /&gt;
 
 --
 
