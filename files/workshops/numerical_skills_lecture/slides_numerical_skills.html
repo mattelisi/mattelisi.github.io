@@ -4,7 +4,6 @@
     <title>Numerical &amp; mathematical skills for neuroscience</title>
     <meta charset="utf-8" />
     <meta name="author" content="Matteo Lisi" />
-    <meta name="date" content="2023-12-05" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
     <script src="libs/tile-view/tile-view.js"></script>
@@ -24,7 +23,7 @@ class: title-slide, center, inverse
 
 ## Matteo Lisi
 
-### 5 December 2023
+### Part 1: introduction to linear algebra
 
 
 
@@ -253,7 +252,7 @@ Differentiating the function `\(y(x) = x^2\)`
 `$$\begin{align}
 \frac{dy}{dx} &amp;= \lim_{h \rightarrow 0} \frac{y(x + h)-y(x)}{(x + h) - x}\\
 &amp;=\lim_{h\to 0 }\frac{(x+h)^2-x^2}{h} \\
-&amp;=\lim_{h\to 0}\frac{(x^2+2xh+h^2)-x^2}{h} \\
+&amp;=\lim_{h\to 0}\frac{x^2+2xh+h^2-x^2}{h} \\
 &amp;=\lim_{h\to 0}\frac{2xh+h^2}{h} \\
 &amp;=\lim_{h\to 0}2x+h 
 \end{align}$$`
@@ -268,7 +267,7 @@ Differentiating the function `\(y(x) = x^2\)`
 `$$\begin{align}
 \frac{dy}{dx} &amp;= \lim_{h \rightarrow 0} \frac{y(x + h)-y(x)}{(x + h) - x}\\
 &amp;=\lim_{h\to 0 }\frac{(x+h)^2-x^2}{h} \\
-&amp;=\lim_{h\to 0}\frac{(x^2+2xh+h^2)-x^2}{h} \\
+&amp;=\lim_{h\to 0}\frac{x^2+2xh+h^2-x^2}{h} \\
 &amp;=\lim_{h\to 0}\frac{2xh+h^2}{h} \\
 &amp;=\lim_{h\to 0}2x+h \\
 &amp;= 2x
@@ -291,13 +290,20 @@ Differentiating the function `\(y(x) = x^2\)`
 
 
 ---
+
+# Numerical differentiation
+
+For digital signals that are described by a discrete set of points or sample we can estimate the derivative using a _finite difference_ approach.
+
+.center[![:scale 75%](./img/Finite_difference_method.png)]
+
+---
 class: inverse
 
-### Question: _What differentiation has to do with this picture?_
+### Example: differentiation gaze position to compute gaze velocity
 
 
 .center[![:scale 50%](./img/saccade_plot.png)]
-
 
 
 
