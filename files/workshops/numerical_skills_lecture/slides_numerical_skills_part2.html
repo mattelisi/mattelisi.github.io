@@ -151,6 +151,53 @@ c + 2d \\
 c + 3d
 \end{bmatrix}$$`
 
+---
+class: inverse
+
+### Linear models
+
+--
+
+The dependent variable `\(y\)` is modeled as a weighted combination of the predictor variables, plus an additive error `\(\epsilon\)` 
+`$$y_i=\beta_0 + \beta_1x_{1i} + \ldots +\beta_nx_{ni} + \epsilon_i \\
+\epsilon \sim \mathcal{N}\left( 0, \sigma^2 \right)$$`
+
+---
+class: inverse
+count: false
+
+### Linear models
+
+
+The dependent variable `\(y\)` is modeled as a weighted combination of the predictor variables, plus an additive error `\(\epsilon\)` 
+`$$\textbf{Y} = \textbf{X}\beta + \epsilon \\
+\epsilon \sim \mathcal{N}\left( 0, \sigma^2 \right)$$`
+
+--
+
+Linear models: matrix notation
+
+`$$\bf{Y} = \bf{X}\beta + \epsilon$$`
+`$$\left( \begin{array}{c} y_1 \\ \vdots \\ y_m \end{array} \right) =
+\left( \begin{array}{cccc} 
+1 &amp; x_{11} &amp; \ldots &amp; x_{1n}\\ 
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ 
+1 &amp; x_{m1} &amp; \ldots &amp; x_{mn}
+\end{array} \right)
+\left( \begin{array}{c} \beta_0 \\  \beta_1 \\ \vdots \\ \beta_n \end{array} \right) +
+\left( \begin{array}{c} \epsilon_1 \\ \vdots \\ \epsilon_m \end{array} \right)$$`
+
+&lt;!-- Matrix multiplication:  --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- \left( \begin{array}{cc} a &amp; b \\ c&amp; d \end{array} \right)  --&gt;
+&lt;!-- \left( \begin{array}{c} 1 \\ 2 \end{array} \right) =  --&gt;
+&lt;!-- 1 \left( \begin{array}{c} a \\ c \end{array} \right) +  --&gt;
+&lt;!-- 2 \left( \begin{array}{c} b \\ d \end{array} \right) = --&gt;
+&lt;!-- \left( \begin{array}{c} a + 2b \\ c+ 2d \end{array} \right) --&gt;
+&lt;!-- $$ --&gt;
+
+
+
 
 ---
 ### Linear independence
