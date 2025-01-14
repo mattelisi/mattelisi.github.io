@@ -520,6 +520,7 @@ then either:</p>
 <img data-src="RHUL_causal_intro_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="576"></section>
 <section id="directed-acyclic-graphs-dags" class="slide level2">
 <h2>Directed Acyclic Graphs (DAGs)</h2>
+<p>&nbsp;</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -566,7 +567,7 @@ then either:</p>
 </div>
 </div></div>
 </section>
-<section id="acyclicity-in-dags" class="slide level2">
+<section id="acyclicity-in-dags" class="slide level2 nostretch">
 <h2>Acyclicity in DAGs</h2>
 <div>
 <ul>
@@ -574,8 +575,16 @@ then either:</p>
 <li><p>One way to deal with these is by adding nodes for repeated measures (e.g.&nbsp;crossed-lagged panel models)</p></li>
 </ul>
 </div>
-
-<img data-src="RHUL_causal_intro_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center r-stretch" width="480"></section>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="RHUL_causal_intro_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="measurement-errors" class="slide level2">
 <h2>“Measurement” errors</h2>
 <div class="columns">
@@ -721,9 +730,10 @@ then either:</p>
 </div>
 </div>
 <ul>
-<li class="fragment"><p><span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent of each other <span class="math inline">\(A \perp\!\!\!\perp  B\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent of each other <span class="math inline">\(X \perp\!\!\!\perp  Y\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(C\)</span> is caused by both <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></p></li>
 <li class="fragment"><p>They become dependent after we condition on the collider node <span class="math inline">\(C\)</span>;<br>
-formally <span class="math inline">\(A \not\!\perp\!\!\!\perp  B \mid C\)</span></p></li>
+(<span class="math inline">\(A \not\!\perp\!\!\!\perp  B \mid C\)</span>)</p></li>
 </ul>
 </section>
 <section id="cake-competition-example" class="slide level2 nostretch">
@@ -748,9 +758,15 @@ formally <span class="math inline">\(A \not\!\perp\!\!\!\perp  B \mid C\)</span>
 </div>
 </div>
 </div>
+<div class="fragment">
+<ul>
+<li class="fragment"><p>No association between <code>appearance</code> and <code>taste</code> in the ‘population’ of cakes</p></li>
+<li class="fragment"><p><code>appearance</code> and <code>taste</code> becomes negatively correlated once we condition our analysis on whether a cake was shortlisted or not.</p></li>
+</ul>
+</div>
 </section>
-<section id="d-separation" class="slide level2 nostretch">
-<h2>D-separation</h2>
+<section id="conditional-independencies-in-complex-dags-d-separation" class="slide level2 nostretch">
+<h2>Conditional independencies in complex DAGS (D-separation)</h2>
 <ul>
 <li class="fragment"><p>Realistic causal models are more complex and have more than 1 path between variables.</p></li>
 <li class="fragment"><p>D-separation (“D” stands for <em>directional</em>) is when some variables on a directed graphs are independent of others</p></li>
@@ -972,8 +988,8 @@ Luckily these questions can be addressed by mechanically applying logical rules,
 <li class="fragment"><p>This type of <em>local</em> test that is different from common practice (e.g.&nbsp;SEM) of estimating parameters for the whole model and interpreting some goodness of fit indices (e.g.&nbsp;RMSEA, etc.).</p></li>
 </ul>
 </section>
-<section id="interim-summary" class="slide level2">
-<h2>Interim summary</h2>
+<section id="testable-implications-of-dags-summary-1" class="slide level2">
+<h2>Testable implications of DAGS: summary</h2>
 <div>
 <ul>
 <li><p>DAGs have implications about the type of conditional and unconditional independencies that should be observed between the variables.</p></li>
@@ -1076,10 +1092,18 @@ When we have latent variables the output is not a unique DAG, but a a set of gra
 <h2>The ‘backdoor’ criterion</h2>
 <ol type="1">
 <li class="fragment"><p>List all of the paths connecting <span class="math inline">\(X\)</span> (the potential cause of interest) and <span class="math inline">\(Y\)</span> (the outcome).</p></li>
-<li class="fragment"><p>Classify each path by whether it is open or closed. A path is open unless it contains a collider.</p></li>
-<li class="fragment"><p>Classify each path by whether it is a backdoor path. A backdoor path has an arrow entering <span class="math inline">\(X\)</span>.</p></li>
-<li class="fragment"><p>If there are any open backdoor paths, decide which variable(s) to condition on to close it (if possible).</p></li>
+<li class="fragment"><p>Classify each path by whether it is open or closed.<br>
+A path is open unless it contains a collider.</p></li>
+<li class="fragment"><p>Classify each path by whether it is a <em>backdoor path</em>.<br>
+<u>A backdoor path has an arrow entering <span class="math inline">\(X\)</span>.</u></p></li>
+<li class="fragment"><p>For each open backdoor paths, decide which variable(s) to condition on to close it.</p></li>
 </ol>
+<div class="fragment">
+<p>&nbsp;</p>
+<div style="font-size: 80%;">
+<p><em>It may be the case that is not possible to close all backdoor paths, in which case one would conclude is not possible to estimate the causal effect from the available data.</em></p>
+</div>
+</div>
 </section>
 <section id="the-backdoor-criterion-example" class="slide level2">
 <h2>The ‘backdoor’ criterion: example</h2>
@@ -1153,22 +1177,35 @@ When we have latent variables the output is not a unique DAG, but a a set of gra
 <section id="reasons-why-dags-are-useful" class="slide level2">
 <h2>Reasons why DAGs are useful</h2>
 <ul>
-<li class="fragment"><p>DAGs help us reason explicitly about causal pathways among variables of interest.</p></li>
-<li class="fragment"><p>By expressing our theory as a DAG, we can use D-separation to derive and test specific its implications.</p></li>
+<li class="fragment"><p>DAGs help us reason <u>explicitly</u> about causal pathways among variables of interest.</p></li>
+<li class="fragment"><p>By expressing our theory as a DAG, we can use D-separation to derive and test its implications.</p></li>
 <li class="fragment"><p>Drawing a DAG and checking for backdoor paths provides a principled way to decide which variables to adjust for when estimating causal effects.</p></li>
-<li class="fragment"><p>Rather than enforcing a taboo on talking about causality from observational data, graphical causal models offer a rigorous, transparent method for stating and scrutinizing causal assumptions.</p></li>
+<li class="fragment"><p>Graphical causal models offer a rigorous, transparent method for stating and scrutinizing causal assumptions.</p></li>
 </ul>
+<aside class="notes">
+<p>DAGs and causal reasoning should probably be introduced as part of undergraduate teaching of statistics; they are a useful tool for critical thinking and equips students to evaluate data-based claims with clarity.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="causal-inference-is-hard" class="slide level2">
 <h2>Causal inference is hard</h2>
 <ul>
 <li class="fragment"><p>Attempting to draw plausible a DAG can be a highly uncomfortable experience, as it fully exposes our uncertainty about our object of study.</p></li>
-<li class="fragment"><p>We should see this as a positive thing: DAGs make our assumptions transparent and easier to critique.</p></li>
-<li class="fragment"><p>Uncertainty about causal structure is common and can only be reduced by accumulating evidence from multiple designs, studies, and theories.</p></li>
-<li class="fragment"><p>A single study rarely offers conclusive evidence. In practice, establishing a convincing causal DAG requires broad, convergent evidence to constrain the plausible causal mechanisms.</p></li>
+<li class="fragment"><p><u>DAGs make our assumptions transparent and easier to critique.</u></p></li>
+<li class="fragment"><p>Unless we are able to intervene (RCT) a single study rarely offers conclusive evidence.</p></li>
+<li class="fragment"><p>Establishing a convincing causal DAG requires broad, convergent evidence from multiple design and studies to constrain the plausible causal mechanisms.</p></li>
 </ul>
 <aside class="notes">
-<p>Plausibility: foir example, parachute use during free fall reduces mortality, we don’t need an RCT for that.</p>
+<p>Plausibility: for example, parachute use during free fall reduces mortality, we don’t need an RCT for that.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1184,16 +1221,17 @@ When we have latent variables the output is not a unique DAG, but a a set of gra
 <section id="limitations-of-dags" class="slide level2">
 <h2>Limitations of DAGs</h2>
 <ul>
-<li class="fragment"><p>DAGs are “the simplest possible” representation; they clarify assumptions but do not replace fully mechanistic, dynamic models.</p></li>
-<li class="fragment"><p>Acyclic graphs can’t capture feedback or highly interconnected systems (e.g., the brain, economic systems). Such systems systems exhibit complexity (e.g.&nbsp;sensitivity dependence on initial conditions) that DAGs cannot capture.</p></li>
+<li class="fragment"><p>DAGs are “the simplest possible” model; they clarify assumptions but cannot replace fully mechanistic, dynamic models.</p></li>
+<li class="fragment"><p>Acyclic graphs can’t capture feedback or highly interconnected systems (e.g., the brain, the economy). Such systems systems exhibit complexity (e.g.&nbsp;sensitivity dependence on initial conditions) that DAGs cannot capture.</p></li>
 </ul>
 </section></section>
 <section id="references" class="title-slide slide level1 center">
 <h1>References</h1>
 <div>
 <ul>
-<li>Pearl, J. (2009). <em>Causality: Models, Reasoning, and Inference</em>. Cambridge University Press.</li>
 <li>McElreath, R. (2020). <em>Statistical rethinking: A Bayesian course with examples in R and Stan</em> (2nd ed.). Chapman and Hall/CRC</li>
+<li>Pearl, J., Glymour, M., &amp; Jewell, N. P. (2016). <em>Causal inference in statistics: A primer</em>. Wiley.</li>
+<li>Pearl, J. (2009). <em>Causality: Models, Reasoning, and Inference</em>. Cambridge University Press.</li>
 <li>Rohrer, J. M. (2018). Thinking clearly about correlations and causation: Graphical causal models for observational data. <em>Advances in Methods and Practices in Psychological Science, 1</em>(1), 27–42.</li>
 </ul>
 </div>
